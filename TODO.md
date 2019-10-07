@@ -11,8 +11,6 @@
 
 ## Deadlines:
 
----
-
 ## Submission 1: 07/10/2019
 
 * Designed Alliance [TEAM]
@@ -110,8 +108,6 @@
 ---
 
 ## General Submission Requirements:
-
----
 
 * Onlyone member of the team needs to submit.
 * Documents MUST be in .PDF format
