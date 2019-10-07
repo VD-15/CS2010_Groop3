@@ -1,7 +1,11 @@
 ## TODO LIST:
 
 - [ ] Team name
-- [ ] 
+- [ ] Write up general idea for game
+- [ ] Write up initial pitch
+- [ ] Create pitch video
+- [ ] Start game design document (as team)
+- [ ] Finish submission #3 (as small groups)
 
 ---
 
