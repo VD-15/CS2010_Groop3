@@ -1,7 +1,7 @@
 ## TODO LIST:
 
-[ ] Team name
-[ ] 
+- [ ] Team name
+- [ ] 
 
 ---
 
