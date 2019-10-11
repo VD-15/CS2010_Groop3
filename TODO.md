@@ -1,8 +1,8 @@
 ## TODO LIST:
 
-- [ ] Team name
-- [ ] Game name
-- [ ] Write up general idea for game
+- [x] Team name
+- [X] Game name
+- [X] Write up general idea for game
 - [ ] Write up initial pitch
 - [ ] Create pitch video
 - [ ] Start game design document (as team)
