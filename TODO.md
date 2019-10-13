@@ -3,8 +3,8 @@
 - [x] Team name
 - [X] Game name
 - [X] Write up general idea for game
-- [ ] Write up initial pitch
-- [ ] Create pitch video
+- [x] Write up initial pitch
+- [x] Create pitch video
 - [ ] Start game design document (as team)
 - [ ] Finish submission #3 (as small groups)
 
