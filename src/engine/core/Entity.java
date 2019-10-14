@@ -17,15 +17,12 @@ public abstract class Entity
 		this.eID = MAX_ENTITY_ID++;
 	}
 	
-	public void Delete()
-	{
-		//Delete components
-	}
-	
 	@Override
 	public boolean equals(Object o)
 	{
 		Entity e = (Entity)o;
 		return (this.eID == e.eID);
 	}
+
+	public abstract void Delete();
 }

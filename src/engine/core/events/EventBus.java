@@ -1,29 +1,30 @@
 package engine.core.events;
 
 import java.util.ArrayList;
+import java.util.function.Consumer;
 
 public final class EventBus<T extends Event<?>>
 {
 	/**
 	 * Event listeners subscribed to this bus
 	 */
-	private ArrayList<EventListener<T>> listeners;
+	private ArrayList<Consumer<T>> consumers;
 	private final Class<T> eventType;
 	
 	private static ArrayList<EventBus<?>> BUSSES = new ArrayList<EventBus<?>>();
 	
 	@SuppressWarnings("unchecked")
-	static <T extends Event<?>> EventBus<T> get(Class<T> c)
+	public static <U extends Event<?>> EventBus<U> get(Class<U> c)
 	{
 		for (EventBus<?> eb : BUSSES)
 		{
 			if (eb.eventType.equals(c))
 			{
-				return (EventBus<T>)eb;
+				return (EventBus<U>)eb;
 			}
 		}
 		
-		EventBus<T> eb = new EventBus<T>(c);
+		EventBus<U> eb = new EventBus<U>(c);
 		BUSSES.add(eb);
 		return eb;
 	}
@@ -33,39 +34,27 @@ public final class EventBus<T extends Event<?>>
 	 */
 	private EventBus(Class<T> c)
 	{
-		this.listeners = new ArrayList<EventListener<T>>();
+		this.consumers = new ArrayList<Consumer<T>>();
 		this.eventType = c;
 		BUSSES.add(this);
 	}
 	
-	/**
-	 * Adds an event listener to this bus.
-	 * @param el The listener to add.
-	 */
-	public void addEventListener(EventListener<T> el)
+	public void subscribeEvent(Consumer<T> consumer)
 	{
-		listeners.add(el);
+		this.consumers.add(consumer);
+	}
+
+	public void unsubscribeEvent(Consumer<T> consumer)
+	{
+		this.consumers.remove(consumer);
 	}
 	
-	/**
-	 * Removes an event listener to this bus.
-	 * @param el The listener to remove.
-	 */
-	public void removeEventListener(EventListener<T> el)
-	{
-		listeners.remove(el);
-	}
-	
-	/**
-	 * Posts an event to all listeners on this bus.
-	 * @param ev The event to be posted.
-	 */
 	public void postEvent(T ev)
 	{
-		for (EventListener<T> el : listeners)
+		for (Consumer<T> c : this.consumers)
 		{
 			if (ev.isCancelled()) break;
-			else el.OnEvent(ev);
+			else c.accept(ev);
 		}
 	}
 }

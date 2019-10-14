@@ -1,9 +1,8 @@
 package engine.core;
 
-import engine.core.events.EntityRemovedEvent;
-import engine.core.events.EventListener;
+import engine.core.memory.Allocator;
 
-public abstract class Component implements EventListener<EntityRemovedEvent>
+public abstract class Component<T>
 {
 	private Entity parent;
 	
@@ -11,8 +10,10 @@ public abstract class Component implements EventListener<EntityRemovedEvent>
 	 * Creates a component
 	 * @param e The parent of this component
 	 */
-	public Component(Entity parent)
+	@SuppressWarnings("unchecked")
+	protected Component(Class<T> c, Entity parent)
 	{
+		Allocator.get(c).addInstance((T)this);
 		this.parent = parent;
 	}
 	
@@ -25,17 +26,11 @@ public abstract class Component implements EventListener<EntityRemovedEvent>
 		return parent;
 	}
 	
-	public void Delete()
+	@SuppressWarnings("unchecked")
+	protected final void Delete(Class<T> c)
 	{
-		
+		Allocator.get(c).removeInstance((T)this);
 	}
 	
-	@Override
-	public void OnEvent(EntityRemovedEvent ev)
-	{
-		if (this.parent.equals(ev.entity))
-		{
-			this.Delete();
-		}
-	}
+	public abstract void Delete();
 }
