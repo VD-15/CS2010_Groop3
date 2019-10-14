@@ -1,4 +1,4 @@
-package engine.core.events;
+package engine.core;
 
 public class EarlyUpdateEvent extends Event<EarlyUpdateEvent>
 {

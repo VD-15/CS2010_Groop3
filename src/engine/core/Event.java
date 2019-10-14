@@ -1,4 +1,4 @@
-package engine.core.events;
+package engine.core;
 
 public abstract class Event<T>
 {

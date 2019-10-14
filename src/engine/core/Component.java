@@ -4,7 +4,8 @@ import engine.core.memory.Allocator;
 
 public abstract class Component<T>
 {
-	private Entity parent;
+	private final Entity parent;
+	private final Class<T> c;
 	
 	/**
 	 * Creates a component
@@ -14,6 +15,7 @@ public abstract class Component<T>
 	protected Component(Class<T> c, Entity parent)
 	{
 		Allocator.get(c).addInstance((T)this);
+		this.c = c;
 		this.parent = parent;
 	}
 	
@@ -21,16 +23,17 @@ public abstract class Component<T>
 	 * Gets the parent of this component
 	 * @return The parent entity of this component
 	 */
-	public Entity getParent()
+	public final Entity getParent()
 	{
 		return parent;
 	}
 	
+	/**
+	 * Deletes this component from the ECS.
+	 */
 	@SuppressWarnings("unchecked")
-	protected final void Delete(Class<T> c)
+	public final void Delete()
 	{
-		Allocator.get(c).removeInstance((T)this);
+		Allocator.get(this.c).removeInstance((T)this);
 	}
-	
-	public abstract void Delete();
 }

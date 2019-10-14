@@ -3,6 +3,8 @@ package engine.core.events;
 import java.util.ArrayList;
 import java.util.function.Consumer;
 
+import engine.core.Event;
+
 public final class EventBus<T extends Event<?>>
 {
 	/**
