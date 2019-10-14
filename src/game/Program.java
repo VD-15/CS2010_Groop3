@@ -1,5 +1,7 @@
 package game;
 
+import engine.Engine;
+
 public class Program
 {
 	/**
@@ -8,11 +10,8 @@ public class Program
 	 */
 	public static void main(String[] args)
 	{
-		System.out.println("Hello World!");
+		Engine.init();
 		
-		for (String s : args)
-		{
-			System.out.println(s);
-		}
+		Engine.destroy();
 	}
 }

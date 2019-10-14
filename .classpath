@@ -6,10 +6,6 @@
 			<attribute name="module" value="true"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="lib" path="C:/Users/Valkyrie/Documents/GitHub/CS2010_Groop3/dep/lwjgl-release-3.2.3.zip">
-		<attributes>
-			<attribute name="module" value="true"/>
-		</attributes>
-	</classpathentry>
+	<classpathentry kind="lib" path="dep/lwjgl-release-3.2.3.zip"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

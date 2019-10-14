@@ -2,12 +2,12 @@ package engine;
 
 public abstract class Engine
 {
-	static void init()
+	public static void init()
 	{
 		
 	}
 	
-	static void destroy()
+	public static void destroy()
 	{
 		
 	}

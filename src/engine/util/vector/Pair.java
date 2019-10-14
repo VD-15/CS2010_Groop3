@@ -4,7 +4,7 @@ public class Pair<T extends Number> implements Cloneable
 {
 	public T x;
 	public T y;
-
+	
 	public Pair(T x, T y)
 	{
 		this.x = x;
@@ -14,10 +14,6 @@ public class Pair<T extends Number> implements Cloneable
 	@Override
 	public boolean equals(Object o)
 	{
-		if (this == o) return true;
-		if (o == null) return false;
-		if (o.getClass() != this.getClass()) return false;
-		
 		Pair<?> p = (Pair<?>)o;
 		if (!p.x.equals(this.x)) return false;
 		if (!p.y.equals(this.y)) return false;
@@ -33,6 +29,6 @@ public class Pair<T extends Number> implements Cloneable
 	@Override 
 	public String toString()
 	{
-		return this.getClass().getName() + '@' + Integer.toHexString(this.hashCode());
+		return this.getClass().getName() + ' ' + x.toString() + ' ' + y.toString();
 	}
 }
