@@ -1,9 +1,7 @@
-package engine.core.events;
+package engine.core;
 
 import java.util.ArrayList;
 import java.util.function.Consumer;
-
-import engine.core.Event;
 
 public final class EventBus<T extends Event<?>>
 {

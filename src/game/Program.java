@@ -1,8 +1,8 @@
 package game;
 
 import engine.Engine;
-import engine.core.EarlyUpdateEvent;
-import engine.core.events.EventBus;
+import engine.core.EventBus;
+import engine.core.events.EarlyUpdateEvent;
 import engine.core.events.LateUpdateEvent;
 import engine.core.events.UpdateEvent;
 import game.debug.TestComponent1;

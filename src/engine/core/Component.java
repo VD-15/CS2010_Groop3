@@ -2,7 +2,7 @@ package engine.core;
 
 import engine.core.memory.Allocator;
 
-public abstract class Component<T>
+public abstract class Component<T extends Component<T>>
 {
 	private final Entity parent;
 	private final Class<T> c;
@@ -32,7 +32,7 @@ public abstract class Component<T>
 	 * Deletes this component from the ECS.
 	 */
 	@SuppressWarnings("unchecked")
-	public final void Delete()
+	public void Delete()
 	{
 		Allocator.get(this.c).removeInstance((T)this);
 	}
