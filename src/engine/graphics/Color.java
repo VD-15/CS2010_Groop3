@@ -106,6 +106,16 @@ public class Color implements Cloneable
 	}
 	
 	/**
+	 * Inverts this color, maintaining alpha
+	 */
+	public void invert()
+	{
+		this.r = 1f - this.r;
+		this.g = 1f - this.g;
+		this.b = 1f - this.b;
+	}
+	
+	/**
 	 * Adds to this color
 	 * @param c The color to add to this color.
 	 */

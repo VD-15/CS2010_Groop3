@@ -1,4 +1,4 @@
-package engine.util.vector;
+package engine.util;
 
 public class Pair<T extends Number> implements Cloneable
 {
