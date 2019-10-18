@@ -5,7 +5,7 @@ CS2010 Group Project
 
 [Website](https://vd-15.github.io/CS2010_Groop3/)
 
-[Game Design Document](https://docs.google.com/document/d/1eZd_iObqXihGZOLK3G9szQyZpHlIoLW1qO-BsqyMQf0/edit?usp=sharing)
+[Game Design Document](https://docs.google.com/document/d/1HlYA44ce1aOPXcEmsJgU3fhtHeeATdx3xW4TToKK8kc/edit?usp=sharing)
 
 [Software Quality Strategy](https://docs.google.com/document/d/1yV17NBRIyjFyiKwCO2mGBXwDT5RqDPu8jVpTrrYdjN0/edit?usp=sharing)
  
