@@ -1,6 +1,7 @@
 package engine.core;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.function.Consumer;
 
 public final class EventBus<T extends Event<?>>
@@ -9,24 +10,24 @@ public final class EventBus<T extends Event<?>>
 	 * Event listeners subscribed to this bus
 	 */
 	private ArrayList<Consumer<T>> consumers;
-	private final Class<T> eventType;
 	
-	private static ArrayList<EventBus<?>> BUSSES = new ArrayList<EventBus<?>>();
+	private static HashMap<Class<?>, EventBus<?>> BUSSES = new HashMap<Class<?>, EventBus<?>>();
 	
 	@SuppressWarnings("unchecked")
 	public static <U extends Event<?>> EventBus<U> get(Class<U> c)
 	{
-		for (EventBus<?> eb : BUSSES)
-		{
-			if (eb.eventType.equals(c))
-			{
-				return (EventBus<U>)eb;
-			}
-		}
+		EventBus<?> eb = BUSSES.get(c);
 		
-		EventBus<U> eb = new EventBus<U>(c);
-		BUSSES.add(eb);
-		return eb;
+		if (eb != null)
+		{
+			return (EventBus<U>)eb;
+		}
+		else
+		{
+			EventBus<U> ebu = new EventBus<U>(c);
+			BUSSES.put(c, ebu);
+			return ebu;
+		}
 	}
 	
 	/**
@@ -35,8 +36,6 @@ public final class EventBus<T extends Event<?>>
 	private EventBus(Class<T> c)
 	{
 		this.consumers = new ArrayList<Consumer<T>>();
-		this.eventType = c;
-		BUSSES.add(this);
 	}
 	
 	public void subscribeEvent(Consumer<T> consumer)
