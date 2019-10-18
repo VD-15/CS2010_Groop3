@@ -1,0 +1,454 @@
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+body {
+    font-family: 'Lato', sans-serif;
+}
+
+h2 {
+    font-size: 30px;
+}
+
+h3 {
+    font-size: 25px;
+}
+
+#header {
+    background: url(https://raw.githubusercontent.com/Brumek/Landing-Page/master/img/alexandru-acea-473175-unsplash2.jpg) no-repeat center center;
+    background-size: cover;
+    height: 100vh;
+    width: 100%;
+    top: : 0;
+}
+
+#header:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, .8);
+}
+
+#logo {
+    position: fixed;
+    float: left;
+    margin: 8px 36px;
+    color: #fff;
+}
+
+nav {
+    position: fixed;
+    width: 100%;
+    z-index: 999;
+}
+
+nav ul {
+    list-style: none;
+    background: rgba(0, 0, 0, 0);
+    overflow: hidden;
+    color: #fff;
+    padding: 0;
+    margin: 0;
+    text-align: right;
+    transition: 1s;
+}
+
+nav.black ul {
+    background: #000;
+}
+
+.nav-link {
+    display: inline-block;
+    padding: 20px;
+    position: relative;
+}
+
+.nav-link a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 20px;
+}
+
+.nav-link a::after {
+    position: absolute;
+    top: 85%;
+    left: 10%;
+    width: 80%;
+    height: 1px;
+    background: #fff;
+    content: '';
+    opacity: 0;
+    -webkit-transition: height 0.3s, opacity 0.3s, -webkit-transform 0.3s;
+    -moz-transition: height 0.3s, opacity 0.3s, -moz-transform 0.3s;
+    transition: height 0.3s, opacity 0.3s, transform 0.3s;
+    -webkit-transform: translateY(-10px);
+    -moz-transform: translateY(-10px);
+    transform: translateY(-10px);
+}
+
+.nav-link a:hover::after {
+    height: 3px;
+    opacity: 1;
+    -webkit-transform: translateY(0px);
+    -moz-transform: translateY(0px);
+    transform: translateY(0px);
+}
+
+#menu-icon {
+    width: 100%;
+    background: #000;
+    text-align: right;
+    box-sizing: border-box;
+    padding: 15px 24px;
+    cursor: pointer;
+    color: #fff;
+    display: none;
+}
+
+#header-description {
+    position: absolute;
+    text-align: center;
+    display: block;
+    width: 100%;
+    margin-top: 20vh;
+    font-size: 60px;
+    color: #fff;
+}
+
+#header-button {
+    display: block;
+    position: absolute;
+    margin-top: 80vh;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    width: 160px;
+    background-color: #19BDB7;
+    font-size: 20px;
+    color: #fff;
+    padding: 8px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    letter-spacing: 2px;
+    outline: none;
+}
+#Doc-info{
+  background: white;
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+}
+#Doc-info ul{
+  max-width: 550px;
+ margin: 0 auto 50px auto;
+ text-align: left;
+ line-height: 1.6;
+  padding-top: 0px;
+ }
+#Doc-info ul li{
+font-family: 'Roboto', sans-serif;
+ color: black;
+ margin: 16px 0;
+ font-size: 20px;
+}
+
+#header-button:hover {
+    background-color: #1BCFC9;
+}
+
+#about-section,
+#deals-section {
+    display: block;
+    margin: 4em auto;
+    max-width: 85vw;
+    line-height: 1.5;
+    text-align: center;
+    color: #353439;
+    padding: 50px 0;
+}
+
+#about-description,
+#deal-description {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 700px;
+    font-size: 22px;
+}
+
+#features,
+#deals {
+    display: flex;
+    justify-content: space-between;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 50px;
+    max-width: 1100px;
+}
+
+.feature,
+.deal {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 700px;
+  font-size: 22px;
+}
+
+.feature-img img,
+.deal-img img {
+    width: 80px;
+    height: auto;
+}
+
+#video-section-wrapper {
+    background-color: #f5f5f5 !important;
+    padding: 40px 0;
+}
+
+#video-section {
+    display: flex;
+    justify-content: space-around;
+    margin: 4em auto;
+    padding: 4em 0;
+    max-width: 1100px;
+    line-height: 1.5;
+    color: #353439;
+}
+
+#video-wrapper {
+    width: 500px;
+    max-width: 100%;
+}
+
+#video-container {
+    position: relative;
+    padding-bottom: 56.25%;
+    padding-top: 30px;
+    height: 0;
+    overflow: hidden;
+}
+
+#video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+#video-description {
+    font-size: 22px;
+    width: 500px;
+    max-width: 100%;
+}
+
+#video-description h3 {
+    margin-top: 0px;
+}
+
+.deal-description h4 {
+    margin-top: 0;
+}
+
+.deal-description h3 {
+    margin-bottom: 0;
+}
+
+.deal-description p {
+    margin: 0;
+}
+
+.deal-description a {
+    text-decoration: none;
+}
+
+#deal-button {
+    display: block;
+    width: 160px;
+    background-color: #19BDB7;
+    font-size: 20px;
+    color: #fff;
+    padding: 8px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    letter-spacing: 2px;
+    outline: none;
+    margin: 20px auto;
+}
+
+#deal-button:hover {
+    background-color: #1BCFC9;
+}
+
+#contact-section {
+    background-color: #35404a;
+}
+
+#contact-wrapper {
+    display: flex;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 20px;
+    padding-bottom: 40px;
+    max-width: 1100px;
+}
+
+#contact-wrapper h5 {
+    color: #ef7c46 !important;
+}
+
+#contact-wrapper p {
+    color: #fff !important;
+}
+
+#newsletter {
+    max-width: 200px;
+    margin-right: 150px;
+}
+
+#newsletter-button {
+    display: block;
+    width: 160px;
+    background-color: #ef7c46;
+    font-size: 20px;
+    color: #fff;
+    padding: 8px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    letter-spacing: 2px;
+    outline: none;
+}
+
+#newsletter-button:hover {
+    background-color: #ff915d;
+}
+
+#newsletter a {
+    text-decoration: none;
+}
+
+#links {
+    display: flex;
+    width: 150px;
+    justify-content: space-between;
+}
+
+#links img {
+    width: 40px;
+}
+
+#links a {
+    transition: all 0.2s ease-in-out;
+}
+
+#links a:hover {
+    transform: scale(1.2);
+}
+
+footer {
+    color: #e0dfdf;
+    background-color: #1f262c;
+}
+
+footer p {
+    margin: 0;
+}
+
+#footer-content {
+    max-width: 1100px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    text-align: center
+}
+
+@media(max-width: 580px) {
+    #logo {
+        position: fixed;
+        top: 0;
+        margin: 6px 15px;
+    }
+    nav ul {
+        max-height: 0px;
+        background: #000;
+    }
+    .showing {
+        max-height: 20em;
+    }
+    .nav-link {
+        box-sizing: border-box;
+        width: 100%;
+        padding: 24px 0;
+        text-align: center;
+    }
+    .nav-link a::after {
+        width: 24%;
+        left: 38%;
+    }
+    #menu-icon {
+        display: block;
+    }
+    #header-description {
+        font-size: 45px;
+    }
+    #features,
+    #deals {
+        flex-direction: column;
+        align-items: center;
+    }
+    .feature,
+    .deal {
+        margin-bottom: 30px;
+    }
+
+    #contact-wrapper {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    #newsletter {
+        margin-right: 0;
+        text-align: center;
+    }
+
+    #newsletter-button {
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+}
+
+@media(max-width: 1024px) {
+    #video-section {
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+        text-align: center;
+        max-width: 85vw;
+    }
+
+    #contact-wrapper {
+        max-width: 85vw;
+    }
+
+    #footer-content {
+        max-width: 85vw;
+    }
+}
+
+@media(max-height: 500px) {
+    #header-button {
+        display: none;
+    }
+}

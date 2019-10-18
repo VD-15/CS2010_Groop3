@@ -1,11 +1,173 @@
-<!DOCTYPE html>
-<html>
-	<head>
-		<link rel="stylesheet" href="_html/main.css">
-	</head>
-    <body>
-		<h1>Hello World!</h1>
-		<p>This is a website I think...</p>
-		<p>This is also a line</p>
-    </body>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>MB Games Landing Page</title>
+
+    <link rel="stylesheet" href="GroupLandingPage/style.css" type="text/css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Lato&amp;subset=latin-ext" rel="stylesheet">
+
+    <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+
+</head>
+
+<body>
+    <header id="header">
+        <nav>
+            <div id="menu-icon">
+                <i class="fa fa-bars fa-2x"></i>
+            </div>
+            <div id="logo">
+                <a href="#header"><img src="https://www.childhood.org.au/app/uploads/2017/07/ACF-logo-placeholder.png" height="50px"></a>
+            </div>
+            <div id="menu">
+                <ul>
+                    <li class="nav-link"><a href="#header">Home</a></li>
+                    <li class="nav-link"><a href="#about-section" class="scroll">About</a></li>
+                    <li class="nav-link"><a href="#deals-section" class="scroll">Downloads</a></li>
+                    <li class="nav-link"><a href="#contact-section" class="scroll">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+        <div id="header-description">
+            <p>GET TAKEOVER<br> A NEW STRATEGY GAME<br>
+            </p>
+        </div>
+        <div>
+            <a href="#about-section"><input type="button" id="header-button" value="Learn more"></a>
+        </div>
+    </header>
+    <main>
+        <section id="about-section">
+            <div id="about-description">
+                <h2>Lorem ipsum dolor sit amet, consectetur adipiscing</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ut arcu nec nisl pharetra consequat. Mauris malesuada et velit nec ornare. Curabitur vehicula tincidunt elit, sed bibendum diam placerat a.</p>
+            </div>
+            <div id="features">
+                <div class="feature">
+                    <div class="feature-img">
+                        <img src="baseline_videogame_asset_black_18dp.png">
+                    </div>
+                    <div class="feature-description">
+                        <h3>Game Play</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ut arcu nec nisl pharetra consequat. Mauris malesuada et velit nec ornare.</p>
+                    </div>
+                </div>
+                <div class="feature">
+                    <div class="feature-img">
+                        <img src="baseline_computer_black_48dp.png">
+                    </div>
+                    <div class="feature-description">
+                        <h3>Story</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ut arcu nec nisl pharetra consequat. Mauris malesuada et velit nec ornare.</p>
+                    </div>
+                </div>
+                <div class="feature">
+                    <div class="feature-img">
+                        <img src="baseline_library_books_black_48dp.png">
+                    </div>
+                    <div class="feature-description">
+                        <h3>Game Engine</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ut arcu nec nisl pharetra consequat. Mauris malesuada et velit nec ornare.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="video-section-wrapper">
+            <div id="video-section">
+                <div id=video-wrapper>
+                    <div id="video-container">
+                        <iframe id="video" allowFullScreen="allowFullScreen" src="https://www.youtube.com/embed/MrcimcC6fmY?ecver=1&amp;iv_load_policy=1&amp;yt:stretch=16:9&amp;autohide=1&amp;color=red&amp;width=560&amp;width=560" allowtransparency="true" frameborder="0"></iframe>
+                    </div>
+                </div>
+                <div id="video-description">
+                    <h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ut arcu nec nisl pharetra consequat. Mauris malesuada et velit nec ornare</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ut arcu nec nisl pharetra consequat. Mauris malesuada et velit nec ornare.</p>
+                </div>
+            </div>
+        </section>
+        <section id="deals-section">
+            <div id="deals-description">
+                <h2>Download game here</h2>
+            </div>
+            <div id="deals">
+                <div class="deal">
+                    <div class="deal-img">
+                        <img src="https://raw.githubusercontent.com/Brumek/Landing-Page/master/img/change.png">
+                    </div>
+                    <div class="deal-description">
+                        <h3>Big Bundle</h3>
+                        <h4>80$</h4>
+                        <p>5 random games</p>
+                        <p>Each game is worth at least 20$</p>
+                        <a href="#about"><input type="button" id="deal-button" value="Download"></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="contact-section">
+            <div id="contact-wrapper">
+                <div id="newsletter">
+                    <h5>NEWSLETTER</h5>
+                    <p>Sign up and learn first about great deals we will have in future.</p>
+                    <a href="#about"><input type="button" id="newsletter-button" value="Sign Up"></a>
+                </div>
+                <div id="follow">
+                    <h5>FOLLOW US</h5>
+                    <div id="links">
+                        <a href="https://www.facebook.com/"><img src="https://raw.githubusercontent.com/Brumek/Landing-Page/master/img/facebook.png"></a>
+                        <a href="https://plus.google.com/discover"><img src="https://raw.githubusercontent.com/Brumek/Landing-Page/master/img/google-plus.png"></a>
+                        <a href="https://twitter.com/"><img src="https://raw.githubusercontent.com/Brumek/Landing-Page/master/img/twitter.png"></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div id="footer-content">
+            <p>Copyright 2019 T3</p>
+        </div>
+    </footer>
+
+    <script type="text/javascript">
+        // Menu-toggle button
+
+        $(document).ready(function() {
+            $("#menu-icon").on("click", function() {
+                $("nav ul").toggleClass("showing");
+            });
+        });
+
+        // Hide menu after click
+
+        $(document).ready(function() {
+            $(".nav-link").on("click", function() {
+                $("nav ul").toggleClass("showing");
+            });
+        });
+
+        // Scrolling Effect
+
+        $(window).on("scroll", function() {
+            if ($(window).scrollTop()) {
+                $('nav').addClass('black');
+            } else {
+                $('nav').removeClass('black');
+            }
+        })
+
+        // Smoth scrolling to anchor
+
+        $(document).on('click', 'a[href^="#"]', function(event) {
+            event.preventDefault();
+
+            $('html, body').animate({
+                scrollTop: $($.attr(this, 'href')).offset().top-130
+            }, 500);
+        });
+    </script>
+
+</body>
+
 </html>
