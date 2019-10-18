@@ -7,5 +7,8 @@
 		</attributes>
 	</classpathentry>
 	<classpathentry kind="lib" path="dep/lwjgl-release-3.2.3.zip"/>
+	<classpathentry kind="lib" path="dep/joml-1.9.20-SNAPSHOT-javadoc.jar"/>
+	<classpathentry kind="lib" path="dep/joml-1.9.20-SNAPSHOT-sources.jar"/>
+	<classpathentry kind="lib" path="dep/joml-1.9.20-SNAPSHOT.jar" sourcepath="dep/joml-1.9.20-SNAPSHOT-sources.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
