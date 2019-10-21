@@ -4,8 +4,13 @@ body {
     width: 100%;
 }
 
-body {
-    font-family: 'Lato', sans-serif;
+@font-face {
+   font-family:"Elemental";
+   src:url("Elemental.ttf");
+}
+
+body{
+	font-family:Elemental;
 }
 
 h2 {
@@ -17,7 +22,7 @@ h3 {
 }
 
 #header {
-    background: url(https://raw.githubusercontent.com/Brumek/Landing-Page/master/img/alexandru-acea-473175-unsplash2.jpg) no-repeat center center;
+    background: url("banner1.jpg") no-repeat center center;
     background-size: cover;
     height: 100vh;
     width: 100%;
@@ -444,11 +449,13 @@ footer p {
 
     #footer-content {
         max-width: 85vw;
+		font: Arial;
     }
 }
 
 @media(max-height: 500px) {
     #header-button {
         display: none;
+		font: Elemental End;
     }
 }
