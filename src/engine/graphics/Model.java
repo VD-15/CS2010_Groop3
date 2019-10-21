@@ -42,6 +42,9 @@ public class Model extends Content<Model>
 				for (Mtl m : MtlReader.read(in))
 				{
 					materials.put(m.getName(), m);
+					m.getMapKd();
+					//TODO: make methods for specular maps
+					//TODO: make materials seperate
 				}
 			}
 			catch (IOException ex)
