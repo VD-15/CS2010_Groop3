@@ -63,5 +63,6 @@
 	<classpathentry kind="lib" path="dep/lwjgl/lwjgl-stb-sources.jar"/>
 	<classpathentry kind="lib" path="dep/lwjgl/lwjgl-stb.jar"/>
 	<classpathentry kind="lib" path="dep/lwjgl/lwjgl.jar" sourcepath="dep/lwjgl/lwjgl-sources.jar"/>
+	<classpathentry kind="lib" path="dep/libobj/obj-0.3.1-SNAPSHOT.jar" sourcepath="dep/libobj/obj-0.3.1-SNAPSHOT-sources.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

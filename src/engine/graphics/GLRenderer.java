@@ -115,7 +115,7 @@ public class GLRenderer
 	{
 		Allocator<DrawModelComponent3D> modelAllocator = Allocator.get(DrawModelComponent3D.class);
 
-		Accumulator acc = new Accumulator();
+		final Accumulator acc = new Accumulator();
 		
 		modelAllocator.forEach((DrawModelComponent3D) ->
 		{
@@ -127,8 +127,8 @@ public class GLRenderer
 	{
 		Allocator<DrawCubeComponent3D> cubeAllocator = Allocator.get(DrawCubeComponent3D.class);
 
-		ByteBuffer vBuffer = memAlloc(8 * 6 * 4 * cubeAllocator.getCount());
-		ByteBuffer eBuffer = memAlloc(36 * 4 * cubeAllocator.getCount());
+		final ByteBuffer vBuffer = memAlloc(8 * 6 * 4 * cubeAllocator.getCount());
+		final ByteBuffer eBuffer = memAlloc(36 * 4 * cubeAllocator.getCount());
 		
 		Random rand = new Random(6546843266L);
 		
