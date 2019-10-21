@@ -6,17 +6,17 @@ public abstract class Component<T extends Component<T>>
 {
 	private final Entity parent;
 	private final Class<T> c;
-	
 	/**
 	 * Creates a component
-	 * @param e The parent of this component
+	 * @param c The class of this component
+	 * @param parent The parent of this component
 	 */
 	@SuppressWarnings("unchecked")
 	protected Component(Class<T> c, Entity parent)
 	{
-		Allocator.get(c).addInstance((T)this);
 		this.c = c;
 		this.parent = parent;
+		Allocator.get(c).addInstance((T)this);
 	}
 	
 	/**

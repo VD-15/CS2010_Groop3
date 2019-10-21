@@ -8,9 +8,9 @@ import engine.core.Entity;
 
 public class TransformComponent3D extends Component<TransformComponent3D>
 {
-	public Vector3f location;
-	public Quaternionf rotation;
-	public Vector3f scale;
+	public final Vector3f location;
+	public final Quaternionf rotation;
+	public final Vector3f scale;
 	
 	public TransformComponent3D(Entity parent)
 	{

@@ -1,11 +1,13 @@
 package engine.core.memory;
 
+import java.lang.reflect.Array;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.function.Consumer;
 
 public class Allocator<T>
 {
-	private static ArrayList<Allocator<?>> allocators = new ArrayList<Allocator<?>>();
+	private static HashMap<Class<?>, Allocator<?>> allocators = new HashMap<Class<?>, Allocator<?>>();
 	
 	private ArrayList<T> instances;
 	private Class<T> type;
@@ -13,16 +15,14 @@ public class Allocator<T>
 	@SuppressWarnings("unchecked")
 	public static <U> Allocator<U> get(Class<U> c)
 	{
-		for (Allocator<?> a : allocators)
+		Allocator<U> a = (Allocator<U>) allocators.get(c);
+		
+		if (a == null)
 		{
-			if (a.type.equals(c))
-			{
-				return (Allocator<U>)a;
-			}
+			a = new Allocator<U>(c);
+			allocators.put(c, a);
 		}
 		
-		Allocator<U> a = new Allocator<U>(c);
-		allocators.add(a);
 		return a;
 	}
 	
@@ -30,6 +30,19 @@ public class Allocator<T>
 	{
 		this.instances = new ArrayList<T>();
 		this.type = c;
+	}
+	
+	public int getCount()
+	{
+		return instances.size();
+	}
+	
+	public T[] getAll()
+	{
+		@SuppressWarnings("unchecked")
+		T[] a = (T[]) Array.newInstance(type, instances.size());
+		instances.toArray(a);
+		return a;
 	}
 	
 	public void forEach(Consumer<T> c)

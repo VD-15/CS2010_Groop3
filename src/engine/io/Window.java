@@ -2,7 +2,6 @@ package engine.io;
 
 import org.lwjgl.*;
 import org.lwjgl.glfw.*;
-import org.lwjgl.opengl.*;
 import org.lwjgl.system.*;
 
 import engine.core.Application;
@@ -14,7 +13,6 @@ import java.nio.*;
 
 import static org.lwjgl.glfw.Callbacks.*;
 import static org.lwjgl.glfw.GLFW.*;
-import static org.lwjgl.opengl.GL11.*;
 import static org.lwjgl.system.MemoryStack.*;
 import static org.lwjgl.system.MemoryUtil.*;
 
@@ -34,7 +32,12 @@ public class Window
 		
 		glfwDefaultWindowHints();
 		glfwWindowHint(GLFW_VISIBLE, GLFW_FALSE);
-		glfwWindowHint(GLFW_RESIZABLE, GLFW_FALSE);
+		glfwWindowHint(GLFW_RESIZABLE, GLFW_TRUE);
+		glfwWindowHint(GLFW_CLIENT_API, GLFW_OPENGL_API);
+		glfwWindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_CORE_PROFILE);
+		glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, 3);
+		glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, 3);
+		//glfwWindowHint(GLFW_OPENGL_DEBUG_CONTEXT, GLFW_TRUE);
 		
 		window = glfwCreateWindow(640, 480, "Window Title", 0, 0);
 		
@@ -99,6 +102,8 @@ public class Window
 		
 		if (glfwWindowShouldClose(window))
 		{
+			System.out.println("window closing");
+			
 			Application.stop();
 		}
 	}

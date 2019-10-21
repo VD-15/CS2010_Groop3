@@ -14,10 +14,19 @@ public class Application
 		
 		while (isRunning)
 		{
+			//System.out.println("PreUpdateEvent");
 			EventBus.get(PreUpdateEvent.class).postEvent(new PreUpdateEvent());
+			
+			//System.out.println("EarlyUpdateEvent");
 			EventBus.get(EarlyUpdateEvent.class).postEvent(new EarlyUpdateEvent());
+			
+			//System.out.println("UpdateEvent");
 			EventBus.get(UpdateEvent.class).postEvent(new UpdateEvent());
+			
+			//System.out.println("LateUpdateEvent");
 			EventBus.get(LateUpdateEvent.class).postEvent(new LateUpdateEvent());
+			
+			//System.out.println("PostUpdateEvent");
 			EventBus.get(PostUpdateEvent.class).postEvent(new PostUpdateEvent());
 		}
 		

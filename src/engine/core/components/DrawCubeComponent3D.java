@@ -8,20 +8,17 @@ import engine.core.Entity;
 
 public class DrawCubeComponent3D extends Component<DrawCubeComponent3D>
 {
-	protected DrawCubeComponent3D(Entity parent, TransformComponent3D transform)
+	public final TransformComponent3D transform;
+
+	public final Vector4f color;
+	
+	public final Vector3f radii;
+	
+	public DrawCubeComponent3D(Entity parent, TransformComponent3D transform)
 	{
 		super(DrawCubeComponent3D.class, parent);
 		this.transform = transform;
 		this.color = new Vector4f(1f);
 		this.radii = new Vector3f(1f);
 	}
-
-	TransformComponent3D transform;
-
-	Vector4f color;
-	
-	/**
-	 * Specifies the dimensions of the cube
-	 */
-	Vector3f radii;
 }
