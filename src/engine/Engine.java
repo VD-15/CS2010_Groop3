@@ -1,14 +1,19 @@
 package engine;
 
+import engine.graphics.GLRenderer;
+import engine.io.Window;
+
 public abstract class Engine
 {
-	static void init()
+	public static void init()
 	{
-		
+		Window.init();
+		GLRenderer.init();
 	}
 	
-	static void destroy()
+	public static void destroy()
 	{
-		
+		GLRenderer.destroy();
+		Window.destroy();
 	}
 }
