@@ -21,6 +21,9 @@ h3 {
     font-size: 25px;
 }
 
+h1 {
+  font-size: 35;
+}
 #header {
     background: url("banner1.jpg") no-repeat center center;
     background-size: cover;
