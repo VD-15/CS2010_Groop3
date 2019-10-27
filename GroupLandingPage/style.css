@@ -210,8 +210,9 @@ font-family: 'Roboto', sans-serif;
 
 .feature-img img,
 .deal-img img {
-    width: 80px;
+    width: 180px;
     height: auto;
+    margin-top: 0px;
 }
 
 #video-section-wrapper {
