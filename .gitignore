@@ -1,1 +1,7 @@
-/bin/
+*/bin/
+*/obj/
+*/.vs/*
+*/[Ee]ditor/
+CS2010_Groop3/Assets/Plugins/GitHub/Editor/**
+CS2010_Groop3/Library/*
+CS2010_Groop3/Temp/*
