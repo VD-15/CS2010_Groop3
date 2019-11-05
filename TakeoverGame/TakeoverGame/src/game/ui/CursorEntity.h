@@ -1,1 +1,29 @@
 #pragma once
+
+#include "../GameManager.h"
+
+#include "../../engine/core/GameEntity.hpp"
+#include "../../engine/components/TransformComponent.h"
+#include "../../engine/components/DrawTextureComponent.h"
+
+using namespace vlk;
+
+namespace tkv
+{
+	struct CursorComponent : public Component<CursorComponent>, public HeapAllocateComponent
+	{
+		CursorComponent(IEntity* e);
+		void Delete() override;
+
+		TransformComponent2D* transform;
+		DrawTextureComponent2D* draw;
+	};
+
+	struct CursorEntity : public Entity<CursorEntity>, public HeapAllocateEntity
+	{
+		CursorEntity();
+		void Delete() override;
+
+		CursorComponent* cursor;
+	};
+}
