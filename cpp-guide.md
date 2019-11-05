@@ -285,7 +285,7 @@ int main()
 }
 ```
 
-It is important to note that C++ does not have a garbage collector like Java does. If you allocate memory on the heap with `new`, it will remain there until the program exits you until call `delete` on it. **You must do this yourself**. Again, data on the stack will be deleted when the function exits. Also worth noting is that you don't need to worry about deleting strings if they're hard coded as that isn't technically on the heap.
+It is important to note that C++ does not have a garbage collector like Java does. If you allocate memory on the heap with `new`, it will remain there until the program exits or until you call `delete` on it. **You must do this yourself**. Again, data on the stack will be deleted when the function exits. Also worth noting is that you don't need to worry about deleting strings if they're hard coded as that isn't technically on the heap.
 
 ```cpp
 //Example.cpp
