@@ -90,6 +90,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="src\game\GameManager.cpp" />
     <ClCompile Include="src\engine\components\CameraComponent.cpp" />
     <ClCompile Include="src\engine\components\ColliderComponent.cpp" />
     <ClCompile Include="src\engine\components\DrawBaseComponent.cpp" />
@@ -127,6 +128,7 @@
     <ClCompile Include="src\game\Program.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="src\game\GameManager.h" />
     <ClInclude Include="src\engine\components\CameraComponent.h" />
     <ClInclude Include="src\engine\components\ColliderComponent.h" />
     <ClInclude Include="src\engine\components\DrawBaseComponent.h" />

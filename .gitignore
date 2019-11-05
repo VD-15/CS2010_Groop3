@@ -1,8 +1,7 @@
-*/bin/
-*/obj/
+*/bin/*
+*/obj/*
 */.vs/*
 */[Ee]ditor/
 CS2010_Groop3/Assets/Plugins/**
 CS2010_Groop3/Library/*
 CS2010_Groop3/Temp/*
-*.vcxproj.user

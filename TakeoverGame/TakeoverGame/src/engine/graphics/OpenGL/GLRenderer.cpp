@@ -38,6 +38,8 @@ namespace
 		UInt size;
 	};
 
+	//TODO: formalize these
+
 	struct Primitive2DVertexArray
 	{
 		UInt id;
@@ -259,6 +261,8 @@ namespace
 		std::vector<DrawRectangleComponent2D*> rectangles;
 		std::vector<DrawTriangleComponent2D*> triangles;
 		std::vector<DrawElipseComponent2D*> elipses;
+
+		//TODO: give these their own custom shaders
 
 		rectangles.reserve(DrawRectangleComponent2D::GetCount());
 		triangles.reserve(DrawTriangleComponent2D::GetCount());

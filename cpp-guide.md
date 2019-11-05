@@ -541,7 +541,9 @@ MyClass::MyClass() :
 
 ### Inheritance
 
-C++ does inheritance weird. For a start, it has multiple inheritance, where an object can inherit from multiple classes at once and second all classes it inherits from are treated as member variables that need to be initialized seperately using an initializer list, as oppose to a super constructor:
+C++ does inheritance weird. For a start, it has multiple inheritance, where an object can inherit from multiple classes at once and second all classes it inherits from are treated as member variables that need to be initialized seperately using an initializer list, as oppose to a super constructor. 
+
+Furthermore, an class can inherit from another either publicly, protected or privately. This is a bit weird to wrap your head around, but if inherited classes are treated as members of the derrived class, then the members of that base class will have that visibility to anything viewing the derrived class. For example, inheriting privately will ensure that only the derrived class will have access to any inherited members. Protected means only the derrived class and any class derrived from it will have access to the inherited members and public means any class can access the inherited members of the derrived class. When in doubt, inherit publicly.
 
 ```cpp
 //Base1.h
@@ -550,32 +552,70 @@ class Base1
 {
 	public:
 	Base1(int i);
+
+	void Foo1();
 	//...
 }
 
 //Base2.h
+
 class Base2
 {
 	public:
 	Base2(float f);
-	...
+
+	void Foo2();
+	//...
 }
 
-//MyClass.h
+//Base3.h
+
+class Base3
+{
+	public:
+	Base3(char c);
+
+	void Foo3();
+	//...
+}
+
+//MyClasses.h
 
 //MyClass inherits from both Base1 & Base2
-class MyClass : Base1, Base2
+class MyClass : public Base1, protected Base2, private Base3
 {
 	public:
 	MyClass();
 }
 
-//MyClass.cpp
+class MyOtherClass : public MyClass
+{
+	public:
+	MyOtherClass();
+}
+
+//MyClasses.cpp
 
 MyClass::MyClass() :
 	Base1(5),
-	Base2(10.0f)
+	Base2(10.0f),
+	Base3('b')
 {
+	//Foo1(), Foo2() and Foo3() visible here
+}
 
+MyOtherClass::MyOtherClass()
+{
+	//Foo1() and Foo2() visible here
+}
+
+//Example.cpp
+
+void SomeOtherFunction()
+{
+	MyClass myClass;
+	MyOtherClass myOtherClass;
+
+	//Only Foo1() visible here
 }
 ```
