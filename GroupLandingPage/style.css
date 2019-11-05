@@ -207,7 +207,7 @@ font-family: 'Roboto', sans-serif;
 
 .commanders{
   padding: 40px 0;
-  background: url("comBackground.jpeg") no-repeat center center;
+  background: url("comBackground.jpg");
 
   background-size: cover;
   height: 100vh;
