@@ -1,0 +1,1444 @@
+EventBus ApplicationStartEvent                   [INFO]: Adding event listener: 0x00007FF71BC33994
+EventBus PreUpdateEvent                          [INFO]: Adding event listener: 0x00007FF71BC29467
+Window                                           [INFO]: Initializing.
+EventBus ApplicationStartEvent                   [INFO]: Adding event listener: 0x00007FF71BC26A91
+EventBus ApplicationExitEvent                    [INFO]: Adding event listener: 0x00007FF71BC326F7
+EventBus PreUpdateEvent                          [INFO]: Adding event listener: 0x00007FF71BC3B4A0
+Keyboard                                         [INFO]: Initializing.
+EventBus CharEvent                               [INFO]: Adding event listener: 0x00007FF71BE992A0
+EventBus KeyEvent                                [INFO]: Adding event listener: 0x00007FF71BE992F0
+EventBus PostUpdateEvent                         [INFO]: Adding event listener: 0x00007FF71BE995A0
+Mouse                                            [INFO]: Initializing
+EventBus CursorPosEvent                          [INFO]: Adding event listener: 0x00007FF71BEF6FD0
+EventBus MouseButtonEvent                        [INFO]: Adding event listener: 0x00007FF71BEF7030
+EventBus ScrollEvent                             [INFO]: Adding event listener: 0x00007FF71BEF72E0
+EventBus PostUpdateEvent                         [INFO]: Adding event listener: 0x00007FF71BEF7360
+Renderer                                         [INFO]: Init() set to: 0x00007FF71BC29228
+Renderer                                         [INFO]: Draw() set to: 0x00007FF71BC26979
+Renderer                                         [INFO]: Destroy() set to: 0x00007FF71BC3E6DC
+Renderer                                         [INFO]: Initializing.
+EventBus WindowFramebufferEvent                  [INFO]: Adding event listener: 0x00007FF71BF6ED30
+EventBus TextureAtlasLoadedEvent                 [INFO]: Adding event listener: 0x00007FF71BF6ED90
+EventBus TextureAtlasUnloadedEvent               [INFO]: Adding event listener: 0x00007FF71BF6F090
+EventBus PostUpdateEvent                         [INFO]: Adding event listener: 0x00007FF71BC38354
+EventBus LateUpdateEvent                         [INFO]: Adding event listener: 0x00007FF71BE796C0
+EventBus WindowFramebufferEvent                  [INFO]: Adding event listener: 0x00007FF71BEED630
+EventBus WindowFramebufferEvent                  [INFO]: Adding event listener: 0x00007FF71BEF3510
+EventBus UpdateEvent                             [INFO]: Adding event listener: 0x00007FF71BEF3620
+Valkyrie Engine                                  [INFO]: VLKinit took 0.804861 Seconds
+EventBus KeyEvent                                [INFO]: Adding event listener: 0x00007FF71BE26E00
+ContentManager TextureAtlas                      [INFO]: Loading content: main_atlas
+GLRenderer                                       [INFO]: Loading texture atlas: main_atlas
+ContentManagerTexture2D                          [EROR]: Attempted to load textures with conflicting names: path_edge_0
+ContentManager TextureAtlas                      [INFO]: Loading content: ui
+GLRenderer                                       [INFO]: Loading texture atlas: ui
+ContentManager xml_document                      [INFO]: Loading content: map_default
+ContentManager xml_document                      [INFO]: Loading content: map_overgrown
+ContentManager SpriteFont                        [INFO]: Loading content: font_small
+GLRenderer                                       [INFO]: Loading texture atlas: font_small
+EventBus CursorPosEvent                          [INFO]: Adding event listener: 0x00007FF71BD812E0
+EventBus EarlyUpdateEvent                        [INFO]: Adding event listener: 0x00007FF71BD81250
+EventBus ObjectiveLostEvent                      [INFO]: Adding event listener: 0x00007FF71BD81450
+EventBus UpdateEvent                             [INFO]: Adding event listener: 0x00007FF71BD39480
+EventBus EarlyUpdateEvent                        [INFO]: Adding event listener: 0x00007FF71BDCD6B0
+EventBus CollisionEvent2D                        [INFO]: Adding event listener: 0x00007FF71BDCCCB0
+EventBus TogglePlayerFireEvent                   [INFO]: Adding event listener: 0x00007FF71BDCD5D0
+EventBus EarlyUpdateEvent                        [INFO]: Adding event listener: 0x00007FF71BD23300
+EventBus UpdateEvent                             [INFO]: Adding event listener: 0x00007FF71BD233C0
+EventBus WaveStartEvent                          [INFO]: Adding event listener: 0x00007FF71BD23540
+EventBus WaveEndEvent                            [INFO]: Adding event listener: 0x00007FF71BD23480
+EventBus UpdateEvent                             [INFO]: Adding event listener: 0x00007FF71BDE0150
+EventBus CollisionEvent2D                        [INFO]: Adding event listener: 0x00007FF71BDB8660
+EventBus UpdateEvent                             [INFO]: Adding event listener: 0x00007FF71BC82B00
+EventBus EarlyUpdateEvent                        [INFO]: Adding event listener: 0x00007FF71BC68060
+EventBus UpdateEvent                             [INFO]: Adding event listener: 0x00007FF71BC927F0
+EventBus UpdateEvent                             [INFO]: Adding event listener: 0x00007FF71BDF0260
+EventBus WaveStartEvent                          [INFO]: Adding event listener: 0x00007FF71BDF03E0
+EventBus WaveEndEvent                            [INFO]: Adding event listener: 0x00007FF71BDF0320
+EventBus ResourceUpdateEvent                     [INFO]: Adding event listener: 0x00007FF71BDA25D0
+EventBus WaveStartEvent                          [INFO]: Adding event listener: 0x00007FF71BDA2AD0
+EventBus WaveEndEvent                            [INFO]: Adding event listener: 0x00007FF71BDA29A0
+EventBus UpdateEvent                             [INFO]: Adding event listener: 0x00007FF71BDA26F0
+EventBus ApplicationExitEvent                    [INFO]: Adding event listener: 0x00007FF71BC274AA
+EventBus ApplicationExitEvent                    [INFO]: Adding event listener: 0x00007FF71BC27C11
+EventBus ApplicationExitEvent                    [INFO]: Adding event listener: 0x00007FF71BC31310
+EventBus ApplicationExitEvent                    [INFO]: Adding event listener: 0x00007FF71BC39812
+EventBus ApplicationExitEvent                    [INFO]: Adding event listener: 0x00007FF71BC2703B
+EventBus ApplicationExitEvent                    [INFO]: Adding event listener: 0x00007FF71BC28B7F
+EventBus UpdateEvent                             [INFO]: Adding event listener: 0x00007FF71BE24A00
+EventBus UpdateEvent                             [INFO]: Adding event listener: 0x00007FF71BD556B0
+EventBus CollisionEvent2D                        [INFO]: Adding event listener: 0x00007FF71BD55050
+EventBus WaveEndEvent                            [INFO]: Adding event listener: 0x00007FF71BD55770
+EventBus EarlyUpdateEvent                        [INFO]: Adding event listener: 0x00007FF71BE188D0
+EventBus UpdateEvent                             [INFO]: Adding event listener: 0x00007FF71BE18AA0
+EventBus UpdateEvent                             [INFO]: Adding event listener: 0x00007FF71BC740E0
+EventBus UpdateEvent                             [INFO]: Adding event listener: 0x00007FF71BC8C2C0
+EventBus MapLoadedEvent                          [INFO]: Adding event listener: 0x00007FF71BDFE710
+GameManager                                      [INFO]: Loading map: map_overgrown
+GameManager                                      [INFO]: Creating tile {8, -4}
+EventBus ApplicationExitEvent                    [INFO]: Adding event listener: 0x00007FF71BC2DA58
+EventBus ApplicationExitEvent                    [INFO]: Adding event listener: 0x00007FF71BC2ED1D
+GameManager                                      [INFO]: Creating tile {8, -3}
+GameManager                                      [INFO]: Creating tile {9, -4}
+GameManager                                      [INFO]: Creating tile {9, -3}
+GameManager                                      [INFO]: Creating tile {10, -4}
+GameManager                                      [INFO]: Creating tile {10, -3}
+GameManager                                      [INFO]: Creating tile {11, -4}
+GameManager                                      [INFO]: Creating tile {11, -3}
+GameManager                                      [INFO]: Creating tile {12, -4}
+GameManager                                      [INFO]: Creating tile {12, -3}
+GameManager                                      [INFO]: Creating tile {8, -15}
+GameManager                                      [INFO]: Creating tile {8, -14}
+GameManager                                      [INFO]: Creating tile {8, -13}
+GameManager                                      [INFO]: Creating tile {8, -12}
+GameManager                                      [INFO]: Creating tile {8, -11}
+GameManager                                      [INFO]: Creating tile {8, -10}
+GameManager                                      [INFO]: Creating tile {8, -9}
+GameManager                                      [INFO]: Creating tile {8, -8}
+GameManager                                      [INFO]: Creating tile {8, -7}
+GameManager                                      [INFO]: Creating tile {8, -6}
+GameManager                                      [INFO]: Creating tile {9, -15}
+GameManager                                      [INFO]: Creating tile {9, -14}
+GameManager                                      [INFO]: Creating tile {9, -13}
+GameManager                                      [INFO]: Creating tile {9, -12}
+GameManager                                      [INFO]: Creating tile {9, -11}
+GameManager                                      [INFO]: Creating tile {9, -10}
+GameManager                                      [INFO]: Creating tile {9, -9}
+GameManager                                      [INFO]: Creating tile {9, -8}
+GameManager                                      [INFO]: Creating tile {9, -7}
+GameManager                                      [INFO]: Creating tile {9, -6}
+GameManager                                      [INFO]: Creating tile {10, -15}
+GameManager                                      [INFO]: Creating tile {10, -14}
+GameManager                                      [INFO]: Creating tile {10, -13}
+GameManager                                      [INFO]: Creating tile {10, -12}
+GameManager                                      [INFO]: Creating tile {10, -11}
+GameManager                                      [INFO]: Creating tile {10, -10}
+GameManager                                      [INFO]: Creating tile {10, -9}
+GameManager                                      [INFO]: Creating tile {10, -8}
+GameManager                                      [INFO]: Creating tile {10, -7}
+GameManager                                      [INFO]: Creating tile {10, -6}
+GameManager                                      [INFO]: Creating tile {11, -15}
+GameManager                                      [INFO]: Creating tile {11, -14}
+GameManager                                      [INFO]: Creating tile {11, -13}
+GameManager                                      [INFO]: Creating tile {11, -12}
+GameManager                                      [INFO]: Creating tile {11, -11}
+GameManager                                      [INFO]: Creating tile {11, -10}
+GameManager                                      [INFO]: Creating tile {11, -9}
+GameManager                                      [INFO]: Creating tile {11, -8}
+GameManager                                      [INFO]: Creating tile {11, -7}
+GameManager                                      [INFO]: Creating tile {11, -6}
+GameManager                                      [INFO]: Creating tile {12, -15}
+GameManager                                      [INFO]: Creating tile {12, -14}
+GameManager                                      [INFO]: Creating tile {12, -13}
+GameManager                                      [INFO]: Creating tile {12, -12}
+GameManager                                      [INFO]: Creating tile {12, -11}
+GameManager                                      [INFO]: Creating tile {12, -10}
+GameManager                                      [INFO]: Creating tile {12, -9}
+GameManager                                      [INFO]: Creating tile {12, -8}
+GameManager                                      [INFO]: Creating tile {12, -7}
+GameManager                                      [INFO]: Creating tile {12, -6}
+GameManager                                      [INFO]: Creating tile {13, -15}
+GameManager                                      [INFO]: Creating tile {13, -14}
+GameManager                                      [INFO]: Creating tile {13, -13}
+GameManager                                      [INFO]: Creating tile {13, -12}
+GameManager                                      [INFO]: Creating tile {13, -11}
+GameManager                                      [INFO]: Creating tile {14, -15}
+GameManager                                      [INFO]: Creating tile {14, -14}
+GameManager                                      [INFO]: Creating tile {14, -13}
+GameManager                                      [INFO]: Creating tile {14, -12}
+GameManager                                      [INFO]: Creating tile {14, -11}
+GameManager                                      [INFO]: Creating tile {15, -15}
+GameManager                                      [INFO]: Creating tile {15, -14}
+GameManager                                      [INFO]: Creating tile {15, -13}
+GameManager                                      [INFO]: Creating tile {15, -12}
+GameManager                                      [INFO]: Creating tile {15, -11}
+GameManager                                      [INFO]: Creating tile {16, -15}
+GameManager                                      [INFO]: Creating tile {16, -14}
+GameManager                                      [INFO]: Creating tile {16, -13}
+GameManager                                      [INFO]: Creating tile {16, -12}
+GameManager                                      [INFO]: Creating tile {16, -11}
+GameManager                                      [INFO]: Creating tile {17, -15}
+GameManager                                      [INFO]: Creating tile {17, -14}
+GameManager                                      [INFO]: Creating tile {17, -13}
+GameManager                                      [INFO]: Creating tile {17, -12}
+GameManager                                      [INFO]: Creating tile {17, -11}
+GameManager                                      [INFO]: Creating tile {18, -15}
+GameManager                                      [INFO]: Creating tile {18, -14}
+GameManager                                      [INFO]: Creating tile {18, -13}
+GameManager                                      [INFO]: Creating tile {18, -12}
+GameManager                                      [INFO]: Creating tile {18, -11}
+GameManager                                      [INFO]: Creating tile {19, -15}
+GameManager                                      [INFO]: Creating tile {19, -14}
+GameManager                                      [INFO]: Creating tile {19, -13}
+GameManager                                      [INFO]: Creating tile {19, -12}
+GameManager                                      [INFO]: Creating tile {19, -11}
+GameManager                                      [INFO]: Creating tile {20, -15}
+GameManager                                      [INFO]: Creating tile {20, -14}
+GameManager                                      [INFO]: Creating tile {20, -13}
+GameManager                                      [INFO]: Creating tile {20, -12}
+GameManager                                      [INFO]: Creating tile {20, -11}
+GameManager                                      [INFO]: Creating tile {21, -15}
+GameManager                                      [INFO]: Creating tile {21, -14}
+GameManager                                      [INFO]: Creating tile {21, -13}
+GameManager                                      [INFO]: Creating tile {21, -12}
+GameManager                                      [INFO]: Creating tile {21, -11}
+GameManager                                      [INFO]: Creating tile {22, -15}
+GameManager                                      [INFO]: Creating tile {22, -14}
+GameManager                                      [INFO]: Creating tile {22, -13}
+GameManager                                      [INFO]: Creating tile {22, -12}
+GameManager                                      [INFO]: Creating tile {22, -11}
+GameManager                                      [INFO]: Creating tile {23, -15}
+GameManager                                      [INFO]: Creating tile {23, -14}
+GameManager                                      [INFO]: Creating tile {23, -13}
+GameManager                                      [INFO]: Creating tile {23, -12}
+GameManager                                      [INFO]: Creating tile {23, -11}
+GameManager                                      [INFO]: Creating tile {24, -15}
+GameManager                                      [INFO]: Creating tile {24, -14}
+GameManager                                      [INFO]: Creating tile {24, -13}
+GameManager                                      [INFO]: Creating tile {24, -12}
+GameManager                                      [INFO]: Creating tile {24, -11}
+GameManager                                      [INFO]: Creating tile {25, -15}
+GameManager                                      [INFO]: Creating tile {25, -14}
+GameManager                                      [INFO]: Creating tile {25, -13}
+GameManager                                      [INFO]: Creating tile {25, -12}
+GameManager                                      [INFO]: Creating tile {25, -11}
+GameManager                                      [INFO]: Creating tile {26, -15}
+GameManager                                      [INFO]: Creating tile {26, -14}
+GameManager                                      [INFO]: Creating tile {26, -13}
+GameManager                                      [INFO]: Creating tile {26, -12}
+GameManager                                      [INFO]: Creating tile {26, -11}
+GameManager                                      [INFO]: Creating tile {22, -17}
+GameManager                                      [INFO]: Creating tile {22, -16}
+GameManager                                      [INFO]: Creating tile {23, -17}
+GameManager                                      [INFO]: Creating tile {23, -16}
+GameManager                                      [INFO]: Creating tile {24, -17}
+GameManager                                      [INFO]: Creating tile {24, -16}
+GameManager                                      [INFO]: Creating tile {25, -17}
+GameManager                                      [INFO]: Creating tile {25, -16}
+GameManager                                      [INFO]: Creating tile {26, -17}
+GameManager                                      [INFO]: Creating tile {26, -16}
+GameManager                                      [INFO]: Creating tile {21, -19}
+GameManager                                      [INFO]: Creating tile {21, -18}
+GameManager                                      [INFO]: Creating tile {22, -19}
+GameManager                                      [INFO]: Creating tile {22, -18}
+GameManager                                      [INFO]: Creating tile {23, -19}
+GameManager                                      [INFO]: Creating tile {23, -18}
+GameManager                                      [INFO]: Creating tile {24, -19}
+GameManager                                      [INFO]: Creating tile {24, -18}
+GameManager                                      [INFO]: Creating tile {25, -19}
+GameManager                                      [INFO]: Creating tile {25, -18}
+GameManager                                      [INFO]: Creating tile {26, -19}
+GameManager                                      [INFO]: Creating tile {26, -18}
+GameManager                                      [INFO]: Creating tile {27, -19}
+GameManager                                      [INFO]: Creating tile {27, -18}
+GameManager                                      [INFO]: Creating tile {21, -24}
+GameManager                                      [INFO]: Creating tile {21, -23}
+GameManager                                      [INFO]: Creating tile {21, -22}
+GameManager                                      [INFO]: Creating tile {21, -21}
+GameManager                                      [INFO]: Creating tile {21, -20}
+GameManager                                      [INFO]: Creating tile {22, -24}
+GameManager                                      [INFO]: Creating tile {22, -23}
+GameManager                                      [INFO]: Creating tile {22, -22}
+GameManager                                      [INFO]: Creating tile {22, -21}
+GameManager                                      [INFO]: Creating tile {22, -20}
+GameManager                                      [INFO]: Creating tile {26, -24}
+GameManager                                      [INFO]: Creating tile {26, -23}
+GameManager                                      [INFO]: Creating tile {26, -22}
+GameManager                                      [INFO]: Creating tile {26, -21}
+GameManager                                      [INFO]: Creating tile {26, -20}
+GameManager                                      [INFO]: Creating tile {27, -24}
+GameManager                                      [INFO]: Creating tile {27, -23}
+GameManager                                      [INFO]: Creating tile {27, -22}
+GameManager                                      [INFO]: Creating tile {27, -21}
+GameManager                                      [INFO]: Creating tile {27, -20}
+GameManager                                      [INFO]: Creating tile {23, -32}
+GameManager                                      [INFO]: Creating tile {23, -31}
+GameManager                                      [INFO]: Creating tile {23, -30}
+GameManager                                      [INFO]: Creating tile {23, -29}
+GameManager                                      [INFO]: Creating tile {23, -28}
+GameManager                                      [INFO]: Creating tile {23, -27}
+GameManager                                      [INFO]: Creating tile {23, -26}
+GameManager                                      [INFO]: Creating tile {23, -25}
+GameManager                                      [INFO]: Creating tile {23, -24}
+GameManager                                      [INFO]: Creating tile {23, -23}
+GameManager                                      [INFO]: Creating tile {24, -32}
+GameManager                                      [INFO]: Creating tile {24, -31}
+GameManager                                      [INFO]: Creating tile {24, -30}
+GameManager                                      [INFO]: Creating tile {24, -29}
+GameManager                                      [INFO]: Creating tile {24, -28}
+GameManager                                      [INFO]: Creating tile {24, -27}
+GameManager                                      [INFO]: Creating tile {24, -26}
+GameManager                                      [INFO]: Creating tile {24, -25}
+GameManager                                      [INFO]: Creating tile {24, -24}
+GameManager                                      [INFO]: Creating tile {24, -23}
+GameManager                                      [INFO]: Creating tile {25, -32}
+GameManager                                      [INFO]: Creating tile {25, -31}
+GameManager                                      [INFO]: Creating tile {25, -30}
+GameManager                                      [INFO]: Creating tile {25, -29}
+GameManager                                      [INFO]: Creating tile {25, -28}
+GameManager                                      [INFO]: Creating tile {25, -27}
+GameManager                                      [INFO]: Creating tile {25, -26}
+GameManager                                      [INFO]: Creating tile {25, -25}
+GameManager                                      [INFO]: Creating tile {25, -24}
+GameManager                                      [INFO]: Creating tile {25, -23}
+GameManager                                      [INFO]: Creating tile {23, -20}
+GameManager                                      [INFO]: Creating tile {24, -20}
+GameManager                                      [INFO]: Creating tile {25, -20}
+EventBus ApplicationExitEvent                    [INFO]: Adding event listener: 0x00007FF71BC3CCE2
+EventBus ApplicationExitEvent                    [INFO]: Adding event listener: 0x00007FF71BC2F2C7
+GameManager                                      [INFO]: Creating tile {23, -22}
+GameManager                                      [INFO]: Creating tile {24, -22}
+GameManager                                      [INFO]: Creating tile {25, -22}
+GameManager                                      [INFO]: Creating tile {23, -34}
+GameManager                                      [INFO]: Creating tile {23, -33}
+GameManager                                      [INFO]: Creating tile {25, -34}
+GameManager                                      [INFO]: Creating tile {25, -33}
+GameManager                                      [INFO]: Creating tile {24, -35}
+GameManager                                      [INFO]: Creating tile {24, -34}
+GameManager                                      [INFO]: Creating tile {3, -19}
+GameManager                                      [INFO]: Creating tile {4, -19}
+GameManager                                      [INFO]: Creating tile {5, -19}
+GameManager                                      [INFO]: Creating tile {3, -31}
+GameManager                                      [INFO]: Creating tile {3, -30}
+GameManager                                      [INFO]: Creating tile {3, -29}
+GameManager                                      [INFO]: Creating tile {3, -28}
+GameManager                                      [INFO]: Creating tile {3, -27}
+GameManager                                      [INFO]: Creating tile {3, -26}
+GameManager                                      [INFO]: Creating tile {3, -25}
+GameManager                                      [INFO]: Creating tile {3, -24}
+GameManager                                      [INFO]: Creating tile {3, -23}
+GameManager                                      [INFO]: Creating tile {3, -22}
+GameManager                                      [INFO]: Creating tile {3, -21}
+GameManager                                      [INFO]: Creating tile {4, -31}
+GameManager                                      [INFO]: Creating tile {4, -30}
+GameManager                                      [INFO]: Creating tile {4, -29}
+GameManager                                      [INFO]: Creating tile {4, -28}
+GameManager                                      [INFO]: Creating tile {4, -27}
+GameManager                                      [INFO]: Creating tile {4, -26}
+GameManager                                      [INFO]: Creating tile {4, -25}
+GameManager                                      [INFO]: Creating tile {4, -24}
+GameManager                                      [INFO]: Creating tile {4, -23}
+GameManager                                      [INFO]: Creating tile {4, -22}
+GameManager                                      [INFO]: Creating tile {4, -21}
+GameManager                                      [INFO]: Creating tile {5, -31}
+GameManager                                      [INFO]: Creating tile {5, -30}
+GameManager                                      [INFO]: Creating tile {5, -29}
+GameManager                                      [INFO]: Creating tile {5, -28}
+GameManager                                      [INFO]: Creating tile {5, -27}
+GameManager                                      [INFO]: Creating tile {5, -26}
+GameManager                                      [INFO]: Creating tile {5, -25}
+GameManager                                      [INFO]: Creating tile {5, -24}
+GameManager                                      [INFO]: Creating tile {5, -23}
+GameManager                                      [INFO]: Creating tile {5, -22}
+GameManager                                      [INFO]: Creating tile {5, -21}
+GameManager                                      [INFO]: Creating tile {6, -31}
+GameManager                                      [INFO]: Creating tile {6, -30}
+GameManager                                      [INFO]: Creating tile {6, -29}
+GameManager                                      [INFO]: Creating tile {7, -31}
+GameManager                                      [INFO]: Creating tile {7, -30}
+GameManager                                      [INFO]: Creating tile {7, -29}
+GameManager                                      [INFO]: Creating tile {8, -31}
+GameManager                                      [INFO]: Creating tile {8, -30}
+GameManager                                      [INFO]: Creating tile {8, -29}
+GameManager                                      [INFO]: Creating tile {9, -31}
+GameManager                                      [INFO]: Creating tile {9, -30}
+GameManager                                      [INFO]: Creating tile {9, -29}
+GameManager                                      [INFO]: Creating tile {10, -31}
+GameManager                                      [INFO]: Creating tile {10, -30}
+GameManager                                      [INFO]: Creating tile {10, -29}
+GameManager                                      [INFO]: Creating tile {11, -31}
+GameManager                                      [INFO]: Creating tile {11, -30}
+GameManager                                      [INFO]: Creating tile {11, -29}
+GameManager                                      [INFO]: Creating tile {9, -28}
+GameManager                                      [INFO]: Creating tile {9, -27}
+GameManager                                      [INFO]: Creating tile {9, -26}
+GameManager                                      [INFO]: Creating tile {9, -25}
+GameManager                                      [INFO]: Creating tile {9, -24}
+GameManager                                      [INFO]: Creating tile {9, -23}
+GameManager                                      [INFO]: Creating tile {9, -22}
+GameManager                                      [INFO]: Creating tile {9, -21}
+GameManager                                      [INFO]: Creating tile {9, -20}
+GameManager                                      [INFO]: Creating tile {9, -19}
+GameManager                                      [INFO]: Creating tile {10, -28}
+GameManager                                      [INFO]: Creating tile {10, -27}
+GameManager                                      [INFO]: Creating tile {10, -26}
+GameManager                                      [INFO]: Creating tile {10, -25}
+GameManager                                      [INFO]: Creating tile {10, -24}
+GameManager                                      [INFO]: Creating tile {10, -23}
+GameManager                                      [INFO]: Creating tile {10, -22}
+GameManager                                      [INFO]: Creating tile {10, -21}
+GameManager                                      [INFO]: Creating tile {10, -20}
+GameManager                                      [INFO]: Creating tile {10, -19}
+GameManager                                      [INFO]: Creating tile {11, -28}
+GameManager                                      [INFO]: Creating tile {11, -27}
+GameManager                                      [INFO]: Creating tile {11, -26}
+GameManager                                      [INFO]: Creating tile {11, -25}
+GameManager                                      [INFO]: Creating tile {11, -24}
+GameManager                                      [INFO]: Creating tile {11, -23}
+GameManager                                      [INFO]: Creating tile {11, -22}
+GameManager                                      [INFO]: Creating tile {11, -21}
+GameManager                                      [INFO]: Creating tile {11, -20}
+GameManager                                      [INFO]: Creating tile {11, -19}
+GameManager                                      [INFO]: Creating tile {12, -21}
+GameManager                                      [INFO]: Creating tile {12, -20}
+GameManager                                      [INFO]: Creating tile {12, -19}
+GameManager                                      [INFO]: Creating tile {13, -21}
+GameManager                                      [INFO]: Creating tile {13, -20}
+GameManager                                      [INFO]: Creating tile {13, -19}
+GameManager                                      [INFO]: Creating tile {14, -21}
+GameManager                                      [INFO]: Creating tile {14, -20}
+GameManager                                      [INFO]: Creating tile {14, -19}
+GameManager                                      [INFO]: Creating tile {15, -21}
+GameManager                                      [INFO]: Creating tile {15, -20}
+GameManager                                      [INFO]: Creating tile {15, -19}
+GameManager                                      [INFO]: Creating tile {16, -21}
+GameManager                                      [INFO]: Creating tile {16, -20}
+GameManager                                      [INFO]: Creating tile {16, -19}
+GameManager                                      [INFO]: Creating tile {17, -21}
+GameManager                                      [INFO]: Creating tile {17, -20}
+GameManager                                      [INFO]: Creating tile {17, -19}
+GameManager                                      [INFO]: Creating tile {15, -31}
+GameManager                                      [INFO]: Creating tile {15, -30}
+GameManager                                      [INFO]: Creating tile {15, -29}
+GameManager                                      [INFO]: Creating tile {15, -28}
+GameManager                                      [INFO]: Creating tile {15, -27}
+GameManager                                      [INFO]: Creating tile {15, -26}
+GameManager                                      [INFO]: Creating tile {15, -25}
+GameManager                                      [INFO]: Creating tile {15, -24}
+GameManager                                      [INFO]: Creating tile {15, -23}
+GameManager                                      [INFO]: Creating tile {15, -22}
+GameManager                                      [INFO]: Creating tile {16, -31}
+GameManager                                      [INFO]: Creating tile {16, -30}
+GameManager                                      [INFO]: Creating tile {16, -29}
+GameManager                                      [INFO]: Creating tile {16, -28}
+GameManager                                      [INFO]: Creating tile {16, -27}
+GameManager                                      [INFO]: Creating tile {16, -26}
+GameManager                                      [INFO]: Creating tile {16, -25}
+GameManager                                      [INFO]: Creating tile {16, -24}
+GameManager                                      [INFO]: Creating tile {16, -23}
+GameManager                                      [INFO]: Creating tile {16, -22}
+GameManager                                      [INFO]: Creating tile {17, -31}
+GameManager                                      [INFO]: Creating tile {17, -30}
+GameManager                                      [INFO]: Creating tile {17, -29}
+GameManager                                      [INFO]: Creating tile {17, -28}
+GameManager                                      [INFO]: Creating tile {17, -27}
+GameManager                                      [INFO]: Creating tile {17, -26}
+GameManager                                      [INFO]: Creating tile {17, -25}
+GameManager                                      [INFO]: Creating tile {17, -24}
+GameManager                                      [INFO]: Creating tile {17, -23}
+GameManager                                      [INFO]: Creating tile {17, -22}
+GameManager                                      [INFO]: Creating tile {18, -31}
+GameManager                                      [INFO]: Creating tile {18, -30}
+GameManager                                      [INFO]: Creating tile {18, -29}
+GameManager                                      [INFO]: Creating tile {19, -31}
+GameManager                                      [INFO]: Creating tile {19, -30}
+GameManager                                      [INFO]: Creating tile {19, -29}
+GameManager                                      [INFO]: Creating tile {20, -31}
+GameManager                                      [INFO]: Creating tile {20, -30}
+GameManager                                      [INFO]: Creating tile {20, -29}
+GameManager                                      [INFO]: Creating tile {21, -31}
+GameManager                                      [INFO]: Creating tile {21, -30}
+GameManager                                      [INFO]: Creating tile {21, -29}
+GameManager                                      [INFO]: Creating tile {22, -31}
+GameManager                                      [INFO]: Creating tile {22, -30}
+GameManager                                      [INFO]: Creating tile {22, -29}
+GameManager                                      [INFO]: Creating tile {42, -10}
+GameManager                                      [INFO]: Creating tile {42, -9}
+GameManager                                      [INFO]: Creating tile {42, -8}
+GameManager                                      [INFO]: Creating tile {31, -10}
+GameManager                                      [INFO]: Creating tile {31, -9}
+GameManager                                      [INFO]: Creating tile {31, -8}
+GameManager                                      [INFO]: Creating tile {32, -10}
+GameManager                                      [INFO]: Creating tile {32, -9}
+GameManager                                      [INFO]: Creating tile {32, -8}
+GameManager                                      [INFO]: Creating tile {33, -10}
+GameManager                                      [INFO]: Creating tile {33, -9}
+GameManager                                      [INFO]: Creating tile {33, -8}
+GameManager                                      [INFO]: Creating tile {34, -10}
+GameManager                                      [INFO]: Creating tile {34, -9}
+GameManager                                      [INFO]: Creating tile {34, -8}
+GameManager                                      [INFO]: Creating tile {35, -10}
+GameManager                                      [INFO]: Creating tile {35, -9}
+GameManager                                      [INFO]: Creating tile {35, -8}
+GameManager                                      [INFO]: Creating tile {36, -10}
+GameManager                                      [INFO]: Creating tile {36, -9}
+GameManager                                      [INFO]: Creating tile {36, -8}
+GameManager                                      [INFO]: Creating tile {37, -10}
+GameManager                                      [INFO]: Creating tile {37, -9}
+GameManager                                      [INFO]: Creating tile {37, -8}
+GameManager                                      [INFO]: Creating tile {38, -10}
+GameManager                                      [INFO]: Creating tile {38, -9}
+GameManager                                      [INFO]: Creating tile {38, -8}
+GameManager                                      [INFO]: Creating tile {39, -10}
+GameManager                                      [INFO]: Creating tile {39, -9}
+GameManager                                      [INFO]: Creating tile {39, -8}
+GameManager                                      [INFO]: Creating tile {40, -10}
+GameManager                                      [INFO]: Creating tile {40, -9}
+GameManager                                      [INFO]: Creating tile {40, -8}
+GameManager                                      [INFO]: Creating tile {31, -31}
+GameManager                                      [INFO]: Creating tile {31, -30}
+GameManager                                      [INFO]: Creating tile {31, -29}
+GameManager                                      [INFO]: Creating tile {31, -28}
+GameManager                                      [INFO]: Creating tile {31, -27}
+GameManager                                      [INFO]: Creating tile {31, -26}
+GameManager                                      [INFO]: Creating tile {31, -25}
+GameManager                                      [INFO]: Creating tile {31, -24}
+GameManager                                      [INFO]: Creating tile {31, -23}
+GameManager                                      [INFO]: Creating tile {31, -22}
+GameManager                                      [INFO]: Creating tile {31, -21}
+GameManager                                      [INFO]: Creating tile {31, -20}
+GameManager                                      [INFO]: Creating tile {31, -19}
+GameManager                                      [INFO]: Creating tile {31, -18}
+GameManager                                      [INFO]: Creating tile {31, -17}
+GameManager                                      [INFO]: Creating tile {31, -16}
+GameManager                                      [INFO]: Creating tile {31, -15}
+GameManager                                      [INFO]: Creating tile {31, -14}
+GameManager                                      [INFO]: Creating tile {31, -13}
+GameManager                                      [INFO]: Creating tile {31, -12}
+GameManager                                      [INFO]: Creating tile {31, -11}
+GameManager                                      [INFO]: Creating tile {31, -10}
+GameManager                                      [INFO]: Creating tile {31, -9}
+GameManager                                      [INFO]: Creating tile {31, -8}
+GameManager                                      [INFO]: Creating tile {32, -31}
+GameManager                                      [INFO]: Creating tile {32, -30}
+GameManager                                      [INFO]: Creating tile {32, -29}
+GameManager                                      [INFO]: Creating tile {32, -28}
+GameManager                                      [INFO]: Creating tile {32, -27}
+GameManager                                      [INFO]: Creating tile {32, -26}
+GameManager                                      [INFO]: Creating tile {32, -25}
+GameManager                                      [INFO]: Creating tile {32, -24}
+GameManager                                      [INFO]: Creating tile {32, -23}
+GameManager                                      [INFO]: Creating tile {32, -22}
+GameManager                                      [INFO]: Creating tile {32, -21}
+GameManager                                      [INFO]: Creating tile {32, -20}
+GameManager                                      [INFO]: Creating tile {32, -19}
+GameManager                                      [INFO]: Creating tile {32, -18}
+GameManager                                      [INFO]: Creating tile {32, -17}
+GameManager                                      [INFO]: Creating tile {32, -16}
+GameManager                                      [INFO]: Creating tile {32, -15}
+GameManager                                      [INFO]: Creating tile {32, -14}
+GameManager                                      [INFO]: Creating tile {32, -13}
+GameManager                                      [INFO]: Creating tile {32, -12}
+GameManager                                      [INFO]: Creating tile {32, -11}
+GameManager                                      [INFO]: Creating tile {32, -10}
+GameManager                                      [INFO]: Creating tile {32, -9}
+GameManager                                      [INFO]: Creating tile {32, -8}
+GameManager                                      [INFO]: Creating tile {33, -31}
+GameManager                                      [INFO]: Creating tile {33, -30}
+GameManager                                      [INFO]: Creating tile {33, -29}
+GameManager                                      [INFO]: Creating tile {33, -28}
+GameManager                                      [INFO]: Creating tile {33, -27}
+GameManager                                      [INFO]: Creating tile {33, -26}
+GameManager                                      [INFO]: Creating tile {33, -25}
+GameManager                                      [INFO]: Creating tile {33, -24}
+GameManager                                      [INFO]: Creating tile {33, -23}
+GameManager                                      [INFO]: Creating tile {33, -22}
+GameManager                                      [INFO]: Creating tile {33, -21}
+GameManager                                      [INFO]: Creating tile {33, -20}
+GameManager                                      [INFO]: Creating tile {33, -19}
+GameManager                                      [INFO]: Creating tile {33, -18}
+GameManager                                      [INFO]: Creating tile {33, -17}
+GameManager                                      [INFO]: Creating tile {33, -16}
+GameManager                                      [INFO]: Creating tile {33, -15}
+GameManager                                      [INFO]: Creating tile {33, -14}
+GameManager                                      [INFO]: Creating tile {33, -13}
+GameManager                                      [INFO]: Creating tile {33, -12}
+GameManager                                      [INFO]: Creating tile {33, -11}
+GameManager                                      [INFO]: Creating tile {33, -10}
+GameManager                                      [INFO]: Creating tile {33, -9}
+GameManager                                      [INFO]: Creating tile {33, -8}
+GameManager                                      [INFO]: Creating tile {26, -31}
+GameManager                                      [INFO]: Creating tile {26, -30}
+GameManager                                      [INFO]: Creating tile {26, -29}
+GameManager                                      [INFO]: Creating tile {27, -31}
+GameManager                                      [INFO]: Creating tile {27, -30}
+GameManager                                      [INFO]: Creating tile {27, -29}
+GameManager                                      [INFO]: Creating tile {28, -31}
+GameManager                                      [INFO]: Creating tile {28, -30}
+GameManager                                      [INFO]: Creating tile {28, -29}
+GameManager                                      [INFO]: Creating tile {29, -31}
+GameManager                                      [INFO]: Creating tile {29, -30}
+GameManager                                      [INFO]: Creating tile {29, -29}
+GameManager                                      [INFO]: Creating tile {30, -31}
+GameManager                                      [INFO]: Creating tile {30, -30}
+GameManager                                      [INFO]: Creating tile {30, -29}
+GameManager                                      [INFO]: Creating tile {27, -11}
+GameManager                                      [INFO]: Creating tile {28, -11}
+GameManager                                      [INFO]: Creating tile {29, -11}
+GameManager                                      [INFO]: Creating tile {30, -11}
+GameManager                                      [INFO]: Creating tile {19, -19}
+GameManager                                      [INFO]: Creating tile {19, -18}
+GameManager                                      [INFO]: Creating tile {19, -17}
+GameManager                                      [INFO]: Creating tile {19, -16}
+GameManager                                      [INFO]: Creating tile {13, -10}
+GameManager                                      [INFO]: Creating tile {13, -9}
+GameManager                                      [INFO]: Creating tile {13, -8}
+GameManager                                      [INFO]: Creating tile {14, -10}
+GameManager                                      [INFO]: Creating tile {14, -9}
+GameManager                                      [INFO]: Creating tile {14, -8}
+GameManager                                      [INFO]: Creating tile {15, -10}
+GameManager                                      [INFO]: Creating tile {15, -9}
+GameManager                                      [INFO]: Creating tile {15, -8}
+GameManager                                      [INFO]: Creating tile {16, -10}
+GameManager                                      [INFO]: Creating tile {16, -9}
+GameManager                                      [INFO]: Creating tile {16, -8}
+GameManager                                      [INFO]: Creating tile {17, -10}
+GameManager                                      [INFO]: Creating tile {17, -9}
+GameManager                                      [INFO]: Creating tile {17, -8}
+GameManager                                      [INFO]: Creating tile {18, -10}
+GameManager                                      [INFO]: Creating tile {18, -9}
+GameManager                                      [INFO]: Creating tile {18, -8}
+GameManager                                      [INFO]: Creating tile {19, -10}
+GameManager                                      [INFO]: Creating tile {19, -9}
+GameManager                                      [INFO]: Creating tile {19, -8}
+GameManager                                      [INFO]: Creating tile {20, -10}
+GameManager                                      [INFO]: Creating tile {20, -9}
+GameManager                                      [INFO]: Creating tile {20, -8}
+GameManager                                      [INFO]: Creating tile {21, -10}
+GameManager                                      [INFO]: Creating tile {21, -9}
+GameManager                                      [INFO]: Creating tile {21, -8}
+GameManager                                      [INFO]: Creating tile {22, -10}
+GameManager                                      [INFO]: Creating tile {22, -9}
+GameManager                                      [INFO]: Creating tile {22, -8}
+GameManager                                      [INFO]: Creating tile {23, -10}
+GameManager                                      [INFO]: Creating tile {23, -9}
+GameManager                                      [INFO]: Creating tile {23, -8}
+GameManager                                      [INFO]: Creating tile {24, -10}
+GameManager                                      [INFO]: Creating tile {24, -9}
+GameManager                                      [INFO]: Creating tile {24, -8}
+GameManager                                      [INFO]: Creating tile {25, -10}
+GameManager                                      [INFO]: Creating tile {25, -9}
+GameManager                                      [INFO]: Creating tile {25, -8}
+GameManager                                      [INFO]: Creating tile {26, -10}
+GameManager                                      [INFO]: Creating tile {26, -9}
+GameManager                                      [INFO]: Creating tile {26, -8}
+GameManager                                      [INFO]: Creating tile {27, -10}
+GameManager                                      [INFO]: Creating tile {27, -9}
+GameManager                                      [INFO]: Creating tile {27, -8}
+GameManager                                      [INFO]: Creating tile {28, -10}
+GameManager                                      [INFO]: Creating tile {28, -9}
+GameManager                                      [INFO]: Creating tile {28, -8}
+GameManager                                      [INFO]: Creating tile {29, -10}
+GameManager                                      [INFO]: Creating tile {29, -9}
+GameManager                                      [INFO]: Creating tile {29, -8}
+GameManager                                      [INFO]: Creating tile {30, -10}
+GameManager                                      [INFO]: Creating tile {30, -9}
+GameManager                                      [INFO]: Creating tile {30, -8}
+GameManager                                      [INFO]: Creating tile {23, -7}
+GameManager                                      [INFO]: Creating tile {24, -7}
+GameManager                                      [INFO]: Creating tile {25, -7}
+GameManager                                      [INFO]: Creating tile {26, -7}
+GameManager                                      [INFO]: Creating tile {27, -7}
+GameManager                                      [INFO]: Creating tile {28, -7}
+GameManager                                      [INFO]: Creating tile {29, -7}
+GameManager                                      [INFO]: Creating tile {30, -7}
+GameManager                                      [INFO]: Creating tile {31, -7}
+GameManager                                      [INFO]: Creating tile {32, -7}
+GameManager                                      [INFO]: Creating tile {33, -7}
+GameManager                                      [INFO]: Creating tile {34, -7}
+GameManager                                      [INFO]: Creating tile {35, -7}
+GameManager                                      [INFO]: Creating tile {36, -7}
+GameManager                                      [INFO]: Creating tile {37, -7}
+GameManager                                      [INFO]: Creating tile {38, -7}
+GameManager                                      [INFO]: Creating tile {27, -17}
+GameManager                                      [INFO]: Creating tile {27, -16}
+GameManager                                      [INFO]: Creating tile {27, -15}
+GameManager                                      [INFO]: Creating tile {27, -14}
+GameManager                                      [INFO]: Creating tile {27, -13}
+GameManager                                      [INFO]: Creating tile {27, -12}
+GameManager                                      [INFO]: Creating tile {28, -17}
+GameManager                                      [INFO]: Creating tile {28, -16}
+GameManager                                      [INFO]: Creating tile {28, -15}
+GameManager                                      [INFO]: Creating tile {28, -14}
+GameManager                                      [INFO]: Creating tile {28, -13}
+GameManager                                      [INFO]: Creating tile {28, -12}
+GameManager                                      [INFO]: Creating tile {29, -17}
+GameManager                                      [INFO]: Creating tile {29, -16}
+GameManager                                      [INFO]: Creating tile {29, -15}
+GameManager                                      [INFO]: Creating tile {29, -14}
+GameManager                                      [INFO]: Creating tile {29, -13}
+GameManager                                      [INFO]: Creating tile {29, -12}
+GameManager                                      [INFO]: Creating tile {30, -17}
+GameManager                                      [INFO]: Creating tile {30, -16}
+GameManager                                      [INFO]: Creating tile {30, -15}
+GameManager                                      [INFO]: Creating tile {30, -14}
+GameManager                                      [INFO]: Creating tile {30, -13}
+GameManager                                      [INFO]: Creating tile {30, -12}
+GameManager                                      [INFO]: Creating tile {26, -28}
+GameManager                                      [INFO]: Creating tile {26, -27}
+GameManager                                      [INFO]: Creating tile {26, -26}
+GameManager                                      [INFO]: Creating tile {26, -25}
+GameManager                                      [INFO]: Creating tile {27, -28}
+GameManager                                      [INFO]: Creating tile {27, -27}
+GameManager                                      [INFO]: Creating tile {27, -26}
+GameManager                                      [INFO]: Creating tile {27, -25}
+GameManager                                      [INFO]: Creating tile {28, -28}
+GameManager                                      [INFO]: Creating tile {28, -27}
+GameManager                                      [INFO]: Creating tile {28, -26}
+GameManager                                      [INFO]: Creating tile {28, -25}
+GameManager                                      [INFO]: Creating tile {28, -24}
+GameManager                                      [INFO]: Creating tile {28, -23}
+GameManager                                      [INFO]: Creating tile {28, -22}
+GameManager                                      [INFO]: Creating tile {28, -21}
+GameManager                                      [INFO]: Creating tile {28, -20}
+GameManager                                      [INFO]: Creating tile {28, -19}
+GameManager                                      [INFO]: Creating tile {28, -18}
+GameManager                                      [INFO]: Creating tile {29, -28}
+GameManager                                      [INFO]: Creating tile {29, -27}
+GameManager                                      [INFO]: Creating tile {29, -26}
+GameManager                                      [INFO]: Creating tile {29, -25}
+GameManager                                      [INFO]: Creating tile {29, -24}
+GameManager                                      [INFO]: Creating tile {29, -23}
+GameManager                                      [INFO]: Creating tile {29, -22}
+GameManager                                      [INFO]: Creating tile {29, -21}
+GameManager                                      [INFO]: Creating tile {29, -20}
+GameManager                                      [INFO]: Creating tile {29, -19}
+GameManager                                      [INFO]: Creating tile {29, -18}
+GameManager                                      [INFO]: Creating tile {30, -28}
+GameManager                                      [INFO]: Creating tile {30, -27}
+GameManager                                      [INFO]: Creating tile {30, -26}
+GameManager                                      [INFO]: Creating tile {30, -25}
+GameManager                                      [INFO]: Creating tile {30, -24}
+GameManager                                      [INFO]: Creating tile {30, -23}
+GameManager                                      [INFO]: Creating tile {30, -22}
+GameManager                                      [INFO]: Creating tile {30, -21}
+GameManager                                      [INFO]: Creating tile {30, -20}
+GameManager                                      [INFO]: Creating tile {30, -19}
+GameManager                                      [INFO]: Creating tile {30, -18}
+GameManager                                      [INFO]: Creating tile {34, -12}
+GameManager                                      [INFO]: Creating tile {34, -11}
+GameManager                                      [INFO]: Creating tile {35, -12}
+GameManager                                      [INFO]: Creating tile {35, -11}
+GameManager                                      [INFO]: Creating tile {36, -12}
+GameManager                                      [INFO]: Creating tile {36, -11}
+GameManager                                      [INFO]: Creating tile {37, -12}
+GameManager                                      [INFO]: Creating tile {37, -11}
+GameManager                                      [INFO]: Creating tile {34, -33}
+GameManager                                      [INFO]: Creating tile {34, -32}
+GameManager                                      [INFO]: Creating tile {34, -31}
+GameManager                                      [INFO]: Creating tile {34, -30}
+GameManager                                      [INFO]: Creating tile {34, -29}
+GameManager                                      [INFO]: Creating tile {34, -28}
+GameManager                                      [INFO]: Creating tile {34, -27}
+GameManager                                      [INFO]: Creating tile {34, -26}
+GameManager                                      [INFO]: Creating tile {34, -25}
+GameManager                                      [INFO]: Creating tile {34, -24}
+GameManager                                      [INFO]: Creating tile {34, -23}
+GameManager                                      [INFO]: Creating tile {34, -22}
+GameManager                                      [INFO]: Creating tile {34, -21}
+GameManager                                      [INFO]: Creating tile {34, -20}
+GameManager                                      [INFO]: Creating tile {34, -19}
+GameManager                                      [INFO]: Creating tile {34, -18}
+GameManager                                      [INFO]: Creating tile {34, -17}
+GameManager                                      [INFO]: Creating tile {34, -16}
+GameManager                                      [INFO]: Creating tile {34, -15}
+GameManager                                      [INFO]: Creating tile {34, -14}
+GameManager                                      [INFO]: Creating tile {34, -13}
+GameManager                                      [INFO]: Creating tile {35, -33}
+GameManager                                      [INFO]: Creating tile {35, -32}
+GameManager                                      [INFO]: Creating tile {35, -31}
+GameManager                                      [INFO]: Creating tile {35, -30}
+GameManager                                      [INFO]: Creating tile {35, -29}
+GameManager                                      [INFO]: Creating tile {35, -28}
+GameManager                                      [INFO]: Creating tile {35, -27}
+GameManager                                      [INFO]: Creating tile {35, -26}
+GameManager                                      [INFO]: Creating tile {35, -25}
+GameManager                                      [INFO]: Creating tile {35, -24}
+GameManager                                      [INFO]: Creating tile {35, -23}
+GameManager                                      [INFO]: Creating tile {35, -22}
+GameManager                                      [INFO]: Creating tile {35, -21}
+GameManager                                      [INFO]: Creating tile {35, -20}
+GameManager                                      [INFO]: Creating tile {35, -19}
+GameManager                                      [INFO]: Creating tile {35, -18}
+GameManager                                      [INFO]: Creating tile {35, -17}
+GameManager                                      [INFO]: Creating tile {35, -16}
+GameManager                                      [INFO]: Creating tile {35, -15}
+GameManager                                      [INFO]: Creating tile {35, -14}
+GameManager                                      [INFO]: Creating tile {35, -13}
+GameManager                                      [INFO]: Creating tile {36, -33}
+GameManager                                      [INFO]: Creating tile {36, -32}
+GameManager                                      [INFO]: Creating tile {36, -31}
+GameManager                                      [INFO]: Creating tile {36, -30}
+GameManager                                      [INFO]: Creating tile {36, -29}
+GameManager                                      [INFO]: Creating tile {36, -28}
+GameManager                                      [INFO]: Creating tile {36, -27}
+GameManager                                      [INFO]: Creating tile {36, -26}
+GameManager                                      [INFO]: Creating tile {36, -25}
+GameManager                                      [INFO]: Creating tile {36, -24}
+GameManager                                      [INFO]: Creating tile {36, -23}
+GameManager                                      [INFO]: Creating tile {36, -22}
+GameManager                                      [INFO]: Creating tile {36, -21}
+GameManager                                      [INFO]: Creating tile {36, -20}
+GameManager                                      [INFO]: Creating tile {36, -19}
+GameManager                                      [INFO]: Creating tile {36, -18}
+GameManager                                      [INFO]: Creating tile {36, -17}
+GameManager                                      [INFO]: Creating tile {36, -16}
+GameManager                                      [INFO]: Creating tile {36, -15}
+GameManager                                      [INFO]: Creating tile {36, -14}
+GameManager                                      [INFO]: Creating tile {36, -13}
+GameManager                                      [INFO]: Creating tile {28, -33}
+GameManager                                      [INFO]: Creating tile {28, -32}
+GameManager                                      [INFO]: Creating tile {29, -33}
+GameManager                                      [INFO]: Creating tile {29, -32}
+GameManager                                      [INFO]: Creating tile {30, -33}
+GameManager                                      [INFO]: Creating tile {30, -32}
+GameManager                                      [INFO]: Creating tile {31, -33}
+GameManager                                      [INFO]: Creating tile {31, -32}
+GameManager                                      [INFO]: Creating tile {32, -33}
+GameManager                                      [INFO]: Creating tile {32, -32}
+GameManager                                      [INFO]: Creating tile {33, -33}
+GameManager                                      [INFO]: Creating tile {33, -32}
+GameManager                                      [INFO]: Creating tile {26, -36}
+GameManager                                      [INFO]: Creating tile {26, -35}
+GameManager                                      [INFO]: Creating tile {26, -34}
+GameManager                                      [INFO]: Creating tile {26, -33}
+GameManager                                      [INFO]: Creating tile {26, -32}
+GameManager                                      [INFO]: Creating tile {27, -36}
+GameManager                                      [INFO]: Creating tile {27, -35}
+GameManager                                      [INFO]: Creating tile {27, -34}
+GameManager                                      [INFO]: Creating tile {27, -33}
+GameManager                                      [INFO]: Creating tile {27, -32}
+GameManager                                      [INFO]: Creating tile {25, -36}
+GameManager                                      [INFO]: Creating tile {25, -35}
+GameManager                                      [INFO]: Creating tile {7, -17}
+GameManager                                      [INFO]: Creating tile {7, -16}
+GameManager                                      [INFO]: Creating tile {7, -15}
+GameManager                                      [INFO]: Creating tile {7, -14}
+GameManager                                      [INFO]: Creating tile {7, -13}
+GameManager                                      [INFO]: Creating tile {7, -12}
+GameManager                                      [INFO]: Creating tile {7, -11}
+GameManager                                      [INFO]: Creating tile {7, -10}
+GameManager                                      [INFO]: Creating tile {7, -9}
+GameManager                                      [INFO]: Creating tile {7, -8}
+GameManager                                      [INFO]: Creating tile {6, -16}
+GameManager                                      [INFO]: Creating tile {6, -15}
+GameManager                                      [INFO]: Creating tile {6, -14}
+GameManager                                      [INFO]: Creating tile {6, -13}
+GameManager                                      [INFO]: Creating tile {6, -12}
+GameManager                                      [INFO]: Creating tile {6, -11}
+GameManager                                      [INFO]: Creating tile {20, -17}
+GameManager                                      [INFO]: Creating tile {20, -16}
+GameManager                                      [INFO]: Creating tile {21, -17}
+GameManager                                      [INFO]: Creating tile {21, -16}
+GameManager                                      [INFO]: Creating tile {20, -19}
+GameManager                                      [INFO]: Creating tile {20, -18}
+GameManager                                      [INFO]: Creating tile {18, -28}
+GameManager                                      [INFO]: Creating tile {18, -27}
+GameManager                                      [INFO]: Creating tile {18, -26}
+GameManager                                      [INFO]: Creating tile {18, -25}
+GameManager                                      [INFO]: Creating tile {18, -24}
+GameManager                                      [INFO]: Creating tile {18, -23}
+GameManager                                      [INFO]: Creating tile {18, -22}
+GameManager                                      [INFO]: Creating tile {18, -21}
+GameManager                                      [INFO]: Creating tile {18, -20}
+GameManager                                      [INFO]: Creating tile {19, -28}
+GameManager                                      [INFO]: Creating tile {19, -27}
+GameManager                                      [INFO]: Creating tile {19, -26}
+GameManager                                      [INFO]: Creating tile {19, -25}
+GameManager                                      [INFO]: Creating tile {19, -24}
+GameManager                                      [INFO]: Creating tile {19, -23}
+GameManager                                      [INFO]: Creating tile {19, -22}
+GameManager                                      [INFO]: Creating tile {19, -21}
+GameManager                                      [INFO]: Creating tile {19, -20}
+GameManager                                      [INFO]: Creating tile {20, -28}
+GameManager                                      [INFO]: Creating tile {20, -27}
+GameManager                                      [INFO]: Creating tile {20, -26}
+GameManager                                      [INFO]: Creating tile {20, -25}
+GameManager                                      [INFO]: Creating tile {20, -24}
+GameManager                                      [INFO]: Creating tile {20, -23}
+GameManager                                      [INFO]: Creating tile {20, -22}
+GameManager                                      [INFO]: Creating tile {20, -21}
+GameManager                                      [INFO]: Creating tile {20, -20}
+GameManager                                      [INFO]: Creating tile {21, -28}
+GameManager                                      [INFO]: Creating tile {21, -27}
+GameManager                                      [INFO]: Creating tile {21, -26}
+GameManager                                      [INFO]: Creating tile {21, -25}
+GameManager                                      [INFO]: Creating tile {22, -28}
+GameManager                                      [INFO]: Creating tile {22, -27}
+GameManager                                      [INFO]: Creating tile {22, -26}
+GameManager                                      [INFO]: Creating tile {22, -25}
+GameManager                                      [INFO]: Creating tile {8, -18}
+GameManager                                      [INFO]: Creating tile {8, -17}
+GameManager                                      [INFO]: Creating tile {8, -16}
+GameManager                                      [INFO]: Creating tile {9, -18}
+GameManager                                      [INFO]: Creating tile {9, -17}
+GameManager                                      [INFO]: Creating tile {9, -16}
+GameManager                                      [INFO]: Creating tile {10, -18}
+GameManager                                      [INFO]: Creating tile {10, -17}
+GameManager                                      [INFO]: Creating tile {10, -16}
+GameManager                                      [INFO]: Creating tile {11, -18}
+GameManager                                      [INFO]: Creating tile {11, -17}
+GameManager                                      [INFO]: Creating tile {11, -16}
+GameManager                                      [INFO]: Creating tile {12, -18}
+GameManager                                      [INFO]: Creating tile {12, -17}
+GameManager                                      [INFO]: Creating tile {12, -16}
+GameManager                                      [INFO]: Creating tile {13, -18}
+GameManager                                      [INFO]: Creating tile {13, -17}
+GameManager                                      [INFO]: Creating tile {13, -16}
+GameManager                                      [INFO]: Creating tile {14, -18}
+GameManager                                      [INFO]: Creating tile {14, -17}
+GameManager                                      [INFO]: Creating tile {14, -16}
+GameManager                                      [INFO]: Creating tile {15, -18}
+GameManager                                      [INFO]: Creating tile {15, -17}
+GameManager                                      [INFO]: Creating tile {15, -16}
+GameManager                                      [INFO]: Creating tile {16, -18}
+GameManager                                      [INFO]: Creating tile {16, -17}
+GameManager                                      [INFO]: Creating tile {16, -16}
+GameManager                                      [INFO]: Creating tile {17, -18}
+GameManager                                      [INFO]: Creating tile {17, -17}
+GameManager                                      [INFO]: Creating tile {17, -16}
+GameManager                                      [INFO]: Creating tile {18, -18}
+GameManager                                      [INFO]: Creating tile {18, -17}
+GameManager                                      [INFO]: Creating tile {18, -16}
+GameManager                                      [INFO]: Creating tile {6, -28}
+GameManager                                      [INFO]: Creating tile {6, -27}
+GameManager                                      [INFO]: Creating tile {6, -26}
+GameManager                                      [INFO]: Creating tile {6, -25}
+GameManager                                      [INFO]: Creating tile {6, -24}
+GameManager                                      [INFO]: Creating tile {7, -28}
+GameManager                                      [INFO]: Creating tile {7, -27}
+GameManager                                      [INFO]: Creating tile {7, -26}
+GameManager                                      [INFO]: Creating tile {7, -25}
+GameManager                                      [INFO]: Creating tile {7, -24}
+GameManager                                      [INFO]: Creating tile {8, -28}
+GameManager                                      [INFO]: Creating tile {8, -27}
+GameManager                                      [INFO]: Creating tile {8, -26}
+GameManager                                      [INFO]: Creating tile {8, -25}
+GameManager                                      [INFO]: Creating tile {8, -24}
+GameManager                                      [INFO]: Creating tile {7, -23}
+GameManager                                      [INFO]: Creating tile {7, -22}
+GameManager                                      [INFO]: Creating tile {8, -23}
+GameManager                                      [INFO]: Creating tile {8, -22}
+GameManager                                      [INFO]: Creating tile {12, -31}
+GameManager                                      [INFO]: Creating tile {12, -30}
+GameManager                                      [INFO]: Creating tile {12, -29}
+GameManager                                      [INFO]: Creating tile {12, -28}
+GameManager                                      [INFO]: Creating tile {12, -27}
+GameManager                                      [INFO]: Creating tile {12, -26}
+GameManager                                      [INFO]: Creating tile {12, -25}
+GameManager                                      [INFO]: Creating tile {12, -24}
+GameManager                                      [INFO]: Creating tile {12, -23}
+GameManager                                      [INFO]: Creating tile {12, -22}
+GameManager                                      [INFO]: Creating tile {13, -31}
+GameManager                                      [INFO]: Creating tile {13, -30}
+GameManager                                      [INFO]: Creating tile {13, -29}
+GameManager                                      [INFO]: Creating tile {13, -28}
+GameManager                                      [INFO]: Creating tile {13, -27}
+GameManager                                      [INFO]: Creating tile {13, -26}
+GameManager                                      [INFO]: Creating tile {13, -25}
+GameManager                                      [INFO]: Creating tile {13, -24}
+GameManager                                      [INFO]: Creating tile {13, -23}
+GameManager                                      [INFO]: Creating tile {13, -22}
+GameManager                                      [INFO]: Creating tile {14, -31}
+GameManager                                      [INFO]: Creating tile {14, -30}
+GameManager                                      [INFO]: Creating tile {14, -29}
+GameManager                                      [INFO]: Creating tile {14, -28}
+GameManager                                      [INFO]: Creating tile {14, -27}
+GameManager                                      [INFO]: Creating tile {14, -26}
+GameManager                                      [INFO]: Creating tile {14, -25}
+GameManager                                      [INFO]: Creating tile {14, -24}
+GameManager                                      [INFO]: Creating tile {14, -23}
+GameManager                                      [INFO]: Creating tile {14, -22}
+GameManager                                      [INFO]: Creating tile {6, -33}
+GameManager                                      [INFO]: Creating tile {6, -32}
+GameManager                                      [INFO]: Creating tile {7, -33}
+GameManager                                      [INFO]: Creating tile {7, -32}
+GameManager                                      [INFO]: Creating tile {8, -33}
+GameManager                                      [INFO]: Creating tile {8, -32}
+GameManager                                      [INFO]: Creating tile {9, -33}
+GameManager                                      [INFO]: Creating tile {9, -32}
+GameManager                                      [INFO]: Creating tile {10, -33}
+GameManager                                      [INFO]: Creating tile {10, -32}
+GameManager                                      [INFO]: Creating tile {11, -33}
+GameManager                                      [INFO]: Creating tile {11, -32}
+GameManager                                      [INFO]: Creating tile {12, -33}
+GameManager                                      [INFO]: Creating tile {12, -32}
+GameManager                                      [INFO]: Creating tile {13, -33}
+GameManager                                      [INFO]: Creating tile {13, -32}
+GameManager                                      [INFO]: Creating tile {14, -33}
+GameManager                                      [INFO]: Creating tile {14, -32}
+GameManager                                      [INFO]: Creating tile {15, -33}
+GameManager                                      [INFO]: Creating tile {15, -32}
+GameManager                                      [INFO]: Creating tile {16, -33}
+GameManager                                      [INFO]: Creating tile {16, -32}
+GameManager                                      [INFO]: Creating tile {17, -33}
+GameManager                                      [INFO]: Creating tile {17, -32}
+GameManager                                      [INFO]: Creating tile {18, -33}
+GameManager                                      [INFO]: Creating tile {18, -32}
+GameManager                                      [INFO]: Creating tile {19, -33}
+GameManager                                      [INFO]: Creating tile {19, -32}
+GameManager                                      [INFO]: Creating tile {20, -33}
+GameManager                                      [INFO]: Creating tile {20, -32}
+GameManager                                      [INFO]: Creating tile {21, -33}
+GameManager                                      [INFO]: Creating tile {21, -32}
+GameManager                                      [INFO]: Creating tile {22, -33}
+GameManager                                      [INFO]: Creating tile {22, -32}
+GameManager                                      [INFO]: Creating tile {21, -36}
+GameManager                                      [INFO]: Creating tile {21, -35}
+GameManager                                      [INFO]: Creating tile {21, -34}
+GameManager                                      [INFO]: Creating tile {22, -36}
+GameManager                                      [INFO]: Creating tile {22, -35}
+GameManager                                      [INFO]: Creating tile {22, -34}
+GameManager                                      [INFO]: Creating tile {23, -36}
+GameManager                                      [INFO]: Creating tile {23, -35}
+GameManager                                      [INFO]: Creating tile {5, -6}
+GameManager                                      [INFO]: Creating tile {5, -5}
+GameManager                                      [INFO]: Creating tile {5, -4}
+GameManager                                      [INFO]: Creating tile {5, -3}
+GameManager                                      [INFO]: Creating tile {5, -2}
+GameManager                                      [INFO]: Creating tile {6, -7}
+GameManager                                      [INFO]: Creating tile {6, -6}
+GameManager                                      [INFO]: Creating tile {6, -5}
+GameManager                                      [INFO]: Creating tile {6, -4}
+GameManager                                      [INFO]: Creating tile {6, -3}
+GameManager                                      [INFO]: Creating tile {6, -2}
+GameManager                                      [INFO]: Creating tile {6, -1}
+GameManager                                      [INFO]: Creating tile {7, -7}
+GameManager                                      [INFO]: Creating tile {7, -6}
+GameManager                                      [INFO]: Creating tile {7, -5}
+GameManager                                      [INFO]: Creating tile {7, -4}
+GameManager                                      [INFO]: Creating tile {7, -3}
+GameManager                                      [INFO]: Creating tile {7, -2}
+GameManager                                      [INFO]: Creating tile {7, -1}
+GameManager                                      [INFO]: Creating tile {7, 0}
+GameManager                                      [INFO]: Creating tile {8, 0}
+GameManager                                      [INFO]: Creating tile {9, 0}
+GameManager                                      [INFO]: Creating tile {10, 0}
+GameManager                                      [INFO]: Creating tile {11, 0}
+GameManager                                      [INFO]: Creating tile {12, 0}
+GameManager                                      [INFO]: Creating tile {13, 0}
+GameManager                                      [INFO]: Creating tile {8, -2}
+GameManager                                      [INFO]: Creating tile {8, -1}
+GameManager                                      [INFO]: Creating tile {9, -2}
+GameManager                                      [INFO]: Creating tile {9, -1}
+GameManager                                      [INFO]: Creating tile {10, -2}
+GameManager                                      [INFO]: Creating tile {10, -1}
+GameManager                                      [INFO]: Creating tile {11, -2}
+GameManager                                      [INFO]: Creating tile {11, -1}
+GameManager                                      [INFO]: Creating tile {12, -2}
+GameManager                                      [INFO]: Creating tile {12, -1}
+GameManager                                      [INFO]: Creating tile {13, -2}
+GameManager                                      [INFO]: Creating tile {13, -1}
+GameManager                                      [INFO]: Creating tile {14, -2}
+GameManager                                      [INFO]: Creating tile {14, -1}
+GameManager                                      [INFO]: Creating tile {13, -7}
+GameManager                                      [INFO]: Creating tile {13, -6}
+GameManager                                      [INFO]: Creating tile {13, -5}
+GameManager                                      [INFO]: Creating tile {13, -4}
+GameManager                                      [INFO]: Creating tile {13, -3}
+GameManager                                      [INFO]: Creating tile {14, -7}
+GameManager                                      [INFO]: Creating tile {14, -6}
+GameManager                                      [INFO]: Creating tile {14, -5}
+GameManager                                      [INFO]: Creating tile {14, -4}
+GameManager                                      [INFO]: Creating tile {14, -3}
+GameManager                                      [INFO]: Creating tile {15, -7}
+GameManager                                      [INFO]: Creating tile {15, -6}
+GameManager                                      [INFO]: Creating tile {15, -5}
+GameManager                                      [INFO]: Creating tile {15, -4}
+GameManager                                      [INFO]: Creating tile {15, -3}
+GameManager                                      [INFO]: Creating tile {16, -7}
+GameManager                                      [INFO]: Creating tile {16, -6}
+GameManager                                      [INFO]: Creating tile {17, -7}
+GameManager                                      [INFO]: Creating tile {17, -6}
+GameManager                                      [INFO]: Creating tile {18, -7}
+GameManager                                      [INFO]: Creating tile {18, -6}
+GameManager                                      [INFO]: Creating tile {19, -7}
+GameManager                                      [INFO]: Creating tile {19, -6}
+GameManager                                      [INFO]: Creating tile {20, -7}
+GameManager                                      [INFO]: Creating tile {20, -6}
+GameManager                                      [INFO]: Creating tile {21, -7}
+GameManager                                      [INFO]: Creating tile {21, -6}
+GameManager                                      [INFO]: Creating tile {21, -5}
+GameManager                                      [INFO]: Creating tile {22, -7}
+GameManager                                      [INFO]: Creating tile {22, -6}
+GameManager                                      [INFO]: Creating tile {22, -5}
+GameManager                                      [INFO]: Creating tile {23, -6}
+GameManager                                      [INFO]: Creating tile {23, -5}
+GameManager                                      [INFO]: Creating tile {24, -6}
+GameManager                                      [INFO]: Creating tile {24, -5}
+GameManager                                      [INFO]: Creating tile {25, -6}
+GameManager                                      [INFO]: Creating tile {25, -5}
+GameManager                                      [INFO]: Creating tile {26, -6}
+GameManager                                      [INFO]: Creating tile {26, -5}
+GameManager                                      [INFO]: Creating tile {27, -6}
+GameManager                                      [INFO]: Creating tile {27, -5}
+GameManager                                      [INFO]: Creating tile {28, -6}
+GameManager                                      [INFO]: Creating tile {28, -5}
+GameManager                                      [INFO]: Creating tile {29, -6}
+GameManager                                      [INFO]: Creating tile {29, -5}
+GameManager                                      [INFO]: Creating tile {30, -6}
+GameManager                                      [INFO]: Creating tile {30, -5}
+GameManager                                      [INFO]: Creating tile {31, -6}
+GameManager                                      [INFO]: Creating tile {31, -5}
+GameManager                                      [INFO]: Creating tile {32, -6}
+GameManager                                      [INFO]: Creating tile {32, -5}
+GameManager                                      [INFO]: Creating tile {33, -6}
+GameManager                                      [INFO]: Creating tile {33, -5}
+GameManager                                      [INFO]: Creating tile {34, -6}
+GameManager                                      [INFO]: Creating tile {34, -5}
+GameManager                                      [INFO]: Creating tile {35, -6}
+GameManager                                      [INFO]: Creating tile {35, -5}
+GameManager                                      [INFO]: Creating tile {36, -6}
+GameManager                                      [INFO]: Creating tile {36, -5}
+GameManager                                      [INFO]: Creating tile {37, -6}
+GameManager                                      [INFO]: Creating tile {37, -5}
+GameManager                                      [INFO]: Creating tile {38, -6}
+GameManager                                      [INFO]: Creating tile {38, -5}
+GameManager                                      [INFO]: Creating tile {39, -6}
+GameManager                                      [INFO]: Creating tile {39, -5}
+GameManager                                      [INFO]: Creating tile {40, -6}
+GameManager                                      [INFO]: Creating tile {40, -5}
+GameManager                                      [INFO]: Creating tile {41, -6}
+GameManager                                      [INFO]: Creating tile {41, -5}
+GameManager                                      [INFO]: Creating tile {42, -6}
+GameManager                                      [INFO]: Creating tile {42, -5}
+GameManager                                      [INFO]: Creating tile {43, -6}
+GameManager                                      [INFO]: Creating tile {43, -5}
+GameManager                                      [INFO]: Creating tile {44, -6}
+GameManager                                      [INFO]: Creating tile {44, -5}
+GameManager                                      [INFO]: Creating tile {38, -4}
+GameManager                                      [INFO]: Creating tile {39, -4}
+GameManager                                      [INFO]: Creating tile {40, -4}
+GameManager                                      [INFO]: Creating tile {41, -4}
+GameManager                                      [INFO]: Creating tile {42, -4}
+GameManager                                      [INFO]: Creating tile {39, -7}
+GameManager                                      [INFO]: Creating tile {40, -7}
+GameManager                                      [INFO]: Creating tile {41, -7}
+GameManager                                      [INFO]: Creating tile {42, -7}
+GameManager                                      [INFO]: Creating tile {43, -7}
+GameManager                                      [INFO]: Creating tile {44, -7}
+GameManager                                      [INFO]: Creating tile {45, -7}
+GameManager                                      [INFO]: Creating tile {43, -9}
+GameManager                                      [INFO]: Creating tile {43, -8}
+GameManager                                      [INFO]: Creating tile {44, -9}
+GameManager                                      [INFO]: Creating tile {44, -8}
+GameManager                                      [INFO]: Creating tile {45, -9}
+GameManager                                      [INFO]: Creating tile {45, -8}
+GameManager                                      [INFO]: Creating tile {43, -10}
+GameManager                                      [INFO]: Creating tile {44, -10}
+GameManager                                      [INFO]: Creating tile {38, -12}
+GameManager                                      [INFO]: Creating tile {38, -11}
+GameManager                                      [INFO]: Creating tile {39, -12}
+GameManager                                      [INFO]: Creating tile {39, -11}
+GameManager                                      [INFO]: Creating tile {40, -12}
+GameManager                                      [INFO]: Creating tile {40, -11}
+GameManager                                      [INFO]: Creating tile {41, -12}
+GameManager                                      [INFO]: Creating tile {41, -11}
+GameManager                                      [INFO]: Creating tile {42, -12}
+GameManager                                      [INFO]: Creating tile {42, -11}
+GameManager                                      [INFO]: Creating tile {43, -12}
+GameManager                                      [INFO]: Creating tile {43, -11}
+GameManager                                      [INFO]: Creating tile {38, -4}
+GameManager                                      [INFO]: Creating tile {39, -4}
+GameManager                                      [INFO]: Creating tile {40, -4}
+GameManager                                      [INFO]: Creating tile {41, -4}
+GameManager                                      [INFO]: Creating tile {42, -4}
+GameManager                                      [INFO]: Creating tile {37, -13}
+GameManager                                      [INFO]: Creating tile {38, -13}
+GameManager                                      [INFO]: Creating tile {39, -13}
+GameManager                                      [INFO]: Creating tile {37, -34}
+GameManager                                      [INFO]: Creating tile {37, -33}
+GameManager                                      [INFO]: Creating tile {37, -32}
+GameManager                                      [INFO]: Creating tile {37, -31}
+GameManager                                      [INFO]: Creating tile {37, -30}
+GameManager                                      [INFO]: Creating tile {37, -29}
+GameManager                                      [INFO]: Creating tile {37, -28}
+GameManager                                      [INFO]: Creating tile {37, -27}
+GameManager                                      [INFO]: Creating tile {37, -26}
+GameManager                                      [INFO]: Creating tile {37, -25}
+GameManager                                      [INFO]: Creating tile {37, -24}
+GameManager                                      [INFO]: Creating tile {37, -23}
+GameManager                                      [INFO]: Creating tile {37, -22}
+GameManager                                      [INFO]: Creating tile {37, -21}
+GameManager                                      [INFO]: Creating tile {37, -20}
+GameManager                                      [INFO]: Creating tile {37, -19}
+GameManager                                      [INFO]: Creating tile {37, -18}
+GameManager                                      [INFO]: Creating tile {37, -17}
+GameManager                                      [INFO]: Creating tile {37, -16}
+GameManager                                      [INFO]: Creating tile {37, -15}
+GameManager                                      [INFO]: Creating tile {37, -14}
+GameManager                                      [INFO]: Creating tile {38, -32}
+GameManager                                      [INFO]: Creating tile {38, -31}
+GameManager                                      [INFO]: Creating tile {38, -30}
+GameManager                                      [INFO]: Creating tile {38, -29}
+GameManager                                      [INFO]: Creating tile {38, -28}
+GameManager                                      [INFO]: Creating tile {38, -27}
+GameManager                                      [INFO]: Creating tile {38, -26}
+GameManager                                      [INFO]: Creating tile {38, -25}
+GameManager                                      [INFO]: Creating tile {38, -24}
+GameManager                                      [INFO]: Creating tile {38, -23}
+GameManager                                      [INFO]: Creating tile {38, -22}
+GameManager                                      [INFO]: Creating tile {38, -21}
+GameManager                                      [INFO]: Creating tile {28, -35}
+GameManager                                      [INFO]: Creating tile {28, -34}
+GameManager                                      [INFO]: Creating tile {29, -35}
+GameManager                                      [INFO]: Creating tile {29, -34}
+GameManager                                      [INFO]: Creating tile {30, -35}
+GameManager                                      [INFO]: Creating tile {30, -34}
+GameManager                                      [INFO]: Creating tile {31, -35}
+GameManager                                      [INFO]: Creating tile {31, -34}
+GameManager                                      [INFO]: Creating tile {32, -35}
+GameManager                                      [INFO]: Creating tile {32, -34}
+GameManager                                      [INFO]: Creating tile {33, -35}
+GameManager                                      [INFO]: Creating tile {33, -34}
+GameManager                                      [INFO]: Creating tile {34, -35}
+GameManager                                      [INFO]: Creating tile {34, -34}
+GameManager                                      [INFO]: Creating tile {35, -35}
+GameManager                                      [INFO]: Creating tile {35, -34}
+GameManager                                      [INFO]: Creating tile {36, -35}
+GameManager                                      [INFO]: Creating tile {36, -34}
+GameManager                                      [INFO]: Creating tile {28, -36}
+GameManager                                      [INFO]: Creating tile {29, -36}
+GameManager                                      [INFO]: Creating tile {30, -36}
+GameManager                                      [INFO]: Creating tile {31, -36}
+GameManager                                      [INFO]: Creating tile {32, -36}
+GameManager                                      [INFO]: Creating tile {19, -37}
+GameManager                                      [INFO]: Creating tile {20, -37}
+GameManager                                      [INFO]: Creating tile {21, -37}
+GameManager                                      [INFO]: Creating tile {22, -37}
+GameManager                                      [INFO]: Creating tile {23, -37}
+GameManager                                      [INFO]: Creating tile {24, -37}
+GameManager                                      [INFO]: Creating tile {25, -37}
+GameManager                                      [INFO]: Creating tile {26, -37}
+GameManager                                      [INFO]: Creating tile {27, -37}
+GameManager                                      [INFO]: Creating tile {28, -37}
+GameManager                                      [INFO]: Creating tile {29, -37}
+GameManager                                      [INFO]: Creating tile {15, -36}
+GameManager                                      [INFO]: Creating tile {15, -35}
+GameManager                                      [INFO]: Creating tile {15, -34}
+GameManager                                      [INFO]: Creating tile {16, -36}
+GameManager                                      [INFO]: Creating tile {16, -35}
+GameManager                                      [INFO]: Creating tile {16, -34}
+GameManager                                      [INFO]: Creating tile {17, -36}
+GameManager                                      [INFO]: Creating tile {17, -35}
+GameManager                                      [INFO]: Creating tile {17, -34}
+GameManager                                      [INFO]: Creating tile {18, -36}
+GameManager                                      [INFO]: Creating tile {18, -35}
+GameManager                                      [INFO]: Creating tile {18, -34}
+GameManager                                      [INFO]: Creating tile {19, -36}
+GameManager                                      [INFO]: Creating tile {19, -35}
+GameManager                                      [INFO]: Creating tile {19, -34}
+GameManager                                      [INFO]: Creating tile {20, -36}
+GameManager                                      [INFO]: Creating tile {20, -35}
+GameManager                                      [INFO]: Creating tile {20, -34}
+GameManager                                      [INFO]: Creating tile {9, -35}
+GameManager                                      [INFO]: Creating tile {9, -34}
+GameManager                                      [INFO]: Creating tile {10, -35}
+GameManager                                      [INFO]: Creating tile {10, -34}
+GameManager                                      [INFO]: Creating tile {11, -35}
+GameManager                                      [INFO]: Creating tile {11, -34}
+GameManager                                      [INFO]: Creating tile {12, -35}
+GameManager                                      [INFO]: Creating tile {12, -34}
+GameManager                                      [INFO]: Creating tile {13, -35}
+GameManager                                      [INFO]: Creating tile {13, -34}
+GameManager                                      [INFO]: Creating tile {14, -35}
+GameManager                                      [INFO]: Creating tile {14, -34}
+GameManager                                      [INFO]: Creating tile {5, -34}
+GameManager                                      [INFO]: Creating tile {6, -34}
+GameManager                                      [INFO]: Creating tile {7, -34}
+GameManager                                      [INFO]: Creating tile {8, -34}
+GameManager                                      [INFO]: Creating tile {3, -33}
+GameManager                                      [INFO]: Creating tile {3, -32}
+GameManager                                      [INFO]: Creating tile {4, -33}
+GameManager                                      [INFO]: Creating tile {4, -32}
+GameManager                                      [INFO]: Creating tile {5, -33}
+GameManager                                      [INFO]: Creating tile {5, -32}
+GameManager                                      [INFO]: Creating tile {2, -32}
+GameManager                                      [INFO]: Creating tile {2, -31}
+GameManager                                      [INFO]: Creating tile {2, -30}
+GameManager                                      [INFO]: Creating tile {2, -29}
+GameManager                                      [INFO]: Creating tile {2, -28}
+GameManager                                      [INFO]: Creating tile {2, -27}
+GameManager                                      [INFO]: Creating tile {2, -26}
+GameManager                                      [INFO]: Creating tile {2, -25}
+GameManager                                      [INFO]: Creating tile {2, -24}
+GameManager                                      [INFO]: Creating tile {2, -23}
+GameManager                                      [INFO]: Creating tile {2, -22}
+GameManager                                      [INFO]: Creating tile {2, -21}
+GameManager                                      [INFO]: Creating tile {2, -20}
+GameManager                                      [INFO]: Creating tile {2, -19}
+GameManager                                      [INFO]: Creating tile {2, -18}
+GameManager                                      [INFO]: Creating tile {2, -17}
+GameManager                                      [INFO]: Creating tile {2, -16}
+GameManager                                      [INFO]: Creating tile {1, -31}
+GameManager                                      [INFO]: Creating tile {1, -30}
+GameManager                                      [INFO]: Creating tile {1, -29}
+GameManager                                      [INFO]: Creating tile {1, -28}
+GameManager                                      [INFO]: Creating tile {1, -27}
+GameManager                                      [INFO]: Creating tile {1, -26}
+GameManager                                      [INFO]: Creating tile {1, -25}
+GameManager                                      [INFO]: Creating tile {1, -24}
+GameManager                                      [INFO]: Creating tile {1, -23}
+GameManager                                      [INFO]: Creating tile {1, -22}
+GameManager                                      [INFO]: Creating tile {1, -21}
+GameManager                                      [INFO]: Creating tile {1, -20}
+GameManager                                      [INFO]: Creating tile {1, -19}
+GameManager                                      [INFO]: Creating tile {1, -18}
+GameManager                                      [INFO]: Creating tile {1, -17}
+GameManager                                      [INFO]: Creating tile {0, -25}
+GameManager                                      [INFO]: Creating tile {0, -24}
+GameManager                                      [INFO]: Creating tile {0, -23}
+GameManager                                      [INFO]: Creating tile {0, -22}
+GameManager                                      [INFO]: Creating tile {0, -21}
+GameManager                                      [INFO]: Creating tile {0, -20}
+GameManager                                      [INFO]: Creating tile {0, -19}
+GameManager                                      [INFO]: Creating tile {6, -23}
+GameManager                                      [INFO]: Creating tile {6, -22}
+GameManager                                      [INFO]: Creating tile {6, -21}
+GameManager                                      [INFO]: Creating tile {6, -20}
+GameManager                                      [INFO]: Creating tile {6, -19}
+GameManager                                      [INFO]: Creating tile {6, -18}
+GameManager                                      [INFO]: Creating tile {6, -17}
+GameManager                                      [INFO]: Creating tile {7, -21}
+GameManager                                      [INFO]: Creating tile {7, -20}
+GameManager                                      [INFO]: Creating tile {7, -19}
+GameManager                                      [INFO]: Creating tile {7, -18}
+GameManager                                      [INFO]: Creating tile {8, -20}
+GameManager                                      [INFO]: Creating tile {8, -19}
+GameManager                                      [INFO]: Creating tile {3, -18}
+GameManager                                      [INFO]: Creating tile {3, -17}
+GameManager                                      [INFO]: Creating tile {3, -16}
+GameManager                                      [INFO]: Creating tile {3, -15}
+GameManager                                      [INFO]: Creating tile {4, -18}
+GameManager                                      [INFO]: Creating tile {4, -17}
+GameManager                                      [INFO]: Creating tile {4, -16}
+GameManager                                      [INFO]: Creating tile {4, -15}
+GameManager                                      [INFO]: Creating tile {5, -18}
+GameManager                                      [INFO]: Creating tile {5, -17}
+GameManager                                      [INFO]: Creating tile {5, -16}
+GameManager                                      [INFO]: Creating tile {5, -15}
+GameManager                                      [INFO]: Creating tile {4, -14}
+GameManager                                      [INFO]: Creating tile {4, -13}
+GameManager                                      [INFO]: Creating tile {5, -14}
+GameManager                                      [INFO]: Creating tile {5, -13}
+GameManager                                      [INFO]: Creating tile {5, -12}
+GameManager                                      [INFO]: Creating tile {5, -11}
+GameManager                                      [INFO]: Creating tile {5, -10}
+GameManager                                      [INFO]: Creating tile {6, -10}
+GameManager                                      [INFO]: Creating tile {6, -9}
+GameManager                                      [INFO]: Creating tile {6, -8}
+GameManager                                      [INFO]: Creating tile {8, -5}
+GameManager                                      [INFO]: Creating tile {10, -5}
+GameManager                                      [INFO]: Creating tile {12, -5}
+GameManager                                      [INFO]: Creating tile {23, -21}
+GameManager                                      [INFO]: Creating tile {25, -21}
+GameManager                                      [INFO]: Creating tile {24, -21}
+GameManager                                      [INFO]: Creating tile {3, -20}
+GameManager                                      [INFO]: Creating tile {5, -20}
+GameManager                                      [INFO]: Creating tile {41, -8}
+GameManager                                      [INFO]: Creating tile {41, -10}
+GameManager                                      [INFO]: Creating tile {18, -19}
+GameManager                                      [INFO]: Creating tile {8, -21}
+GameManager                                      [INFO]: Creating tile {24, -36}
+GameManager                                      [INFO]: Creating tile {15, -2}
+GameManager                                      [INFO]: Creating tile {16, -5}
+GameManager                                      [INFO]: Creating tile {44, -11}
+GameManager                                      [INFO]: Creating spawner {11, -5}
+EventBus ApplicationExitEvent                    [INFO]: Adding event listener: 0x00007FF71BC3492A
+EventBus ApplicationExitEvent                    [INFO]: Adding event listener: 0x00007FF71BC32512
+GameManager                                      [INFO]: Creating spawner {9, -5}
+GameManager                                      [INFO]: Creating spawner {4, -20}
+GameManager                                      [INFO]: Creating spawner {41, -9}
+GameManager                                      [INFO]: Creating objective {24, -33}
+EventBus ApplicationExitEvent                    [INFO]: Adding event listener: 0x00007FF71BC3EABA
+EventBus ApplicationExitEvent                    [INFO]: Adding event listener: 0x00007FF71BC2D058
+EventBus ApplicationExitEvent                    [INFO]: Adding event listener: 0x00007FF71BC3E957
+EventBus ApplicationExitEvent                    [INFO]: Adding event listener: 0x00007FF71BC2F731
+EventBus ApplicationExitEvent                    [INFO]: Adding event listener: 0x00007FF71BC37E40
+EventBus ApplicationExitEvent                    [INFO]: Adding event listener: 0x00007FF71BC3F05A
+EventBus ApplicationExitEvent                    [INFO]: Adding event listener: 0x00007FF71BC2D8BE
+EventBus ApplicationExitEvent                    [INFO]: Adding event listener: 0x00007FF71BC310BD
+EventBus ApplicationExitEvent                    [INFO]: Adding event listener: 0x00007FF71BC2AC72
+EventBus ApplicationExitEvent                    [INFO]: Adding event listener: 0x00007FF71BC28940
+EventBus ApplicationExitEvent                    [INFO]: Adding event listener: 0x00007FF71BC3E7E0
+EventBus ApplicationExitEvent                    [INFO]: Adding event listener: 0x00007FF71BC2A06F
+EventBus ApplicationExitEvent                    [INFO]: Adding event listener: 0x00007FF71BC36AB3
+Application                                      [INFO]: Application starting.
+Window                                           [INFO]: Showing window.
+EventBus ApplicationExitEvent                    [INFO]: Adding event listener: 0x00007FF71BC2F551
+EventBus ApplicationExitEvent                    [INFO]: Adding event listener: 0x00007FF71BC3EB41
+EventBus ApplicationExitEvent                    [INFO]: Adding event listener: 0x00007FF71BC2E5CA
+EventBus ApplicationExitEvent                    [INFO]: Adding event listener: 0x00007FF71BC27F77
+EventBus ApplicationExitEvent                    [INFO]: Adding event listener: 0x00007FF71BC315DB
+EventBus ApplicationExitEvent                    [INFO]: Adding event listener: 0x00007FF71BC29976
+EventBus ApplicationExitEvent                    [INFO]: Adding event listener: 0x00007FF71BC31B76
+EventBus ApplicationExitEvent                    [INFO]: Adding event listener: 0x00007FF71BC2D1E8
+EventBus ApplicationExitEvent                    [INFO]: Adding event listener: 0x00007FF71BC35F91
+EventBus ApplicationExitEvent                    [INFO]: Adding event listener: 0x00007FF71BC32314
+Cursor                                           [INFO]: Tower placed, resources: 40
+EventBus ApplicationExitEvent                    [INFO]: Adding event listener: 0x00007FF71BC32E3B
+GameManager                                      [INFO]: Starting wave: 1
+EventBus ApplicationExitEvent                    [INFO]: Adding event listener: 0x00007FF71BC2B087
+EventBus ApplicationExitEvent                    [INFO]: Adding event listener: 0x00007FF71BC2CA27
+EventBus ApplicationExitEvent                    [INFO]: Adding event listener: 0x00007FF71BC2A236
+Objective                                        [INFO]: Objective hit! Health: 4
+Objective                                        [INFO]: Objective hit! Health: 3
+Objective                                        [INFO]: Objective hit! Health: 2
+Objective                                        [INFO]: Objective hit! Health: 1
+Objective                                        [INFO]: Objective hit! Health: 0
+Window                                           [INFO]: Set window title to {YOU LOSE!}
+Enemy                                            [WARN]: Removed 10 enemies after wave has ended.
+Application                                      [INFO]: Application exiting.
+Window                                           [INFO]: Hiding window.
+Application                                      [INFO]: Application exiting.
+EventBus MapLoadedEvent                          [INFO]: Removing event listener: 0x00007FF71BDFE710
+EventBus UpdateEvent                             [INFO]: Removing event listener: 0x00007FF71BC8C2C0
+EventBus UpdateEvent                             [INFO]: Removing event listener: 0x00007FF71BC740E0
+EventBus UpdateEvent                             [INFO]: Removing event listener: 0x00007FF71BE18AA0
+EventBus EarlyUpdateEvent                        [INFO]: Removing event listener: 0x00007FF71BE188D0
+EventBus UpdateEvent                             [INFO]: Removing event listener: 0x00007FF71BD556B0
+EventBus CollisionEvent2D                        [INFO]: Removing event listener: 0x00007FF71BD55050
+EventBus WaveEndEvent                            [INFO]: Removing event listener: 0x00007FF71BD55770
+EventBus UpdateEvent                             [INFO]: Removing event listener: 0x00007FF71BE24A00
+EventBus ResourceUpdateEvent                     [INFO]: Removing event listener: 0x00007FF71BDA25D0
+EventBus WaveStartEvent                          [INFO]: Removing event listener: 0x00007FF71BDA2AD0
+EventBus WaveEndEvent                            [INFO]: Removing event listener: 0x00007FF71BDA29A0
+EventBus UpdateEvent                             [INFO]: Removing event listener: 0x00007FF71BDA26F0
+EventBus UpdateEvent                             [INFO]: Removing event listener: 0x00007FF71BDF0260
+EventBus WaveStartEvent                          [INFO]: Removing event listener: 0x00007FF71BDF03E0
+EventBus WaveEndEvent                            [INFO]: Removing event listener: 0x00007FF71BDF0320
+EventBus UpdateEvent                             [INFO]: Removing event listener: 0x00007FF71BC927F0
+EventBus EarlyUpdateEvent                        [INFO]: Removing event listener: 0x00007FF71BC68060
+EventBus UpdateEvent                             [INFO]: Removing event listener: 0x00007FF71BC82B00
+EventBus CollisionEvent2D                        [INFO]: Removing event listener: 0x00007FF71BDB8660
+EventBus UpdateEvent                             [INFO]: Removing event listener: 0x00007FF71BDE0150
+EventBus EarlyUpdateEvent                        [INFO]: Removing event listener: 0x00007FF71BD23300
+EventBus UpdateEvent                             [INFO]: Removing event listener: 0x00007FF71BD233C0
+EventBus WaveStartEvent                          [INFO]: Removing event listener: 0x00007FF71BD23540
+EventBus WaveEndEvent                            [INFO]: Removing event listener: 0x00007FF71BD23480
+EventBus EarlyUpdateEvent                        [INFO]: Removing event listener: 0x00007FF71BDCD6B0
+EventBus CollisionEvent2D                        [INFO]: Removing event listener: 0x00007FF71BDCCCB0
+EventBus TogglePlayerFireEvent                   [INFO]: Removing event listener: 0x00007FF71BDCD5D0
+EventBus UpdateEvent                             [INFO]: Removing event listener: 0x00007FF71BD39480
+EventBus CursorPosEvent                          [INFO]: Removing event listener: 0x00007FF71BD812E0
+EventBus EarlyUpdateEvent                        [INFO]: Removing event listener: 0x00007FF71BD81250
+EventBus ObjectiveLostEvent                      [INFO]: Removing event listener: 0x00007FF71BD81450
+ContentManager SpriteFont                        [INFO]: Unloading content: font_small
+ContentManager xml_document                      [INFO]: Unloading content: map_default
+ContentManager TextureAtlas                      [INFO]: Unloading content: ui
+GLRenderer                                       [INFO]: Unloading texture atlas: ui
+ContentManager TextureAtlas                      [INFO]: Unloading content: main_atlas
+ContentManager TextureAtlas                      [EROR]: Failed to remove texture {main_atlas} for texture atlas: main_atlas
+GLRenderer                                       [INFO]: Unloading texture atlas: main_atlas
+EventBus WindowFramebufferEvent                  [INFO]: Removing event listener: 0x00007FF71BEF3510
+EventBus UpdateEvent                             [INFO]: Removing event listener: 0x00007FF71BEF3620
+EventBus WindowFramebufferEvent                  [INFO]: Removing event listener: 0x00007FF71BEED630
+EventBus LateUpdateEvent                         [INFO]: Removing event listener: 0x00007FF71BE796C0
+Renderer                                         [INFO]: Destroying.
+EventBus WindowFramebufferEvent                  [INFO]: Removing event listener: 0x00007FF71BF6ED30
+EventBus PostUpdateEvent                         [INFO]: Adding event listener: 0x00007FF71BC38354
+Mouse                                            [INFO]: Destroying.
+EventBus CursorPosEvent                          [INFO]: Removing event listener: 0x00007FF71BEF6FD0
+EventBus MouseButtonEvent                        [INFO]: Removing event listener: 0x00007FF71BEF7030
+EventBus ScrollEvent                             [INFO]: Removing event listener: 0x00007FF71BEF72E0
+Keyboard                                         [INFO]: Destroying.
+EventBus CharEvent                               [INFO]: Removing event listener: 0x00007FF71BE992A0
+EventBus KeyEvent                                [INFO]: Removing event listener: 0x00007FF71BE992F0
+EventBus PostUpdateEvent                         [INFO]: Removing event listener: 0x00007FF71BE995A0
+Window                                           [INFO]: Destroying.
+EventBus ApplicationStartEvent                   [INFO]: Removing event listener: 0x00007FF71BC26A91
+EventBus ApplicationExitEvent                    [INFO]: Removing event listener: 0x00007FF71BC326F7
+EventBus PreUpdateEvent                          [INFO]: Removing event listener: 0x00007FF71BC3B4A0
+EventBus ApplicationStartEvent                   [INFO]: Removing event listener: 0x00007FF71BC33994
+EventBus PreUpdateEvent                          [INFO]: Removing event listener: 0x00007FF71BC29467
+Valkyrie Engine                                  [INFO]: Destroyed Successfully.
