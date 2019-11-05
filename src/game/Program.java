@@ -22,12 +22,14 @@ public class Program
 		TestEntity1 t1 = new TestEntity1(new Vector3f(-5f, 0f, 0f));
 		TestEntity1 t2 = new TestEntity1(new Vector3f(0f, 0f, 0f));
 		TestEntity1 t3 = new TestEntity1(new Vector3f(5f, 0f, 0f));
+		TestEntity1 t4 = new TestEntity1(new Vector3f(-10f, 1f, 1f));
 		
 		Application.start();
 
 		t1.Delete();
 		t2.Delete();
 		t3.Delete();
+		t4.Delete();
 		
 		TestComponent1.destroy();
 		

@@ -201,12 +201,12 @@ font-family: 'Roboto', sans-serif;
 }
 #commanders-section{
     /* background-color: #f5f5f5 !important; */
-    background-color: #ff69b4 !important;
+    background: url("comBackground.jpeg") no-repeat center center;
 
 }
 .commanders{
   padding: 40px 0;
-  background: url("comBackground.jpeg") no-repeat center center;
+
   /* background: #2F4F4F; */
   color: #FFFFFF;
   text-align: center;
