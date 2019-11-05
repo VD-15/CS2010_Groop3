@@ -200,13 +200,18 @@ font-family: 'Roboto', sans-serif;
     max-width: 1100px;
 }
 #commanders-section{
-    background-color: #f5f5f5 !important;
+    /* background-color: #f5f5f5 !important; */
+    background-color: #ff69b4 !important;
 }
 .commanders{
   padding: 40px 0;
   background: #f1f1f1;
   color: #434343;
   text-align: center;
+}
+
+.colouredText{
+  color: #00CED1;
 }
 .inner{
   max-width: 1200px;
@@ -227,23 +232,70 @@ font-family: 'Roboto', sans-serif;
   flex-wrap: wrap;
   justify-content: center;
 }
+
+/* This is for the boxes in the commander section */
 .col{
   flex: 20.33%;
   max-width: 25.33%;
   box-sizing: border-box;
   padding: 15px;
 }
-.commander{
-  background: #fff;
+
+/* changed this */
+.zohron{
+  background: #FFA07A;
   padding: 30px;
   height: 500px;
+  background-image: url("forest.jpeg");
 
 }
-.commander img{
+/* changes this */
+.zohron img{
   width: 100px;
   height: 100px;
   border-radius: 50%;
 }
+/* changed this */
+.karan{
+  background: #FFA07A;
+  padding: 30px;
+  height: 500px;
+  background-image: url("karan.jpeg");
+}
+/* changes this */
+.karan img{
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+}
+/* changed this */
+.valk{
+  background: #FFA07A;
+  padding: 30px;
+  height: 500px;
+  background-image: url("valk.jpeg");
+}
+/* changes this */
+.valk img{
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+}
+/* changed this */
+.p3{
+  background: #FFA07A;
+  padding: 30px;
+  height: 500px;
+  background-image: url("p3.png");
+}
+/* changes this */
+.p3 img{
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+}
+
+
 .name{
   font-size: 20px;
   margin: 20px 0;
