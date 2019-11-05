@@ -126,6 +126,8 @@
     <ClCompile Include="src\engine\utils\Vector.cpp" />
     <ClCompile Include="src\engine\utils\VLKIO.cpp" />
     <ClCompile Include="src\game\Program.cpp" />
+    <ClCompile Include="src\game\ui\CursorEntity.cpp" />
+    <ClCompile Include="src\game\units\TestUnitEntity.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\game\GameManager.h" />
@@ -170,6 +172,8 @@
     <ClInclude Include="src\engine\utils\Timers.h" />
     <ClInclude Include="src\engine\utils\Vector.h" />
     <ClInclude Include="src\engine\utils\VLKIO.h" />
+    <ClInclude Include="src\game\ui\CursorEntity.h" />
+    <ClInclude Include="src\game\units\TestUnitEntity.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

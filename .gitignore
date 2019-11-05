@@ -1,6 +1,6 @@
-*/bin/*
-*/obj/*
-*/.vs/*
+bin/
+obj/
+.vs/
 */[Ee]ditor/
 CS2010_Groop3/Assets/Plugins/**
 CS2010_Groop3/Library/*
