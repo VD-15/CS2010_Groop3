@@ -67,6 +67,24 @@ namespace vlk
 			return std::move(f);
 		}
 
+		template <class U>
+		T* Find(U pred)
+		{
+			std::lock_guard<std::mutex> lock(allocMtx);
+
+			T* t = nullptr;
+
+			for (auto it = chunks.begin(); it != chunks.end(); it++)
+			{
+				Chunk<T>* c = *it;
+				t = c->Find(pred);
+
+				if (t) return t;
+			}
+
+			return nullptr;
+		}
+
 		ULong GetCount() const
 		{
 			ULong count = 0;

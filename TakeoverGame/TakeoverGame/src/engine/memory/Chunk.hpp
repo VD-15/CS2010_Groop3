@@ -78,6 +78,21 @@ namespace vlk
 			return nullptr;
 		}
 
+		template<class U>
+		T* Find(U pred)
+		{
+			auto it = std::find_if(allocations.begin(), allocations.end(), pred);
+
+			if (it == allocations.end())
+			{
+				return nullptr;
+			}
+			else
+			{
+				return *it;
+			}
+		}
+
 		//Removes an element from this chunk.
 		void Remove(T* allocation)
 		{
@@ -102,13 +117,6 @@ namespace vlk
 
 			LogError("Chunk " + TypeToString<T>(), "Failed to remove object from chunk: " + PointerToString(allocation));
 		}
-
-		/*
-		std::vector<T*> GetAll()
-		{
-			return instances;
-		}
-		*/
 
 		//Removes all elements from this chunk.
 		void RemoveAll()

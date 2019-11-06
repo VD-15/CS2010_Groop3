@@ -10,6 +10,12 @@ using namespace vlk;
 
 namespace tkv
 {
+	namespace CursorSystem
+	{
+		void Init();
+		void Destroy();
+	}
+
 	struct CursorComponent : public Component<CursorComponent>, public HeapAllocateComponent
 	{
 		CursorComponent(IEntity* e);

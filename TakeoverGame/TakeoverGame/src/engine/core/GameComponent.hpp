@@ -60,6 +60,26 @@ namespace vlk
 			}
 		}
 
+		static T* Get(IEntity* e)
+		{
+			T* t = nullptr;
+
+			if constexpr (std::is_base_of<HeapAllocateComponent, T>::value)
+			{
+				return HeapAllocator<T>::Get().Find([e](T* t)
+				{
+					return t->GetParent() == e;
+				});
+			}
+			else
+			{
+				return ChunkAllocator<T>::Get().Find([e](T* t)
+				{
+					return t->GetParent() == e;
+				});
+			}
+		}
+
 		static ULong GetCount()
 		{
 			if constexpr (std::is_base_of<HeapAllocateComponent, T>::value)

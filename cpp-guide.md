@@ -466,19 +466,65 @@ MyClass::~MyClass()
 
 ## General C++ stuff
 
+### Primitive types
+
+C exists on multiple different platforms with varying support for different integer lengths. As a result, the primitive types provided by C aren't of consistent length across different architectures. Here's the primitive types provided by the compiler in Microsoft Visual Studio and what they match up to on x86-64:
+
+|Name|Bit Length|Signed|
+|--:|:-:|:-:|
+|`char`|8|Y|
+|`short`|16|Y|
+|`int`|32|Y|
+|`long`|32|Y|
+|`long long`|64|Y|
+|`unsigned char`|8|N|
+|`unsigned short`|16|N|
+|`unsigned int`|32|N|
+|`unsigned long`|32|N|
+|`unsigned long long`|64|N|
+|`float`|32|Y|
+|`double`|64|Y|
+|`long double`|64|Y|
+
+As you can see there's some redundant types. `long` and `int` are actually both 32 bit integers and `double` and `long double` are both double precision floats. To get around this, C++ introduced the `cstdint` header that introduces some typedefs that guarantee certain integer lengths. Some platforms may not have these some of these defined if they don't support numbers that big, but we shouldn't need to worry about that because we're all developing for x86-64 anyway.
+
+|Name|Bit Length|Signed|
+|--:|:-:|:-:|
+|`int8_t`|8|Y|
+|`int16_t`|16|Y|
+|`int32_t`|32|Y|
+|`int64_t`|64|Y|
+|`uint8_t`|8|N|
+|`uint16_t`|16|N|
+|`uint32_t`|32|N|
+|`uint64_t`|64|N|
+
+These are effort to type, so for our engine, I've made some typedefs that simply rename these to things that are a bit more readable.
+
+|Standard Name|Engine Name|
+|--:|:--|
+|`int8_t`|SByte|
+|`int16_t`|Short|
+|`int32_t`|Int|
+|`int64_t`|Long|
+|`uint8_t`|Byte|
+|`uint16_t`|UShort|
+|`uint32_t`|UInt|
+|`uint64_t`|ULong|
+
 ### Namespace STD
 
-Namespace std is C++'s standard library. A combination of utility classes split up over several headers. Namespace std encapsulates everything inside of the C++ standard library. Below are some Java ADT's and their C++ equivalents.
+Namespace `std` is C++'s standard library. A combination of utility classes split up over several headers. Namespace `std` encapsulates everything inside of the C++ standard library. Below are some Java ADT's and their C++ equivalents.
 
 |Java|C++|
 |---:|:--|
-|ArrayList|vector|
-|HashMap|map|
-|HashMap|unordered_map|
-|HashSet|set|
-|HashSet|unordered_set|
+|ArrayList|std::vector|
+|HashMap|std::map|
+|HashMap|std::unordered_map|
+|HashSet|std::set|
+|HashSet|std::unordered_set|
 
-### Casting
+Namespace `std` also contains several helpful algorithms in the `<algorithm>` header and time functions in the `<chrono>` header. `std` is a namespace, so treat it like one. As a general rule of thumb, you should never type `using namespace std` because it can introduce some name clashes with your variables or classes depending on the implementation of the library.
 
 ### Iterators
 
@@ -617,5 +663,82 @@ void SomeOtherFunction()
 	MyOtherClass myOtherClass;
 
 	//Only Foo1() visible here
+}
+```
+
+### Casting
+
+There are multiple types of casts in C++ that do different things. Knowing when to use the right one is important because some will give different results to others. First, there's `static_cast`, this is mainly done to convert between primitive types, (i.e. `int` to `float`, etc.). This is the cast you will be using most often.
+
+```cpp
+//Example.cpp
+
+void Foo()
+{
+	int i = 15;
+
+	//Convert i to a float
+	float f = static_cast<float>(i);
+}
+```
+
+The `dynamic_cast` is used primarily for inheritance when converting between different types of object. `dynamic_cast` can only work on pointers to objects and it's important that you use it in place of `static_cast` here, because `static_cast` can't move up the inheritance hierarchy, whereas `dynamic_cast` can while doing so safely as well. If `dynamic_cast` fails, it will return nullptr for easy checking.
+
+```cpp
+//Example.cpp
+
+void Foo()
+{
+	MyClass* myParent = new MyClass();
+
+	//Obtain a base class of myParent
+	MyBase* myBase = dynamic_cast<MyBase>(myParent);
+
+	if (!myBase)
+	{
+		//Cast failed
+	}
+}
+```
+
+The `const_cast` removes `const` modifiers of objects or types. You should never need to use `const_cast` if you're using `const` appropriately. It's helpful for testing purposes, but it can seriously mess with code that expects `const`-ness to be upheld. Use with caution.
+
+```cpp
+//Example.cpp
+
+void Foo()
+{
+	int i = 4;
+	const int& iRef = i;
+
+	//modify const reference to i
+	const_cast<int&>(iRef) = 5;
+}
+```
+
+The `reinterpret_cast` converts one type of pointer to another, regardless of whether the two types are related and doesn't perform any sort of conversion. You shouldn't need to do this unless you're doing some fancy stuff with memory or void pointers.
+
+```cpp
+//Example.cpp
+
+void Foo()
+{
+	long long l = 4;
+	
+	int* i = reinterpret_cast<int>(&l);
+	char* c = reinterpret_cast<char>(&l);
+}
+```
+
+Finally there's the C-style cast. This is a hangover from C and acts most similarly to a `static_cast` in most cases. Generally avoid using this if you can, there's multiple valid casts for certain situations and with a C-style cast, you don't know which one you're going to end up using.
+
+```cpp
+//Example.cpp
+
+void Foo()
+{
+	long long l = 4;
+	
+	int i = (int)l;
 }
 ```

@@ -45,6 +45,21 @@ namespace vlk
 			return std::for_each(allocations.begin(), allocations.end(), f);
 		}
 
+		template <class U>
+		T* Find(U pred)
+		{
+			auto it = std::find_if(allocations.begin(), allocations.end(), pred);
+
+			if (it == allocations.end())
+			{
+				return nullptr;
+			}
+			else
+			{
+				return *it;
+			}
+		}
+
 		ULong GetCount() const
 		{
 			return allocations.size();
