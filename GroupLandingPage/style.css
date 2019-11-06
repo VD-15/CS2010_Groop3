@@ -22,7 +22,7 @@ h3 {
 }
 
 h1 {
-  font-size: 35;
+  font-size: 40;
 }
 #header {
     background: url("banner1.jpg") no-repeat center center;
@@ -171,12 +171,23 @@ font-family: 'Roboto', sans-serif;
     background-color: #1BCFC9;
 }
 
-#about-section,
+#about-section {
+  background: url("space.jpg");
+
+  margin: auto;
+  max-width: auto;
+  color: #000000;
+  text-align: center;
+  padding: 50px 0;
+}
+
+
+/* #about-section, */
 #downloads-section {
+    background: #000000;
     display: block;
-    margin: 4em auto;
-    max-width: 85vw;
-    line-height: 1.5;
+    margin: 0em auto;
+    max-width: auto;
     text-align: center;
     color: #353439;
     padding: 50px 0;
@@ -295,7 +306,7 @@ font-family: 'Roboto', sans-serif;
   background: #FFA07A;
   padding: 30px;
   height: 500px;
-  background-image: url("p32.png");
+  background-image: url("p3.png");
 }
 /* changes this */
 .p3 img{
