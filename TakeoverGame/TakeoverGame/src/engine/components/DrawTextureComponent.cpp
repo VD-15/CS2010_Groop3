@@ -8,4 +8,6 @@ DrawTextureComponent2D::DrawTextureComponent2D(IEntity* e, const TransformCompon
 {
 	this->transform = transform;
 	this->texture = texture;
+	this->size.Set(texture->Width(), texture->Height());
+	this->origin.Set(0.5f, 0.5f);
 }

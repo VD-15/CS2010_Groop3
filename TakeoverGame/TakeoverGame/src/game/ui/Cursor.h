@@ -5,6 +5,7 @@
 #include "../../engine/core/GameEntity.hpp"
 #include "../../engine/components/TransformComponent.h"
 #include "../../engine/components/DrawTextureComponent.h"
+#include "../../engine/components/UIComponent.h"
 
 using namespace vlk;
 
@@ -23,6 +24,7 @@ namespace tkv
 
 		TransformComponent2D* transform;
 		DrawTextureComponent2D* draw;
+		UIComponent* ui;
 	};
 
 	struct CursorEntity : public Entity<CursorEntity>, public HeapAllocateEntity

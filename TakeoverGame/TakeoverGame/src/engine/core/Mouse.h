@@ -37,6 +37,7 @@ namespace vlk
 		Boolean IsButtonReleased(MouseButton button);
 
 		Vector2 GetPosition();
+		Vector2 GetCenteredPosition();
 		Vector2 GetPositionDelta();
 
 		Vector2 GetScroll();

@@ -18,7 +18,7 @@
 #include "../components/CameraComponent.h"
 #include "../components/UIComponent.h"
 #include "../utils/Logger.h"
-#include "ContentManager.h"
+#include "ContentManager.hpp"
 #include "VLKTime.h"
 #include "VLKRandom.h"
 #include "Window.h"
@@ -43,7 +43,7 @@ void vlk::Init()
 		Window::Init();
 		Keyboard::Init();
 		Mouse::Init();
-		ContentManager::Init();
+		ContentSystem::Init();
 
 		//TODO: Expose this somewhere
 		Renderer::SetRenderer(GLRenderer::Init, GLRenderer::Draw, GLRenderer::Destroy);
@@ -68,7 +68,7 @@ void vlk::Destroy()
 		CollisionSystem::Destroy();
 
 		Renderer::Destroy();
-		ContentManager::Destroy();
+		ContentSystem::Destroy();
 		Mouse::Destroy();
 		Keyboard::Destroy();
 		Window::Destroy();

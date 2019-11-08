@@ -10,5 +10,8 @@ namespace vlk
 		DrawTextureComponent2D(IEntity* e, const TransformComponent2D* transform, const Texture2D* texture);
 
 		const Texture2D* texture;
+
+		Vector2 origin;
+		Vector2 size;
 	};
 }

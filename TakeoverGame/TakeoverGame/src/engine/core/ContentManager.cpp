@@ -1,4 +1,4 @@
-#include "ContentManager.h"
+#include "ContentManager.hpp"
 
 #include <unordered_map>
 #include <fstream>
@@ -12,116 +12,12 @@ using namespace vlk;
 
 namespace
 {
-	std::unordered_map<std::string, TextureAtlas*> atlases;
-	std::unordered_map<std::string, Texture2D*> textures;
-	std::unordered_map<std::string, StringCollection*> strings;
-	std::unordered_map<std::string, pugi::xml_document*> xmls;
-	std::unordered_map<std::string, SpriteFont*> fonts;
-
-	std::string contentDir = "content/";
 	pugi::xml_document contentDoc;
-
-	pugi::xml_node FindNodeByName(const std::string& name, const std::string& type)
-	{
-		for (pugi::xml_node node = contentDoc.first_child().child(type.c_str()); node; node = node.next_sibling(type.c_str()))
-		{
-			if (!strcmp(node.attribute("name").value(), name.c_str()))
-			{
-				return node;
-			}
-		}
-
-		return pugi::xml_node();
-	}
 }
 
-TextureAtlasLoadedEvent::TextureAtlasLoadedEvent(const TextureAtlas* atlas, const std::string& name) :
-	Event(),
-	atlas(atlas),
-	name(name)
+void ContentSystem::Init()
 {
-
-}
-
-TextureAtlasUnloadedEvent::TextureAtlasUnloadedEvent(const TextureAtlas* atlas, const std::string& name) :
-	Event(),
-	atlas(atlas),
-	name(name)
-{
-
-}
-
-Texture2DLoadedEvent::Texture2DLoadedEvent(const Texture2D* texture, const std::string& name) :
-	Event(),
-	texture(texture),
-	name(name)
-{
-
-}
-
-Texture2DUnloadedEvent::Texture2DUnloadedEvent(const Texture2D* texture, const std::string& name) :
-	Event(),
-	texture(texture),
-	name(name)
-{
-
-}
-
-StringCollectionLoadedEvent::StringCollectionLoadedEvent(const StringCollection* collection, const std::string& name) :
-	Event(),
-	collection(collection),
-	name(name)
-{
-
-}
-
-StringCollectionUnloadedEvent::StringCollectionUnloadedEvent(const StringCollection* collection, const std::string& name) :
-	Event(),
-	collection(collection),
-	name(name)
-{
-
-}
-
-XMLDocumentLoadedEvent::XMLDocumentLoadedEvent(const XmlDocument* document, const std::string& name) :
-	Event(),
-	document(document),
-	name(name)
-{
-
-}
-
-XMLDocumentUnloadedEvent::XMLDocumentUnloadedEvent(const XmlDocument* document, const std::string& name) :
-	Event(),
-	document(document),
-	name(name)
-{
-
-}
-
-SpriteFontLoadedEvent::SpriteFontLoadedEvent(const SpriteFont* font, const std::string& name) :
-	Event(),
-	font(font),
-	name(name)
-{
-
-}
-
-SpriteFontUnloadedEvent::SpriteFontUnloadedEvent(const SpriteFont* font, const std::string& name) :
-	Event(),
-	font(font),
-	name(name)
-{
-
-}
-
-void ContentManager::Init()
-{
-	atlases.clear();
-	textures.clear();
-	strings.clear();
-
-	pugi::xml_parse_result result = contentDoc.load_file((contentDir + "Content.xml").c_str());
+	pugi::xml_parse_result result = contentDoc.load_file("Content.xml");
 
 	if (result.status != pugi::xml_parse_status::status_ok)
 	{
@@ -130,56 +26,17 @@ void ContentManager::Init()
 	}
 }
 
-void ContentManager::Destroy()
+void ContentSystem::Destroy()
 {
 	contentDoc.reset();
-
-	//Clear textures
-	for (auto it = textures.begin(); it != textures.end(); it++)
-	{
-		EventBus<Texture2DUnloadedEvent>::Get().PostEvent({ it->second, it->first });
-		delete it->second;
-	}
-
-	textures.clear();
-
-	//Clear atlases
-	for (auto it = atlases.begin(); it != atlases.end(); it++)
-	{
-		EventBus<TextureAtlasUnloadedEvent>::Get().PostEvent({ it->second, it->first });
-		delete it->second;
-	}
-
-	atlases.clear();
-
-	//Clear strings
-	for (auto it = strings.begin(); it != strings.end(); it++)
-	{
-		EventBus<StringCollectionUnloadedEvent>::Get().PostEvent({ it->second, it->first });
-		delete it->second;
-	}
-
-	strings.clear();
-
-	//Clear XML docs
-	for (auto it = xmls.begin(); it != xmls.end(); it++)
-	{
-		EventBus<XMLDocumentUnloadedEvent>::Get().PostEvent({ it->second, it->first });
-		delete it->second;
-	}
-
-	xmls.clear();
-
-	//Clear Spritefonts
-	for (auto it = fonts.begin(); it != fonts.end(); it++)
-	{
-		EventBus<SpriteFontUnloadedEvent>::Get().PostEvent({ it->second, it->first });
-		delete it->second;
-	}
-
-	fonts.clear();
 }
 
+pugi::xml_node ContentSystem::GetRootNode()
+{
+	return contentDoc.first_child();
+}
+
+/*
 void ContentManager::SetContentDirectory(const std::string& path)
 {
 	if (!contentDoc.empty())
@@ -288,13 +145,6 @@ const TextureAtlas* ContentManager::LoadContent<TextureAtlas>(const std::string&
 		Float hVal = child.child("height").text().as_float(0.0f);
 		Float oxVal = child.child("origin_x").text().as_float(defValue);
 		Float oyVal = child.child("origin_y").text().as_float(defValue);
-		/*
-		xVal += 0.5f;
-		yVal += 0.5f;
-
-		wVal -= 0.5f;
-		hVal -= 0.5f;
-		*/
 		if (oxVal == defValue) oxVal = wVal / 2.0f;
 		if (oyVal == defValue) oyVal = hVal / 2.0f;
 
@@ -700,3 +550,4 @@ void ContentManager::UnloadContent<SpriteFont>(const std::string& name)
 		LogError("ContentManager " + TypeToString<SpriteFont>(), "Failed to remove content with name: " + name);
 	}
 }
+*/

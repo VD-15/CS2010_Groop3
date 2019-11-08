@@ -69,6 +69,7 @@ namespace vlk
 		inline Vector2& operator/=(Float f)					{ this->x /= f; this->y /= f; return *this; }
 		inline Vector2& operator*=(const Vector2& v)		{ this->x *= v.x; this->y *= v.y; return *this; }
 
+		void Set(Float x, Float y);
 		void Rotate(Float angle);
 		void RotateAround(const Vector2& origin, Float angle);
 		void Normalize();

@@ -99,6 +99,12 @@ Vector2& Vector2::operator=(const Vector2& other)
 
 Vector2::~Vector2() {}
 
+void Vector2::Set(Float x, Float y)
+{
+	this->x = x;
+	this->y = y;
+}
+
 void Vector2::Rotate(Float angle)
 {
 	float cosa = std::cosf(angle);

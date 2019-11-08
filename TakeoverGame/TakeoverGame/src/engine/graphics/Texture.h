@@ -1,30 +1,31 @@
 #pragma once
 
-#include "TextureAtlas.h"
-#include "../core/ValkyrieEngine.h"
-#include "../utils/Vector.h"
+#include "../core/Content.h"
 
 namespace vlk
 {
-	class Texture2D final : public NonClonable
+	/*
+	Valid meta tags:
+	[wrap_mode]	repeat, mirror, clamp, border (default: border)
+	[mipmap] true, false (default: true)
+	[filter_mode] linear, nearest (default: linear) (overrides to linear if mipmap is true)
+	*/
+	class Texture2D : public Content
 	{
 		public:
-		Texture2D(const TextureAtlas* atlas, Pair<Float> location, Pair<Float> size, Pair<Float> origin);
+		Texture2D();
+		~Texture2D();
 
-		const Vector2 location;
-		const Vector2 size;
-		const Vector2 origin;
+		inline const Byte* const Data() const { return data; }
+		inline const Int Width() const { return width; }
+		inline const Int Height() const { return height; }
 
-		/*
-		* All of these are relative to the texture atlas the texture is a part of.
-		* Values should be within the range of 0.0f to 1.0f inclusive
-		*/
+		void LoadContent(const std::string& path) override;
+		const std::string& GetContentName() const override;
 
-		const Vector2 topLeft;
-		const Vector2 topRight;
-		const Vector2 bottomLeft;
-		const Vector2 bottomRight;
-
-		const TextureAtlas* const atlas;
+		private:
+		Byte* data;
+		Int width;
+		Int height;
 	};
 }

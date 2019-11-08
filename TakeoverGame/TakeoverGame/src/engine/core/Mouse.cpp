@@ -134,6 +134,13 @@ Vector2 Mouse::GetPosition()
 	return position;
 }
 
+Vector2 Mouse::GetCenteredPosition()
+{
+	Vector2 adj(position - Vector2(Window::GetWidth() / 2.0f, Window::GetHeight() / 2.0f));
+	adj.y *= -1.0f;
+	return adj;
+}
+
 Vector2 Mouse::GetPositionDelta()
 {
 	return position - oldPosition;
