@@ -5,5 +5,5 @@ using namespace tkv;
 TeamComponent::TeamComponent(IEntity* e) :
 	Component<TeamComponent>(e)
 {
-	this->team = 0;
+	this->team = Team::Neutral;
 }

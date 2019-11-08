@@ -11,8 +11,8 @@ using namespace vlk;
 
 namespace tkv
 {
-	constexpr Byte TKV_FLAG_SELECTED;
-	constexpr Byte TKV_FLAG_HOVERED;
+	constexpr Byte TKV_FLAG_SELECTED =	0b0000001;
+	constexpr Byte TKV_FLAG_HOVERED =	0b0000010;
 
 	struct SelectableComponent : public Component<SelectableComponent>
 	{

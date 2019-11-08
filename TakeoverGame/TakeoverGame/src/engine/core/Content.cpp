@@ -9,14 +9,15 @@ void Content::AddMetaTag(const std::string& name, const std::string& value)
 
 const std::string& Content::GetMetaTag(const std::string& name) const
 {
+	static std::string empty("");
 	auto it = metaData.find(name);
 
-	if (it != metaData.end())
+	if (it == metaData.end())
 	{
-		return std::forward<const std::string>(it->second);
+		return empty;
 	}
 	else
 	{
-		return "";
+		return it->second;
 	}
 }

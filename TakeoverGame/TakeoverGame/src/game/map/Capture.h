@@ -23,8 +23,10 @@ namespace tkv
 		const TransformComponent2D* transform;
 		TeamComponent* team;
 
+		Team capturingTeam;
 		Double captureProgress;
 		Double captureThreshold;
+		Float captureRange;
 	};
 
 	struct CaptureBeginEvent : public Event
@@ -55,13 +57,20 @@ namespace tkv
 		const CaptureComponent* const capture;
 	};
 
+	struct CaptureContributorComponent : public Component<CaptureContributorComponent>
+	{
+		CaptureContributorComponent(IEntity* e, const TransformComponent2D* const transform, const TeamComponent* const team);
+		
+		const TransformComponent2D* const transform;
+		const TeamComponent* const team;
+	};
+
 	struct CaptureVisualizerEntity : public Entity<CaptureVisualizerEntity>
 	{
 		CaptureVisualizerEntity(const CaptureComponent* const capture);
 		void Delete() override;
 
 		const CaptureComponent* const capture;
-
-
+		DrawTextureComponent2D* draw;
 	};
 }

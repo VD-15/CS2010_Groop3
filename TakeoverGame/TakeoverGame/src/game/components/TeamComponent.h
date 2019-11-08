@@ -11,10 +11,17 @@ using namespace vlk;
 
 namespace tkv
 {
+	enum class Team
+	{
+		Neutral,
+		Team1,
+		Team2
+	};
+
 	struct TeamComponent : public Component<TeamComponent>
 	{
 		TeamComponent(IEntity* e);
 
-		Byte team;
+		Team team;
 	};
 }

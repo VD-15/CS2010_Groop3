@@ -93,6 +93,7 @@
     <ClCompile Include="src\engine\core\Content.cpp" />
     <ClCompile Include="src\engine\graphics\OpenGL\VertexArray.cpp" />
     <ClCompile Include="src\engine\utils\XmlDocument.cpp" />
+    <ClCompile Include="src\game\components\Selectable.cpp" />
     <ClCompile Include="src\game\GameManager.cpp" />
     <ClCompile Include="src\engine\components\CameraComponent.cpp" />
     <ClCompile Include="src\engine\components\ColliderComponent.cpp" />
@@ -128,6 +129,7 @@
     <ClCompile Include="src\engine\utils\Vector.cpp" />
     <ClCompile Include="src\engine\utils\VLKIO.cpp" />
     <ClCompile Include="src\game\map\Building.cpp" />
+    <ClCompile Include="src\game\map\Capture.cpp" />
     <ClCompile Include="src\game\map\GameMap.cpp" />
     <ClCompile Include="src\game\Program.cpp" />
     <ClCompile Include="src\game\ui\Cursor.cpp" />
@@ -139,6 +141,7 @@
     <ClInclude Include="src\engine\core\Content.h" />
     <ClInclude Include="src\engine\graphics\OpenGL\VertexArray.h" />
     <ClInclude Include="src\engine\utils\XmlDocument.h" />
+    <ClInclude Include="src\game\components\Selectable.h" />
     <ClInclude Include="src\game\GameManager.h" />
     <ClInclude Include="src\engine\components\CameraComponent.h" />
     <ClInclude Include="src\engine\components\ColliderComponent.h" />
@@ -181,6 +184,7 @@
     <ClInclude Include="src\engine\utils\Vector.h" />
     <ClInclude Include="src\engine\utils\VLKIO.h" />
     <ClInclude Include="src\game\map\Building.h" />
+    <ClInclude Include="src\game\map\Capture.h" />
     <ClInclude Include="src\game\map\GameMap.h" />
     <ClInclude Include="src\game\Takover.h" />
     <ClInclude Include="src\game\ui\Cursor.h" />
