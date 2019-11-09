@@ -153,6 +153,9 @@
     <ClCompile Include="src\game\map\Capture.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="src\game\components\CommandReciever.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\engine\components\CameraComponent.h">
@@ -312,6 +315,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="src\game\components\Selectable.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\game\components\CommandReciever.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

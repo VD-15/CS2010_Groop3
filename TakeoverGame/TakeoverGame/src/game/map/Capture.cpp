@@ -15,6 +15,8 @@ namespace
 
 			auto find = CaptureContributorComponent::ForEach([&c, &numCapturing, &numContesting](CaptureContributorComponent* cap)
 			{
+				if (cap->team->team == c->team->team) return;
+
 				if ((c->transform->location - cap->transform->location).Magnitude() < c->captureRange)
 				{
 					if (c->capturingTeam == Team::Neutral)
@@ -45,6 +47,10 @@ namespace
 						{
 							c->captureProgress = captureAmount;
 							EventBus<CaptureEvent>::Get().PostEvent({ c, CaptureAction::Begin });
+
+							c->draw = DrawTextureComponent2D::CreateComponent(c->GetParent(), c->transform, ContentManager<Texture2D>::Get().GetContent("cap_0"));
+							c->draw->depth = tkv::DEPTH_CAPTURE;			
+
 							LogInfo("CaptureComponent", "Capture begin");
 						}
 						else
@@ -53,16 +59,24 @@ namespace
 							{
 								c->isPaused = false;
 								EventBus<CaptureEvent>::Get().PostEvent({ c, CaptureAction::Resume });
+
+								c->draw->color = Color::WHITE;
+
 								LogInfo("CaptureComponent", "Capture resume");
 							}
 
 							c->captureProgress += captureAmount;
+
+							c->draw->texture = ContentManager<Texture2D>::Get().GetContent("cap_" + std::to_string(static_cast<Int>(c->captureProgress * 10.0 / c->captureThreshold)));
 
 							if (c->captureProgress > c->captureThreshold)
 							{
 								c->team->team = c->capturingTeam;
 								c->captureProgress = 0.0;
 								EventBus<CaptureEvent>::Get().PostEvent({ c, CaptureAction::Complete });
+
+								c->draw->Delete();
+
 								LogInfo("CaptureComponent", "Capture complete");
 							}
 						}
@@ -72,6 +86,9 @@ namespace
 						if (!c->isPaused)
 						{
 							EventBus<CaptureEvent>::Get().PostEvent({ c, CaptureAction::Pause });
+
+							c->draw->color = Color(0.5f, 0.5f, 0.5f, 1.0f);
+
 							LogInfo("CaptureComponent", "Capture pause");
 						}
 					}
@@ -85,6 +102,9 @@ namespace
 						c->capturingTeam = Team::Neutral;
 						c->isPaused = false;
 						EventBus<CaptureEvent>::Get().PostEvent({ c, CaptureAction::Fail });
+
+						c->draw->Delete();
+
 						LogInfo("CaptureComponent", "Capture fail");
 					}
 				}
@@ -114,6 +134,13 @@ CaptureComponent::CaptureComponent(IEntity* e, const TransformComponent2D* trans
 	this->captureRange = 64.0f;
 	this->capturingTeam = Team::Neutral;
 	this->isPaused = false;
+
+	this->draw = nullptr;
+}
+
+void CaptureComponent::OnDelete()
+{
+	if (this->draw) this->draw->Delete();
 }
 
 CaptureEvent::CaptureEvent(const CaptureComponent* const capture, CaptureAction action) :
@@ -129,15 +156,4 @@ CaptureContributorComponent::CaptureContributorComponent(IEntity* e, const Trans
 	team(team)
 {
 
-}
-
-CaptureVisualizerEntity::CaptureVisualizerEntity(const CaptureComponent* const capture) :
-	capture(capture)
-{
-	this->draw = CreateComponent<DrawTextureComponent2D>(capture->transform, ContentManager<Texture2D>::Get().GetContent("capture_0"));
-}
-
-void CaptureVisualizerEntity::OnDelete()
-{
-	draw->Delete();
 }

@@ -7,6 +7,8 @@
 #include "../../engine/components/DrawTextureComponent.h"
 #include "../../engine/components/UIComponent.h"
 
+#include "TeamComponent.h"
+
 using namespace vlk;
 
 namespace tkv
@@ -22,19 +24,21 @@ namespace tkv
 
 	struct SelectableComponent : public Component<SelectableComponent>
 	{
-		typedef void SelectFun();
-
-		SelectableComponent(IEntity* e, const TransformComponent2D* const transform);
+		SelectableComponent(IEntity* e, const TransformComponent2D* const transform, const TeamComponent* team);
+		void OnDelete() override;
 
 		SByte priority;
 		Byte flags;
 		Float hoverRadius;
-
-		SelectFun OnSelect;
-		SelectFun OnDeselect;
-		SelectFun OnHoverEnter;
-		SelectFun OnHoverLeave;
 		
 		const TransformComponent2D* const transform;
+		const TeamComponent* const team;
+
+		DrawTextureComponent2D* draw;
+
+		void OnSelect();
+		void OnDeselect();
+		void OnHoverEnter();
+		void OnHoverLeave();
 	};
 }

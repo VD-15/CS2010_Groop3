@@ -3,7 +3,9 @@
 #include "../../engine/core/ContentManager.hpp"
 #include "../../engine/core/VLKRandom.h"
 #include "../../engine/core/VLKTime.h"
+#include "../../engine/components/CameraComponent.h"
 #include "../Takover.h"
+#include "../components/CommandReciever.h"
 
 using namespace tkv;
 
@@ -43,12 +45,17 @@ namespace
 
 			if (Mouse::IsButtonPressed(MouseButtons::BUTTON_LEFT))
 			{
+				c->selectStartPos = CameraComponent2D::ACTIVE->GetMousePosition();
 				EventBus<MouseSelectEvent>::Get().PostEvent({ true, c });
-				c->selectStartPos = mousePos;
 			}
 			else if (Mouse::IsButtonReleased(MouseButtons::BUTTON_LEFT))
 			{
 				EventBus<MouseSelectEvent>::Get().PostEvent({ false, c });
+			}
+
+			if (Mouse::IsButtonPressed(MouseButtons::BUTTON_RIGHT))
+			{
+				EventBus<CommandIssuedEvent>::Get().PostEvent(CameraComponent2D::ACTIVE->GetMousePosition());
 			}
 
 			//c->transform->rotation += VLKTime::DeltaTime<Float>();
@@ -59,9 +66,11 @@ namespace
 
 	void OnUpdate(UpdateEvent& ev)
 	{
-		auto update = MouseSelectionBoxComponent::ForEach([](MouseSelectionBoxComponent* c)
+		Vector2 mousePos(CameraComponent2D::ACTIVE->GetMousePosition());
+
+		auto update = MouseSelectionBoxComponent::ForEach([mousePos](MouseSelectionBoxComponent* c)
 		{
-			Vector2 size = (c->cursor->transform->location - c->cursor->selectStartPos);
+			Vector2 size = (mousePos - c->cursor->selectStartPos);
 			c->transform->location = c->cursor->selectStartPos + size * 0.5f;
 			c->draw->size = size;
 		});
@@ -95,11 +104,14 @@ CursorComponent::CursorComponent(IEntity* e) :
 	this->transform = TransformComponent2D::CreateComponent(e);
 	this->draw = DrawTextureComponent2D::CreateComponent(e, transform, ContentManager<Texture2D>::Get().GetContent("cursor"));
 	this->ui = UIComponent::CreateComponent(e, transform);
+	this->team = TeamComponent::CreateComponent(e);
 
 	this->ui->dock = DockType::Center;
 	this->draw->flags = VLK_SCREEN_RELATIVE_BIT;
 	this->draw->origin.Set(0.0f, 1.0f);
 	this->draw->depth = tkv::DEPTH_CURSOR;
+
+	this->team->team = Team::Team1;
 }
 
 void CursorComponent::OnDelete()
@@ -130,7 +142,7 @@ MouseSelectionBoxComponent::MouseSelectionBoxComponent(IEntity* e, const CursorC
 	this->draw = DrawTextureComponent2D::CreateComponent(e, transform, ContentManager<Texture2D>::Get().GetContent("debug"));
 
 	this->draw->color = Color(0.0f, 0.75f, 0.0f, 0.5f);
-	this->draw->flags = VLK_TRANSLUCENT_BIT | VLK_SCREEN_RELATIVE_BIT;
+	this->draw->flags = VLK_TRANSLUCENT_BIT;
 	this->draw->depth = tkv::DEPTH_CURSOR;
 }
 

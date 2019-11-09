@@ -5,4 +5,18 @@
     <texture name="map" path="textures/test_map.png"></texture>
     <texture name="factory" path="textures/factory.png"></texture>
     <texture name="debug" path="textures/dbg.png"><wrap_mode>mirror</wrap_mode></texture>
+    <texture name="hover_outline" path="textures/hover_outline.png"></texture>
+    <texture name="select_outline" path="textures/select_outline.png"></texture>
+    <texture name="unit" path="textures/unit.png"></texture>
+    <texture name="cap_0" path="textures/capture/capture_0.png"></texture>
+    <texture name="cap_1" path="textures/capture/capture_1.png"></texture>
+    <texture name="cap_2" path="textures/capture/capture_2.png"></texture>
+    <texture name="cap_3" path="textures/capture/capture_3.png"></texture>
+    <texture name="cap_4" path="textures/capture/capture_4.png"></texture>
+    <texture name="cap_5" path="textures/capture/capture_5.png"></texture>
+    <texture name="cap_6" path="textures/capture/capture_6.png"></texture>
+    <texture name="cap_7" path="textures/capture/capture_7.png"></texture>
+    <texture name="cap_8" path="textures/capture/capture_8.png"></texture>
+    <texture name="cap_9" path="textures/capture/capture_9.png"></texture>
+    <texture name="cap_10" path="textures/capture/capture_10.png"></texture>
 </content>

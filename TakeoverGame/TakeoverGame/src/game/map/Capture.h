@@ -1,5 +1,6 @@
 #pragma once
 
+#include "../Takover.h"
 #include "../GameManager.h"
 #include "../components/TeamComponent.h"
 
@@ -19,6 +20,7 @@ namespace tkv
 	struct CaptureComponent : public Component<CaptureComponent>
 	{
 		CaptureComponent(IEntity* e, const TransformComponent2D* transform, TeamComponent* team);
+		void OnDelete() override;
 
 		const TransformComponent2D* transform;
 		TeamComponent* team;
@@ -28,6 +30,8 @@ namespace tkv
 		Double captureThreshold;
 		Float captureRange;
 		Boolean isPaused;
+
+		DrawTextureComponent2D* draw;
 	};
 
 	enum class CaptureAction
@@ -53,14 +57,5 @@ namespace tkv
 		
 		const TransformComponent2D* const transform;
 		const TeamComponent* const team;
-	};
-
-	struct CaptureVisualizerEntity : public Entity<CaptureVisualizerEntity>
-	{
-		CaptureVisualizerEntity(const CaptureComponent* const capture);
-		void OnDelete() override;
-
-		const CaptureComponent* const capture;
-		DrawTextureComponent2D* draw;
 	};
 }

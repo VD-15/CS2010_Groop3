@@ -239,7 +239,8 @@ namespace
 			}
 
 			glBindTexture(GL_TEXTURE_2D, textureMap[(*it)->texture]);
-			glDrawElementsInstanced(GL_TRIANGLES, 6, GL_UNSIGNED_INT, reinterpret_cast<void*>(static_cast<ULong>(lastDraw) * 6 * 4), thisTex - lastDraw);
+			glDrawElements(GL_TRIANGLES, 6 * (thisTex - lastDraw), GL_UNSIGNED_INT, reinterpret_cast<void*>(static_cast<ULong>(lastDraw) * 6 * 4));
+			//glDrawElementsInstanced(GL_TRIANGLES, 6, GL_UNSIGNED_INT, reinterpret_cast<void*>(static_cast<ULong>(lastDraw) * 6 * 4), thisTex - lastDraw);
 			lastDraw = thisTex;
 		}
 

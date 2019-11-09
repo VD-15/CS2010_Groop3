@@ -7,6 +7,8 @@
 #include "../../engine/components/DrawTextureComponent.h"
 #include "../../engine/components/UIComponent.h"
 
+#include "../components/TeamComponent.h"
+
 using namespace vlk;
 
 namespace tkv
@@ -27,6 +29,7 @@ namespace tkv
 		TransformComponent2D* transform;
 		DrawTextureComponent2D* draw;
 		UIComponent* ui;
+		TeamComponent* team;
 	};
 
 	struct MouseSelectEvent : public Event

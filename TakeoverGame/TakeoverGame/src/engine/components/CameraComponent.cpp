@@ -1,5 +1,6 @@
 #include "CameraComponent.h"
 #include "../core/Window.h"
+#include "../../engine/core/Mouse.h"
 
 using namespace vlk;
 
@@ -7,13 +8,12 @@ namespace
 {
 	void OnResize(vlk::WindowFramebufferEvent& ev)
 	{
-		CameraComponent2D::ForEach([ev](CameraComponent2D* c)
+		auto resize = CameraComponent2D::ForEach([ev](CameraComponent2D* c)
 		{
 			if (c->autoResize)
 			{
 				c->viewport.x = ev.width / 2.0f;
 				c->viewport.y = ev.height / 2.0f;
-
 			}
 		});
 	}
@@ -29,7 +29,7 @@ void Camera::Destroy()
 	EventBus<WindowFramebufferEvent>::Get().RemoveEventListener(OnResize);
 }
 
-CameraComponent2D* CameraComponent2D::ACTIVE = nullptr;
+const CameraComponent2D* CameraComponent2D::ACTIVE = nullptr;
 
 CameraComponent2D::CameraComponent2D(IEntity* e, TransformComponent2D* transform) :
 	Component(e)
@@ -47,6 +47,11 @@ CameraComponent2D::CameraComponent2D(IEntity* e, TransformComponent2D* transform
 void CameraComponent2D::Activate()
 {
 	CameraComponent2D::ACTIVE = this;
+}
+
+Vector2 CameraComponent2D::GetMousePosition() const
+{
+	return Mouse::GetCenteredPosition() + this->transform->location;
 }
 
 Matrix4 CameraComponent2D::GetProjection() const

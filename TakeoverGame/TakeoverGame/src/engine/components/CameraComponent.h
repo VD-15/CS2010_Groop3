@@ -14,12 +14,13 @@ namespace vlk
 	struct CameraComponent2D : public Component<CameraComponent2D>
 	{
 		//The active camera
-		static CameraComponent2D* ACTIVE;
+		static const CameraComponent2D* ACTIVE;
 
 		CameraComponent2D(IEntity* e, TransformComponent2D* transform);
 
 		void Activate();
 
+		Vector2 GetMousePosition() const;
 		Matrix4 GetProjection() const;
 		Matrix4 GetView() const;
 
