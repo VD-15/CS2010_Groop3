@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>16.0</VCProjectVersion>
+    <ProjectGuid>{8057AF8E-ACDA-4754-8B79-DC1C84BF9229}</ProjectGuid>
+    <RootNamespace>TakeoverGame</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+    <UseOfMfc>false</UseOfMfc>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+    <UseOfMfc>false</UseOfMfc>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <OutDir>$(ProjectDir)bin/$(Configuration)/</OutDir>
+    <IntDir>$(ProjectDir)obj/$(Configuration)/</IntDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <OutDir>$(ProjectDir)bin/$(Configuration)/</OutDir>
+    <IntDir>$(ProjectDir)obj/$(Configuration)/</IntDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>true</SDLCheck>
+      <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>$(ProjectDir)inc/;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <AdditionalLibraryDirectories>$(ProjectDir)dep/GLEW/$(Configuration)/;$(ProjectDir)dep/GLFW/$(Configuration)/;$(ProjectDir)dep/Pugixml/$(Configuration)/;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>pugixml.lib;opengl32.lib;libglew32.lib;glfw3.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>$(ProjectDir)inc/;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalDependencies>pugixml.lib;opengl32.lib;libglew32.lib;glfw3.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(ProjectDir)dep/GLEW/$(Configuration)/;$(ProjectDir)dep/GLFW/$(Configuration)/;$(ProjectDir)dep/Pugixml/$(Configuration)/;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="src\engine\core\Content.cpp" />
+    <ClCompile Include="src\engine\graphics\OpenGL\VertexArray.cpp" />
+    <ClCompile Include="src\engine\utils\XmlDocument.cpp" />
+    <ClCompile Include="src\game\components\CommandReciever.cpp" />
+    <ClCompile Include="src\game\components\Selectable.cpp" />
+    <ClCompile Include="src\game\GameManager.cpp" />
+    <ClCompile Include="src\engine\components\CameraComponent.cpp" />
+    <ClCompile Include="src\engine\components\ColliderComponent.cpp" />
+    <ClCompile Include="src\engine\components\DrawBaseComponent.cpp" />
+    <ClCompile Include="src\engine\components\DrawPrimitiveComponent.cpp" />
+    <ClCompile Include="src\engine\components\DrawStringComponent.cpp" />
+    <ClCompile Include="src\engine\components\DrawTextureComponent.cpp" />
+    <ClCompile Include="src\engine\components\TransformComponent.cpp" />
+    <ClCompile Include="src\engine\components\UIComponent.cpp" />
+    <ClCompile Include="src\engine\core\Application.cpp" />
+    <ClCompile Include="src\engine\core\ContentManager.cpp" />
+    <ClCompile Include="src\engine\core\Fabricator.cpp" />
+    <ClCompile Include="src\engine\core\Game.cpp" />
+    <ClCompile Include="src\engine\core\IGameComponent.cpp" />
+    <ClCompile Include="src\engine\core\IGameEntity.cpp" />
+    <ClCompile Include="src\engine\core\Keyboard.cpp" />
+    <ClCompile Include="src\engine\core\Mouse.cpp" />
+    <ClCompile Include="src\engine\core\ValkyrieEngine.cpp" />
+    <ClCompile Include="src\engine\core\VLKRandom.cpp" />
+    <ClCompile Include="src\engine\core\VLKTime.cpp" />
+    <ClCompile Include="src\engine\core\Window.cpp" />
+    <ClCompile Include="src\engine\graphics\OpenGL\GLRenderer.cpp" />
+    <ClCompile Include="src\engine\graphics\Renderer.cpp" />
+    <ClCompile Include="src\engine\graphics\SpriteFont.cpp" />
+    <ClCompile Include="src\engine\graphics\Texture.cpp" />
+    <ClCompile Include="src\engine\performance\ThreadPool.cpp" />
+    <ClCompile Include="src\engine\utils\ByteBuffer.cpp" />
+    <ClCompile Include="src\engine\utils\Color.cpp" />
+    <ClCompile Include="src\engine\utils\Logger.cpp" />
+    <ClCompile Include="src\engine\utils\Matrix.cpp" />
+    <ClCompile Include="src\engine\utils\StringCollection.cpp" />
+    <ClCompile Include="src\engine\utils\Timers.cpp" />
+    <ClCompile Include="src\engine\utils\Vector.cpp" />
+    <ClCompile Include="src\engine\utils\VLKIO.cpp" />
+    <ClCompile Include="src\game\map\Building.cpp" />
+    <ClCompile Include="src\game\map\Capture.cpp" />
+    <ClCompile Include="src\game\map\GameMap.cpp" />
+    <ClCompile Include="src\game\Program.cpp" />
+    <ClCompile Include="src\game\ui\Cursor.cpp" />
+    <ClCompile Include="src\game\ui\PlayerCamera.cpp" />
+    <ClCompile Include="src\game\components\TeamComponent.cpp" />
+    <ClCompile Include="src\game\units\TestUnitEntity.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="src\engine\core\Content.h" />
+    <ClInclude Include="src\engine\graphics\OpenGL\VertexArray.h" />
+    <ClInclude Include="src\engine\utils\XmlDocument.h" />
+    <ClInclude Include="src\game\components\CommandReciever.h" />
+    <ClInclude Include="src\game\components\Selectable.h" />
+    <ClInclude Include="src\game\GameManager.h" />
+    <ClInclude Include="src\engine\components\CameraComponent.h" />
+    <ClInclude Include="src\engine\components\ColliderComponent.h" />
+    <ClInclude Include="src\engine\components\DrawBaseComponent.h" />
+    <ClInclude Include="src\engine\components\DrawPrimitiveComponent.h" />
+    <ClInclude Include="src\engine\components\DrawStringComponent.h" />
+    <ClInclude Include="src\engine\components\DrawTextureComponent.h" />
+    <ClInclude Include="src\engine\components\TransformComponent.h" />
+    <ClInclude Include="src\engine\components\UIComponent.h" />
+    <ClInclude Include="src\engine\core\Application.h" />
+    <ClInclude Include="src\engine\core\ContentManager.hpp" />
+    <ClInclude Include="src\engine\core\EventBus.hpp" />
+    <ClInclude Include="src\engine\core\Fabricator.h" />
+    <ClInclude Include="src\engine\core\Game.h" />
+    <ClInclude Include="src\engine\core\GameComponent.hpp" />
+    <ClInclude Include="src\engine\core\GameEntity.hpp" />
+    <ClInclude Include="src\engine\core\IGameComponent.h" />
+    <ClInclude Include="src\engine\core\IGameEntity.h" />
+    <ClInclude Include="src\engine\core\Keyboard.h" />
+    <ClInclude Include="src\engine\core\Mouse.h" />
+    <ClInclude Include="src\engine\core\ValkyrieEngine.h" />
+    <ClInclude Include="src\engine\core\VLKRandom.h" />
+    <ClInclude Include="src\engine\core\VLKTime.h" />
+    <ClInclude Include="src\engine\core\Window.h" />
+    <ClInclude Include="src\engine\graphics\OpenGL\GLRenderer.h" />
+    <ClInclude Include="src\engine\graphics\Renderer.h" />
+    <ClInclude Include="src\engine\graphics\SpriteFont.h" />
+    <ClInclude Include="src\engine\graphics\Texture.h" />
+    <ClInclude Include="src\engine\memory\Chunk.hpp" />
+    <ClInclude Include="src\engine\memory\ChunkAllocator.hpp" />
+    <ClInclude Include="src\engine\memory\HeapAllocator.hpp" />
+    <ClInclude Include="src\engine\performance\ThreadPool.h" />
+    <ClInclude Include="src\engine\utils\ByteBuffer.hpp" />
+    <ClInclude Include="src\engine\utils\Color.h" />
+    <ClInclude Include="src\engine\utils\Logger.h" />
+    <ClInclude Include="src\engine\utils\Matrix.h" />
+    <ClInclude Include="src\engine\utils\NonClonable.h" />
+    <ClInclude Include="src\engine\utils\StringCollection.h" />
+    <ClInclude Include="src\engine\utils\Timers.h" />
+    <ClInclude Include="src\engine\utils\Vector.h" />
+    <ClInclude Include="src\engine\utils\VLKIO.h" />
+    <ClInclude Include="src\game\map\Building.h" />
+    <ClInclude Include="src\game\map\Capture.h" />
+    <ClInclude Include="src\game\map\GameMap.h" />
+    <ClInclude Include="src\game\Takover.h" />
+    <ClInclude Include="src\game\ui\Cursor.h" />
+    <ClInclude Include="src\game\ui\PlayerCamera.h" />
+    <ClInclude Include="src\game\components\TeamComponent.h" />
+    <ClInclude Include="src\game\units\TestUnitEntity.h" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

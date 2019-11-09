@@ -1,1 +1,0 @@
-memberSearchIndex = [{"p":"engine.core","c":"Component","l":"c"},{"p":"engine.core","c":"Component","l":"Component(Class<T>, Entity)","url":"%3Cinit%3E(java.lang.Class,engine.core.Entity)"},{"p":"engine.core","c":"Component","l":"Delete()"},{"p":"engine.core","c":"Component","l":"getParent()"},{"p":"engine.core","c":"Component","l":"parent"}]

@@ -1,0 +1,417 @@
+EventBus ApplicationStartEvent                   [INFO]: Adding event listener: 0x00007FF6C34F31D9
+EventBus PreUpdateEvent                          [INFO]: Adding event listener: 0x00007FF6C34EB5FB
+Window                                           [INFO]: Initializing.
+EventBus ApplicationStartEvent                   [INFO]: Adding event listener: 0x00007FF6C34E7D07
+EventBus ApplicationExitEvent                    [INFO]: Adding event listener: 0x00007FF6C34F247D
+EventBus PreUpdateEvent                          [INFO]: Adding event listener: 0x00007FF6C34F89BD
+Keyboard                                         [INFO]: Initializing.
+EventBus CharEvent                               [INFO]: Adding event listener: 0x00007FF6C35C3CC0
+EventBus KeyEvent                                [INFO]: Adding event listener: 0x00007FF6C35C3D30
+EventBus PostUpdateEvent                         [INFO]: Adding event listener: 0x00007FF6C35C32B0
+Mouse                                            [INFO]: Initializing
+EventBus CursorPosEvent                          [INFO]: Adding event listener: 0x00007FF6C35D3250
+EventBus MouseButtonEvent                        [INFO]: Adding event listener: 0x00007FF6C35D2F20
+EventBus ScrollEvent                             [INFO]: Adding event listener: 0x00007FF6C35D3400
+EventBus PostUpdateEvent                         [INFO]: Adding event listener: 0x00007FF6C35D32E0
+Renderer                                         [INFO]: Init() set to: 0x00007FF6C34EB2AE
+Renderer                                         [INFO]: Draw() set to: 0x00007FF6C34E7B5E
+Renderer                                         [INFO]: Destroy() set to: 0x00007FF6C34EB48E
+Renderer                                         [INFO]: Initializing.
+EventBus WindowFramebufferEvent                  [INFO]: Adding event listener: 0x00007FF6C363ABF0
+EventBus Texture2D>                              [INFO]: Adding event listener: 0x00007FF6C363AC70
+EventBus Texture2D>                              [INFO]: Adding event listener: 0x00007FF6C363B100
+EventBus PostUpdateEvent                         [INFO]: Adding event listener: 0x00007FF6C34F65A5
+EventBus LateUpdateEvent                         [INFO]: Adding event listener: 0x00007FF6C358C390
+EventBus WindowFramebufferEvent                  [INFO]: Adding event listener: 0x00007FF6C3573060
+EventBus WindowFramebufferEvent                  [INFO]: Adding event listener: 0x00007FF6C35AFFC0
+EventBus UpdateEvent                             [INFO]: Adding event listener: 0x00007FF6C35B0140
+Valkyrie Engine                                  [INFO]: VLKinit took 0.894882 Seconds
+Window                                           [INFO]: Set window swap interval to: 1
+EventBus MouseSelectEvent                        [INFO]: Adding event listener: 0x00007FF6C368AD50
+EventBus EarlyUpdateEvent                        [INFO]: Adding event listener: 0x00007FF6C368AC50
+EventBus UpdateEvent                             [INFO]: Adding event listener: 0x00007FF6C368AF70
+EventBus UpdateEvent                             [INFO]: Adding event listener: 0x00007FF6C369CAC0
+EventBus UpdateEvent                             [INFO]: Adding event listener: 0x00007FF6C3674640
+EventBus MouseSelectEvent                        [INFO]: Adding event listener: 0x00007FF6C3542D40
+EventBus EarlyUpdateEvent                        [INFO]: Adding event listener: 0x00007FF6C35426E0
+EventBus CommandIssuedEvent                      [INFO]: Adding event listener: 0x00007FF6C352A460
+EventBus UpdateEvent                             [INFO]: Adding event listener: 0x00007FF6C352A530
+EventBus ApplicationExitEvent                    [INFO]: Adding event listener: 0x00007FF6C34F6857
+EventBus ApplicationExitEvent                    [INFO]: Adding event listener: 0x00007FF6C34E93B9
+EventBus ApplicationExitEvent                    [INFO]: Adding event listener: 0x00007FF6C34ECE42
+EventBus ApplicationExitEvent                    [INFO]: Adding event listener: 0x00007FF6C34F4732
+EventBus ApplicationExitEvent                    [INFO]: Adding event listener: 0x00007FF6C34EDCF2
+EventBus ApplicationExitEvent                    [INFO]: Adding event listener: 0x00007FF6C34EB470
+EventBus ApplicationExitEvent                    [INFO]: Adding event listener: 0x00007FF6C34F15F0
+EventBus ApplicationExitEvent                    [INFO]: Adding event listener: 0x00007FF6C34E840F
+EventBus ApplicationExitEvent                    [INFO]: Adding event listener: 0x00007FF6C34EB6DC
+EventBus ApplicationExitEvent                    [INFO]: Adding event listener: 0x00007FF6C34F6668
+EventBus ApplicationExitEvent                    [INFO]: Adding event listener: 0x00007FF6C34F8A2B
+EventBus ApplicationExitEvent                    [INFO]: Adding event listener: 0x00007FF6C34F7702
+EventBus ApplicationExitEvent                    [INFO]: Adding event listener: 0x00007FF6C34F14B0
+EventBus ApplicationExitEvent                    [INFO]: Adding event listener: 0x00007FF6C34F1BF4
+EventBus ApplicationExitEvent                    [INFO]: Adding event listener: 0x00007FF6C34F6A41
+EventBus ApplicationExitEvent                    [INFO]: Adding event listener: 0x00007FF6C34E9FA8
+Application                                      [INFO]: Application starting.
+Window                                           [INFO]: Showing window.
+EventBus ApplicationExitEvent                    [INFO]: Adding event listener: 0x00007FF6C34E9292
+EventBus ApplicationExitEvent                    [INFO]: Adding event listener: 0x00007FF6C34F1406
+EventBus ApplicationExitEvent                    [INFO]: Adding event listener: 0x00007FF6C34EFFB6
+EventBus ApplicationExitEvent                    [INFO]: Adding event listener: 0x00007FF6C34EF39F
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: Hovered, flag is now: 2
+Selectable                                       [INFO]: UnHovered, flag is now: 0
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: Selected, flag is now: 1
+Selectable                                       [INFO]: Selected, flag is now: 1
+Selectable                                       [INFO]: Selected, flag is now: 1
+Selectable                                       [INFO]: Selected, flag is now: 1
+Selectable                                       [INFO]: Selected, flag is now: 1
+Selectable                                       [INFO]: Selected, flag is now: 1
+Selectable                                       [INFO]: Selected, flag is now: 1
+Selectable                                       [INFO]: Selected, flag is now: 1
+Selectable                                       [INFO]: Hovered, flag is now: 3
+Selectable                                       [INFO]: UnHovered, flag is now: 1
+Selectable                                       [INFO]: Hovered, flag is now: 2
+Selectable                                       [INFO]: UnHovered, flag is now: 0
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: DeSelected, flag is now: 0
+Selectable                                       [INFO]: DeSelected, flag is now: 0
+Selectable                                       [INFO]: DeSelected, flag is now: 0
+Selectable                                       [INFO]: DeSelected, flag is now: 0
+Selectable                                       [INFO]: DeSelected, flag is now: 0
+Selectable                                       [INFO]: DeSelected, flag is now: 0
+Selectable                                       [INFO]: DeSelected, flag is now: 0
+Selectable                                       [INFO]: DeSelected, flag is now: 0
+CaptureComponent                                 [INFO]: Capture begin
+CaptureComponent                                 [INFO]: Capture complete
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: Hovered, flag is now: 2
+Selectable                                       [INFO]: UnHovered, flag is now: 0
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: DeSelected, flag is now: 0
+Selectable                                       [INFO]: Selected, flag is now: 1
+Selectable                                       [INFO]: Selected, flag is now: 1
+Selectable                                       [INFO]: Selected, flag is now: 1
+Selectable                                       [INFO]: Selected, flag is now: 1
+Selectable                                       [INFO]: Selected, flag is now: 1
+Selectable                                       [INFO]: Selected, flag is now: 1
+Selectable                                       [INFO]: Selected, flag is now: 1
+Selectable                                       [INFO]: Selected, flag is now: 1
+Selectable                                       [INFO]: Hovered, flag is now: 2
+Selectable                                       [INFO]: UnHovered, flag is now: 0
+Selectable                                       [INFO]: Hovered, flag is now: 2
+Selectable                                       [INFO]: Hovered, flag is now: 2
+Selectable                                       [INFO]: Hovered, flag is now: 2
+Selectable                                       [INFO]: UnHovered, flag is now: 0
+Selectable                                       [INFO]: Hovered, flag is now: 2
+Selectable                                       [INFO]: UnHovered, flag is now: 0
+Selectable                                       [INFO]: UnHovered, flag is now: 0
+Selectable                                       [INFO]: UnHovered, flag is now: 0
+Selectable                                       [INFO]: Hovered, flag is now: 2
+Selectable                                       [INFO]: UnHovered, flag is now: 0
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: DeSelected, flag is now: 0
+Selectable                                       [INFO]: DeSelected, flag is now: 0
+Selectable                                       [INFO]: DeSelected, flag is now: 0
+Selectable                                       [INFO]: DeSelected, flag is now: 0
+Selectable                                       [INFO]: DeSelected, flag is now: 0
+Selectable                                       [INFO]: DeSelected, flag is now: 0
+Selectable                                       [INFO]: DeSelected, flag is now: 0
+Selectable                                       [INFO]: DeSelected, flag is now: 0
+Selectable                                       [INFO]: DeSelected, flag is now: 0
+Selectable                                       [INFO]: Hovered, flag is now: 2
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: DeSelected, flag is now: 0
+Selectable                                       [INFO]: DeSelected, flag is now: 0
+Selectable                                       [INFO]: DeSelected, flag is now: 0
+Selectable                                       [INFO]: DeSelected, flag is now: 0
+Selectable                                       [INFO]: DeSelected, flag is now: 0
+Selectable                                       [INFO]: DeSelected, flag is now: 0
+Selectable                                       [INFO]: DeSelected, flag is now: 0
+Selectable                                       [INFO]: DeSelected, flag is now: 0
+Selectable                                       [INFO]: Selected, flag is now: 3
+Selectable                                       [INFO]: UnHovered, flag is now: 1
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: DeSelected, flag is now: 0
+Selectable                                       [INFO]: DeSelected, flag is now: 0
+Selectable                                       [INFO]: DeSelected, flag is now: 0
+Selectable                                       [INFO]: DeSelected, flag is now: 0
+Selectable                                       [INFO]: DeSelected, flag is now: 0
+Selectable                                       [INFO]: DeSelected, flag is now: 0
+Selectable                                       [INFO]: DeSelected, flag is now: 0
+Selectable                                       [INFO]: DeSelected, flag is now: 0
+Selectable                                       [INFO]: DeSelected, flag is now: 0
+Selectable                                       [INFO]: Hovered, flag is now: 2
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: DeSelected, flag is now: 0
+Selectable                                       [INFO]: DeSelected, flag is now: 0
+Selectable                                       [INFO]: DeSelected, flag is now: 0
+Selectable                                       [INFO]: DeSelected, flag is now: 0
+Selectable                                       [INFO]: DeSelected, flag is now: 0
+Selectable                                       [INFO]: DeSelected, flag is now: 0
+Selectable                                       [INFO]: DeSelected, flag is now: 0
+Selectable                                       [INFO]: DeSelected, flag is now: 0
+Selectable                                       [INFO]: Selected, flag is now: 3
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: DeSelected, flag is now: 0
+Selectable                                       [INFO]: DeSelected, flag is now: 0
+Selectable                                       [INFO]: DeSelected, flag is now: 0
+Selectable                                       [INFO]: DeSelected, flag is now: 0
+Selectable                                       [INFO]: DeSelected, flag is now: 0
+Selectable                                       [INFO]: DeSelected, flag is now: 0
+Selectable                                       [INFO]: DeSelected, flag is now: 0
+Selectable                                       [INFO]: DeSelected, flag is now: 0
+Selectable                                       [INFO]: Selected, flag is now: 3
+Selectable                                       [INFO]: UnHovered, flag is now: 1
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: DeSelected, flag is now: 0
+Selectable                                       [INFO]: DeSelected, flag is now: 0
+Selectable                                       [INFO]: DeSelected, flag is now: 0
+Selectable                                       [INFO]: DeSelected, flag is now: 0
+Selectable                                       [INFO]: DeSelected, flag is now: 0
+Selectable                                       [INFO]: DeSelected, flag is now: 0
+Selectable                                       [INFO]: DeSelected, flag is now: 0
+Selectable                                       [INFO]: DeSelected, flag is now: 0
+Selectable                                       [INFO]: DeSelected, flag is now: 0
+Selectable                                       [INFO]: Hovered, flag is now: 2
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: DeSelected, flag is now: 0
+Selectable                                       [INFO]: DeSelected, flag is now: 0
+Selectable                                       [INFO]: DeSelected, flag is now: 0
+Selectable                                       [INFO]: DeSelected, flag is now: 0
+Selectable                                       [INFO]: DeSelected, flag is now: 0
+Selectable                                       [INFO]: DeSelected, flag is now: 0
+Selectable                                       [INFO]: DeSelected, flag is now: 0
+Selectable                                       [INFO]: DeSelected, flag is now: 0
+Selectable                                       [INFO]: Selected, flag is now: 3
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: DeSelected, flag is now: 0
+Selectable                                       [INFO]: DeSelected, flag is now: 0
+Selectable                                       [INFO]: DeSelected, flag is now: 0
+Selectable                                       [INFO]: DeSelected, flag is now: 0
+Selectable                                       [INFO]: DeSelected, flag is now: 0
+Selectable                                       [INFO]: DeSelected, flag is now: 0
+Selectable                                       [INFO]: DeSelected, flag is now: 0
+Selectable                                       [INFO]: DeSelected, flag is now: 0
+Selectable                                       [INFO]: Selected, flag is now: 3
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: DeSelected, flag is now: 0
+Selectable                                       [INFO]: DeSelected, flag is now: 0
+Selectable                                       [INFO]: DeSelected, flag is now: 0
+Selectable                                       [INFO]: DeSelected, flag is now: 0
+Selectable                                       [INFO]: DeSelected, flag is now: 0
+Selectable                                       [INFO]: DeSelected, flag is now: 0
+Selectable                                       [INFO]: DeSelected, flag is now: 0
+Selectable                                       [INFO]: DeSelected, flag is now: 0
+Selectable                                       [INFO]: Selected, flag is now: 3
+Selectable                                       [INFO]: UnHovered, flag is now: 1
+Selectable                                       [INFO]: Hovered, flag is now: 2
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: DeSelected, flag is now: 0
+Selectable                                       [INFO]: DeSelected, flag is now: 0
+Selectable                                       [INFO]: DeSelected, flag is now: 0
+Selectable                                       [INFO]: DeSelected, flag is now: 0
+Selectable                                       [INFO]: DeSelected, flag is now: 0
+Selectable                                       [INFO]: DeSelected, flag is now: 0
+Selectable                                       [INFO]: DeSelected, flag is now: 0
+Selectable                                       [INFO]: DeSelected, flag is now: 0
+Selectable                                       [INFO]: DeSelected, flag is now: 0
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: DeSelected, flag is now: 0
+Selectable                                       [INFO]: DeSelected, flag is now: 0
+Selectable                                       [INFO]: DeSelected, flag is now: 0
+Selectable                                       [INFO]: DeSelected, flag is now: 0
+Selectable                                       [INFO]: DeSelected, flag is now: 0
+Selectable                                       [INFO]: DeSelected, flag is now: 0
+Selectable                                       [INFO]: DeSelected, flag is now: 0
+Selectable                                       [INFO]: DeSelected, flag is now: 0
+Selectable                                       [INFO]: DeSelected, flag is now: 0
+Selectable                                       [INFO]: UnHovered, flag is now: 0
+Selectable                                       [INFO]: Hovered, flag is now: 2
+Selectable                                       [INFO]: UnHovered, flag is now: 0
+Selectable                                       [INFO]: Hovered, flag is now: 2
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: DeSelected, flag is now: 0
+Selectable                                       [INFO]: DeSelected, flag is now: 0
+Selectable                                       [INFO]: DeSelected, flag is now: 0
+Selectable                                       [INFO]: DeSelected, flag is now: 0
+Selectable                                       [INFO]: DeSelected, flag is now: 0
+Selectable                                       [INFO]: DeSelected, flag is now: 0
+Selectable                                       [INFO]: DeSelected, flag is now: 0
+Selectable                                       [INFO]: DeSelected, flag is now: 0
+Selectable                                       [INFO]: DeSelected, flag is now: 0
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: DeSelected, flag is now: 0
+Selectable                                       [INFO]: DeSelected, flag is now: 0
+Selectable                                       [INFO]: DeSelected, flag is now: 0
+Selectable                                       [INFO]: DeSelected, flag is now: 0
+Selectable                                       [INFO]: DeSelected, flag is now: 0
+Selectable                                       [INFO]: DeSelected, flag is now: 0
+Selectable                                       [INFO]: DeSelected, flag is now: 0
+Selectable                                       [INFO]: DeSelected, flag is now: 0
+Selectable                                       [INFO]: DeSelected, flag is now: 0
+Selectable                                       [INFO]: Hovered, flag is now: 2
+Selectable                                       [INFO]: UnHovered, flag is now: 0
+Selectable                                       [INFO]: UnHovered, flag is now: 0
+Selectable                                       [INFO]: Hovered, flag is now: 2
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: DeSelected, flag is now: 0
+Selectable                                       [INFO]: DeSelected, flag is now: 0
+Selectable                                       [INFO]: DeSelected, flag is now: 0
+Selectable                                       [INFO]: DeSelected, flag is now: 0
+Selectable                                       [INFO]: DeSelected, flag is now: 0
+Selectable                                       [INFO]: DeSelected, flag is now: 0
+Selectable                                       [INFO]: DeSelected, flag is now: 0
+Selectable                                       [INFO]: DeSelected, flag is now: 0
+Selectable                                       [INFO]: DeSelected, flag is now: 0
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: DeSelected, flag is now: 0
+Selectable                                       [INFO]: DeSelected, flag is now: 0
+Selectable                                       [INFO]: DeSelected, flag is now: 0
+Selectable                                       [INFO]: DeSelected, flag is now: 0
+Selectable                                       [INFO]: DeSelected, flag is now: 0
+Selectable                                       [INFO]: DeSelected, flag is now: 0
+Selectable                                       [INFO]: DeSelected, flag is now: 0
+Selectable                                       [INFO]: DeSelected, flag is now: 0
+Selectable                                       [INFO]: DeSelected, flag is now: 0
+Selectable                                       [INFO]: UnHovered, flag is now: 0
+Selectable                                       [INFO]: Hovered, flag is now: 2
+Selectable                                       [INFO]: UnHovered, flag is now: 0
+Selectable                                       [INFO]: Hovered, flag is now: 2
+Selectable                                       [INFO]: UnHovered, flag is now: 0
+Selectable                                       [INFO]: Hovered, flag is now: 2
+Selectable                                       [INFO]: UnHovered, flag is now: 0
+Selectable                                       [INFO]: Hovered, flag is now: 2
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: DeSelected, flag is now: 0
+Selectable                                       [INFO]: DeSelected, flag is now: 0
+Selectable                                       [INFO]: DeSelected, flag is now: 0
+Selectable                                       [INFO]: DeSelected, flag is now: 0
+Selectable                                       [INFO]: DeSelected, flag is now: 0
+Selectable                                       [INFO]: DeSelected, flag is now: 0
+Selectable                                       [INFO]: DeSelected, flag is now: 0
+Selectable                                       [INFO]: DeSelected, flag is now: 0
+Selectable                                       [INFO]: Selected, flag is now: 3
+Selectable                                       [INFO]: UnHovered, flag is now: 1
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: DeSelected, flag is now: 0
+Selectable                                       [INFO]: DeSelected, flag is now: 0
+Selectable                                       [INFO]: DeSelected, flag is now: 0
+Selectable                                       [INFO]: DeSelected, flag is now: 0
+Selectable                                       [INFO]: DeSelected, flag is now: 0
+Selectable                                       [INFO]: DeSelected, flag is now: 0
+Selectable                                       [INFO]: DeSelected, flag is now: 0
+Selectable                                       [INFO]: DeSelected, flag is now: 0
+Selectable                                       [INFO]: DeSelected, flag is now: 0
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: DeSelected, flag is now: 0
+Selectable                                       [INFO]: DeSelected, flag is now: 0
+Selectable                                       [INFO]: DeSelected, flag is now: 0
+Selectable                                       [INFO]: DeSelected, flag is now: 0
+Selectable                                       [INFO]: DeSelected, flag is now: 0
+Selectable                                       [INFO]: DeSelected, flag is now: 0
+Selectable                                       [INFO]: DeSelected, flag is now: 0
+Selectable                                       [INFO]: DeSelected, flag is now: 0
+Selectable                                       [INFO]: DeSelected, flag is now: 0
+Selectable                                       [INFO]: Hovered, flag is now: 2
+Selectable                                       [INFO]: UnHovered, flag is now: 0
+Selectable                                       [INFO]: Hovered, flag is now: 2
+Selectable                                       [INFO]: Hovered, flag is now: 2
+Selectable                                       [INFO]: Hovered, flag is now: 2
+Selectable                                       [INFO]: UnHovered, flag is now: 0
+Selectable                                       [INFO]: UnHovered, flag is now: 0
+Selectable                                       [INFO]: UnHovered, flag is now: 0
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: Hovered, flag is now: 2
+Selectable                                       [INFO]: UnHovered, flag is now: 0
+Selectable                                       [INFO]: Hovered, flag is now: 2
+Selectable                                       [INFO]: UnHovered, flag is now: 0
+Selectable                                       [INFO]: Hovered, flag is now: 2
+Selectable                                       [INFO]: Hovered, flag is now: 2
+Selectable                                       [INFO]: UnHovered, flag is now: 0
+Selectable                                       [INFO]: UnHovered, flag is now: 0
+Selectable                                       [INFO]: Hovered, flag is now: 2
+Selectable                                       [INFO]: UnHovered, flag is now: 0
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: DeSelected, flag is now: 0
+Selectable                                       [INFO]: Selected, flag is now: 1
+Selectable                                       [INFO]: Selected, flag is now: 1
+Selectable                                       [INFO]: Selected, flag is now: 1
+Selectable                                       [INFO]: Selected, flag is now: 1
+Selectable                                       [INFO]: Selected, flag is now: 1
+Selectable                                       [INFO]: Selected, flag is now: 1
+Selectable                                       [INFO]: Selected, flag is now: 1
+Selectable                                       [INFO]: Selected, flag is now: 1
+Selectable                                       [INFO]: Hovered, flag is now: 3
+Selectable                                       [INFO]: UnHovered, flag is now: 1
+Selectable                                       [INFO]: Hovered, flag is now: 2
+Selectable                                       [INFO]: Hovered, flag is now: 2
+Selectable                                       [INFO]: Hovered, flag is now: 2
+Selectable                                       [INFO]: UnHovered, flag is now: 0
+Selectable                                       [INFO]: UnHovered, flag is now: 0
+Selectable                                       [INFO]: UnHovered, flag is now: 0
+Selectable                                       [INFO]: Hovered, flag is now: 2
+Selectable                                       [INFO]: UnHovered, flag is now: 0
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: DeSelected, flag is now: 0
+Selectable                                       [INFO]: DeSelected, flag is now: 0
+Selectable                                       [INFO]: DeSelected, flag is now: 0
+Selectable                                       [INFO]: DeSelected, flag is now: 0
+Selectable                                       [INFO]: DeSelected, flag is now: 0
+Selectable                                       [INFO]: DeSelected, flag is now: 0
+Selectable                                       [INFO]: DeSelected, flag is now: 0
+Selectable                                       [INFO]: DeSelected, flag is now: 0
+Selectable                                       [INFO]: DeSelected, flag is now: 0
+Application                                      [INFO]: Application exiting.
+Window                                           [INFO]: Hiding window.
+EventBus CommandIssuedEvent                      [INFO]: Removing event listener: 0x00007FF6C352A460
+EventBus UpdateEvent                             [INFO]: Removing event listener: 0x00007FF6C352A530
+EventBus MouseSelectEvent                        [INFO]: Removing event listener: 0x00007FF6C3542D40
+EventBus EarlyUpdateEvent                        [INFO]: Removing event listener: 0x00007FF6C35426E0
+EventBus UpdateEvent                             [INFO]: Removing event listener: 0x00007FF6C3674640
+EventBus UpdateEvent                             [INFO]: Removing event listener: 0x00007FF6C369CAC0
+EventBus MouseSelectEvent                        [INFO]: Removing event listener: 0x00007FF6C368AD50
+EventBus EarlyUpdateEvent                        [INFO]: Removing event listener: 0x00007FF6C368AC50
+EventBus UpdateEvent                             [INFO]: Removing event listener: 0x00007FF6C368AF70
+EventBus WindowFramebufferEvent                  [INFO]: Removing event listener: 0x00007FF6C35AFFC0
+EventBus UpdateEvent                             [INFO]: Removing event listener: 0x00007FF6C35B0140
+EventBus WindowFramebufferEvent                  [INFO]: Removing event listener: 0x00007FF6C3573060
+EventBus LateUpdateEvent                         [INFO]: Removing event listener: 0x00007FF6C358C390
+Renderer                                         [INFO]: Destroying.
+EventBus PostUpdateEvent                         [INFO]: Adding event listener: 0x00007FF6C34F65A5
+Mouse                                            [INFO]: Destroying.
+EventBus CursorPosEvent                          [INFO]: Removing event listener: 0x00007FF6C35D3250
+EventBus MouseButtonEvent                        [INFO]: Removing event listener: 0x00007FF6C35D2F20
+EventBus ScrollEvent                             [INFO]: Removing event listener: 0x00007FF6C35D3400
+Keyboard                                         [INFO]: Destroying.
+EventBus CharEvent                               [INFO]: Removing event listener: 0x00007FF6C35C3CC0
+EventBus KeyEvent                                [INFO]: Removing event listener: 0x00007FF6C35C3D30
+EventBus PostUpdateEvent                         [INFO]: Removing event listener: 0x00007FF6C35C32B0
+Window                                           [INFO]: Destroying.
+EventBus ApplicationStartEvent                   [INFO]: Removing event listener: 0x00007FF6C34E7D07
+EventBus ApplicationExitEvent                    [INFO]: Removing event listener: 0x00007FF6C34F247D
+EventBus PreUpdateEvent                          [INFO]: Removing event listener: 0x00007FF6C34F89BD
+EventBus ApplicationStartEvent                   [INFO]: Removing event listener: 0x00007FF6C34F31D9
+EventBus PreUpdateEvent                          [INFO]: Removing event listener: 0x00007FF6C34EB5FB
+Valkyrie Engine                                  [INFO]: Destroyed Successfully.
