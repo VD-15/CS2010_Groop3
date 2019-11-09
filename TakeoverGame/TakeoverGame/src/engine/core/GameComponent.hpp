@@ -92,9 +92,11 @@ namespace vlk
 			}
 		}
 
-		virtual void Delete()
+		void Delete() final override
 		{
 			LogVerbose("Component " + TypeToString<T>(), "Deleting component: " + TypeToString<T>());
+
+			OnDelete();
 
 			if constexpr (std::is_base_of<HeapAllocateComponent, T>::value)
 			{
@@ -105,5 +107,8 @@ namespace vlk
 				ChunkAllocator<T>::Get().Delete(dynamic_cast<T*>(this));
 			}
 		}
+
+		protected:
+		virtual void OnDelete() {}
 	};
 }

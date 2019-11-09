@@ -3,4 +3,6 @@
     <texture name="test_atlas" path="textures/test_atlas.png"></texture>
     <texture name="cursor" path="textures/cursor.png"></texture>
     <texture name="map" path="textures/test_map.png"></texture>
+    <texture name="factory" path="textures/factory.png"></texture>
+    <texture name="debug" path="textures/dbg.png"><wrap_mode>mirror</wrap_mode></texture>
 </content>

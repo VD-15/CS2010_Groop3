@@ -103,14 +103,19 @@ namespace vlk
 					{
 						t->AddMetaTag(att.name(), att.text().as_string());
 					}
+
+					content.emplace(name, t);
+
+					EventBus<ContentLoadedEvent<T>>::Get().PostEvent({ t, name });
+
+					return t;
 				}
 			}
 
-			content.emplace(name, t);
-
-			EventBus<ContentLoadedEvent<T>>::Get().PostEvent({ t, name });
-
-			return t;
+			LogError("ContentManager " + TypeToString<T>(), "Failed to load content: " + name);
+			throw std::exception("Failed to load content");
+			delete t;
+			return nullptr;
 		}
 
 		const T* GetContent(const std::string& name) const

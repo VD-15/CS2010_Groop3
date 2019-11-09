@@ -11,17 +11,30 @@ using namespace vlk;
 
 namespace tkv
 {
+	namespace SelectionSystem
+	{
+		void Init();
+		void Destroy();
+	}
+
 	constexpr Byte TKV_FLAG_SELECTED =	0b0000001;
 	constexpr Byte TKV_FLAG_HOVERED =	0b0000010;
 
 	struct SelectableComponent : public Component<SelectableComponent>
 	{
-		SelectableComponent(IEntity* e, TransformComponent2D* transform);
+		typedef void SelectFun();
+
+		SelectableComponent(IEntity* e, const TransformComponent2D* const transform);
 
 		SByte priority;
 		Byte flags;
 		Float hoverRadius;
 
-		TransformComponent2D* transform;
+		SelectFun OnSelect;
+		SelectFun OnDeselect;
+		SelectFun OnHoverEnter;
+		SelectFun OnHoverLeave;
+		
+		const TransformComponent2D* const transform;
 	};
 }

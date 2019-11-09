@@ -115,14 +115,15 @@ namespace
 
 		std::sort(textures.begin(), textures.end(), [](DrawTextureComponent2D* t1, DrawTextureComponent2D* t2)
 		{
-			if (t1->flags & VLK_TRANSLUCENT_BIT && !(t2->flags & VLK_TRANSLUCENT_BIT))
-			{
-				return true;
-			}
-			else
-			{
-				return t1->texture > t2->texture;
-			}
+			//translucency gets priority, followed by depth, followed by texture
+
+			if ((t1->flags & VLK_TRANSLUCENT_BIT) && !(t2->flags & VLK_TRANSLUCENT_BIT)) return false;
+			if ((t2->flags & VLK_TRANSLUCENT_BIT) && !(t1->flags & VLK_TRANSLUCENT_BIT)) return true;
+
+			if (t1->depth > t2->depth) return false;
+			if (t2->depth > t1->depth) return true;
+
+			return t1->texture > t2->texture;
 		});
 
 		ByteBuffer vertices;
@@ -215,7 +216,10 @@ namespace
 		glUniformMatrix4fv(texture2Dvao.viewportBinding, 1, GL_FALSE, viewport2D.Data());
 
 		glEnable(GL_DEPTH_TEST);
-		glDepthFunc(GL_LESS);
+		glDepthFunc(GL_LEQUAL);
+
+		glEnable(GL_BLEND);
+		glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
 
 		UInt lastDraw = 0;
 		UInt thisTex = 0;

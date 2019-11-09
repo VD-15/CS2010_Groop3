@@ -27,7 +27,7 @@ namespace tkv
 	struct PlayerCameraEntity : public Entity<PlayerCameraEntity>
 	{
 		PlayerCameraEntity();
-		void Delete() override;
+		void OnDelete() override;
 
 		TransformComponent2D* transform;
 		CameraComponent2D* camera;

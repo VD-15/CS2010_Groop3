@@ -14,7 +14,7 @@ namespace tkv
 	struct MapEntity : public Entity<MapEntity>, public HeapAllocateEntity
 	{
 		MapEntity();
-		void Delete() override;
+		void OnDelete() override;
 
 		TransformComponent2D* transform;
 		DrawTextureComponent2D* draw;

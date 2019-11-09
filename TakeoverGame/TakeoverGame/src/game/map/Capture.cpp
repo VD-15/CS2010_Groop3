@@ -35,18 +35,59 @@ namespace
 
 			Double captureAmount = VLKTime::DeltaTime() * numCapturing;
 
-			if (numCapturing > 0)
+			if (c->capturingTeam != Team::Neutral)
 			{
-				if (numContesting == 0)
+				if (numCapturing > 0)
 				{
-					c->captureProgress += captureAmount;
+					if (numContesting == 0)
+					{
+						if (c->captureProgress <= 0.0)
+						{
+							c->captureProgress = captureAmount;
+							EventBus<CaptureEvent>::Get().PostEvent({ c, CaptureAction::Begin });
+							LogInfo("CaptureComponent", "Capture begin");
+						}
+						else
+						{
+							if (c->isPaused)
+							{
+								c->isPaused = false;
+								EventBus<CaptureEvent>::Get().PostEvent({ c, CaptureAction::Resume });
+								LogInfo("CaptureComponent", "Capture resume");
+							}
+
+							c->captureProgress += captureAmount;
+
+							if (c->captureProgress > c->captureThreshold)
+							{
+								c->team->team = c->capturingTeam;
+								c->captureProgress = 0.0;
+								EventBus<CaptureEvent>::Get().PostEvent({ c, CaptureAction::Complete });
+								LogInfo("CaptureComponent", "Capture complete");
+							}
+						}
+					}
+					else
+					{
+						if (!c->isPaused)
+						{
+							EventBus<CaptureEvent>::Get().PostEvent({ c, CaptureAction::Pause });
+							LogInfo("CaptureComponent", "Capture pause");
+						}
+					}
 				}
+				else
+				{
+					c->captureProgress -= captureAmount;
 
-
-			}
-			else
-			{
-				c->captureProgress -= captureAmount;
+					if (c->captureProgress < 0.0)
+					{
+						c->capturingTeam = Team::Neutral;
+						c->isPaused = false;
+						EventBus<CaptureEvent>::Get().PostEvent({ c, CaptureAction::Fail });
+						LogInfo("CaptureComponent", "Capture fail");
+					}
+				}
 			}
 		});
 	}
@@ -62,37 +103,30 @@ void CaptureSystem::Destroy()
 	EventBus<UpdateEvent>::Get().RemoveEventListener(OnUpdate);
 }
 
-CaptureComponent::CaptureComponent(IEntity* e, const TransformComponent2D* transform) :
+CaptureComponent::CaptureComponent(IEntity* e, const TransformComponent2D* transform, TeamComponent* team) :
 	Component<CaptureComponent>(e)
 {
 	this->transform = transform;
-	this->team = TeamComponent::CreateComponent(e);
+	this->team = team;
 
 	this->captureProgress = 0.0;
 	this->captureThreshold = 10.0;
 	this->captureRange = 64.0f;
+	this->capturingTeam = Team::Neutral;
+	this->isPaused = false;
 }
 
-CaptureBeginEvent::CaptureBeginEvent(const CaptureComponent* const capture) :
-	capture(capture)
+CaptureEvent::CaptureEvent(const CaptureComponent* const capture, CaptureAction action) :
+	capture(capture),
+	action(action)
 {
 
 }
 
-CaptureCompleteEvent::CaptureCompleteEvent(const CaptureComponent* const capture) :
-	capture(capture)
-{
-
-}
-
-CaptureStopEvent::CaptureStopEvent(const CaptureComponent* const capture) :
-	capture(capture)
-{
-
-}
-
-CaptureContestEvent::CaptureContestEvent(const CaptureComponent* const capture) :
-	capture(capture)
+CaptureContributorComponent::CaptureContributorComponent(IEntity* e, const TransformComponent2D* const transform, const TeamComponent* const team) :
+	Component<CaptureContributorComponent>(e),
+	transform(transform),
+	team(team)
 {
 
 }
@@ -103,7 +137,7 @@ CaptureVisualizerEntity::CaptureVisualizerEntity(const CaptureComponent* const c
 	this->draw = CreateComponent<DrawTextureComponent2D>(capture->transform, ContentManager<Texture2D>::Get().GetContent("capture_0"));
 }
 
-void CaptureVisualizerEntity::Delete()
+void CaptureVisualizerEntity::OnDelete()
 {
 	draw->Delete();
 }
