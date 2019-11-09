@@ -25,7 +25,7 @@ h1 {
   font-size: 40;
 }
 #header {
-    background: url("Images/banner1.jpg") no-repeat center center;
+    background: url("banner1.jpg") no-repeat center center;
     background-size: cover;
     height: 100vh;
     width: 100%;
@@ -172,7 +172,7 @@ font-family: 'Roboto', sans-serif;
 }
 
 #about-section {
-  background: url("Images/space.jpg");
+  background: url("space.jpg");
 
   margin: auto;
   max-width: auto;
@@ -218,7 +218,7 @@ font-family: 'Roboto', sans-serif;
 
 .commanders{
   padding: 40px 0;
-  background: url("Images/comBack.jpg");
+  background: url("comBack.jpg");
 
   background-size: cover;
   height: 100vh;
@@ -266,7 +266,7 @@ font-family: 'Roboto', sans-serif;
   background: #FFA07A;
   padding: 30px;
   height: 500px;
-  background-image: url("Images/forest.jpeg");
+  background-image: url("forest.jpeg");
 
 }
 /* changes this */
@@ -280,7 +280,7 @@ font-family: 'Roboto', sans-serif;
   background: #FFA07A;
   padding: 30px;
   height: 500px;
-  background-image: url("Images/karan.jpeg");
+  background-image: url("karan.jpeg");
 }
 /* changes this */
 .karan img{
@@ -293,7 +293,7 @@ font-family: 'Roboto', sans-serif;
   background: #FFA07A;
   padding: 30px;
   height: 500px;
-  background-image: url("Images/valk.jpeg");
+  background-image: url("valk.jpeg");
 }
 /* changes this */
 .valk img{
@@ -306,7 +306,7 @@ font-family: 'Roboto', sans-serif;
   background: #FFA07A;
   padding: 30px;
   height: 500px;
-  background-image: url("Images/p3.png");
+  background-image: url("p3.png");
 }
 /* changes this */
 .p3 img{
