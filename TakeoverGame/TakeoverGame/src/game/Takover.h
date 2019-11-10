@@ -13,3 +13,12 @@ namespace tkv
 	constexpr Float DEPTH_CAPTURE =		99.0f;
 	constexpr Float DEPTH_CURSOR =		100.0f;
 }
+
+//The To-Do List:
+//TODO: Add commanders
+//TODO: Add win/loss
+//TODO: Add Unit damage
+//TODO: Add unit health
+//TODO: Factory Production
+//TODO: Resource Quarries
+//TODO: Simulated Multiplayer

@@ -19,7 +19,7 @@ namespace
 
 				if ((c->transform->location - cap->transform->location).Magnitude() < c->captureRange)
 				{
-					if (c->capturingTeam == Team::Neutral)
+					if (c->capturingTeam == Team::Neutral && cap->team->team != c->team->team)
 					{
 						c->capturingTeam = cap->team->team;
 					}
@@ -35,7 +35,7 @@ namespace
 				}
 			});
 
-			Double captureAmount = VLKTime::DeltaTime() * numCapturing;
+			Double captureAmount = VLKTime::DeltaTime() * (numCapturing + 1);
 
 			if (c->capturingTeam != Team::Neutral)
 			{
@@ -49,7 +49,8 @@ namespace
 							EventBus<CaptureEvent>::Get().PostEvent({ c, CaptureAction::Begin });
 
 							c->draw = DrawTextureComponent2D::CreateComponent(c->GetParent(), c->transform, ContentManager<Texture2D>::Get().GetContent("cap_0"));
-							c->draw->depth = tkv::DEPTH_CAPTURE;			
+							c->draw->depth = tkv::DEPTH_CAPTURE;	
+							c->draw->origin = Vector2(0.5f, 0.0f);
 
 							LogInfo("CaptureComponent", "Capture begin");
 						}
@@ -72,6 +73,7 @@ namespace
 							if (c->captureProgress > c->captureThreshold)
 							{
 								c->team->team = c->capturingTeam;
+								c->capturingTeam = Team::Neutral;
 								c->captureProgress = 0.0;
 								EventBus<CaptureEvent>::Get().PostEvent({ c, CaptureAction::Complete });
 
@@ -96,6 +98,8 @@ namespace
 				else
 				{
 					c->captureProgress -= captureAmount;
+
+					c->draw->texture = ContentManager<Texture2D>::Get().GetContent("cap_" + std::to_string(static_cast<Int>(c->captureProgress * 10.0 / c->captureThreshold)));
 
 					if (c->captureProgress < 0.0)
 					{

@@ -2,6 +2,9 @@
 #include <string>
 #include <typeinfo>
 
+//Valkyrie Engine
+//Copyright (c) 2019 Simran Sian
+
 namespace vlk
 {
 	typedef uint8_t		Byte;
