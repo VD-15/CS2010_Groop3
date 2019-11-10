@@ -31,6 +31,7 @@ namespace tkv
 		Float captureRange;
 		Boolean isPaused;
 
+		//TODO: Move to seperate Entity
 		DrawTextureComponent2D* draw;
 	};
 
