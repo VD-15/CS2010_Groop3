@@ -12,7 +12,7 @@ MapEntity::MapEntity()
 	this->draw->depth = tkv::DEPTH_MAP;
 }
 
-void MapEntity::Delete()
+void MapEntity::OnDelete()
 {
 	this->draw->Delete();
 	this->transform->Delete();

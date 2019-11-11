@@ -30,10 +30,13 @@ namespace vlk
 		void Init();
 		void Destroy();
 
+		//Is this button pressed?
 		Boolean IsButtonDown(MouseButton button);
 
+		//Was this button pressed this frame?
 		Boolean IsButtonPressed(MouseButton button);
 
+		//Was this button released this frame?
 		Boolean IsButtonReleased(MouseButton button);
 
 		Vector2 GetPosition();

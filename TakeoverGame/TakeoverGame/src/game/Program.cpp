@@ -25,7 +25,7 @@ int main()
 	//Create logger
 	logger.Open("logs/latest.log");
 	logger.EnableSecondaryOutput();
-	logger.SetLogLevel(VLK_LOG_LEVEL_VERBOSE);
+	logger.SetLogLevel(VLK_LOG_LEVEL_INFO);
 
 	EventBus<LogEvent>::Get().AddEventListener(OnLog);
 

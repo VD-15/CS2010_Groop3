@@ -1,7 +1,10 @@
 #pragma once
 
+#include "../Takover.h"
 #include "../GameManager.h"
 #include "../components/TeamComponent.h"
+#include "../components/Selectable.h"
+#include "../map/Capture.h"
 
 #include "../../engine/core/GameEntity.hpp"
 #include "../../engine/components/TransformComponent.h"
@@ -12,18 +15,15 @@ using namespace vlk;
 
 namespace tkv
 {
-	namespace BuildingSystem
-	{
-		void Init();
-		void Destroy();
-	}
-
 	struct BuildingEntity : public Entity<BuildingEntity>
 	{
 		BuildingEntity();
-		void Delete() override;
+		void OnDelete() override;
 
 		TransformComponent2D* transform;
 		DrawTextureComponent2D* draw;
+		TeamComponent* team;
+		CaptureComponent* capture;
+		SelectableComponent* select;
 	};
 }

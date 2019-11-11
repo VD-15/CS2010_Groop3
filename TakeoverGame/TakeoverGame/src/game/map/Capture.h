@@ -1,5 +1,6 @@
 #pragma once
 
+#include "../Takover.h"
 #include "../GameManager.h"
 #include "../components/TeamComponent.h"
 
@@ -18,7 +19,8 @@ namespace tkv
 
 	struct CaptureComponent : public Component<CaptureComponent>
 	{
-		CaptureComponent(IEntity* e, const TransformComponent2D* transform);
+		CaptureComponent(IEntity* e, const TransformComponent2D* transform, TeamComponent* team);
+		void OnDelete() override;
 
 		const TransformComponent2D* transform;
 		TeamComponent* team;
@@ -27,34 +29,27 @@ namespace tkv
 		Double captureProgress;
 		Double captureThreshold;
 		Float captureRange;
+		Boolean isPaused;
+
+		//TODO: Move to seperate Entity
+		DrawTextureComponent2D* draw;
 	};
 
-	struct CaptureBeginEvent : public Event
+	enum class CaptureAction
 	{
-		CaptureBeginEvent(const CaptureComponent* const capture);
-
-		const CaptureComponent* const capture;
+		Begin,
+		Complete,
+		Fail,
+		Pause,
+		Resume
 	};
 
-	struct CaptureCompleteEvent : public Event
+	struct CaptureEvent : public Event
 	{
-		CaptureCompleteEvent(const CaptureComponent* const capture);
+		CaptureEvent(const CaptureComponent* const capture, CaptureAction action);
 
 		const CaptureComponent* const capture;
-	};
-
-	struct CaptureStopEvent : public Event
-	{
-		CaptureStopEvent(const CaptureComponent* const capture);
-
-		const CaptureComponent* const capture;
-	};
-
-	struct CaptureContestEvent : public Event
-	{
-		CaptureContestEvent(const CaptureComponent* const capture);
-
-		const CaptureComponent* const capture;
+		const CaptureAction action;
 	};
 
 	struct CaptureContributorComponent : public Component<CaptureContributorComponent>
@@ -63,14 +58,5 @@ namespace tkv
 		
 		const TransformComponent2D* const transform;
 		const TeamComponent* const team;
-	};
-
-	struct CaptureVisualizerEntity : public Entity<CaptureVisualizerEntity>
-	{
-		CaptureVisualizerEntity(const CaptureComponent* const capture);
-		void Delete() override;
-
-		const CaptureComponent* const capture;
-		DrawTextureComponent2D* draw;
 	};
 }

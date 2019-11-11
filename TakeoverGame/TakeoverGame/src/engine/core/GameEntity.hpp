@@ -56,9 +56,11 @@ namespace vlk
 
 		//This will crash the entire application if you're calling this from within a ForEach.
 		//Don't call this from within a ForEach. Please.
-		virtual void Delete() override
+		void Delete() final override
 		{
 			LogVerbose("Entity " + TypeToString<T>(), "Deleting Immediately: " + PointerToString(this));
+
+			OnDelete();
 
 			if constexpr (std::is_base_of<HeapAllocateEntity, T>::value)
 			{
@@ -69,5 +71,8 @@ namespace vlk
 				ChunkAllocator<T>::Get().Delete(dynamic_cast<T*>(this));
 			}
 		}
+
+		protected:
+		virtual void OnDelete() = 0;
 	};
 }

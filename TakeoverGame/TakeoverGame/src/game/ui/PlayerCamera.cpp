@@ -49,7 +49,7 @@ PlayerCameraEntity::PlayerCameraEntity()
 	this->logic = CreateComponent<PlayerCameraComponent>(camera, transform);
 }
 
-void PlayerCameraEntity::Delete()
+void PlayerCameraEntity::OnDelete()
 {
 	this->logic->Delete();
 	this->camera->Delete();
