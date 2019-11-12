@@ -12,8 +12,11 @@ namespace
 		{
 			if (c->select->flags & TKV_FLAG_SELECTED)
 			{
-				c->target = ev.target;
-				c->isMoving = true;
+				if (c->target != ev.target)
+				{
+					c->target = ev.target;
+					c->isMoving = true;
+				}
 			}
 		});
 	}
@@ -25,6 +28,8 @@ namespace
 			if (c->isMoving)
 			{
 				Vector2 moveDir = c->target - c->transform->location;
+
+				//TODO: the Normalize() here will cause units to move to infinity if their position is equal to their destination
 				Vector2 moveAmount(Vector2::Normalize(moveDir) * c->speed * VLKTime::DeltaTime<Float>());
 
 				if (moveAmount.Magnitude() > moveDir.Magnitude())

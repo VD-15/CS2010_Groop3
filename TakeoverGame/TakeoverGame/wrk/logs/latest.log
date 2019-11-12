@@ -1,222 +1,91 @@
-EventBus ApplicationStartEvent                   [INFO]: Adding event listener: 0x00007FF7262B31D9
-EventBus PreUpdateEvent                          [INFO]: Adding event listener: 0x00007FF7262AB5FB
+EventBus ApplicationStartEvent                   [INFO]: Adding event listener: 0x00007FF71DB731D9
+EventBus PreUpdateEvent                          [INFO]: Adding event listener: 0x00007FF71DB6B5FB
 Window                                           [INFO]: Initializing.
-EventBus ApplicationStartEvent                   [INFO]: Adding event listener: 0x00007FF7262A7D07
-EventBus ApplicationExitEvent                    [INFO]: Adding event listener: 0x00007FF7262B247D
-EventBus PreUpdateEvent                          [INFO]: Adding event listener: 0x00007FF7262B89BD
+EventBus ApplicationStartEvent                   [INFO]: Adding event listener: 0x00007FF71DB67D07
+EventBus ApplicationExitEvent                    [INFO]: Adding event listener: 0x00007FF71DB7247D
+EventBus PreUpdateEvent                          [INFO]: Adding event listener: 0x00007FF71DB789BD
 Keyboard                                         [INFO]: Initializing.
-EventBus CharEvent                               [INFO]: Adding event listener: 0x00007FF726383CC0
-EventBus KeyEvent                                [INFO]: Adding event listener: 0x00007FF726383D30
-EventBus PostUpdateEvent                         [INFO]: Adding event listener: 0x00007FF7263832B0
+EventBus CharEvent                               [INFO]: Adding event listener: 0x00007FF71DC43CC0
+EventBus KeyEvent                                [INFO]: Adding event listener: 0x00007FF71DC43D30
+EventBus PostUpdateEvent                         [INFO]: Adding event listener: 0x00007FF71DC432B0
 Mouse                                            [INFO]: Initializing
-EventBus CursorPosEvent                          [INFO]: Adding event listener: 0x00007FF726393250
-EventBus MouseButtonEvent                        [INFO]: Adding event listener: 0x00007FF726392F20
-EventBus ScrollEvent                             [INFO]: Adding event listener: 0x00007FF726393400
-EventBus PostUpdateEvent                         [INFO]: Adding event listener: 0x00007FF7263932E0
-Renderer                                         [INFO]: Init() set to: 0x00007FF7262AB2AE
-Renderer                                         [INFO]: Draw() set to: 0x00007FF7262A7B5E
-Renderer                                         [INFO]: Destroy() set to: 0x00007FF7262AB48E
+EventBus CursorPosEvent                          [INFO]: Adding event listener: 0x00007FF71DC53250
+EventBus MouseButtonEvent                        [INFO]: Adding event listener: 0x00007FF71DC52F20
+EventBus ScrollEvent                             [INFO]: Adding event listener: 0x00007FF71DC53400
+EventBus PostUpdateEvent                         [INFO]: Adding event listener: 0x00007FF71DC532E0
+Renderer                                         [INFO]: Init() set to: 0x00007FF71DB6B2AE
+Renderer                                         [INFO]: Draw() set to: 0x00007FF71DB67B5E
+Renderer                                         [INFO]: Destroy() set to: 0x00007FF71DB6B48E
 Renderer                                         [INFO]: Initializing.
-EventBus WindowFramebufferEvent                  [INFO]: Adding event listener: 0x00007FF7263FABF0
-EventBus Texture2D>                              [INFO]: Adding event listener: 0x00007FF7263FAC70
-EventBus Texture2D>                              [INFO]: Adding event listener: 0x00007FF7263FB100
-EventBus PostUpdateEvent                         [INFO]: Adding event listener: 0x00007FF7262B65A5
-EventBus LateUpdateEvent                         [INFO]: Adding event listener: 0x00007FF72634C390
-EventBus WindowFramebufferEvent                  [INFO]: Adding event listener: 0x00007FF726333060
-EventBus WindowFramebufferEvent                  [INFO]: Adding event listener: 0x00007FF72636FFC0
-EventBus UpdateEvent                             [INFO]: Adding event listener: 0x00007FF726370140
-Valkyrie Engine                                  [INFO]: VLKinit took 0.759512 Seconds
+EventBus WindowFramebufferEvent                  [INFO]: Adding event listener: 0x00007FF71DCBABF0
+EventBus Texture2D>                              [INFO]: Adding event listener: 0x00007FF71DCBAC70
+EventBus Texture2D>                              [INFO]: Adding event listener: 0x00007FF71DCBB100
+EventBus PostUpdateEvent                         [INFO]: Adding event listener: 0x00007FF71DB765A5
+EventBus LateUpdateEvent                         [INFO]: Adding event listener: 0x00007FF71DC0C390
+EventBus WindowFramebufferEvent                  [INFO]: Adding event listener: 0x00007FF71DBF3060
+EventBus WindowFramebufferEvent                  [INFO]: Adding event listener: 0x00007FF71DC2FFC0
+EventBus UpdateEvent                             [INFO]: Adding event listener: 0x00007FF71DC30140
+Valkyrie Engine                                  [INFO]: VLKinit took 0.720096 Seconds
 Window                                           [INFO]: Set window swap interval to: 1
-EventBus MouseSelectEvent                        [INFO]: Adding event listener: 0x00007FF72644AD50
-EventBus EarlyUpdateEvent                        [INFO]: Adding event listener: 0x00007FF72644AC50
-EventBus UpdateEvent                             [INFO]: Adding event listener: 0x00007FF72644AF70
-EventBus UpdateEvent                             [INFO]: Adding event listener: 0x00007FF72645CAC0
-EventBus UpdateEvent                             [INFO]: Adding event listener: 0x00007FF726434640
-EventBus MouseSelectEvent                        [INFO]: Adding event listener: 0x00007FF726302D40
-EventBus EarlyUpdateEvent                        [INFO]: Adding event listener: 0x00007FF7263026E0
-EventBus CommandIssuedEvent                      [INFO]: Adding event listener: 0x00007FF7262EA460
-EventBus UpdateEvent                             [INFO]: Adding event listener: 0x00007FF7262EA530
-EventBus ApplicationExitEvent                    [INFO]: Adding event listener: 0x00007FF7262B6857
-EventBus ApplicationExitEvent                    [INFO]: Adding event listener: 0x00007FF7262A93B9
-EventBus ApplicationExitEvent                    [INFO]: Adding event listener: 0x00007FF7262ACE42
-EventBus ApplicationExitEvent                    [INFO]: Adding event listener: 0x00007FF7262B4732
-EventBus ApplicationExitEvent                    [INFO]: Adding event listener: 0x00007FF7262ADCF2
-EventBus ApplicationExitEvent                    [INFO]: Adding event listener: 0x00007FF7262AB470
-EventBus ApplicationExitEvent                    [INFO]: Adding event listener: 0x00007FF7262B15F0
-EventBus ApplicationExitEvent                    [INFO]: Adding event listener: 0x00007FF7262A840F
-EventBus ApplicationExitEvent                    [INFO]: Adding event listener: 0x00007FF7262AB6DC
-EventBus ApplicationExitEvent                    [INFO]: Adding event listener: 0x00007FF7262B6668
-EventBus ApplicationExitEvent                    [INFO]: Adding event listener: 0x00007FF7262B8A2B
-EventBus ApplicationExitEvent                    [INFO]: Adding event listener: 0x00007FF7262B7702
-EventBus ApplicationExitEvent                    [INFO]: Adding event listener: 0x00007FF7262B14B0
-EventBus ApplicationExitEvent                    [INFO]: Adding event listener: 0x00007FF7262B1BF4
-EventBus ApplicationExitEvent                    [INFO]: Adding event listener: 0x00007FF7262B6A41
-EventBus ApplicationExitEvent                    [INFO]: Adding event listener: 0x00007FF7262A9FA8
+EventBus MouseSelectEvent                        [INFO]: Adding event listener: 0x00007FF71DD0AD50
+EventBus EarlyUpdateEvent                        [INFO]: Adding event listener: 0x00007FF71DD0AC50
+EventBus UpdateEvent                             [INFO]: Adding event listener: 0x00007FF71DD0AF70
+EventBus UpdateEvent                             [INFO]: Adding event listener: 0x00007FF71DD1CAC0
+EventBus UpdateEvent                             [INFO]: Adding event listener: 0x00007FF71DCF4640
+EventBus MouseSelectEvent                        [INFO]: Adding event listener: 0x00007FF71DBC2D40
+EventBus EarlyUpdateEvent                        [INFO]: Adding event listener: 0x00007FF71DBC26E0
+EventBus CommandIssuedEvent                      [INFO]: Adding event listener: 0x00007FF71DB96360
+EventBus UpdateEvent                             [INFO]: Adding event listener: 0x00007FF71DBAA5B0
+EventBus ApplicationExitEvent                    [INFO]: Adding event listener: 0x00007FF71DB76857
+EventBus ApplicationExitEvent                    [INFO]: Adding event listener: 0x00007FF71DB693B9
+EventBus ApplicationExitEvent                    [INFO]: Adding event listener: 0x00007FF71DB6CE42
+EventBus ApplicationExitEvent                    [INFO]: Adding event listener: 0x00007FF71DB74732
+EventBus ApplicationExitEvent                    [INFO]: Adding event listener: 0x00007FF71DB6DCF2
+EventBus ApplicationExitEvent                    [INFO]: Adding event listener: 0x00007FF71DB6B470
+EventBus ApplicationExitEvent                    [INFO]: Adding event listener: 0x00007FF71DB715F0
+EventBus ApplicationExitEvent                    [INFO]: Adding event listener: 0x00007FF71DB6840F
+EventBus ApplicationExitEvent                    [INFO]: Adding event listener: 0x00007FF71DB6B6DC
+EventBus ApplicationExitEvent                    [INFO]: Adding event listener: 0x00007FF71DB76668
+EventBus ApplicationExitEvent                    [INFO]: Adding event listener: 0x00007FF71DB78A2B
+EventBus ApplicationExitEvent                    [INFO]: Adding event listener: 0x00007FF71DB77702
+EventBus ApplicationExitEvent                    [INFO]: Adding event listener: 0x00007FF71DB714B0
+EventBus ApplicationExitEvent                    [INFO]: Adding event listener: 0x00007FF71DB71BF4
+EventBus ApplicationExitEvent                    [INFO]: Adding event listener: 0x00007FF71DB76A41
+EventBus ApplicationExitEvent                    [INFO]: Adding event listener: 0x00007FF71DB69FA8
 Application                                      [INFO]: Application starting.
 Window                                           [INFO]: Showing window.
-EventBus ApplicationExitEvent                    [INFO]: Adding event listener: 0x00007FF7262A9292
-EventBus ApplicationExitEvent                    [INFO]: Adding event listener: 0x00007FF7262B1406
-EventBus ApplicationExitEvent                    [INFO]: Adding event listener: 0x00007FF7262AFFB6
-Selectable                                       [INFO]: Hovered, flag is now: 2
-Selectable                                       [INFO]: UnHovered, flag is now: 0
-Selectable                                       [INFO]: Hovered, flag is now: 2
-Selectable                                       [INFO]: UnHovered, flag is now: 0
-Selectable                                       [INFO]: Hovered, flag is now: 2
-EventBus ApplicationExitEvent                    [INFO]: Adding event listener: 0x00007FF7262AF39F
-Selectable                                       [INFO]: OnSelect
-Selectable                                       [INFO]: OnSelect
-Selectable                                       [INFO]: DeSelected, flag is now: 0
-Selectable                                       [INFO]: DeSelected, flag is now: 0
-Selectable                                       [INFO]: DeSelected, flag is now: 0
-Selectable                                       [INFO]: DeSelected, flag is now: 0
-Selectable                                       [INFO]: DeSelected, flag is now: 0
-Selectable                                       [INFO]: DeSelected, flag is now: 0
-Selectable                                       [INFO]: DeSelected, flag is now: 0
-Selectable                                       [INFO]: Selected, flag is now: 3
-Selectable                                       [INFO]: UnHovered, flag is now: 1
-Selectable                                       [INFO]: Hovered, flag is now: 2
-Selectable                                       [INFO]: UnHovered, flag is now: 0
-Selectable                                       [INFO]: OnSelect
-Selectable                                       [INFO]: OnSelect
-Selectable                                       [INFO]: DeSelected, flag is now: 0
-Selectable                                       [INFO]: DeSelected, flag is now: 0
-Selectable                                       [INFO]: DeSelected, flag is now: 0
-Selectable                                       [INFO]: DeSelected, flag is now: 0
-Selectable                                       [INFO]: DeSelected, flag is now: 0
-Selectable                                       [INFO]: DeSelected, flag is now: 0
-Selectable                                       [INFO]: DeSelected, flag is now: 0
-Selectable                                       [INFO]: DeSelected, flag is now: 0
-Selectable                                       [INFO]: OnSelect
-Selectable                                       [INFO]: Hovered, flag is now: 2
-Selectable                                       [INFO]: UnHovered, flag is now: 0
-Selectable                                       [INFO]: Hovered, flag is now: 2
-Selectable                                       [INFO]: Hovered, flag is now: 2
-Selectable                                       [INFO]: UnHovered, flag is now: 0
-Selectable                                       [INFO]: UnHovered, flag is now: 0
-Selectable                                       [INFO]: Hovered, flag is now: 2
-Selectable                                       [INFO]: UnHovered, flag is now: 0
-Selectable                                       [INFO]: OnSelect
-Selectable                                       [INFO]: Selected, flag is now: 1
-Selectable                                       [INFO]: Selected, flag is now: 1
-Selectable                                       [INFO]: Selected, flag is now: 1
-Selectable                                       [INFO]: Selected, flag is now: 1
-Selectable                                       [INFO]: Selected, flag is now: 1
-Selectable                                       [INFO]: Selected, flag is now: 1
-Selectable                                       [INFO]: Selected, flag is now: 1
-Selectable                                       [INFO]: Selected, flag is now: 1
-Selectable                                       [INFO]: Hovered, flag is now: 3
-Selectable                                       [INFO]: Hovered, flag is now: 3
-Selectable                                       [INFO]: UnHovered, flag is now: 1
-Selectable                                       [INFO]: Hovered, flag is now: 3
-Selectable                                       [INFO]: UnHovered, flag is now: 1
-Selectable                                       [INFO]: UnHovered, flag is now: 1
-Selectable                                       [INFO]: Hovered, flag is now: 3
-Selectable                                       [INFO]: UnHovered, flag is now: 1
-Selectable                                       [INFO]: Hovered, flag is now: 3
-Selectable                                       [INFO]: UnHovered, flag is now: 1
-Selectable                                       [INFO]: Hovered, flag is now: 3
-Selectable                                       [INFO]: OnSelect
-Selectable                                       [INFO]: OnSelect
-Selectable                                       [INFO]: DeSelected, flag is now: 0
-Selectable                                       [INFO]: DeSelected, flag is now: 0
-Selectable                                       [INFO]: DeSelected, flag is now: 0
-Selectable                                       [INFO]: DeSelected, flag is now: 0
-Selectable                                       [INFO]: DeSelected, flag is now: 0
-Selectable                                       [INFO]: DeSelected, flag is now: 0
-Selectable                                       [INFO]: DeSelected, flag is now: 0
-Selectable                                       [INFO]: Selected, flag is now: 3
-Selectable                                       [INFO]: Hovered, flag is now: 2
-Selectable                                       [INFO]: UnHovered, flag is now: 1
-Selectable                                       [INFO]: UnHovered, flag is now: 0
-Selectable                                       [INFO]: Hovered, flag is now: 2
-Selectable                                       [INFO]: UnHovered, flag is now: 0
-CaptureComponent                                 [INFO]: Capture begin
-Selectable                                       [INFO]: OnSelect
-Selectable                                       [INFO]: Hovered, flag is now: 2
-Selectable                                       [INFO]: Hovered, flag is now: 3
-Selectable                                       [INFO]: UnHovered, flag is now: 1
-Selectable                                       [INFO]: UnHovered, flag is now: 0
-Selectable                                       [INFO]: OnSelect
-Selectable                                       [INFO]: DeSelected, flag is now: 0
-Selectable                                       [INFO]: DeSelected, flag is now: 0
-Selectable                                       [INFO]: DeSelected, flag is now: 0
-Selectable                                       [INFO]: DeSelected, flag is now: 0
-Selectable                                       [INFO]: DeSelected, flag is now: 0
-Selectable                                       [INFO]: DeSelected, flag is now: 0
-Selectable                                       [INFO]: DeSelected, flag is now: 0
-Selectable                                       [INFO]: Selected, flag is now: 1
-Selectable                                       [INFO]: Hovered, flag is now: 3
-Selectable                                       [INFO]: UnHovered, flag is now: 1
-Selectable                                       [INFO]: Hovered, flag is now: 2
-Selectable                                       [INFO]: UnHovered, flag is now: 0
-Selectable                                       [INFO]: Hovered, flag is now: 2
-Selectable                                       [INFO]: UnHovered, flag is now: 0
-CaptureComponent                                 [INFO]: Capture complete
-Selectable                                       [INFO]: OnSelect
-Selectable                                       [INFO]: Hovered, flag is now: 2
-Selectable                                       [INFO]: Hovered, flag is now: 3
-Selectable                                       [INFO]: UnHovered, flag is now: 1
-Selectable                                       [INFO]: UnHovered, flag is now: 0
-Selectable                                       [INFO]: OnSelect
-Selectable                                       [INFO]: DeSelected, flag is now: 0
-Selectable                                       [INFO]: DeSelected, flag is now: 0
-Selectable                                       [INFO]: DeSelected, flag is now: 0
-Selectable                                       [INFO]: DeSelected, flag is now: 0
-Selectable                                       [INFO]: DeSelected, flag is now: 0
-Selectable                                       [INFO]: DeSelected, flag is now: 0
-Selectable                                       [INFO]: DeSelected, flag is now: 0
-Selectable                                       [INFO]: DeSelected, flag is now: 0
-Selectable                                       [INFO]: Selected, flag is now: 1
-Selectable                                       [INFO]: Hovered, flag is now: 3
-Selectable                                       [INFO]: UnHovered, flag is now: 1
-Selectable                                       [INFO]: Hovered, flag is now: 2
-Selectable                                       [INFO]: UnHovered, flag is now: 0
-Selectable                                       [INFO]: Hovered, flag is now: 3
-Selectable                                       [INFO]: UnHovered, flag is now: 1
-Selectable                                       [INFO]: OnSelect
-Selectable                                       [INFO]: OnSelect
-Selectable                                       [INFO]: DeSelected, flag is now: 0
-Selectable                                       [INFO]: DeSelected, flag is now: 0
-Selectable                                       [INFO]: DeSelected, flag is now: 0
-Selectable                                       [INFO]: DeSelected, flag is now: 0
-Selectable                                       [INFO]: DeSelected, flag is now: 0
-Selectable                                       [INFO]: DeSelected, flag is now: 0
-Selectable                                       [INFO]: DeSelected, flag is now: 0
-Selectable                                       [INFO]: DeSelected, flag is now: 0
-Selectable                                       [INFO]: DeSelected, flag is now: 0
-Selectable                                       [INFO]: Hovered, flag is now: 2
-Selectable                                       [INFO]: UnHovered, flag is now: 0
-Selectable                                       [INFO]: Hovered, flag is now: 2
-Selectable                                       [INFO]: UnHovered, flag is now: 0
+EventBus ApplicationExitEvent                    [INFO]: Adding event listener: 0x00007FF71DB69292
+EventBus ApplicationExitEvent                    [INFO]: Adding event listener: 0x00007FF71DB71406
+EventBus ApplicationExitEvent                    [INFO]: Adding event listener: 0x00007FF71DB6FFB6
 Application                                      [INFO]: Application exiting.
 Window                                           [INFO]: Hiding window.
-EventBus CommandIssuedEvent                      [INFO]: Removing event listener: 0x00007FF7262EA460
-EventBus UpdateEvent                             [INFO]: Removing event listener: 0x00007FF7262EA530
-EventBus MouseSelectEvent                        [INFO]: Removing event listener: 0x00007FF726302D40
-EventBus EarlyUpdateEvent                        [INFO]: Removing event listener: 0x00007FF7263026E0
-EventBus UpdateEvent                             [INFO]: Removing event listener: 0x00007FF726434640
-EventBus UpdateEvent                             [INFO]: Removing event listener: 0x00007FF72645CAC0
-EventBus MouseSelectEvent                        [INFO]: Removing event listener: 0x00007FF72644AD50
-EventBus EarlyUpdateEvent                        [INFO]: Removing event listener: 0x00007FF72644AC50
-EventBus UpdateEvent                             [INFO]: Removing event listener: 0x00007FF72644AF70
-EventBus WindowFramebufferEvent                  [INFO]: Removing event listener: 0x00007FF72636FFC0
-EventBus UpdateEvent                             [INFO]: Removing event listener: 0x00007FF726370140
-EventBus WindowFramebufferEvent                  [INFO]: Removing event listener: 0x00007FF726333060
-EventBus LateUpdateEvent                         [INFO]: Removing event listener: 0x00007FF72634C390
+EventBus CommandIssuedEvent                      [INFO]: Removing event listener: 0x00007FF71DB96360
+EventBus UpdateEvent                             [INFO]: Removing event listener: 0x00007FF71DBAA5B0
+EventBus MouseSelectEvent                        [INFO]: Removing event listener: 0x00007FF71DBC2D40
+EventBus EarlyUpdateEvent                        [INFO]: Removing event listener: 0x00007FF71DBC26E0
+EventBus UpdateEvent                             [INFO]: Removing event listener: 0x00007FF71DCF4640
+EventBus UpdateEvent                             [INFO]: Removing event listener: 0x00007FF71DD1CAC0
+EventBus MouseSelectEvent                        [INFO]: Removing event listener: 0x00007FF71DD0AD50
+EventBus EarlyUpdateEvent                        [INFO]: Removing event listener: 0x00007FF71DD0AC50
+EventBus UpdateEvent                             [INFO]: Removing event listener: 0x00007FF71DD0AF70
+EventBus WindowFramebufferEvent                  [INFO]: Removing event listener: 0x00007FF71DC2FFC0
+EventBus UpdateEvent                             [INFO]: Removing event listener: 0x00007FF71DC30140
+EventBus WindowFramebufferEvent                  [INFO]: Removing event listener: 0x00007FF71DBF3060
+EventBus LateUpdateEvent                         [INFO]: Removing event listener: 0x00007FF71DC0C390
 Renderer                                         [INFO]: Destroying.
-EventBus PostUpdateEvent                         [INFO]: Adding event listener: 0x00007FF7262B65A5
+EventBus PostUpdateEvent                         [INFO]: Adding event listener: 0x00007FF71DB765A5
 Mouse                                            [INFO]: Destroying.
-EventBus CursorPosEvent                          [INFO]: Removing event listener: 0x00007FF726393250
-EventBus MouseButtonEvent                        [INFO]: Removing event listener: 0x00007FF726392F20
-EventBus ScrollEvent                             [INFO]: Removing event listener: 0x00007FF726393400
+EventBus CursorPosEvent                          [INFO]: Removing event listener: 0x00007FF71DC53250
+EventBus MouseButtonEvent                        [INFO]: Removing event listener: 0x00007FF71DC52F20
+EventBus ScrollEvent                             [INFO]: Removing event listener: 0x00007FF71DC53400
 Keyboard                                         [INFO]: Destroying.
-EventBus CharEvent                               [INFO]: Removing event listener: 0x00007FF726383CC0
-EventBus KeyEvent                                [INFO]: Removing event listener: 0x00007FF726383D30
-EventBus PostUpdateEvent                         [INFO]: Removing event listener: 0x00007FF7263832B0
+EventBus CharEvent                               [INFO]: Removing event listener: 0x00007FF71DC43CC0
+EventBus KeyEvent                                [INFO]: Removing event listener: 0x00007FF71DC43D30
+EventBus PostUpdateEvent                         [INFO]: Removing event listener: 0x00007FF71DC432B0
 Window                                           [INFO]: Destroying.
-EventBus ApplicationStartEvent                   [INFO]: Removing event listener: 0x00007FF7262A7D07
-EventBus ApplicationExitEvent                    [INFO]: Removing event listener: 0x00007FF7262B247D
-EventBus PreUpdateEvent                          [INFO]: Removing event listener: 0x00007FF7262B89BD
-EventBus ApplicationStartEvent                   [INFO]: Removing event listener: 0x00007FF7262B31D9
-EventBus PreUpdateEvent                          [INFO]: Removing event listener: 0x00007FF7262AB5FB
+EventBus ApplicationStartEvent                   [INFO]: Removing event listener: 0x00007FF71DB67D07
+EventBus ApplicationExitEvent                    [INFO]: Removing event listener: 0x00007FF71DB7247D
+EventBus PreUpdateEvent                          [INFO]: Removing event listener: 0x00007FF71DB789BD
+EventBus ApplicationStartEvent                   [INFO]: Removing event listener: 0x00007FF71DB731D9
+EventBus PreUpdateEvent                          [INFO]: Removing event listener: 0x00007FF71DB6B5FB
 Valkyrie Engine                                  [INFO]: Destroyed Successfully.
