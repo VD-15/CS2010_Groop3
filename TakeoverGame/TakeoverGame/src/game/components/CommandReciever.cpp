@@ -12,8 +12,11 @@ namespace
 		{
 			if (c->select->flags & TKV_FLAG_SELECTED)
 			{
-				c->target = ev.target;
-				c->isMoving = true;
+				if (c->target != ev.target)
+				{
+					c->target = ev.target;
+					c->isMoving = true;
+				}
 			}
 		});
 	}

@@ -1,91 +1,671 @@
-EventBus ApplicationStartEvent                   [INFO]: Adding event listener: 0x00007FF6BB7DD120
-EventBus PreUpdateEvent                          [INFO]: Adding event listener: 0x00007FF6BB7D5655
+EventBus ApplicationStartEvent                   [INFO]: Adding event listener: 0x00007FF71DB731D9
+EventBus PreUpdateEvent                          [INFO]: Adding event listener: 0x00007FF71DB6B5FB
 Window                                           [INFO]: Initializing.
-EventBus ApplicationStartEvent                   [INFO]: Adding event listener: 0x00007FF6BB7D1D84
-EventBus ApplicationExitEvent                    [INFO]: Adding event listener: 0x00007FF6BB7DC3DD
-EventBus PreUpdateEvent                          [INFO]: Adding event listener: 0x00007FF6BB7E28E6
+EventBus ApplicationStartEvent                   [INFO]: Adding event listener: 0x00007FF71DB67D07
+EventBus ApplicationExitEvent                    [INFO]: Adding event listener: 0x00007FF71DB7247D
+EventBus PreUpdateEvent                          [INFO]: Adding event listener: 0x00007FF71DB789BD
 Keyboard                                         [INFO]: Initializing.
-EventBus CharEvent                               [INFO]: Adding event listener: 0x00007FF6BB8A7980
-EventBus KeyEvent                                [INFO]: Adding event listener: 0x00007FF6BB8A79F0
-EventBus PostUpdateEvent                         [INFO]: Adding event listener: 0x00007FF6BB8A6FF0
+EventBus CharEvent                               [INFO]: Adding event listener: 0x00007FF71DC43CC0
+EventBus KeyEvent                                [INFO]: Adding event listener: 0x00007FF71DC43D30
+EventBus PostUpdateEvent                         [INFO]: Adding event listener: 0x00007FF71DC432B0
 Mouse                                            [INFO]: Initializing
-EventBus CursorPosEvent                          [INFO]: Adding event listener: 0x00007FF6BB8B5360
-EventBus MouseButtonEvent                        [INFO]: Adding event listener: 0x00007FF6BB8B5040
-EventBus ScrollEvent                             [INFO]: Adding event listener: 0x00007FF6BB8B5500
-EventBus PostUpdateEvent                         [INFO]: Adding event listener: 0x00007FF6BB8B53F0
-Renderer                                         [INFO]: Init() set to: 0x00007FF6BB7D5308
-Renderer                                         [INFO]: Draw() set to: 0x00007FF6BB7D1BDB
-Renderer                                         [INFO]: Destroy() set to: 0x00007FF6BB7D54E3
+EventBus CursorPosEvent                          [INFO]: Adding event listener: 0x00007FF71DC53250
+EventBus MouseButtonEvent                        [INFO]: Adding event listener: 0x00007FF71DC52F20
+EventBus ScrollEvent                             [INFO]: Adding event listener: 0x00007FF71DC53400
+EventBus PostUpdateEvent                         [INFO]: Adding event listener: 0x00007FF71DC532E0
+Renderer                                         [INFO]: Init() set to: 0x00007FF71DB6B2AE
+Renderer                                         [INFO]: Draw() set to: 0x00007FF71DB67B5E
+Renderer                                         [INFO]: Destroy() set to: 0x00007FF71DB6B48E
 Renderer                                         [INFO]: Initializing.
-EventBus WindowFramebufferEvent                  [INFO]: Adding event listener: 0x00007FF6BB91B030
-EventBus Texture2D>                              [INFO]: Adding event listener: 0x00007FF6BB91B0B0
-EventBus Texture2D>                              [INFO]: Adding event listener: 0x00007FF6BB91B530
-EventBus PostUpdateEvent                         [INFO]: Adding event listener: 0x00007FF6BB7E04D8
-EventBus LateUpdateEvent                         [INFO]: Adding event listener: 0x00007FF6BB872EC0
-EventBus WindowFramebufferEvent                  [INFO]: Adding event listener: 0x00007FF6BB85A5B0
-EventBus WindowFramebufferEvent                  [INFO]: Adding event listener: 0x00007FF6BB895C80
-EventBus UpdateEvent                             [INFO]: Adding event listener: 0x00007FF6BB895DF0
-Valkyrie Engine                                  [INFO]: VLKinit took 1.506173 Seconds
+EventBus WindowFramebufferEvent                  [INFO]: Adding event listener: 0x00007FF71DCBABF0
+EventBus Texture2D>                              [INFO]: Adding event listener: 0x00007FF71DCBAC70
+EventBus Texture2D>                              [INFO]: Adding event listener: 0x00007FF71DCBB100
+EventBus PostUpdateEvent                         [INFO]: Adding event listener: 0x00007FF71DB765A5
+EventBus LateUpdateEvent                         [INFO]: Adding event listener: 0x00007FF71DC0C390
+EventBus WindowFramebufferEvent                  [INFO]: Adding event listener: 0x00007FF71DBF3060
+EventBus WindowFramebufferEvent                  [INFO]: Adding event listener: 0x00007FF71DC2FFC0
+EventBus UpdateEvent                             [INFO]: Adding event listener: 0x00007FF71DC30140
+Valkyrie Engine                                  [INFO]: VLKinit took 0.787122 Seconds
 Window                                           [INFO]: Set window swap interval to: 1
-EventBus MouseSelectEvent                        [INFO]: Adding event listener: 0x00007FF6BB9696F0
-EventBus EarlyUpdateEvent                        [INFO]: Adding event listener: 0x00007FF6BB9695F0
-EventBus UpdateEvent                             [INFO]: Adding event listener: 0x00007FF6BB969900
-EventBus UpdateEvent                             [INFO]: Adding event listener: 0x00007FF6BB97ACE0
-EventBus UpdateEvent                             [INFO]: Adding event listener: 0x00007FF6BB953890
-EventBus MouseSelectEvent                        [INFO]: Adding event listener: 0x00007FF6BB82B770
-EventBus EarlyUpdateEvent                        [INFO]: Adding event listener: 0x00007FF6BB82B140
-EventBus CommandIssuedEvent                      [INFO]: Adding event listener: 0x00007FF6BB813990
-EventBus UpdateEvent                             [INFO]: Adding event listener: 0x00007FF6BB813A60
-EventBus ApplicationExitEvent                    [INFO]: Adding event listener: 0x00007FF6BB7E077B
-EventBus ApplicationExitEvent                    [INFO]: Adding event listener: 0x00007FF6BB7D342C
-EventBus ApplicationExitEvent                    [INFO]: Adding event listener: 0x00007FF6BB7D6E79
-EventBus ApplicationExitEvent                    [INFO]: Adding event listener: 0x00007FF6BB7DE665
-EventBus ApplicationExitEvent                    [INFO]: Adding event listener: 0x00007FF6BB7D7D42
-EventBus ApplicationExitEvent                    [INFO]: Adding event listener: 0x00007FF6BB7D54C5
-EventBus ApplicationExitEvent                    [INFO]: Adding event listener: 0x00007FF6BB7DB59B
-EventBus ApplicationExitEvent                    [INFO]: Adding event listener: 0x00007FF6BB7D248C
-EventBus ApplicationExitEvent                    [INFO]: Adding event listener: 0x00007FF6BB7D5736
-EventBus ApplicationExitEvent                    [INFO]: Adding event listener: 0x00007FF6BB7E0596
-EventBus ApplicationExitEvent                    [INFO]: Adding event listener: 0x00007FF6BB7E2954
-EventBus ApplicationExitEvent                    [INFO]: Adding event listener: 0x00007FF6BB7E1630
-EventBus ApplicationExitEvent                    [INFO]: Adding event listener: 0x00007FF6BB7DB460
-EventBus ApplicationExitEvent                    [INFO]: Adding event listener: 0x00007FF6BB7DBB7C
-EventBus ApplicationExitEvent                    [INFO]: Adding event listener: 0x00007FF6BB7E096A
-EventBus ApplicationExitEvent                    [INFO]: Adding event listener: 0x00007FF6BB7D400C
+EventBus MouseSelectEvent                        [INFO]: Adding event listener: 0x00007FF71DD0AD50
+EventBus EarlyUpdateEvent                        [INFO]: Adding event listener: 0x00007FF71DD0AC50
+EventBus UpdateEvent                             [INFO]: Adding event listener: 0x00007FF71DD0AF70
+EventBus UpdateEvent                             [INFO]: Adding event listener: 0x00007FF71DD1CAC0
+EventBus UpdateEvent                             [INFO]: Adding event listener: 0x00007FF71DCF4640
+EventBus MouseSelectEvent                        [INFO]: Adding event listener: 0x00007FF71DBC2D40
+EventBus EarlyUpdateEvent                        [INFO]: Adding event listener: 0x00007FF71DBC26E0
+EventBus CommandIssuedEvent                      [INFO]: Adding event listener: 0x00007FF71DB96360
+EventBus UpdateEvent                             [INFO]: Adding event listener: 0x00007FF71DBAA5B0
+EventBus ApplicationExitEvent                    [INFO]: Adding event listener: 0x00007FF71DB76857
+EventBus ApplicationExitEvent                    [INFO]: Adding event listener: 0x00007FF71DB693B9
+EventBus ApplicationExitEvent                    [INFO]: Adding event listener: 0x00007FF71DB6CE42
+EventBus ApplicationExitEvent                    [INFO]: Adding event listener: 0x00007FF71DB74732
+EventBus ApplicationExitEvent                    [INFO]: Adding event listener: 0x00007FF71DB6DCF2
+EventBus ApplicationExitEvent                    [INFO]: Adding event listener: 0x00007FF71DB6B470
+EventBus ApplicationExitEvent                    [INFO]: Adding event listener: 0x00007FF71DB715F0
+EventBus ApplicationExitEvent                    [INFO]: Adding event listener: 0x00007FF71DB6840F
+EventBus ApplicationExitEvent                    [INFO]: Adding event listener: 0x00007FF71DB6B6DC
+EventBus ApplicationExitEvent                    [INFO]: Adding event listener: 0x00007FF71DB76668
+EventBus ApplicationExitEvent                    [INFO]: Adding event listener: 0x00007FF71DB78A2B
+EventBus ApplicationExitEvent                    [INFO]: Adding event listener: 0x00007FF71DB77702
+EventBus ApplicationExitEvent                    [INFO]: Adding event listener: 0x00007FF71DB714B0
+EventBus ApplicationExitEvent                    [INFO]: Adding event listener: 0x00007FF71DB71BF4
+EventBus ApplicationExitEvent                    [INFO]: Adding event listener: 0x00007FF71DB76A41
+EventBus ApplicationExitEvent                    [INFO]: Adding event listener: 0x00007FF71DB69FA8
 Application                                      [INFO]: Application starting.
 Window                                           [INFO]: Showing window.
-EventBus ApplicationExitEvent                    [INFO]: Adding event listener: 0x00007FF6BB7D3305
-EventBus ApplicationExitEvent                    [INFO]: Adding event listener: 0x00007FF6BB7DB3B6
-EventBus ApplicationExitEvent                    [INFO]: Adding event listener: 0x00007FF6BB7D9F89
+EventBus ApplicationExitEvent                    [INFO]: Adding event listener: 0x00007FF71DB69292
+EventBus ApplicationExitEvent                    [INFO]: Adding event listener: 0x00007FF71DB71406
+EventBus ApplicationExitEvent                    [INFO]: Adding event listener: 0x00007FF71DB6FFB6
+Selectable                                       [INFO]: Hovered, flag is now: 2
+Selectable                                       [INFO]: Hovered, flag is now: 2
+EventBus ApplicationExitEvent                    [INFO]: Adding event listener: 0x00007FF71DB6F39F
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: DeSelected, flag is now: 0
+Selectable                                       [INFO]: DeSelected, flag is now: 0
+Selectable                                       [INFO]: DeSelected, flag is now: 0
+Selectable                                       [INFO]: DeSelected, flag is now: 0
+Selectable                                       [INFO]: DeSelected, flag is now: 0
+Selectable                                       [INFO]: DeSelected, flag is now: 0
+Selectable                                       [INFO]: DeSelected, flag is now: 0
+Selectable                                       [INFO]: Selected, flag is now: 3
+Selectable                                       [INFO]: Hovered, flag is now: 2
+Selectable                                       [INFO]: UnHovered, flag is now: 1
+Selectable                                       [INFO]: UnHovered, flag is now: 0
+Selectable                                       [INFO]: Hovered, flag is now: 3
+Selectable                                       [INFO]: UnHovered, flag is now: 1
+Selectable                                       [INFO]: Hovered, flag is now: 3
+Selectable                                       [INFO]: UnHovered, flag is now: 1
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: Hovered, flag is now: 2
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: Hovered, flag is now: 2
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: UnHovered, flag is now: 0
+Selectable                                       [INFO]: Hovered, flag is now: 2
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: Hovered, flag is now: 2
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: UnHovered, flag is now: 0
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: UnHovered, flag is now: 0
+Selectable                                       [INFO]: Hovered, flag is now: 2
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: UnHovered, flag is now: 0
+Selectable                                       [INFO]: Hovered, flag is now: 2
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: UnHovered, flag is now: 0
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: Hovered, flag is now: 2
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: UnHovered, flag is now: 0
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: UnHovered, flag is now: 0
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: Hovered, flag is now: 3
+Selectable                                       [INFO]: UnHovered, flag is now: 1
+Selectable                                       [INFO]: Hovered, flag is now: 3
+Selectable                                       [INFO]: UnHovered, flag is now: 1
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: DeSelected, flag is now: 0
+Selectable                                       [INFO]: DeSelected, flag is now: 0
+Selectable                                       [INFO]: DeSelected, flag is now: 0
+Selectable                                       [INFO]: DeSelected, flag is now: 0
+Selectable                                       [INFO]: DeSelected, flag is now: 0
+Selectable                                       [INFO]: DeSelected, flag is now: 0
+Selectable                                       [INFO]: DeSelected, flag is now: 0
+Selectable                                       [INFO]: DeSelected, flag is now: 0
+Selectable                                       [INFO]: Hovered, flag is now: 2
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: DeSelected, flag is now: 0
+Selectable                                       [INFO]: DeSelected, flag is now: 0
+Selectable                                       [INFO]: DeSelected, flag is now: 0
+Selectable                                       [INFO]: DeSelected, flag is now: 0
+Selectable                                       [INFO]: DeSelected, flag is now: 0
+Selectable                                       [INFO]: DeSelected, flag is now: 0
+Selectable                                       [INFO]: DeSelected, flag is now: 0
+Selectable                                       [INFO]: Selected, flag is now: 3
+Selectable                                       [INFO]: UnHovered, flag is now: 1
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: DeSelected, flag is now: 0
+Selectable                                       [INFO]: DeSelected, flag is now: 0
+Selectable                                       [INFO]: DeSelected, flag is now: 0
+Selectable                                       [INFO]: DeSelected, flag is now: 0
+Selectable                                       [INFO]: DeSelected, flag is now: 0
+Selectable                                       [INFO]: DeSelected, flag is now: 0
+Selectable                                       [INFO]: DeSelected, flag is now: 0
+Selectable                                       [INFO]: DeSelected, flag is now: 0
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: OnSelect
+Selectable                                       [INFO]: DeSelected, flag is now: 0
+Selectable                                       [INFO]: DeSelected, flag is now: 0
+Selectable                                       [INFO]: DeSelected, flag is now: 0
+Selectable                                       [INFO]: DeSelected, flag is now: 0
+Selectable                                       [INFO]: DeSelected, flag is now: 0
+Selectable                                       [INFO]: DeSelected, flag is now: 0
+Selectable                                       [INFO]: DeSelected, flag is now: 0
+Selectable                                       [INFO]: DeSelected, flag is now: 0
+Selectable                                       [INFO]: Hovered, flag is now: 2
+Selectable                                       [INFO]: UnHovered, flag is now: 0
 Application                                      [INFO]: Application exiting.
 Window                                           [INFO]: Hiding window.
-EventBus CommandIssuedEvent                      [INFO]: Removing event listener: 0x00007FF6BB813990
-EventBus UpdateEvent                             [INFO]: Removing event listener: 0x00007FF6BB813A60
-EventBus MouseSelectEvent                        [INFO]: Removing event listener: 0x00007FF6BB82B770
-EventBus EarlyUpdateEvent                        [INFO]: Removing event listener: 0x00007FF6BB82B140
-EventBus UpdateEvent                             [INFO]: Removing event listener: 0x00007FF6BB953890
-EventBus UpdateEvent                             [INFO]: Removing event listener: 0x00007FF6BB97ACE0
-EventBus MouseSelectEvent                        [INFO]: Removing event listener: 0x00007FF6BB9696F0
-EventBus EarlyUpdateEvent                        [INFO]: Removing event listener: 0x00007FF6BB9695F0
-EventBus UpdateEvent                             [INFO]: Removing event listener: 0x00007FF6BB969900
-EventBus WindowFramebufferEvent                  [INFO]: Removing event listener: 0x00007FF6BB895C80
-EventBus UpdateEvent                             [INFO]: Removing event listener: 0x00007FF6BB895DF0
-EventBus WindowFramebufferEvent                  [INFO]: Removing event listener: 0x00007FF6BB85A5B0
-EventBus LateUpdateEvent                         [INFO]: Removing event listener: 0x00007FF6BB872EC0
+EventBus CommandIssuedEvent                      [INFO]: Removing event listener: 0x00007FF71DB96360
+EventBus UpdateEvent                             [INFO]: Removing event listener: 0x00007FF71DBAA5B0
+EventBus MouseSelectEvent                        [INFO]: Removing event listener: 0x00007FF71DBC2D40
+EventBus EarlyUpdateEvent                        [INFO]: Removing event listener: 0x00007FF71DBC26E0
+EventBus UpdateEvent                             [INFO]: Removing event listener: 0x00007FF71DCF4640
+EventBus UpdateEvent                             [INFO]: Removing event listener: 0x00007FF71DD1CAC0
+EventBus MouseSelectEvent                        [INFO]: Removing event listener: 0x00007FF71DD0AD50
+EventBus EarlyUpdateEvent                        [INFO]: Removing event listener: 0x00007FF71DD0AC50
+EventBus UpdateEvent                             [INFO]: Removing event listener: 0x00007FF71DD0AF70
+EventBus WindowFramebufferEvent                  [INFO]: Removing event listener: 0x00007FF71DC2FFC0
+EventBus UpdateEvent                             [INFO]: Removing event listener: 0x00007FF71DC30140
+EventBus WindowFramebufferEvent                  [INFO]: Removing event listener: 0x00007FF71DBF3060
+EventBus LateUpdateEvent                         [INFO]: Removing event listener: 0x00007FF71DC0C390
 Renderer                                         [INFO]: Destroying.
-EventBus PostUpdateEvent                         [INFO]: Adding event listener: 0x00007FF6BB7E04D8
+EventBus PostUpdateEvent                         [INFO]: Adding event listener: 0x00007FF71DB765A5
 Mouse                                            [INFO]: Destroying.
-EventBus CursorPosEvent                          [INFO]: Removing event listener: 0x00007FF6BB8B5360
-EventBus MouseButtonEvent                        [INFO]: Removing event listener: 0x00007FF6BB8B5040
-EventBus ScrollEvent                             [INFO]: Removing event listener: 0x00007FF6BB8B5500
+EventBus CursorPosEvent                          [INFO]: Removing event listener: 0x00007FF71DC53250
+EventBus MouseButtonEvent                        [INFO]: Removing event listener: 0x00007FF71DC52F20
+EventBus ScrollEvent                             [INFO]: Removing event listener: 0x00007FF71DC53400
 Keyboard                                         [INFO]: Destroying.
-EventBus CharEvent                               [INFO]: Removing event listener: 0x00007FF6BB8A7980
-EventBus KeyEvent                                [INFO]: Removing event listener: 0x00007FF6BB8A79F0
-EventBus PostUpdateEvent                         [INFO]: Removing event listener: 0x00007FF6BB8A6FF0
+EventBus CharEvent                               [INFO]: Removing event listener: 0x00007FF71DC43CC0
+EventBus KeyEvent                                [INFO]: Removing event listener: 0x00007FF71DC43D30
+EventBus PostUpdateEvent                         [INFO]: Removing event listener: 0x00007FF71DC432B0
 Window                                           [INFO]: Destroying.
-EventBus ApplicationStartEvent                   [INFO]: Removing event listener: 0x00007FF6BB7D1D84
-EventBus ApplicationExitEvent                    [INFO]: Removing event listener: 0x00007FF6BB7DC3DD
-EventBus PreUpdateEvent                          [INFO]: Removing event listener: 0x00007FF6BB7E28E6
-EventBus ApplicationStartEvent                   [INFO]: Removing event listener: 0x00007FF6BB7DD120
-EventBus PreUpdateEvent                          [INFO]: Removing event listener: 0x00007FF6BB7D5655
+EventBus ApplicationStartEvent                   [INFO]: Removing event listener: 0x00007FF71DB67D07
+EventBus ApplicationExitEvent                    [INFO]: Removing event listener: 0x00007FF71DB7247D
+EventBus PreUpdateEvent                          [INFO]: Removing event listener: 0x00007FF71DB789BD
+EventBus ApplicationStartEvent                   [INFO]: Removing event listener: 0x00007FF71DB731D9
+EventBus PreUpdateEvent                          [INFO]: Removing event listener: 0x00007FF71DB6B5FB
 Valkyrie Engine                                  [INFO]: Destroyed Successfully.
