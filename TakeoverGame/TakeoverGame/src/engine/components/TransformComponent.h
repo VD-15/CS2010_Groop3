@@ -10,22 +10,25 @@ namespace vlk
 		TransformComponent2D(IEntity* e);
 
 		void Translate(Vector2 translation);
-		void Scale(Vector2 scale);
-		void Scale(Float scale);
 		void Rotate(Float rotation);
-
-		//Order of transformation:
-		//Translate -> Scale -> Rotate
 
 		Vector2 location;
 		Vector2 scale;
 		Float rotation;
 	};
-	/*
-	class TransformComponent3D
+	
+	struct TransformComponent3D : public Component<TransformComponent3D>
 	{
-		public:
-		TransformComponent3D();
+		TransformComponent3D(IEntity* e);
+
+		void TranslateLocal(const Vector3& translation);
+		void TranslateGlobal(const Vector3& translation);
+		void Rotate(const Vector3& axis, Float angle);
+		void Rotate(const Quaternion& q);
+
+		Vector3 location;
+		Vector3 scale;
+		Quaternion rotation;
 	};
-	*/
+	
 }

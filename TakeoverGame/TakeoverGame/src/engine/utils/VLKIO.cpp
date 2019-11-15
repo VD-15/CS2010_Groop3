@@ -13,6 +13,7 @@ StringCollection IO::ReadFile(const std::string& path)
 	if (!stream.is_open())
 	{
 		LogError("IO", "Failed to open file {" + path + "}");
+		throw std::exception("Failed to open file.");
 		return StringCollection();
 	}
 

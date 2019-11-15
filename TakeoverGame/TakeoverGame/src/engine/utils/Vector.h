@@ -47,8 +47,6 @@ namespace vlk
 		Vector2(Vector2&& other) noexcept;
 		Vector2& operator=(const Vector2& other);
 
-		virtual ~Vector2();
-
 		Float x;
 		Float y;
 
@@ -110,18 +108,9 @@ namespace vlk
 		Vector3(Vector3&& other) noexcept;
 		Vector3& operator=(const Vector3& other);
 
-		virtual ~Vector3();
-
 		Float x;
 		Float y;
 		Float z;
-
-		//Convert this Vector3 to a Vector2, scaling by z
-		//Use this when converting from a matrix multiplication
-		inline Vector2 ToVector2s() const { return Vector2(this->x / this->z, this->y / this->z); }
-
-		//Convert this Vector3 to a Vector2, discarding z
-		inline Vector2 ToVector2d() const { return Vector2(this->x, this->y); }
 
 		inline Boolean operator==(const Vector3& v) const { return this->x == v.x && this->y == v.y && this->z == v.z; }
 		inline Boolean operator!=(const Vector3& v) const { return this->x != v.x || this->y != v.y || this->z != v.z; }
@@ -136,6 +125,18 @@ namespace vlk
 		inline Vector3& operator*=(const Float f) { this->x *= f; this->y *= f; this->z *= f; return *this; }
 		inline Vector3& operator/=(const Float f) { this->x /= f; this->y /= f; this->z /= f; return *this; }
 
+		void Set(Float x, Float y, Float z);
+		void Normalize();
+		void Normalize(Float magnitude);
+		Float Magnitude() const;
+		void Round();
+
+		static Float AngleBetween(const Vector3& a, const Vector3& b);
+		static Vector3 CrossProduct(const Vector3& a, const Vector3& b);
+		static Float DotProduct(const Vector3& a, const Vector3& b);
+		static Vector3 Normalize(const Vector3& v);
+		static Float Magnitude(const Vector3& v);
+
 		static const Vector3 UP;
 		static const Vector3 DOWN;
 		static const Vector3 LEFT;
@@ -146,52 +147,73 @@ namespace vlk
 		static const Vector3 IDENTITY;
 	};
 
-	class Vector4 final
+	struct Quaternion final
 	{
-		public:
+		Quaternion();
+		Quaternion(Float x, Float y, Float z, Float w);
 
-		//Initializes a Vector4 at 0, 0, 0, 0
+		inline Boolean operator==(const Quaternion& q) const { return this->x == q.x && this->y == q.y && this->z == q.z && this->w == q.w; }
+		inline Boolean operator!=(const Quaternion& q) const { return this->x != q.x || this->y != q.y || this->z != q.z || this->w != q.w; }
+
+		inline Quaternion operator* (const Quaternion& q) const
+		{
+			return Quaternion(
+				this->w * q.x + this->x * q.w + this->y * q.z - this->z * q.y,  // i
+				this->w * q.y - this->x * q.z + this->y * q.w + this->z * q.x,  // j
+				this->w * q.z + this->x * q.y - this->y * q.x + this->z * q.w,  // k
+				this->w * q.w - this->x * q.x - this->y * q.y - this->z * q.z   // 1
+			);
+		}
+
+		inline Quaternion& operator* (const Quaternion& q)
+		{
+			Float x = this->w * q.x + this->x * q.w + this->y * q.z - this->z * q.y;  // i
+			Float y = this->w * q.y - this->x * q.z + this->y * q.w + this->z * q.x;  // j
+			Float z = this->w * q.z + this->x * q.y - this->y * q.x + this->z * q.w;  // k
+			Float w = this->w * q.w - this->x * q.x - this->y * q.y - this->z * q.z;  // 1
+
+			this->x = x;
+			this->y = y;
+			this->z = z;
+			this->w = w;
+
+			return *this;
+		}
+
+		static Quaternion AxisAngle(const Vector3& axis, Float angle);
+		static Quaternion FromEuler(const Vector3& v);
+		static Quaternion Conjugate(const Quaternion& q);
+		static Vector3 Rotate(const Vector3& v, const Quaternion& q);
+		static Vector3 RotateAround(const Vector3& origin, const Vector3& v, const Quaternion& q);
+
+		//Don't touch these unless you know what quaternions do.
+
+		Float x;
+		Float y;
+		Float z;
+		Float w;
+	};
+
+	//Where are we using this, again?
+	struct Vector4 final
+	{
 		Vector4();
-
-		//Initializes a Vector4 from the given x/y/z components with a W-value of 1
 		Vector4(Float x, Float y, Float z);
-
-		//Initializes a Vector4 from the given x/y/z/w components
 		Vector4(Float x, Float y, Float z, Float w);
-
-
-		//Initializes a Vector4 from the given Vector2 with a Z-value of 0 and a W-value of 1
 		Vector4(const Vector2& xy);
-
-		//Initializes a Vector4 from the given Vector2 with the given Z-value and a W-value of 1
 		Vector4(const Vector2& xy, Float z);
-
-		//Initializes a Vector4 from the given Vector2 with the given Z-value and W-value
 		Vector4(const Vector2& xy, Float z, Float w);
-
-		//Initializes a Vector4 from the given Vector3 with a W-value of 1
 		Vector4(const Vector3& xyz);
-
-		//Initializes a Vector4 from the given Vector3 and W-value
 		Vector4(const Vector3& xyz, Float w);
 
 		Vector4(const Vector4& other);
 		Vector4(Vector4&& other) noexcept;
 		Vector4& operator=(const Vector4& other);
 
-		virtual ~Vector4();
-
 		Float x;
 		Float y;
 		Float z;
 		Float w;
-
-		//Convert this Vector4 to a Vector3, scaling by w
-		//Use this when converting from a matrix multiplication
-		inline Vector3 ToVector3s() const { return Vector3(this->x / this->w, this->y / this->w, this->z / this->w); }
-
-		//Convert this Vector4 to a Vector3, discarding w
-		inline Vector3 ToVector3d() const { return Vector3(this->x, this->y, this->z); }
 
 		inline Boolean operator==(const Vector4& v) const { return this->x == v.x && this->y == v.y && this->z == v.z && this->w == v.w; }
 		inline Boolean operator!=(const Vector4& v) const { return this->x != v.x || this->y != v.y || this->z != v.z && this->w == v.w; }

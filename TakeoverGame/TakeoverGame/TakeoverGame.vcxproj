@@ -91,6 +91,8 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="src\engine\core\Content.cpp" />
+    <ClCompile Include="src\engine\graphics\Material.cpp" />
+    <ClCompile Include="src\engine\graphics\Model.cpp" />
     <ClCompile Include="src\engine\graphics\OpenGL\VertexArray.cpp" />
     <ClCompile Include="src\engine\utils\XmlDocument.cpp" />
     <ClCompile Include="src\game\components\CommandReciever.cpp" />
@@ -139,7 +141,10 @@
     <ClCompile Include="src\game\units\TestUnitEntity.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="src\engine\components\DrawModelComponent.h" />
     <ClInclude Include="src\engine\core\Content.h" />
+    <ClInclude Include="src\engine\graphics\Material.h" />
+    <ClInclude Include="src\engine\graphics\Model.h" />
     <ClInclude Include="src\engine\graphics\OpenGL\VertexArray.h" />
     <ClInclude Include="src\engine\utils\XmlDocument.h" />
     <ClInclude Include="src\game\components\CommandReciever.h" />
