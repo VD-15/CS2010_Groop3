@@ -1,6 +1,7 @@
 #include "GameManager.h"
 #include "../engine/core/ContentManager.hpp"
 #include "../engine/graphics/Texture.h"
+#include "../engine/graphics/Model.h"
 
 #include "ui/PlayerCamera.h"
 #include "ui/Cursor.h"
@@ -45,6 +46,9 @@ void GameManager::Init()
 	ContentManager<Texture2D>::Get().LoadContent("cap_8");
 	ContentManager<Texture2D>::Get().LoadContent("cap_9");
 	ContentManager<Texture2D>::Get().LoadContent("cap_10");
+
+	ContentManager<MaterialLibrary>::Get().LoadContent("monkey");
+	const Model* m = ContentManager<Model>::Get().LoadContent("monkey");
 
 	//Create a camera entity and make it's camera active
 	PlayerCameraEntity::CreateEntity()->camera->Activate();

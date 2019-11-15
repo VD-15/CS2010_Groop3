@@ -1,6 +1,7 @@
 #include "Material.h"
 
 #include <fstream>
+#include <array>
 
 using namespace vlk;
 
@@ -63,42 +64,84 @@ void MaterialLibrary::LoadContent(const std::string& path)
 		}
 		else if (command == "Ka")
 		{
+			std::string col(line.substr(pos + 1));
+			ULong start = 0;
+
+			std::array<Float, 3> com;
+
+			for (UInt i = 0; i < 3; i++)
+			{
+				ULong end = col.find(" ", start);
+				com[i] = std::stof(col.substr(start, end));
+				start = end;
+			}
+
+			ULong end = col.find(" ", start);
+			Float r = std::stof(col.substr(start, end));
 			mat->ambient = Color(
-				std::stof(line, &pos),
-				std::stof(line, &pos),
-				std::stof(line, &pos),
+				com[0],
+				com[1],
+				com[2],
 				1.0f
 			);
 		}
 		else if (command == "Kd")
 		{
+			std::string col(line.substr(pos + 1));
+			ULong start = 0;
+
+			std::array<Float, 3> com;
+
+			for (UInt i = 0; i < 3; i++)
+			{
+				ULong end = col.find(" ", start);
+				com[i] = std::stof(col.substr(start, end));
+				start = end;
+			}
+
+			ULong end = col.find(" ", start);
+			Float r = std::stof(col.substr(start, end));
 			mat->diffuse = Color(
-				std::stof(line, &pos),
-				std::stof(line, &pos),
-				std::stof(line, &pos),
+				com[0],
+				com[1],
+				com[2],
 				1.0f
 			);
 		}
 		else if (command == "Ks")
 		{
+			std::string col(line.substr(pos + 1));
+			ULong start = 0;
+
+			std::array<Float, 3> com;
+
+			for (UInt i = 0; i < 3; i++)
+			{
+				ULong end = col.find(" ", start);
+				com[i] = std::stof(col.substr(start, end));
+				start = end;
+			}
+
+			ULong end = col.find(" ", start);
+			Float r = std::stof(col.substr(start, end));
 			mat->specular = Color(
-				std::stof(line, &pos),
-				std::stof(line, &pos),
-				std::stof(line, &pos),
+				com[0],
+				com[1],
+				com[2],
 				1.0f
 			);
 		}
 		else if (command == "Ns")
 		{
-			mat->exponent = std::stof(line, &pos);
+			mat->exponent = std::stof(line.substr(pos));
 		}
 		else if (command == "d")
 		{
-			mat->transparency = std::stof(line, &pos);
+			mat->transparency = std::stof(line.substr(pos));
 		}
 		else if (command == "Tr")
 		{
-			mat->transparency = 1.0f - std::stof(line, &pos);
+			mat->transparency = 1.0f - std::stof(line.substr(pos));
 		}
 		else if (command == "map_Kd")
 		{
@@ -115,6 +158,10 @@ void MaterialLibrary::LoadContent(const std::string& path)
 		else if (command == "map_d" || command == "map_Tr")
 		{
 
+		}
+		else if (command == "#")
+		{
+			continue;
 		}
 		else
 		{
