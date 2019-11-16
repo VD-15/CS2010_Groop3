@@ -47,16 +47,17 @@ void GameManager::Init()
 	ContentManager<Texture2D>::Get().LoadContent("cap_9");
 	ContentManager<Texture2D>::Get().LoadContent("cap_10");
 
-	ContentManager<MaterialLibrary>::Get().LoadContent("monkey");
-	const Model* m = ContentManager<Model>::Get().LoadContent("monkey");
+	ContentManager<MaterialLibrary>::Get().LoadContent("monkey.mtl");
+	ContentManager<Model>::Get().LoadContent("monkey");
 
 	//Create a camera entity and make it's camera active
-	PlayerCameraEntity::CreateEntity()->camera->Activate();
-	CursorEntity::CreateEntity();
-	MapEntity::CreateEntity();
-	BuildingEntity::CreateEntity();
+	//PlayerCameraEntity::CreateEntity()->camera->Activate();
+	//CursorEntity::CreateEntity();
+	//MapEntity::CreateEntity();
+	//BuildingEntity::CreateEntity();
 
-	//TestUnitEntity::CreateEntity(Team::Team1, Vector2(128.0f));
+	TestUnitEntity::CreateEntity(Team::Team1, Vector2(64.0f, 0.0f));
+	TestUnitEntity::CreateEntity(Team::Team1, Vector2(-64.0f, 0.0f));
 
 	constexpr UInt startingUnits = 8;
 	Float inc = vlk::TwoPi / startingUnits;

@@ -20,5 +20,5 @@
     <texture name="cap_9" path="textures/capture/capture_9.png"></texture>
     <texture name="cap_10" path="textures/capture/capture_10.png"></texture>
 	<model name="monkey" path="models/monkey.obj"></model>
-	<material name="monkey" path="models/monkey.mtl"></material> 
+	<material name="monkey.mtl" path="models/monkey.mtl"></material> 
 </content>

@@ -76,8 +76,6 @@ void MaterialLibrary::LoadContent(const std::string& path)
 				start = end;
 			}
 
-			ULong end = col.find(" ", start);
-			Float r = std::stof(col.substr(start, end));
 			mat->ambient = Color(
 				com[0],
 				com[1],
@@ -99,8 +97,6 @@ void MaterialLibrary::LoadContent(const std::string& path)
 				start = end;
 			}
 
-			ULong end = col.find(" ", start);
-			Float r = std::stof(col.substr(start, end));
 			mat->diffuse = Color(
 				com[0],
 				com[1],
@@ -117,13 +113,11 @@ void MaterialLibrary::LoadContent(const std::string& path)
 
 			for (UInt i = 0; i < 3; i++)
 			{
-				ULong end = col.find(" ", start);
-				com[i] = std::stof(col.substr(start, end));
+				ULong end = col.find(" ", start) + 1;
+				com[i] = std::stof(col.substr(start, start - end));
 				start = end;
 			}
 
-			ULong end = col.find(" ", start);
-			Float r = std::stof(col.substr(start, end));
 			mat->specular = Color(
 				com[0],
 				com[1],
@@ -179,7 +173,7 @@ const std::string& MaterialLibrary::GetContentName() const
 const Material* MaterialLibrary::GetMaterial(const std::string& name) const
 {
 	auto it = materials.find(name);
-
+	
 	if (it == materials.end())
 	{
 		LogError("Material Library", "Failed to find material with name: " + name);

@@ -41,7 +41,7 @@ void Model::LoadContent(const std::string& path)
 	//preliminary parse to determine size of vectors and to assign material
 	while (std::getline(in, line))
 	{
-		ULong pos = line.find_first_not_of(" ");
+		ULong pos = line.find_first_of(" ");
 		std::string command = line.substr(0, pos);
 
 		if (command == "v")
@@ -67,7 +67,7 @@ void Model::LoadContent(const std::string& path)
 		else if (command == "usemtl")
 		{
 			//use material
-			currentMat = this->lib->GetMaterial(line.substr(pos));
+			currentMat = this->lib->GetMaterial(line.substr(pos + 1));
 		}
 		else if (command == "mtllib")
 		{
@@ -86,6 +86,9 @@ void Model::LoadContent(const std::string& path)
 		this->faces[it->first].reserve(it->second * 9);
 	}
 
+	in.clear();
+	in.seekg(0, std::ios::beg);
+
 	//secondary pass to fill vectors
 	while (std::getline(in, line))
 	{
@@ -94,25 +97,47 @@ void Model::LoadContent(const std::string& path)
 
 		if (command == "v")
 		{
+			std::string vert(line.substr(pos + 1));
+			ULong start = 0;
+
 			//vertex, expects precisely three floats
-			vertices.push_back(std::stof(line, &pos));
-			vertices.push_back(std::stof(line, &pos));
-			vertices.push_back(std::stof(line, &pos));
+			for (UInt i = 0; i < 3; i++)
+			{
+				ULong end = vert.find(" ", start) + 1;
+				vertices.push_back(std::stof(vert.substr(start, start - end)));
+				start = end;
+			}
+
 			continue;
 		}
 		else if (command == "vt")
 		{
+			std::string vert(line.substr(pos + 1));
+			ULong start = 0;
+
 			//texture coordinate, expects precisely two floats
-			coords.push_back(std::stof(line, &pos));
-			coords.push_back(std::stof(line, &pos));
+			for (UInt i = 0; i < 2; i++)
+			{
+				ULong end = vert.find(" ", start) + 1;
+				coords.push_back(std::stof(vert.substr(start, start - end)));
+				start = end;
+			}
+
 			continue;
 		}
 		else if (command == "vn")
 		{
+			std::string vert(line.substr(pos + 1));
+			ULong start = 0;
+
 			//vertex normal, expexts precisely three floats
-			normals.push_back(std::stof(line, &pos));
-			normals.push_back(std::stof(line, &pos));
-			normals.push_back(std::stof(line, &pos));
+			for (UInt i = 0; i < 3; i++)
+			{
+				ULong end = vert.find(" ", start) + 1;
+				normals.push_back(std::stof(vert.substr(start, start - end)));
+				start = end;
+			}
+
 			continue;
 		}
 		else if (command == "f")
@@ -138,7 +163,7 @@ void Model::LoadContent(const std::string& path)
 		else if (command == "usemtl")
 		{
 			//use material
-			currentMat = this->lib->GetMaterial(line.substr(pos));
+			currentMat = this->lib->GetMaterial(line.substr(pos + 1));
 		}
 		else if (command == "#")
 		{

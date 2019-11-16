@@ -1,45 +1,107 @@
-EventBus ApplicationStartEvent                   [INFO]: Adding event listener: 0x00007FF78ECDF5CB
-EventBus PreUpdateEvent                          [INFO]: Adding event listener: 0x00007FF78ECD7470
+EventBus ApplicationStartEvent                   [INFO]: Adding event listener: 0x00007FF717676698
+EventBus PreUpdateEvent                          [INFO]: Adding event listener: 0x00007FF71766E448
 Window                                           [INFO]: Initializing.
-EventBus ApplicationStartEvent                   [INFO]: Adding event listener: 0x00007FF78ECD38E3
-EventBus ApplicationExitEvent                    [INFO]: Adding event listener: 0x00007FF78ECDE7F2
-EventBus PreUpdateEvent                          [INFO]: Adding event listener: 0x00007FF78ECE51CE
+EventBus ApplicationStartEvent                   [INFO]: Adding event listener: 0x00007FF71766A898
+EventBus ApplicationExitEvent                    [INFO]: Adding event listener: 0x00007FF7176758A6
+EventBus PreUpdateEvent                          [INFO]: Adding event listener: 0x00007FF71767C2AF
 Keyboard                                         [INFO]: Initializing.
-EventBus CharEvent                               [INFO]: Adding event listener: 0x00007FF78EDDAA80
-EventBus KeyEvent                                [INFO]: Adding event listener: 0x00007FF78EDDAAF0
-EventBus PostUpdateEvent                         [INFO]: Adding event listener: 0x00007FF78EDDA0F0
+EventBus CharEvent                               [INFO]: Adding event listener: 0x00007FF717779F30
+EventBus KeyEvent                                [INFO]: Adding event listener: 0x00007FF717779FA0
+EventBus PostUpdateEvent                         [INFO]: Adding event listener: 0x00007FF717779520
 Mouse                                            [INFO]: Initializing
-EventBus CursorPosEvent                          [INFO]: Adding event listener: 0x00007FF78EDE7FF0
-EventBus MouseButtonEvent                        [INFO]: Adding event listener: 0x00007FF78EDE7CD0
-EventBus ScrollEvent                             [INFO]: Adding event listener: 0x00007FF78EDE8190
-EventBus PostUpdateEvent                         [INFO]: Adding event listener: 0x00007FF78EDE8080
-Renderer                                         [INFO]: Init() set to: 0x00007FF78ECD7114
-Renderer                                         [INFO]: Draw() set to: 0x00007FF78ECD373A
-Renderer                                         [INFO]: Destroy() set to: 0x00007FF78ECD72F9
+EventBus CursorPosEvent                          [INFO]: Adding event listener: 0x00007FF717789040
+EventBus MouseButtonEvent                        [INFO]: Adding event listener: 0x00007FF717788D10
+EventBus ScrollEvent                             [INFO]: Adding event listener: 0x00007FF7177891F0
+EventBus PostUpdateEvent                         [INFO]: Adding event listener: 0x00007FF7177890D0
+Renderer                                         [INFO]: Init() set to: 0x00007FF71766E0E7
+Renderer                                         [INFO]: Draw() set to: 0x00007FF71766A74E
+Renderer                                         [INFO]: Destroy() set to: 0x00007FF71766E2D1
 Renderer                                         [INFO]: Initializing.
-EventBus WindowFramebufferEvent                  [INFO]: Adding event listener: 0x00007FF78EE452B0
-EventBus Texture2D>                              [INFO]: Adding event listener: 0x00007FF78EE45330
-EventBus Texture2D>                              [INFO]: Adding event listener: 0x00007FF78EE457B0
-EventBus PostUpdateEvent                         [INFO]: Adding event listener: 0x00007FF78ECE2C17
-EventBus LateUpdateEvent                         [INFO]: Adding event listener: 0x00007FF78EDA2410
-EventBus WindowFramebufferEvent                  [INFO]: Adding event listener: 0x00007FF78ED8A170
-EventBus WindowFramebufferEvent                  [INFO]: Adding event listener: 0x00007FF78EDC9270
-EventBus UpdateEvent                             [INFO]: Adding event listener: 0x00007FF78EDC9380
-Valkyrie Engine                                  [INFO]: VLKinit took 1.468482 Seconds
+EventBus WindowFramebufferEvent                  [INFO]: Adding event listener: 0x00007FF7177E7A10
+EventBus Texture2D>                              [INFO]: Adding event listener: 0x00007FF7177E7A90
+EventBus Texture2D>                              [INFO]: Adding event listener: 0x00007FF7177E7F20
+EventBus PostUpdateEvent                         [INFO]: Adding event listener: 0x00007FF717679CF3
+EventBus LateUpdateEvent                         [INFO]: Adding event listener: 0x00007FF71773E950
+EventBus WindowFramebufferEvent                  [INFO]: Adding event listener: 0x00007FF717725CD0
+EventBus WindowFramebufferEvent                  [INFO]: Adding event listener: 0x00007FF717766750
+EventBus UpdateEvent                             [INFO]: Adding event listener: 0x00007FF717766860
+Valkyrie Engine                                  [INFO]: VLKinit took 0.713971 Seconds
 Window                                           [INFO]: Set window swap interval to: 1
-EventBus MouseSelectEvent                        [INFO]: Adding event listener: 0x00007FF78EE90520
-EventBus EarlyUpdateEvent                        [INFO]: Adding event listener: 0x00007FF78EE90450
-EventBus UpdateEvent                             [INFO]: Adding event listener: 0x00007FF78EE90730
-EventBus UpdateEvent                             [INFO]: Adding event listener: 0x00007FF78EEA1A30
-EventBus UpdateEvent                             [INFO]: Adding event listener: 0x00007FF78EE7AA00
-EventBus MouseSelectEvent                        [INFO]: Adding event listener: 0x00007FF78ED510E0
-EventBus EarlyUpdateEvent                        [INFO]: Adding event listener: 0x00007FF78ED50AE0
-EventBus CommandIssuedEvent                      [INFO]: Adding event listener: 0x00007FF78ED3A240
-EventBus UpdateEvent                             [INFO]: Adding event listener: 0x00007FF78ED3A310
+EventBus MouseSelectEvent                        [INFO]: Adding event listener: 0x00007FF7178347A0
+EventBus EarlyUpdateEvent                        [INFO]: Adding event listener: 0x00007FF7178346D0
+EventBus UpdateEvent                             [INFO]: Adding event listener: 0x00007FF7178349C0
+EventBus UpdateEvent                             [INFO]: Adding event listener: 0x00007FF717846410
+EventBus UpdateEvent                             [INFO]: Adding event listener: 0x00007FF71781E3F0
+EventBus MouseSelectEvent                        [INFO]: Adding event listener: 0x00007FF7176EB1D0
+EventBus EarlyUpdateEvent                        [INFO]: Adding event listener: 0x00007FF7176EABB0
+EventBus CommandIssuedEvent                      [INFO]: Adding event listener: 0x00007FF7176D3940
+EventBus UpdateEvent                             [INFO]: Adding event listener: 0x00007FF7176D3A10
 Material Library                                 [WARN]: Unknown command: 
 Material Library                                 [WARN]: Unknown command: Ke
 Material Library                                 [WARN]: Unknown command: Ni
 Material Library                                 [WARN]: Unknown command: illum
 Material Library                                 [WARN]: Unknown command: 
 Material Library                                 [WARN]: Unknown command: Ke
-Material Library              
+Material Library                                 [WARN]: Unknown command: Ni
+Material Library                                 [WARN]: Unknown command: illum
+Material Library                                 [WARN]: Unknown command: 
+Material Library                                 [WARN]: Unknown command: Ke
+Material Library                                 [WARN]: Unknown command: Ni
+Material Library                                 [WARN]: Unknown command: illum
+Model                                            [WARN]: Unknown command while passing file: mtllib
+Model                                            [WARN]: Unknown command while passing file: s
+EventBus ApplicationExitEvent                    [INFO]: Adding event listener: 0x00007FF717679FB9
+EventBus ApplicationExitEvent                    [INFO]: Adding event listener: 0x00007FF71766C067
+EventBus ApplicationExitEvent                    [INFO]: Adding event listener: 0x00007FF71766FDD4
+EventBus ApplicationExitEvent                    [INFO]: Adding event listener: 0x00007FF717677D13
+EventBus ApplicationExitEvent                    [INFO]: Adding event listener: 0x00007FF717670D4C
+EventBus ApplicationExitEvent                    [INFO]: Adding event listener: 0x00007FF71766E2B3
+EventBus ApplicationExitEvent                    [INFO]: Adding event listener: 0x00007FF717674956
+EventBus ApplicationExitEvent                    [INFO]: Adding event listener: 0x00007FF71766B004
+EventBus ApplicationExitEvent                    [INFO]: Adding event listener: 0x00007FF71766E542
+EventBus ApplicationExitEvent                    [INFO]: Adding event listener: 0x00007FF717679DBB
+EventBus ApplicationExitEvent                    [INFO]: Adding event listener: 0x00007FF71767C327
+EventBus ApplicationExitEvent                    [INFO]: Adding event listener: 0x00007FF71767AF1D
+EventBus ApplicationExitEvent                    [INFO]: Adding event listener: 0x00007FF717674807
+EventBus ApplicationExitEvent                    [INFO]: Adding event listener: 0x00007FF717674FA0
+EventBus ApplicationExitEvent                    [INFO]: Adding event listener: 0x00007FF71767A1B7
+EventBus ApplicationExitEvent                    [INFO]: Adding event listener: 0x00007FF71766CCEC
+Application                                      [INFO]: Application starting.
+Window                                           [INFO]: Showing window.
+EventBus ApplicationExitEvent                    [INFO]: Adding event listener: 0x00007FF71766BF3B
+EventBus ApplicationExitEvent                    [INFO]: Adding event listener: 0x00007FF717674758
+EventBus ApplicationExitEvent                    [INFO]: Adding event listener: 0x00007FF7176731EB
+Selectable                                       [INFO]: Hovered, flag is now: 2
+Selectable                                       [INFO]: UnHovered, flag is now: 0
+Application                                      [INFO]: Application exiting.
+Window                                           [INFO]: Hiding window.
+EventBus CommandIssuedEvent                      [INFO]: Removing event listener: 0x00007FF7176D3940
+EventBus UpdateEvent                             [INFO]: Removing event listener: 0x00007FF7176D3A10
+EventBus MouseSelectEvent                        [INFO]: Removing event listener: 0x00007FF7176EB1D0
+EventBus EarlyUpdateEvent                        [INFO]: Removing event listener: 0x00007FF7176EABB0
+EventBus UpdateEvent                             [INFO]: Removing event listener: 0x00007FF71781E3F0
+EventBus UpdateEvent                             [INFO]: Removing event listener: 0x00007FF717846410
+EventBus MouseSelectEvent                        [INFO]: Removing event listener: 0x00007FF7178347A0
+EventBus EarlyUpdateEvent                        [INFO]: Removing event listener: 0x00007FF7178346D0
+EventBus UpdateEvent                             [INFO]: Removing event listener: 0x00007FF7178349C0
+EventBus WindowFramebufferEvent                  [INFO]: Removing event listener: 0x00007FF717766750
+EventBus UpdateEvent                             [INFO]: Removing event listener: 0x00007FF717766860
+EventBus WindowFramebufferEvent                  [INFO]: Removing event listener: 0x00007FF717725CD0
+EventBus LateUpdateEvent                         [INFO]: Removing event listener: 0x00007FF71773E950
+Renderer                                         [INFO]: Destroying.
+EventBus PostUpdateEvent                         [INFO]: Adding event listener: 0x00007FF717679CF3
+Mouse                                            [INFO]: Destroying.
+EventBus CursorPosEvent                          [INFO]: Removing event listener: 0x00007FF717789040
+EventBus MouseButtonEvent                        [INFO]: Removing event listener: 0x00007FF717788D10
+EventBus ScrollEvent                             [INFO]: Removing event listener: 0x00007FF7177891F0
+Keyboard                                         [INFO]: Destroying.
+EventBus CharEvent                               [INFO]: Removing event listener: 0x00007FF717779F30
+EventBus KeyEvent                                [INFO]: Removing event listener: 0x00007FF717779FA0
+EventBus PostUpdateEvent                         [INFO]: Removing event listener: 0x00007FF717779520
+Window                                           [INFO]: Destroying.
+EventBus ApplicationStartEvent                   [INFO]: Removing event listener: 0x00007FF71766A898
+EventBus ApplicationExitEvent                    [INFO]: Removing event listener: 0x00007FF7176758A6
+EventBus PreUpdateEvent                          [INFO]: Removing event listener: 0x00007FF71767C2AF
+EventBus ApplicationStartEvent                   [INFO]: Removing event listener: 0x00007FF717676698
+EventBus PreUpdateEvent                          [INFO]: Removing event listener: 0x00007FF71766E448
+Valkyrie Engine                                  [INFO]: Destroyed Successfully.

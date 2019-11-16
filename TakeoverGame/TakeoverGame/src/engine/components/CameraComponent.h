@@ -29,4 +29,20 @@ namespace vlk
 		Vector2 zoom;
 		const TransformComponent2D* transform;
 	};
+
+	struct CameraComponent3D : public Component<CameraComponent3D>
+	{
+		static const CameraComponent3D* ACTIVE;
+
+		CameraComponent3D(IEntity* e, TransformComponent3D* transform);
+
+		void Activate();
+
+		Matrix4 GetProjection() const;
+		Matrix4 GetView() const;
+
+		Float fov;
+
+		const TransformComponent3D* transform;
+	};
 }
