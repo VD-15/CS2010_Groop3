@@ -1,10 +1,94 @@
-<!DOCTYPE html>
-<html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Development Blog</title>
-  </head>
-  <body>
-    <p>Hi World</p>
-  </body>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="GroupLandingPage/style.css" type="text/css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Lato&amp;subset=latin-ext" rel="stylesheet">
+      <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+
+</head>
+
+<body>
+    <header id="header">
+        <nav>
+            <div id="menu-icon">
+                <i class="fa fa-bars fa-2x"></i>
+            </div>
+            <div id="logo">
+                <a href="#header"><img src="GroupLandingPage/logo.png" height="50px"></a>
+            </div>
+            <div id="menu">
+                <ul>
+                    <li class="nav-link"><a href="#header">Home</a></li>
+                </ul>
+            </div>
+        </nav>
+        <div id="header-description">
+            <p>TAKEOVER<br>Development Blog<br>
+            </p>
+        </div>
+        <div>
+            <a href="#about-section"><input type="button" id="header-button" value="Scroll Down"></a>
+        </div>
+    </header>
+    <main>
+        <section id="about-section">
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        </section>
+
+    </main>
+    <footer>
+        <div id="footer-content">
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-youtube"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+
+            <p>© Copyright 2019 T3</p>
+        </div>
+    </footer>
+
+    <script type="text/javascript">
+        // Menu-toggle button
+
+        $(document).ready(function() {
+            $("#menu-icon").on("click", function() {
+                $("nav ul").toggleClass("showing");
+            });
+        });
+
+        // Hide menu after click
+
+        $(document).ready(function() {
+            $(".nav-link").on("click", function() {
+                $("nav ul").toggleClass("showing");
+            });
+        });
+
+        // Scrolling Effect
+
+        $(window).on("scroll", function() {
+            if ($(window).scrollTop()) {
+                $('nav').addClass('black');
+            } else {
+                $('nav').removeClass('black');
+            }
+        })
+
+        // Smoth scrolling to anchor
+
+        $(document).on('click', 'a[href^="#"]', function(event) {
+            event.preventDefault();
+
+            $('html, body').animate({
+                scrollTop: $($.attr(this, 'href')).offset().top-50
+            }, 500);
+        });
+    </script>
+
+</body>
+
 </html>
