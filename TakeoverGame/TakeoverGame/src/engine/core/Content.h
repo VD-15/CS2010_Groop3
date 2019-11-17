@@ -8,7 +8,7 @@ namespace vlk
 {
 	struct Content
 	{
-		virtual void LoadContent(const std::string& path) = 0;
+		virtual void LoadContent(const std::string& path, const std::string& name) = 0;
 		virtual const std::string& GetContentName() const = 0;
 
 		void AddMetaTag(const std::string& name, const std::string& value);

@@ -29,7 +29,6 @@ namespace
 			{
 				Vector2 moveDir = c->target - c->transform->location;
 
-				//TODO: the Normalize() here will cause units to move to infinity if their position is equal to their destination
 				Vector2 moveAmount(Vector2::Normalize(moveDir) * c->speed * VLKTime::DeltaTime<Float>());
 
 				if (moveAmount.Magnitude() > moveDir.Magnitude())

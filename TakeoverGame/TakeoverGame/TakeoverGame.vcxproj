@@ -90,6 +90,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="src\engine\components\LightComponent.cpp" />
     <ClCompile Include="src\engine\core\Content.cpp" />
     <ClCompile Include="src\engine\graphics\Material.cpp" />
     <ClCompile Include="src\engine\graphics\Model.cpp" />
@@ -142,6 +143,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\engine\components\DrawModelComponent.h" />
+    <ClInclude Include="src\engine\components\LightComponent.h" />
     <ClInclude Include="src\engine\core\Content.h" />
     <ClInclude Include="src\engine\graphics\Material.h" />
     <ClInclude Include="src\engine\graphics\Model.h" />

@@ -8,9 +8,12 @@
 
 namespace vlk
 {
-	struct Material
+	struct Material : public Content
 	{
 		Material();
+
+		void LoadContent(const std::string& path, const std::string& name) final override;
+		const std::string& GetContentName() const final override;
 
 		Color ambient;					//Ka
 		Color diffuse;					//Kd
@@ -26,20 +29,5 @@ namespace vlk
 		const Texture2D* exponentMap;	//map_Ns
 
 		const Texture2D* alphaMap;		//map_d / map_Tr
-	};
-
-	class MaterialLibrary : public Content
-	{
-		public:
-		MaterialLibrary();
-		~MaterialLibrary();
-
-		void LoadContent(const std::string& path) final override;
-		const std::string& GetContentName() const final override;
-
-		const Material* GetMaterial(const std::string& name) const;
-
-		private:
-		std::map<std::string, Material*> materials;
 	};
 }

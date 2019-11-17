@@ -96,7 +96,7 @@ namespace vlk
 				{
 					const char* path = node.attribute("path").value();
 
-					t->LoadContent(path);
+					t->LoadContent(path, name);
 
 					//Add meta tags
 					for (pugi::xml_node att = node.first_child(); att; att = att.next_sibling())
@@ -116,6 +116,11 @@ namespace vlk
 			throw std::exception("Failed to load content");
 			delete t;
 			return nullptr;
+		}
+
+		void AddContent(const std::string& name, T* content)
+		{
+			this->content.emplace(name, content);
 		}
 
 		const T* GetContent(const std::string& name) const

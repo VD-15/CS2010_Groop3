@@ -36,8 +36,6 @@ Matrix3& Matrix3::operator=(const Matrix3& other)
 	return *this;
 }
 
-Matrix3::~Matrix3() {}
-
 Boolean Matrix3::operator==(const Matrix3& other) const
 {
 	for (UInt i = 0; i < 9; i++)
@@ -196,40 +194,35 @@ Matrix3 Matrix3::CreateRotation(const Float angle)
 }
 
 Matrix4::Matrix4() :
-	data {0.0f}
+	data()
 {
 
+}
+
+Matrix4::Matrix4(const std::array<Float, 16> data) :
+	data(data)
+{
+	
 }
 
 Matrix4::Matrix4(const Matrix4& other) :
-	data {}
+	data(other.data)
 {
-	for (UInt i = 0; i < 16; i++)
-	{
-		data[i] = other.data[i];
-	}
+
 }
 
 Matrix4::Matrix4(Matrix4&& other) noexcept :
-	data {}
+	data(other.data)
 {
-	for (UInt i = 0; i < 16; i++)
-	{
-		data[i] = other.data[i];
-	}
+
 }
 
 Matrix4& Matrix4::operator=(const Matrix4& other)
 {
-	for (UInt i = 0; i < 16; i++)
-	{
-		data[i] = other.data[i];
-	}
+	this->data = other.data;
 
 	return *this;
 }
-
-Matrix4::~Matrix4() {}
 
 Boolean Matrix4::operator==(const Matrix4& other) const
 {
@@ -434,7 +427,29 @@ Matrix4 Matrix4::CreateRotationZ(Float angle)
 	return m;
 }
 
-Matrix4 Matrix4::CreateLookAt(Vector3 right, Vector3 up, Vector3 direction, Vector3 position)
+Matrix4 Matrix4::CreateRotation(const Quaternion& q)
+{
+	std::array<Float, 16> mD = {
+		q.w, q.z, -q.y, q.x,
+		-q.z, q.w, q.x, q.y,
+		q.y, -q.x, q.w, q.z,
+		-q.x, -q.y, -q.z, q.w
+	};
+
+	std::array<Float, 16> nD = {
+		q.w, q.z, -q.y, -q.x,
+		-q.z, q.w, q.x, -q.y,
+		q.y, -q.x, q.w, -q.z,
+		q.x, q.y, q.z, q.w
+	};
+
+	Matrix4 m(mD);
+	Matrix4 n(nD);
+
+	return m * n;
+}
+
+Matrix4 Matrix4::CreateLookAt(const Vector3& right, const Vector3& up, const Vector3& direction, const Vector3& position)
 {
 	Matrix4 m(Matrix4::CreateIdentity());
 	Matrix4 n(Matrix4::CreateIdentity());

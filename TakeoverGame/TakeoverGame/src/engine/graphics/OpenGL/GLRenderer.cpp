@@ -8,11 +8,12 @@
 #include <fstream>
 #include <sstream>
 #include <vector>
-#include <unordered_map>
+#include <set>
 
 #include "../../components/DrawPrimitiveComponent.h"
 #include "../../components/DrawTextureComponent.h"
 #include "../../components/DrawStringComponent.h"
+#include "../../components/DrawModelComponent.h"
 #include "../../components/CameraComponent.h"
 #include "../../memory/ChunkAllocator.hpp"
 #include "../../utils/StringCollection.h"
@@ -34,6 +35,7 @@ namespace
 
 	std::map<const Texture2D*, UInt> textureMap;
 	Texture2DVAO texture2Dvao;
+	ModelVAO modelVAO;
 
 	void OnFramebufferResize(vlk::WindowFramebufferEvent& ev)
 	{
@@ -99,6 +101,96 @@ namespace
 		UInt texture = textureMap[ev.content];
 
 		glDeleteTextures(1, &texture);
+	}
+
+	void DrawModels3D()
+	{
+		std::vector<DrawModelComponent3D*> models(0);
+		models.reserve(DrawModelComponent3D::GetCount());
+
+		std::set<const Model*> uniqueModels;
+
+		if (models.capacity() == 0) return;
+
+		DrawModelComponent3D::ForEach([&models, &uniqueModels](DrawModelComponent3D* c)
+		{
+			models.push_back(c);
+			uniqueModels.emplace(c->model);
+		});
+
+		//sort by models
+		std::sort(models.begin(), models.end(), [](DrawModelComponent3D* m1, DrawModelComponent3D* m2)
+		{
+			return m1->model > m2->model;
+		});
+
+		ByteBuffer modelBuffer;
+		ByteBuffer transformBuffer;
+
+		ULong modelSize = 0;
+
+		//Loop over unique models
+		for (auto a = uniqueModels.begin(); a != uniqueModels.end(); a++)
+		{
+			const Model* model = *a;
+
+			//loop over meshes in model
+			for (auto b = model->GetMeshes().begin(); b != model->GetMeshes().end(); b++)
+			{
+				std::vector<UInt> mesh = *b;
+
+				//add number of vertices in mesh
+				modelSize += mesh.size();
+			}
+		}
+
+		//Allocate space for number of vertices in mesh * (3 + 2 + 3) floats ver vertex * 4 bytes per float
+		modelBuffer.Allocate(modelSize * (3 + 2 + 3) * 4);
+
+		//Allocate space for 16 floats per transform matrix * 4 bytes per float
+		transformBuffer.Allocate(models.size() * 16 * 4);
+
+		for (auto model = uniqueModels.begin(); model != uniqueModels.end(); model++)
+		{
+			const Model* m = *model;
+
+			for (auto mesh = m->GetMeshes().begin(); mesh != m->GetMeshes().end(); mesh++)
+			{
+				const std::vector<UInt> v = *mesh;
+
+				for (auto it = v.begin(); it != v.end(); it += 3)
+				{
+					UInt vertex = *it;
+					UInt coord = *(it + 1);
+					UInt normal = *(it + 2);
+
+					modelBuffer.Put<Float>(m->GetVertices().at((static_cast<ULong>(vertex) * 3) + 0));
+					modelBuffer.Put<Float>(m->GetVertices().at((static_cast<ULong>(vertex) * 3) + 1));
+					modelBuffer.Put<Float>(m->GetVertices().at((static_cast<ULong>(vertex) * 3) + 2));
+
+					modelBuffer.Put<Float>(m->GetCoords().at((static_cast<ULong>(coord) * 2) + 0));
+					modelBuffer.Put<Float>(m->GetCoords().at((static_cast<ULong>(coord) * 2) + 1));
+
+					modelBuffer.Put<Float>(m->GetNormals().at((static_cast<ULong>(normal) * 3 + 0)));
+					modelBuffer.Put<Float>(m->GetNormals().at((static_cast<ULong>(normal) * 3 + 1)));
+					modelBuffer.Put<Float>(m->GetNormals().at((static_cast<ULong>(normal) * 3 + 2)));
+				}
+			}
+		}
+
+		for (auto it = models.begin(); it != models.end(); it++)
+		{
+			DrawModelComponent3D* draw = *it;
+
+			Matrix4 matrix = Matrix4::CreateScale(draw->transform->scale) * Matrix4::CreateRotation(draw->transform->rotation) * Matrix4::CreateTranslation(draw->transform->location);
+
+			const Float* data = matrix.Data();
+
+			for (UInt i = 0; i < 16; i++)
+			{
+				transformBuffer.Put<Float>(data[i]);
+			}
+		}
 	}
 
 	void DrawTextures2D()
@@ -255,6 +347,7 @@ void GLRenderer::Init()
 	glClearColor(0.0f, 0.0f, 0.0f, 1.0f);
 
 	texture2Dvao.Create();
+	modelVAO.Create();
 	
 	EventBus<vlk::WindowFramebufferEvent>::Get().AddEventListener(OnFramebufferResize);
 	EventBus<vlk::ContentLoadedEvent<Texture2D>>::Get().AddEventListener(OnTextureLoad);
@@ -267,6 +360,7 @@ void GLRenderer::Draw()
 	
 	viewport2D = CameraComponent2D::ACTIVE->GetView() * CameraComponent2D::ACTIVE->GetProjection();
 
+	DrawModels3D();
 	DrawTextures2D();
 	/*
 	DrawStrings();
@@ -275,7 +369,11 @@ void GLRenderer::Draw()
 }
 
 void GLRenderer::Destroy()
-{/*
+{
+	texture2Dvao.Delete();
+	modelVAO.Delete();
+
+	/*
 	DestroyPrimitive2DVertexArray();
 	DestroyTexture2DVertexArray();
 

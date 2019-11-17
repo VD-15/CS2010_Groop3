@@ -8,7 +8,16 @@ namespace
 {
 	void OnResize(vlk::WindowFramebufferEvent& ev)
 	{
-		auto resize = CameraComponent2D::ForEach([ev](CameraComponent2D* c)
+		auto resize2D = CameraComponent2D::ForEach([ev](CameraComponent2D* c)
+		{
+			if (c->autoResize)
+			{
+				c->viewport.x = ev.width / 2.0f;
+				c->viewport.y = ev.height / 2.0f;
+			}
+		});
+
+		auto resize3D = CameraComponent3D::ForEach([ev](CameraComponent3D* c)
 		{
 			if (c->autoResize)
 			{
@@ -30,11 +39,12 @@ void Camera::Destroy()
 }
 
 const CameraComponent2D* CameraComponent2D::ACTIVE = nullptr;
+const CameraComponent3D* CameraComponent3D::ACTIVE = nullptr;
 
 CameraComponent2D::CameraComponent2D(IEntity* e, TransformComponent2D* transform) :
-	Component(e)
+	Component(e),
+	transform(transform)
 {
-	this->transform = transform;
 	this->autoResize = true;
 	this->zoom = 1.0f;
 
@@ -67,4 +77,40 @@ Matrix4 CameraComponent2D::GetProjection() const
 Matrix4 CameraComponent2D::GetView() const
 {
 	return Matrix4::CreateLookAt(Vector3::RIGHT, Vector3::UP, Vector3::FORWARD, Vector3(this->transform->location, 0.0f));
+}
+
+CameraComponent3D::CameraComponent3D(IEntity* e, TransformComponent3D* transform) : 
+	Component<CameraComponent3D>(e),
+	transform(transform)
+{
+	this->fov = 90.0f;
+	this->autoResize = true;
+
+	if (!CameraComponent3D::ACTIVE)
+	{
+		CameraComponent3D::ACTIVE = this;
+	}
+}
+
+void CameraComponent3D::Activate()
+{
+	CameraComponent3D::ACTIVE = this;
+}
+
+Matrix4 CameraComponent3D::GetProjection() const
+{
+	Float aspect = viewport.y / viewport.x;
+	Float height = this->fov * aspect;
+
+	return Matrix4::CreatePerspective(-fov, fov, height, -height, std::numeric_limits<Float>::min(), 1048576.0f);
+}
+
+Matrix4 CameraComponent3D::GetView() const
+{
+	return Matrix4::CreateLookAt(
+		Quaternion::Rotate(Vector3::RIGHT, this->transform->rotation),
+		Quaternion::Rotate(Vector3::UP, this->transform->rotation), 
+		Quaternion::Rotate(Vector3::FORWARD, this->transform->rotation), 
+		this->transform->location
+	);
 }

@@ -3,6 +3,8 @@
 #include "Vector.h"
 #include "../core/ValkyrieEngine.h"
 
+#include <array>
+
 namespace vlk
 {
 	class Matrix3
@@ -13,8 +15,6 @@ namespace vlk
 		Matrix3(const Matrix3& other);
 		Matrix3(Matrix3&& other) noexcept;
 		Matrix3& operator=(const Matrix3& other);
-
-		virtual ~Matrix3();
 
 		inline Float& At(UInt col, UInt row) { return data[col + row * 3]; }
 		inline const Float& At(UInt col, UInt row) const { return data[col + row * 3]; }
@@ -46,18 +46,17 @@ namespace vlk
 	{
 		public:
 		Matrix4();
+		Matrix4(const std::array<Float, 16> data);
 
 		Matrix4(const Matrix4& other);
 		Matrix4(Matrix4&& other) noexcept;
 		Matrix4& operator=(const Matrix4& other);
 
-		virtual ~Matrix4();
+		inline Float& At(ULong col, ULong row) { return data[col + row * 4]; }
+		inline const Float& At(ULong col, ULong row) const { return data[col + row * 4]; }
 
-		inline Float& At(UInt col, UInt row) { return data[col + row * 4]; }
-		inline const Float& At(UInt col, UInt row) const { return data[col + row * 4]; }
-
-		inline Float* Data() { return data; }
-		inline const Float* Data() const { return data; }
+		inline Float* Data() { return data.data(); }
+		inline const Float* Data() const { return data.data(); }
 
 		Boolean operator==(const Matrix4& other) const;
 		Boolean operator!=(const Matrix4& other) const;
@@ -76,11 +75,12 @@ namespace vlk
 		static Matrix4 CreateRotationX(Float angle);
 		static Matrix4 CreateRotationY(Float angle);
 		static Matrix4 CreateRotationZ(Float angle);
-		static Matrix4 CreateLookAt(Vector3 right, Vector3 up, Vector3 direction, Vector3 position);
+		static Matrix4 CreateRotation(const Quaternion& q);
+		static Matrix4 CreateLookAt(const Vector3& right, const Vector3& up, const Vector3& direction, const Vector3& position);
 		static Matrix4 CreatePerspective(Float left, Float right, Float top, Float bottom, Float near, Float far);
 		static Matrix4 CreateOrthographic(Float right, Float left, Float top, Float bottom, Float near, Float far);
 
 		private:
-		Float data[16];
+		std::array<Float, 16> data;
 	};
 }

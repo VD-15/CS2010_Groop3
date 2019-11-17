@@ -6,7 +6,7 @@ using namespace vlk;
 
 Model::Model()
 {
-	lib = nullptr;
+
 }
 
 Model::~Model()
@@ -14,12 +14,12 @@ Model::~Model()
 
 }
 
-void Model::LoadContent(const std::string& path)
+void Model::LoadContent(const std::string& path, const std::string& name)
 {
 	this->vertices.clear();
 	this->coords.clear();
 	this->normals.clear();
-	this->faces.clear();
+	this->meshes.clear();
 
 	std::ifstream in;
 	in.open(path, std::ios::in);
@@ -35,10 +35,10 @@ void Model::LoadContent(const std::string& path)
 	ULong numVertices = 0;
 	ULong numCoords = 0;
 	ULong numNormals = 0;
-	std::map<const Material*, ULong> numFaces;
-	const Material* currentMat = nullptr;
+	std::map<ULong, ULong> numFaces;
+	ULong meshGroups = 0;
 
-	//preliminary parse to determine size of vectors and to assign material
+	//preliminary parse to determine size of vectors and number of materials
 	while (std::getline(in, line))
 	{
 		ULong pos = line.find_first_of(" ");
@@ -62,32 +62,32 @@ void Model::LoadContent(const std::string& path)
 		else if (command == "f")
 		{
 			//face
-			numFaces[currentMat]++;
+			numFaces[meshGroups]++;
 		}
 		else if (command == "usemtl")
 		{
 			//use material
-			currentMat = this->lib->GetMaterial(line.substr(pos + 1));
-		}
-		else if (command == "mtllib")
-		{
-			//material library
-			this->lib = ContentManager<MaterialLibrary>::Get().GetContent(line.substr(pos + 1));
+			meshGroups++;
 		}
 	}
 
-	this->vertices.reserve(numVertices * 3);
-	this->coords.reserve(numCoords * 2);
-	this->normals.reserve(numNormals * 3);
+	//resize vectors once because we don't hate our heap memory
+	this->vertices.reserve((numVertices) * 3);
+	this->coords.reserve((numCoords) * 2);
+	this->normals.reserve((numNormals) * 3);
+	this->materials.reserve(meshGroups);
+
+	for (auto)
 
 	for (auto it = numFaces.begin(); it != numFaces.end(); it++)
 	{
 		//this assumes all faces will be triangular and have three elements: position, normal and UV
-		this->faces[it->first].reserve(it->second * 9);
+		this->meshes[it->first].reserve((it->second) * 9);
 	}
 
 	in.clear();
 	in.seekg(0, std::ios::beg);
+	meshGroups = 0;
 
 	//secondary pass to fill vectors
 	while (std::getline(in, line))
@@ -153,7 +153,7 @@ void Model::LoadContent(const std::string& path)
 					newPos = line.find_first_of("/", pos); //find next '/' character
 					std::string sub = line.substr(pos + 1, newPos);
 
-					faces[currentMat].push_back(std::stoul(sub));
+					meshes[meshGroups - 1].push_back(std::stoul(sub));
 
 					pos = newPos;
 				}
@@ -162,8 +162,10 @@ void Model::LoadContent(const std::string& path)
 		}
 		else if (command == "usemtl")
 		{
+			materials[meshGroups] = ContentManager<Material>::Get().GetContent(line.substr(pos + 1));
+
 			//use material
-			currentMat = this->lib->GetMaterial(line.substr(pos + 1));
+			meshGroups++;
 		}
 		else if (command == "#")
 		{

@@ -4,8 +4,6 @@
 
 namespace vlk
 {
-	//TODO: dynamically allocated / deleted components
-
 	class IEntity
 	{
 		public:

@@ -27,7 +27,7 @@ namespace vlk
 		Boolean autoResize;
 		Vector2 viewport;
 		Vector2 zoom;
-		const TransformComponent2D* transform;
+		const TransformComponent2D* const transform;
 	};
 
 	struct CameraComponent3D : public Component<CameraComponent3D>
@@ -41,8 +41,10 @@ namespace vlk
 		Matrix4 GetProjection() const;
 		Matrix4 GetView() const;
 
+		Boolean autoResize;
 		Float fov;
+		Vector2 viewport;
 
-		const TransformComponent3D* transform;
+		const TransformComponent3D* const transform;
 	};
 }
