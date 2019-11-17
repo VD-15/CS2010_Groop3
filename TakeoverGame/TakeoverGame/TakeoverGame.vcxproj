@@ -90,6 +90,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="src\engine\components\DrawModelComponent3D.cpp" />
     <ClCompile Include="src\engine\components\LightComponent.cpp" />
     <ClCompile Include="src\engine\core\Content.cpp" />
     <ClCompile Include="src\engine\graphics\Material.cpp" />

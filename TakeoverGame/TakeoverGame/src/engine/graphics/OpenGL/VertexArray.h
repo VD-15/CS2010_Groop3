@@ -91,8 +91,6 @@ namespace vlk
 		//transparency binding
 		UInt alpBinding;
 
-		GLBuffer elementBuffer;
-
 		GLBuffer modelBuffer;
 
 		GLBuffer instanceBuffer;
