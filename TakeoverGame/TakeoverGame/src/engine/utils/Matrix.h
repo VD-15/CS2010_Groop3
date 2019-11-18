@@ -52,8 +52,8 @@ namespace vlk
 		Matrix4(Matrix4&& other) noexcept;
 		Matrix4& operator=(const Matrix4& other);
 
-		inline Float& At(ULong col, ULong row) { return data[col + row * 4]; }
-		inline const Float& At(ULong col, ULong row) const { return data[col + row * 4]; }
+		inline Float& At(ULong col, ULong row) { return data[col * 4 + row]; }
+		inline const Float& At(ULong col, ULong row) const { return data[col * 4 + row]; }
 
 		inline Float* Data() { return data.data(); }
 		inline const Float* Data() const { return data.data(); }
@@ -77,7 +77,7 @@ namespace vlk
 		static Matrix4 CreateRotationZ(Float angle);
 		static Matrix4 CreateRotation(const Quaternion& q);
 		static Matrix4 CreateLookAt(const Vector3& right, const Vector3& up, const Vector3& direction, const Vector3& position);
-		static Matrix4 CreatePerspective(Float fov, Float far, Float near);
+		static Matrix4 CreatePerspective(Float fov, Float aspect, Float far, Float near);
 		static Matrix4 CreateOrthographic(Float right, Float left, Float top, Float bottom, Float near, Float far);
 
 		private:

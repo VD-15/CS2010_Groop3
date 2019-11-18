@@ -62,11 +62,13 @@ void GameManager::Init()
 	//TestUnitEntity::CreateEntity(Team::Team1, Vector2(64.0f, 0.0f));
 	//TestUnitEntity::CreateEntity(Team::Team1, Vector2(-64.0f, 0.0f));
 
-	TestUnitEntity2::CreateEntity(Vector3(0.0f, 0.0f, -10.0f));
-	TestUnitEntity2::CreateEntity(Vector3(-10.0f, 0.0f, -10.0f));
-	TestUnitEntity2::CreateEntity(Vector3(10.0f, 0.0f, -10.0f));
-	CameraComponent3D::CreateComponent(nullptr, TransformComponent3D::CreateComponent(nullptr));
+	TestUnitEntity2::CreateEntity(Vector3(0.0f, 0.0f, 2.0f));
+	TestUnitEntity2::CreateEntity(Vector3(-5.0f, 0.0f, 2.0f))->transform->scale.y = 5.0f;
+	TestUnitEntity2::CreateEntity(Vector3(5.0f, 0.0f, 2.0f))->transform->scale = 2.5f;
+	auto c = CameraComponent3D::CreateComponent(nullptr, TransformComponent3D::CreateComponent(nullptr));
 	CameraComponent2D::CreateComponent(nullptr, TransformComponent2D::CreateComponent(nullptr));
+
+	const_cast<TransformComponent3D*>(c->transform)->location.z += 2.0f;
 
 	constexpr UInt startingUnits = 8;
 	Float inc = vlk::TwoPi / startingUnits;

@@ -297,6 +297,13 @@ Vector3::Vector3()
 	this->z = 0.0f;
 }
 
+Vector3::Vector3(Float xyz)
+{
+	this->x = xyz;
+	this->y = xyz;
+	this->z = xyz;
+}
+
 Vector3::Vector3(Float x, Float y, Float z)
 {
 	this->x = x;

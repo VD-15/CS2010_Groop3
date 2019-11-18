@@ -100,6 +100,7 @@ namespace vlk
 	{
 		public:
 		Vector3();
+		Vector3(Float xyz);
 		Vector3(Float x, Float y, Float z);
 		Vector3(const Vector2& v);
 		Vector3(const Vector2& xy, Float z);

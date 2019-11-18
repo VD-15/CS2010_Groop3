@@ -83,7 +83,7 @@ CameraComponent3D::CameraComponent3D(IEntity* e, TransformComponent3D* transform
 	Component<CameraComponent3D>(e),
 	transform(transform)
 {
-	this->fov = 90.0f;
+	this->fov = 45.0f;
 	this->autoResize = true;
 
 	if (!CameraComponent3D::ACTIVE)
@@ -99,10 +99,9 @@ void CameraComponent3D::Activate()
 
 Matrix4 CameraComponent3D::GetProjection() const
 {
-	Float aspect = viewport.y / viewport.x;
-	Float height = this->fov * aspect;
+	Float aspect = viewport.x / viewport.y;
 
-	return Matrix4::CreatePerspective(fov, 1048576.0f, 0.1f);
+	return Matrix4::CreatePerspective(fov, aspect, 1048576.0f, 0.1f);
 }
 
 Matrix4 CameraComponent3D::GetView() const
