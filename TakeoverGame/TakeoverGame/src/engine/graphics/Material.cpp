@@ -34,6 +34,7 @@ void Material::LoadContent(const std::string& path, const std::string& name)
 	}
 
 	std::string line;
+	Boolean found = false;
 
 	while (std::getline(in, line))
 	{
@@ -43,6 +44,7 @@ void Material::LoadContent(const std::string& path, const std::string& name)
 		if (command == "newmtl")
 		{
 			std::string args = line.substr(pos + 1);
+			found = true;
 
 			//find this material in material file
 			if (args == name)
@@ -158,7 +160,10 @@ void Material::LoadContent(const std::string& path, const std::string& name)
 				}
 			}
 		}
+	}
 
+	if (!found)
+	{
 		LogError("Material", "Failed to find material " + name + " in file " + path);
 		throw std::exception("Failed to find material");
 	}

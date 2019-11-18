@@ -158,18 +158,18 @@ namespace vlk
 		inline Quaternion operator* (const Quaternion& q) const
 		{
 			return Quaternion(
-				this->w * q.x + this->x * q.w + this->y * q.z - this->z * q.y,  // i
-				this->w * q.y - this->x * q.z + this->y * q.w + this->z * q.x,  // j
-				this->w * q.z + this->x * q.y - this->y * q.x + this->z * q.w,  // k
+				this->w * q.x + this->x * q.w - this->y * q.z + this->z * q.y,  // i
+				this->w * q.y + this->x * q.z + this->y * q.w - this->z * q.x,  // j
+				this->w * q.z + this->x * q.y + this->y * q.x - this->z * q.w,  // k
 				this->w * q.w - this->x * q.x - this->y * q.y - this->z * q.z   // 1
 			);
 		}
 
 		inline Quaternion& operator* (const Quaternion& q)
 		{
-			Float x = this->w * q.x + this->x * q.w + this->y * q.z - this->z * q.y;  // i
-			Float y = this->w * q.y - this->x * q.z + this->y * q.w + this->z * q.x;  // j
-			Float z = this->w * q.z + this->x * q.y - this->y * q.x + this->z * q.w;  // k
+			Float x = this->w * q.x + this->x * q.w - this->y * q.z + this->z * q.y;  // i
+			Float y = this->w * q.y + this->x * q.z + this->y * q.w - this->z * q.x;  // j
+			Float z = this->w * q.z + this->x * q.y + this->y * q.x - this->z * q.w;  // k
 			Float w = this->w * q.w - this->x * q.x - this->y * q.y - this->z * q.z;  // 1
 
 			this->x = x;

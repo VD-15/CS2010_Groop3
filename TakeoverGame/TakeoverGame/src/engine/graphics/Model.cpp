@@ -62,7 +62,7 @@ void Model::LoadContent(const std::string& path, const std::string& name)
 		else if (command == "f")
 		{
 			//face
-			numFaces[meshGroups]++;
+			numFaces[meshGroups - 1]++;
 		}
 		else if (command == "usemtl")
 		{
@@ -76,12 +76,12 @@ void Model::LoadContent(const std::string& path, const std::string& name)
 	this->coords.reserve((numCoords) * 2);
 	this->normals.reserve((numNormals) * 3);
 	this->materials.reserve(meshGroups);
-
-	for (auto)
+	this->meshes.reserve(meshGroups);
 
 	for (auto it = numFaces.begin(); it != numFaces.end(); it++)
 	{
 		//this assumes all faces will be triangular and have three elements: position, normal and UV
+		this->meshes.push_back(std::vector<UInt>());
 		this->meshes[it->first].reserve((it->second) * 9);
 	}
 
@@ -162,7 +162,7 @@ void Model::LoadContent(const std::string& path, const std::string& name)
 		}
 		else if (command == "usemtl")
 		{
-			materials[meshGroups] = ContentManager<Material>::Get().GetContent(line.substr(pos + 1));
+			materials.push_back(ContentManager<Material>::Get().GetContent(line.substr(pos + 1)));
 
 			//use material
 			meshGroups++;

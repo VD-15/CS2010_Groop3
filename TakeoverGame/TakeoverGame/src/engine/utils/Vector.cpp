@@ -495,7 +495,7 @@ Vector3 Quaternion::Rotate(const Vector3& v, const Quaternion& q)
 	Quaternion p(v.x, v.y, v.z, 0.0f);	//pure quaternion from v
 	Quaternion c(-q.x, -q.y, -q.z, q.w); //conjugate quaternion
 
-	Quaternion q1(q * p * c); //multiply quaternions
+	Quaternion q1(c * p * q); //multiply quaternions
 
 	return Vector3(q1.x, q1.y, q1.z);	//q1 should be a pure quaternion by this point.
 }

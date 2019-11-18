@@ -12,7 +12,7 @@ namespace vlk
 		XmlDocument();
 		virtual ~XmlDocument();
 
-		void LoadContent(const std::string& path) override;
+		void LoadContent(const std::string& path, const std::string& name) override;
 		const std::string& GetContentName() const override;
 	};
 }

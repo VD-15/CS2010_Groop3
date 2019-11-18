@@ -213,8 +213,8 @@ void ModelVAO::Create()
 	glBufferData(GL_ARRAY_BUFFER, this->instanceBuffer.size, nullptr, GL_DYNAMIC_DRAW);
 	glBindBuffer(GL_ARRAY_BUFFER, 0);
 
-	UInt vShader = CreateShader(GL_VERTEX_SHADER, "shaders/model.vert");
-	UInt fShader = CreateShader(GL_FRAGMENT_SHADER, "shaders/model.frag");
+	UInt vShader = CreateShader(GL_VERTEX_SHADER, "shaders/model3D.vert");
+	UInt fShader = CreateShader(GL_FRAGMENT_SHADER, "shaders/model3D.frag");
 
 	CheckShaderCompile(vShader);
 	CheckShaderCompile(fShader);

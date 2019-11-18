@@ -2,7 +2,34 @@
 
 #include "../../engine/core/ContentManager.hpp"
 
+#include "../../engine/core/VLKTime.h"
+
 using namespace tkv;
+
+void OnUpdate(UpdateEvent& ev)
+{
+	TestComponent::ForEach([](TestComponent* c)
+	{
+		c->transform->Rotate(Quaternion::AxisAngle(Vector3::UP, VLKTime::DeltaTime<Float>()));
+	});
+}
+
+void TestSystem::Init()
+{
+	EventBus<UpdateEvent>::Get().AddEventListener(OnUpdate);
+}
+
+void TestSystem::Destroy()
+{
+	EventBus<UpdateEvent>::Get().RemoveEventListener(OnUpdate);
+}
+
+TestComponent::TestComponent(IEntity* e, TransformComponent3D* transform) :
+	Component<TestComponent>(e),
+	transform(transform)
+{
+
+}
 
 TestUnitEntity::TestUnitEntity(Team t, Vector2 location)
 {
@@ -32,4 +59,16 @@ void TestUnitEntity::OnDelete()
 	team->Delete();
 	draw->Delete();
 	transform->Delete();
+}
+
+TestUnitEntity2::TestUnitEntity2(const Vector3& location)
+{
+	this->transform = CreateComponent<TransformComponent3D>();
+	this->draw = CreateComponent<DrawModelComponent3D>(transform, ContentManager<Model>::Get().GetContent("monkey"));
+}
+
+void TestUnitEntity2::OnDelete()
+{
+	this->draw->Delete();
+	this->transform->Delete();
 }

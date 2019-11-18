@@ -21,6 +21,7 @@ namespace
 
 void GameManager::Init()
 {
+	TestSystem::Init();
 	CursorSystem::Init();
 	CameraSystem::Init();
 	CaptureSystem::Init();
@@ -47,7 +48,9 @@ void GameManager::Init()
 	ContentManager<Texture2D>::Get().LoadContent("cap_9");
 	ContentManager<Texture2D>::Get().LoadContent("cap_10");
 
-	ContentManager<MaterialLibrary>::Get().LoadContent("monkey.mtl");
+	ContentManager<Material>::Get().LoadContent("monkey_green");
+	ContentManager<Material>::Get().LoadContent("monkey_blue");
+	ContentManager<Material>::Get().LoadContent("monkey_yellow");
 	ContentManager<Model>::Get().LoadContent("monkey");
 
 	//Create a camera entity and make it's camera active
@@ -56,8 +59,14 @@ void GameManager::Init()
 	//MapEntity::CreateEntity();
 	//BuildingEntity::CreateEntity();
 
-	TestUnitEntity::CreateEntity(Team::Team1, Vector2(64.0f, 0.0f));
-	TestUnitEntity::CreateEntity(Team::Team1, Vector2(-64.0f, 0.0f));
+	//TestUnitEntity::CreateEntity(Team::Team1, Vector2(64.0f, 0.0f));
+	//TestUnitEntity::CreateEntity(Team::Team1, Vector2(-64.0f, 0.0f));
+
+	TestUnitEntity2::CreateEntity(Vector3(0.0f, 0.0f, -10.0f));
+	TestUnitEntity2::CreateEntity(Vector3(-10.0f, 0.0f, -10.0f));
+	TestUnitEntity2::CreateEntity(Vector3(10.0f, 0.0f, -10.0f));
+	CameraComponent3D::CreateComponent(nullptr, TransformComponent3D::CreateComponent(nullptr));
+	CameraComponent2D::CreateComponent(nullptr, TransformComponent2D::CreateComponent(nullptr));
 
 	constexpr UInt startingUnits = 8;
 	Float inc = vlk::TwoPi / startingUnits;
@@ -66,8 +75,8 @@ void GameManager::Init()
 	{
 		Vector2 p1(Vector2::RotateAround(Vector2(448.0f, 480.0f), Vector2(480.0f, 480.0f), inc * static_cast<Float>(i)));
 
-		TestUnitEntity::CreateEntity(Team::Team2, p1);
-		TestUnitEntity::CreateEntity(Team::Team1, -p1);
+		//TestUnitEntity::CreateEntity(Team::Team2, p1);
+		//TestUnitEntity::CreateEntity(Team::Team1, -p1);
 	}
 }
 
@@ -78,6 +87,12 @@ void GameManager::Destroy()
 	CaptureSystem::Destroy();
 	CameraSystem::Destroy();
 	CursorSystem::Destroy();
+	TestSystem::Destroy();
+
+	ContentManager<Material>::Get().UnloadContent("monkey_green");
+	ContentManager<Material>::Get().UnloadContent("monkey_blue");
+	ContentManager<Material>::Get().UnloadContent("monkey_yellow");
+	ContentManager<Model>::Get().UnloadContent("monkey");
 
 	ContentManager<Texture2D>::Get().UnloadContent("cap_0");
 	ContentManager<Texture2D>::Get().UnloadContent("cap_1");

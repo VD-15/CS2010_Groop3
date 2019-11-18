@@ -108,9 +108,9 @@ namespace
 		std::vector<DrawModelComponent3D*> models(0);
 		models.reserve(DrawModelComponent3D::GetCount());
 
-		std::set<const Model*> uniqueModels;
-
 		if (models.capacity() == 0) return;
+
+		std::set<const Model*> uniqueModels;
 
 		DrawModelComponent3D::ForEach([&models, &uniqueModels](DrawModelComponent3D* c)
 		{
@@ -124,73 +124,116 @@ namespace
 			return m1->model > m2->model;
 		});
 
-		ByteBuffer modelBuffer;
-		ByteBuffer transformBuffer;
+		std::vector<DrawModelComponent3D*> thisDraw;
+		thisDraw.reserve(models.size());
 
-		ULong modelSize = 0;
-
-		//Loop over unique models
-		for (auto a = uniqueModels.begin(); a != uniqueModels.end(); a++)
+		//Draw unique models in groups
+		for (auto iModel = uniqueModels.begin(); iModel != uniqueModels.end(); iModel++)
 		{
-			const Model* model = *a;
+			const Model* model = *iModel;
 
-			//loop over meshes in model
-			for (auto b = model->GetMeshes().begin(); b != model->GetMeshes().end(); b++)
+			//Get all DrawModelComponents that use this model and move them into thisDraw
 			{
-				std::vector<UInt> mesh = *b;
-
-				//add number of vertices in mesh
-				modelSize += mesh.size();
-			}
-		}
-
-		//Allocate space for number of vertices in mesh * (3 + 2 + 3) floats ver vertex * 4 bytes per float
-		modelBuffer.Allocate(modelSize * (3 + 2 + 3) * 4);
-
-		//Allocate space for 16 floats per transform matrix * 4 bytes per float
-		transformBuffer.Allocate(models.size() * 16 * 4);
-
-		for (auto model = uniqueModels.begin(); model != uniqueModels.end(); model++)
-		{
-			const Model* m = *model;
-
-			for (auto mesh = m->GetMeshes().begin(); mesh != m->GetMeshes().end(); mesh++)
-			{
-				const std::vector<UInt> v = *mesh;
-
-				for (auto it = v.begin(); it != v.end(); it += 3)
+				thisDraw.clear();
+				auto it = std::remove_if(models.begin(), models.end(), [model](const DrawModelComponent3D* d)
 				{
-					UInt vertex = *it;
-					UInt coord = *(it + 1);
-					UInt normal = *(it + 2);
+					return d->model == model;
+				});
 
-					modelBuffer.Put<Float>(m->GetVertices().at((static_cast<ULong>(vertex) * 3) + 0));
-					modelBuffer.Put<Float>(m->GetVertices().at((static_cast<ULong>(vertex) * 3) + 1));
-					modelBuffer.Put<Float>(m->GetVertices().at((static_cast<ULong>(vertex) * 3) + 2));
+				//Move components from models to thisDraw
+				std::move(it, models.end(), std::back_inserter(thisDraw));
+				models.erase(it, models.end());
+			}
 
-					modelBuffer.Put<Float>(m->GetCoords().at((static_cast<ULong>(coord) * 2) + 0));
-					modelBuffer.Put<Float>(m->GetCoords().at((static_cast<ULong>(coord) * 2) + 1));
+			//Contains all the transforms for the model renders
+			ByteBuffer perInstanceBuffer;
+			perInstanceBuffer.Allocate(thisDraw.size() * 16 * 4);
 
-					modelBuffer.Put<Float>(m->GetNormals().at((static_cast<ULong>(normal) * 3 + 0)));
-					modelBuffer.Put<Float>(m->GetNormals().at((static_cast<ULong>(normal) * 3 + 1)));
-					modelBuffer.Put<Float>(m->GetNormals().at((static_cast<ULong>(normal) * 3 + 2)));
+			//Load transform matrices into perInstanceBuffer
+			for (auto it = thisDraw.begin(); it != thisDraw.end(); it++)
+			{
+				DrawModelComponent3D* c = *it;
+
+				Matrix4 transform =		Matrix4::CreateScale(c->transform->scale) *
+										Matrix4::CreateRotation(c->transform->rotation) *
+										Matrix4::CreateTranslation(c->transform->location);
+
+				for (UInt i = 0; i < 16; i++)
+				{
+					perInstanceBuffer.Put<Float>(transform.Data()[i]);
 				}
 			}
-		}
+			
+			modelVAO.Bind();
+			glUniformMatrix4fv(modelVAO.viewportBinding, 1, GL_FALSE, viewport3D.Data());
 
-		for (auto it = models.begin(); it != models.end(); it++)
-		{
-			DrawModelComponent3D* draw = *it;
+			glEnable(GL_DEPTH_TEST);
+			glDepthFunc(GL_LEQUAL);
 
-			Matrix4 matrix = Matrix4::CreateScale(draw->transform->scale) * Matrix4::CreateRotation(draw->transform->rotation) * Matrix4::CreateTranslation(draw->transform->location);
+			glEnable(GL_BLEND);
+			glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
 
-			const Float* data = matrix.Data();
+			glEnable(GL_CULL_FACE);
+			glCullFace(GL_CW);
 
-			for (UInt i = 0; i < 16; i++)
+			//draw meshes
+			for (ULong i = 0; i < model->GetMeshes().size(); i++)
 			{
-				transformBuffer.Put<Float>(data[i]);
+				const std::vector<UInt>& mesh = model->GetMeshes()[i];
+				const Material* material = model->GetMaterials()[i];
+
+				//Contains the mesh data
+				ByteBuffer perVertexBuffer;
+				perVertexBuffer.Allocate(mesh.size() * (3 * 2 * 3) * 4);
+
+				//Assemble mesh data into perVertexBuffer
+				for (ULong j = 0; j < mesh.size(); j += 3)
+				{
+					ULong vertex = static_cast<ULong>(mesh[j + 0] - 1) * 3;
+					ULong coord = static_cast<ULong>(mesh[j + 1] - 1) * 2;
+					ULong norm = static_cast<ULong>(mesh[j + 2] - 1) * 3;
+
+					perVertexBuffer.Put<Float>(model->GetVertices()[vertex + 0]);
+					perVertexBuffer.Put<Float>(model->GetVertices()[vertex + 1]);
+					perVertexBuffer.Put<Float>(model->GetVertices()[vertex + 2]);
+
+					perVertexBuffer.Put<Float>(model->GetCoords()[coord + 0]);
+					perVertexBuffer.Put<Float>(model->GetCoords()[coord + 1]);
+
+					perVertexBuffer.Put<Float>(model->GetNormals()[norm + 0]);
+					perVertexBuffer.Put<Float>(model->GetNormals()[norm + 1]);
+					perVertexBuffer.Put<Float>(model->GetNormals()[norm + 2]);
+				}
+
+				modelVAO.modelBuffer.Fill(perVertexBuffer);
+				modelVAO.instanceBuffer.Fill(perInstanceBuffer);
+
+				//Send material to uniforms
+				{
+					glActiveTexture(GL_TEXTURE0 + 0);
+					glBindTexture(GL_TEXTURE_2D, textureMap[material->diffuseMap]);
+
+					glActiveTexture(GL_TEXTURE0 + 1);
+					glBindTexture(GL_TEXTURE_2D, textureMap[material->specularMap]);
+
+					glActiveTexture(GL_TEXTURE0 + 2);
+					glBindTexture(GL_TEXTURE_2D, textureMap[material->exponentMap]);
+
+					glActiveTexture(GL_TEXTURE0 + 3);
+					glBindTexture(GL_TEXTURE_2D, textureMap[material->alphaMap]);
+
+					glUniform4f(modelVAO.ambBinding, material->ambient.r, material->ambient.g, material->ambient.b, material->ambient.a);
+					glUniform4f(modelVAO.difBinding, material->diffuse.r, material->diffuse.g, material->diffuse.b, material->diffuse.a);
+					glUniform4f(modelVAO.spcBinding, material->specular.r, material->specular.g, material->specular.b, material->specular.a);
+					glUniform1f(modelVAO.expBinding, material->exponent);
+					glUniform1f(modelVAO.alpBinding, material->transparency);
+				}
+
+				glDrawArraysInstanced(GL_TRIANGLES, 0, static_cast<UInt>(mesh.size() / 3), static_cast<UInt>(thisDraw.size()));
 			}
 		}
+
+		modelVAO.Unbind();
 	}
 
 	void DrawTextures2D()
@@ -313,6 +356,8 @@ namespace
 		glEnable(GL_BLEND);
 		glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
 
+		glDisable(GL_CULL_FACE);
+
 		UInt lastDraw = 0;
 		UInt thisTex = 0;
 
@@ -359,6 +404,7 @@ void GLRenderer::Draw()
 	glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 	
 	viewport2D = CameraComponent2D::ACTIVE->GetView() * CameraComponent2D::ACTIVE->GetProjection();
+	viewport3D = CameraComponent3D::ACTIVE->GetView() * CameraComponent3D::ACTIVE->GetProjection();
 
 	DrawModels3D();
 	DrawTextures2D();
