@@ -1,0 +1,599 @@
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+@font-face {
+   font-family:"Elemental";
+   src:url("Elemental.ttf");
+}
+
+body{
+	font-family:Elemental;
+}
+
+h2 {
+    font-size: 30px;
+}
+
+h3 {
+    font-size: 25px;
+}
+
+h1 {
+  font-size: 40;
+}
+#header {
+    background: url("BG space 3.jpg") no-repeat center center;
+    background-size: cover;
+    height: 100vh;
+    width: 100%;
+    top: : 0;
+}
+
+#header:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    /*background: rgba(0, 0, 0, .8);*/
+}
+
+#logo {
+    position: fixed;
+    float: left;
+    margin: 8px 36px;
+    color: #fff;
+
+}
+
+nav {
+    position: fixed;
+    width: 100%;
+    z-index: 999;
+}
+
+nav ul {
+    list-style: none;
+    background: rgba(0, 0, 0, 0);
+    overflow: hidden;
+    color: #fff;
+    padding: 0;
+    margin: 0;
+    text-align: right;
+    transition: 1s;
+}
+
+/* social media icons*/
+.s-m{
+  /*position: relative;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%,-50%);*/
+}
+#footer-content a{
+  display: inline-flex;
+  width: 40px;
+  height: 40px;
+  background: #2c3e50;
+  color: white;
+  margin: 0 6px;
+  border-radius: 50%;
+  justify-content: center;
+  align-items: center;
+  transition: 0.4s;
+  font-size: 22px;
+  margin-bottom: 20px
+}
+#footer-content a:hover{
+  background: #e67e22;
+
+}
+#footer-content a i{
+  transition: 0.4s all;
+}
+#footer-content a:hover > i{
+  transform: scale(1.6) rotate(25deg);
+}
+
+/*social media icons end*/
+
+nav.black ul {
+    background: #000;
+}
+
+.nav-link {
+    display: inline-block;
+    padding: 20px;
+    position: relative;
+}
+
+.nav-link a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 20px;
+}
+
+.nav-link a::after {
+    position: absolute;
+    top: 85%;
+    left: 10%;
+    width: 80%;
+    height: 1px;
+    background: #fff;
+    content: '';
+    opacity: 0;
+    -webkit-transition: height 0.3s, opacity 0.3s, -webkit-transform 0.3s;
+    -moz-transition: height 0.3s, opacity 0.3s, -moz-transform 0.3s;
+    transition: height 0.3s, opacity 0.3s, transform 0.3s;
+    -webkit-transform: translateY(-10px);
+    -moz-transform: translateY(-10px);
+    transform: translateY(-10px);
+}
+
+.nav-link a:hover::after {
+    height: 3px;
+    opacity: 1;
+    -webkit-transform: translateY(0px);
+    -moz-transform: translateY(0px);
+    transform: translateY(0px);
+}
+
+#menu-icon {
+    width: 100%;
+    background: #000;
+    text-align: right;
+    box-sizing: border-box;
+    padding: 15px 24px;
+    cursor: pointer;
+    color: #fff;
+    display: none;
+}
+
+#header-description {
+    position: absolute;
+    text-align: center;
+    display: block;
+    width: 100%;
+    margin-top: 20vh;
+    font-size: 60px;
+    color: #fff;
+}
+
+#header-button {
+    display: block;
+    position: absolute;
+    margin-top: 80vh;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    width: 180px;
+    background-color: black;
+    font-size: 20px;
+    color: #fff;
+    padding: 8px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    letter-spacing: 2px;
+    outline: none;
+}
+#Doc-info{
+  background: white;
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+}
+#Doc-info ul{
+  max-width: 550px;
+ margin: 0 auto 50px auto;
+ text-align: left;
+ line-height: 1.6;
+  padding-top: 0px;
+ }
+#Doc-info ul li{
+font-family: 'Roboto', sans-serif;
+ color: black;
+ margin: 16px 0;
+ font-size: 20px;
+}
+
+#header-button:hover {
+    background-color: white;
+    color: black;
+}
+
+#about-section {
+  background: url("BG space 2.jpg");
+  margin: auto;
+  max-width: auto;
+  color: #000000;
+  text-align: center;
+  padding: 50px 0;
+}
+
+
+
+#devblog {
+  background: url("BG space 5.jpg");
+  margin: auto;
+  max-width: auto;
+  color: #000000;
+  text-align: center;
+  padding: 50px 0;
+}
+
+
+
+
+
+
+
+
+/* #about-section, */
+#downloads-section {
+    background: #000000;
+    display: block;
+    margin: 0em auto;
+    max-width: auto;
+    text-align: center;
+    color: #353439;
+    padding: 50px 0;
+}
+
+#about-description,
+#downloads-description {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 700px;
+    font-size: 22px;
+}
+
+
+#features,
+#downloads {
+    display: flex;
+    justify-content: space-between;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 50px;
+    max-width: 1100px;
+}
+/* this is all the new code for commander section*/
+
+#testimonials{
+
+  background: url("BG space 3.jpg");
+  margin: auto;
+  max-width: auto;
+  color: #fff;
+  text-align: center;
+  padding: 50px 0;
+}
+.inner{
+  max-width: 1200px;
+  margin: auto;
+  overflow: hidden;
+  padding: 0 20px;
+}
+
+.border{
+  width: 160px;
+  height: 5px;
+  background: #6ab04c;
+  margin: 26px auto;
+}
+
+.row{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.col{
+  flex: 25%;
+  max-width: 25.0%;
+  box-sizing: border-box;
+  padding: 15px;
+}
+.testimonial{
+  background: #fff;
+  padding: 30px;
+  color: #fff;
+}
+.testimonial img{
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+}
+.name{
+  font-size: 20px;
+  margin: 20px 0;
+}
+.stars{
+  color: #6ab04c;
+  margin-bottom: 20px;
+}
+
+
+@media screen and (max-width:960px) {
+.col{
+  flex: 100%;
+  max-width: 80%;
+}
+}
+
+@media screen and (max-width:600px) {
+.col{
+  flex: 100%;
+  max-width: 100%;
+}
+.testimonials h1{
+  position: relative;
+  right: 13px;
+  flex: 100%;
+  max-width: 100%;
+}
+}
+
+
+
+
+
+
+
+
+
+
+
+/*end of new code for commander section*/
+
+
+
+.colouredText{
+  color: #FFFFFF;
+}
+
+.border{
+  width: 160px;
+  height: 5px;
+  background: black;
+  margin: 26px auto;
+}
+
+#GameDownload{
+  background: url("BG alien 3.jpg");
+  margin: auto;
+  max-width: auto;
+  color: #fff;
+  text-align: center;
+  padding: 50px 0;
+
+}
+
+
+.feature,
+.download {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 700px;
+  font-size: 22px;
+}
+
+.feature-img img,
+.download-img img {
+    width: 200px;
+    height: auto;
+    margin-top: 0px;
+    position: relative;
+    top: -23px;
+}
+
+.download-description h4 {
+    margin-top: 0;
+}
+
+.download-description h3 {
+    margin-bottom: 0;
+}
+
+.download-description p {
+    margin: 0;
+}
+
+.download-description a {
+    text-decoration: none;
+}
+
+.download-button{
+background-color: black;
+border: none;
+color: white;
+padding: 12px 30px;
+cursor: pointer;
+font-size: 20px;
+margin-top: 20px;
+position: relative;
+left: 3px;
+}
+#download-logo-container img{
+   width: 25%;
+   height: auto;
+}
+
+.download-button:hover {
+    background-color: white;
+    color: black;
+}
+
+#contact-section {
+    background-color: #35404a;
+}
+
+#contact-wrapper {
+    display: flex;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 20px;
+    padding-bottom: 40px;
+    max-width: 1100px;
+}
+
+#contact-wrapper h5 {
+    color: #ef7c46 !important;
+}
+
+#contact-wrapper p {
+    color: #fff !important;
+}
+
+#newsletter {
+    max-width: 200px;
+    margin-right: 150px;
+}
+
+#newsletter-button {
+    display: block;
+    width: 160px;
+    background-color: #ef7c46;
+    font-size: 20px;
+    color: #fff;
+    padding: 8px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    letter-spacing: 2px;
+    outline: none;
+}
+
+#newsletter-button:hover {
+    background-color: #ff915d;
+}
+
+#newsletter a {
+    text-decoration: none;
+}
+
+#links {
+    display: flex;
+    width: 150px;
+    justify-content: space-between;
+}
+
+#links img {
+    width: 40px;
+}
+
+#links a {
+    transition: all 0.2s ease-in-out;
+}
+
+#links a:hover {
+    transform: scale(1.2);
+}
+
+footer {
+    color: #e0dfdf;
+    background-color: #1f262c;
+}
+
+footer p {
+    margin: 0;
+}
+
+#footer-content {
+    max-width: 1100px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    text-align: center
+}
+
+
+@media(max-width: 580px) {
+    #logo {
+        position: fixed;
+        top: 0;
+        margin: 6px 15px;
+    }
+    nav ul {
+        max-height: 0px;
+        background: #000;
+    }
+    .showing {
+        max-height: 20em;
+    }
+    .nav-link {
+        box-sizing: border-box;
+        width: 100%;
+        padding: 24px 0;
+        text-align: center;
+    }
+    .nav-link a::after {
+        width: 24%;
+        left: 38%;
+    }
+    #menu-icon {
+        display: block;
+    }
+    #header-description {
+        font-size: 45px;
+    }
+    #features,
+    #deals {
+        flex-direction: column;
+        align-items: center;
+    }
+    .feature,
+    .deal {
+        margin-bottom: 30px;
+    }
+
+    #contact-wrapper {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    #newsletter {
+        margin-right: 0;
+        text-align: center;
+    }
+
+    #newsletter-button {
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+}
+
+@media(max-width: 1024px) {
+    #video-section {
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+        text-align: center;
+        max-width: 85vw;
+    }
+
+    #contact-wrapper {
+        max-width: 85vw;
+    }
+
+    #footer-content {
+        max-width: 85vw;
+		font: Arial;
+    }
+}
+
+@media(max-height: 500px) {
+    #header-button {
+        display: none;
+		font: Elemental End;
+    }
+}
