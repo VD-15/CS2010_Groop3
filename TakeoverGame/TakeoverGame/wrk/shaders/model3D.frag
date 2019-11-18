@@ -21,4 +21,5 @@ void main()
 {
 	//just use diffuse color for now
 	outColor = uDiffuse;
+	//outColor = vec4(vec3(gl_FragCoord.z / gl_FragCoord.w), 1.0);
 }

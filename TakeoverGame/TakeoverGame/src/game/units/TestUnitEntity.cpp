@@ -10,7 +10,7 @@ void OnUpdate(UpdateEvent& ev)
 {
 	TestComponent::ForEach([](TestComponent* c)
 	{
-		c->transform->Rotate(Quaternion::AxisAngle(Vector3::UP, VLKTime::DeltaTime<Float>()));
+		c->transform->rotation *= Quaternion::AxisAngle(Vector3::UP, VLKTime::DeltaTime<Float>());
 	});
 }
 
@@ -65,12 +65,14 @@ TestUnitEntity2::TestUnitEntity2(const Vector3& location)
 {
 	this->transform = CreateComponent<TransformComponent3D>();
 	this->draw = CreateComponent<DrawModelComponent3D>(transform, ContentManager<Model>::Get().GetContent("monkey"));
+	this->test = CreateComponent<TestComponent>(transform);
 
 	this->transform->location = location;
 }
 
 void TestUnitEntity2::OnDelete()
 {
+	this->test->Delete();
 	this->draw->Delete();
 	this->transform->Delete();
 }

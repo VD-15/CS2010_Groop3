@@ -49,7 +49,7 @@ namespace tkv
 		void OnDelete() override;
 
 		TransformComponent3D* transform;
-		
+		TestComponent* test;
 		DrawModelComponent3D* draw;
 	};
 }

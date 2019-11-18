@@ -7,6 +7,30 @@
 
 using namespace vlk;
 
+namespace
+{
+	Color ParseColor(std::string col)
+	{
+		ULong start = 0;
+
+		ULong split1 = col.find(" ", start);
+		ULong split2 = col.find(" ", split1 + 1);
+
+		std::array<Float, 3> com;
+
+		com[0] = std::stof(col.substr(start, split1));
+		com[1] = std::stof(col.substr(split1, split2));
+		com[2] = std::stof(col.substr(split2));
+
+		return Color(
+			com[0],
+			com[1],
+			com[2],
+			1.0f
+		);
+	}
+}
+
 Material::Material() :
 	ambient(Color::WHITE),
 	diffuse(Color::WHITE),
@@ -61,65 +85,20 @@ void Material::LoadContent(const std::string& path, const std::string& name)
 					else if (command == "Ka")
 					{
 						std::string col(line.substr(pos + 1));
-						ULong start = 0;
 
-						std::array<Float, 3> com;
-
-						for (UInt i = 0; i < 3; i++)
-						{
-							ULong end = col.find(" ", start);
-							com[i] = std::stof(col.substr(start, end));
-							start = end;
-						}
-
-						this->ambient = Color(
-							com[0],
-							com[1],
-							com[2],
-							1.0f
-						);
+						this->ambient = ParseColor(line.substr(pos + 1));
 					}
 					else if (command == "Kd")
 					{
 						std::string col(line.substr(pos + 1));
-						ULong start = 0;
 
-						std::array<Float, 3> com;
-
-						for (UInt i = 0; i < 3; i++)
-						{
-							ULong end = col.find(" ", start);
-							com[i] = std::stof(col.substr(start, end));
-							start = end;
-						}
-
-						this->diffuse = Color(
-							com[0],
-							com[1],
-							com[2],
-							1.0f
-						);
+						this->diffuse = ParseColor(line.substr(pos + 1));
 					}
 					else if (command == "Ks")
 					{
 						std::string col(line.substr(pos + 1));
-						ULong start = 0;
 
-						std::array<Float, 3> com;
-
-						for (UInt i = 0; i < 3; i++)
-						{
-							ULong end = col.find(" ", start) + 1;
-							com[i] = std::stof(col.substr(start, start - end));
-							start = end;
-						}
-
-						this->specular = Color(
-							com[0],
-							com[1],
-							com[2],
-							1.0f
-						);
+						this->specular = ParseColor(line.substr(pos + 1));
 					}
 					else if (command == "Ns")
 					{

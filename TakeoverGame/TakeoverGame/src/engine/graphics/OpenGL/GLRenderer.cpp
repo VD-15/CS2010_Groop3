@@ -131,13 +131,14 @@ namespace
 		glUniformMatrix4fv(modelVAO.viewportBinding, 1, GL_FALSE, viewport3D.Data());
 
 		glEnable(GL_DEPTH_TEST);
-		glDepthFunc(GL_LEQUAL);
+		glDepthFunc(GL_LESS);
 
 		glEnable(GL_BLEND);
 		glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
 
 		glEnable(GL_CULL_FACE);
-
+		glFrontFace(GL_CW);
+		//glCullFace(GL_FRONT);
 
 		//Draw unique models in groups
 		for (auto iModel = uniqueModels.begin(); iModel != uniqueModels.end(); iModel++)
@@ -166,9 +167,10 @@ namespace
 			{
 				DrawModelComponent3D* c = *it;
 
-				Matrix4 transform =		Matrix4::CreateScale(c->transform->scale) *
-										Matrix4::CreateRotation(c->transform->rotation) *
-										Matrix4::CreateTranslation(c->transform->location);
+				Matrix4 transform =		
+										Matrix4::CreateScale(c->transform->scale) *
+										Matrix4::CreateTranslation(c->transform->location) *
+										Matrix4::CreateRotation(c->transform->rotation);
 
 				for (UInt i = 0; i < 16; i++)
 				{

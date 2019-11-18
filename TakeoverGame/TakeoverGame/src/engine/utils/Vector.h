@@ -156,6 +156,11 @@ namespace vlk
 		inline Boolean operator==(const Quaternion& q) const { return this->x == q.x && this->y == q.y && this->z == q.z && this->w == q.w; }
 		inline Boolean operator!=(const Quaternion& q) const { return this->x != q.x || this->y != q.y || this->z != q.z || this->w != q.w; }
 
+		inline void operator*=(const Quaternion& q)
+		{
+			*this = (*this) * q;
+		}
+
 		inline Quaternion operator* (const Quaternion& q) const
 		{
 			Float x =  this->x * q.w + this->y * q.z - this->z * q.y + this->w * q.x;
