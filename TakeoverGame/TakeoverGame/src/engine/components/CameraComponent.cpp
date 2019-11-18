@@ -102,15 +102,19 @@ Matrix4 CameraComponent3D::GetProjection() const
 	Float aspect = viewport.y / viewport.x;
 	Float height = this->fov * aspect;
 
-	return Matrix4::CreatePerspective(-fov, fov, height, -height, std::numeric_limits<Float>::min(), 1048576.0f);
+	return Matrix4::CreatePerspective(fov, 1048576.0f, 0.1f);
 }
 
 Matrix4 CameraComponent3D::GetView() const
 {
+	Vector3 right(Quaternion::Rotate(Vector3::RIGHT, this->transform->rotation));
+	Vector3 up(Quaternion::Rotate(Vector3::UP, this->transform->rotation));
+	Vector3 forward(Quaternion::Rotate(Vector3::FORWARD, this->transform->rotation));
+
 	return Matrix4::CreateLookAt(
-		Quaternion::Rotate(Vector3::RIGHT, this->transform->rotation),
-		Quaternion::Rotate(Vector3::UP, this->transform->rotation), 
-		Quaternion::Rotate(Vector3::FORWARD, this->transform->rotation), 
+		right,
+		up,
+		forward,
 		this->transform->location
 	);
 }

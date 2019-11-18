@@ -77,7 +77,7 @@ namespace vlk
 		static Matrix4 CreateRotationZ(Float angle);
 		static Matrix4 CreateRotation(const Quaternion& q);
 		static Matrix4 CreateLookAt(const Vector3& right, const Vector3& up, const Vector3& direction, const Vector3& position);
-		static Matrix4 CreatePerspective(Float left, Float right, Float top, Float bottom, Float near, Float far);
+		static Matrix4 CreatePerspective(Float fov, Float far, Float near);
 		static Matrix4 CreateOrthographic(Float right, Float left, Float top, Float bottom, Float near, Float far);
 
 		private:

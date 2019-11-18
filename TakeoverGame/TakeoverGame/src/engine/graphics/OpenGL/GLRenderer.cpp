@@ -127,6 +127,18 @@ namespace
 		std::vector<DrawModelComponent3D*> thisDraw;
 		thisDraw.reserve(models.size());
 
+		modelVAO.Bind();
+		glUniformMatrix4fv(modelVAO.viewportBinding, 1, GL_FALSE, viewport3D.Data());
+
+		glEnable(GL_DEPTH_TEST);
+		glDepthFunc(GL_LEQUAL);
+
+		glEnable(GL_BLEND);
+		glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
+
+		glEnable(GL_CULL_FACE);
+
+
 		//Draw unique models in groups
 		for (auto iModel = uniqueModels.begin(); iModel != uniqueModels.end(); iModel++)
 		{
@@ -163,18 +175,6 @@ namespace
 					perInstanceBuffer.Put<Float>(transform.Data()[i]);
 				}
 			}
-			
-			modelVAO.Bind();
-			glUniformMatrix4fv(modelVAO.viewportBinding, 1, GL_FALSE, viewport3D.Data());
-
-			glEnable(GL_DEPTH_TEST);
-			glDepthFunc(GL_LEQUAL);
-
-			glEnable(GL_BLEND);
-			glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
-
-			glEnable(GL_CULL_FACE);
-			glCullFace(GL_CW);
 
 			//draw meshes
 			for (ULong i = 0; i < model->GetMeshes().size(); i++)
@@ -207,6 +207,7 @@ namespace
 
 				modelVAO.modelBuffer.Fill(perVertexBuffer);
 				modelVAO.instanceBuffer.Fill(perInstanceBuffer);
+				glBindBuffer(GL_ARRAY_BUFFER, 0);
 
 				//Send material to uniforms
 				{

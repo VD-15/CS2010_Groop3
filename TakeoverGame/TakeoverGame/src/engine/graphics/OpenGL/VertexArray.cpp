@@ -245,6 +245,7 @@ void ModelVAO::Create()
 	this->difBinding = glGetUniformLocation(this->shaderProgram, "uDiffuse");
 	this->spcBinding = glGetUniformLocation(this->shaderProgram, "uSpecular");
 	this->alpBinding = glGetUniformLocation(this->shaderProgram, "uAlpha");
+	this->expBinding = glGetUniformLocation(this->shaderProgram, "uExponent");
 
 	//viewport uniform
 	this->viewportBinding = glGetUniformLocation(this->shaderProgram, "uViewport");
@@ -296,7 +297,6 @@ void ModelVAO::Unbind()
 {
 	glBindVertexArray(0);
 	glUseProgram(0);
-	glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, 0);
 }
 
 void ModelVAO::Delete()

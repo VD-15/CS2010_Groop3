@@ -473,17 +473,19 @@ Matrix4 Matrix4::CreateLookAt(const Vector3& right, const Vector3& up, const Vec
 	return m * n;
 }
 
-Matrix4 Matrix4::CreatePerspective(Float left, Float right, Float top, Float bottom, Float near, Float far)
+Matrix4 Matrix4::CreatePerspective(Float fov, Float far, Float near)
 {
 	Matrix4 m;
 
-	m.At(0, 0) = (2.0f * near) / (right - left);
-	m.At(2, 0) = (right + left) / (right - left);
-	m.At(1, 1) = (2.0f * near) / (top - bottom);
-	m.At(2, 1) = (top + bottom) / (top - bottom);
-	m.At(2, 2) = (-far - near) / (far - near);
-	m.At(3, 2) = (-2.0f * far * near) / (far - near);
-	m.At(2, 3) = -1.0f;
+	Float s = 1.0f / (std::tanf(fov / 2.0f));
+
+	m.At(0, 0) = s;
+	m.At(1, 1) = s;
+	m.At(2, 2) = -(far / (far - near));
+	m.At(2, 3) = -((far * near) / (far - near));
+
+	m.At(3, 2) = -1.0f;
+	m.At(3, 3) = 0.0f;
 
 	return m;
 }
