@@ -99,7 +99,7 @@ void CameraComponent3D::Activate()
 
 Matrix4 CameraComponent3D::GetProjection() const
 {
-	Float aspect = viewport.x / viewport.y;
+	Float aspect = viewport.y / viewport.x;
 
 	return Matrix4::CreatePerspective(fov, aspect, 100.0f, 0.1f);
 }

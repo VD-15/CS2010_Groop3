@@ -91,6 +91,12 @@ namespace vlk
 		//transparency binding
 		UInt alpBinding;
 
+		//Ambient light color binding
+		UInt ambLightColBinding;
+
+		//Ambient light intensity binding
+		UInt ambLightIntBinding;
+
 		GLBuffer modelBuffer;
 
 		GLBuffer instanceBuffer;

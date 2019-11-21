@@ -1,6 +1,7 @@
 #include "TestUnitEntity.h"
 
 #include "../../engine/core/ContentManager.hpp"
+#include "../../engine/components/LightComponent.h"
 
 #include "../../engine/core/VLKTime.h"
 
@@ -8,9 +9,21 @@ using namespace tkv;
 
 void OnUpdate(UpdateEvent& ev)
 {
+	static Float theta;
+
 	TestComponent::ForEach([](TestComponent* c)
 	{
 		c->transform->rotation *= Quaternion::AxisAngle(Vector3::UP, VLKTime::DeltaTime<Float>());
+	});
+
+	theta += VLKTime::DeltaTime<Float>();
+
+	AmbientLightComponent3D::ForEach([](AmbientLightComponent3D* c)
+	{
+		c->color.r = std::clamp(std::sinf(theta), 0.0f, 1.0f);
+		c->color.g = std::clamp(std::sinf(theta + vlk::TwoPi / 3), 0.0f, 1.0f);
+		c->color.b = std::clamp(std::sinf(theta - vlk::TwoPi / 3), 0.0f, 1.0f);
+		c->constant = std::clamp(std::sinf(theta / 3.0f), 0.0f, 1.0f);
 	});
 }
 

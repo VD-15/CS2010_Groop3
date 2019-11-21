@@ -194,6 +194,9 @@ ModelVAO::ModelVAO() :
 	spcBinding = 0;
 	expBinding = 0;
 	alpBinding = 0;
+
+	ambLightColBinding = 0;
+	ambLightIntBinding = 0;
 }
 
 void ModelVAO::Create()
@@ -246,6 +249,9 @@ void ModelVAO::Create()
 	this->spcBinding = glGetUniformLocation(this->shaderProgram, "uSpecular");
 	this->alpBinding = glGetUniformLocation(this->shaderProgram, "uAlpha");
 	this->expBinding = glGetUniformLocation(this->shaderProgram, "uExponent");
+
+	this->ambLightColBinding = glGetUniformLocation(this->shaderProgram, "uAmbientColor");
+	this->ambLightIntBinding = glGetUniformLocation(this->shaderProgram, "uAmbientIntensity");
 
 	//viewport uniform
 	this->viewportBinding = glGetUniformLocation(this->shaderProgram, "uViewport");

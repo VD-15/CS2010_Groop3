@@ -1,5 +1,6 @@
 #include "GameManager.h"
 #include "../engine/core/ContentManager.hpp"
+#include "../engine/components/LightComponent.h"
 #include "../engine/graphics/Texture.h"
 #include "../engine/graphics/Model.h"
 
@@ -65,10 +66,13 @@ void GameManager::Init()
 	TestUnitEntity2::CreateEntity(Vector3(0.0f, 0.0f, 2.0f));
 	TestUnitEntity2::CreateEntity(Vector3(-5.0f, 0.0f, 2.0f))->transform->scale.y = 5.0f;
 	TestUnitEntity2::CreateEntity(Vector3(5.0f, 0.0f, 2.0f))->transform->scale = 2.5f;
+
 	auto c = CameraComponent3D::CreateComponent(nullptr, TransformComponent3D::CreateComponent(nullptr));
 	CameraComponent2D::CreateComponent(nullptr, TransformComponent2D::CreateComponent(nullptr));
 
 	const_cast<TransformComponent3D*>(c->transform)->location.z += 2.0f;
+
+	AmbientLightComponent3D::CreateComponent(nullptr);
 
 	constexpr UInt startingUnits = 8;
 	Float inc = vlk::TwoPi / startingUnits;

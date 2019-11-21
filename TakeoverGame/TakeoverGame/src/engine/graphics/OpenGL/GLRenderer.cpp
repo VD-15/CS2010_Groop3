@@ -15,6 +15,7 @@
 #include "../../components/DrawStringComponent.h"
 #include "../../components/DrawModelComponent.h"
 #include "../../components/CameraComponent.h"
+#include "../../components/LightComponent.h"
 #include "../../memory/ChunkAllocator.hpp"
 #include "../../utils/StringCollection.h"
 #include "../../utils/ByteBuffer.hpp"
@@ -129,6 +130,12 @@ namespace
 
 		modelVAO.Bind();
 		glUniformMatrix4fv(modelVAO.viewportBinding, 1, GL_FALSE, viewport3D.Data());
+
+		//bind light uniforms
+		{
+			glUniform3f(modelVAO.ambLightColBinding, AmbientLightComponent3D::ACTIVE->color.r, AmbientLightComponent3D::ACTIVE->color.g, AmbientLightComponent3D::ACTIVE->color.b);
+			glUniform1f(modelVAO.ambLightIntBinding, AmbientLightComponent3D::ACTIVE->constant);
+		}
 
 		glEnable(GL_DEPTH_TEST);
 		glDepthFunc(GL_LESS);
