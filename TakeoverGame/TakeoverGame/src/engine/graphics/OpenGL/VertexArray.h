@@ -97,6 +97,16 @@ namespace vlk
 		//Ambient light intensity binding
 		UInt ambLightIntBinding;
 
+		UInt pntLightColBinding;
+		UInt pntLightIntBinding;
+		UInt pntLightPosBinding;
+		UInt pntLightNumBinding;
+
+		UInt dirLightColBinding;
+		UInt dirLightIntBinding;
+		UInt dirLightDirBinding;
+		UInt dirLightNumBinding;
+
 		GLBuffer modelBuffer;
 
 		GLBuffer instanceBuffer;

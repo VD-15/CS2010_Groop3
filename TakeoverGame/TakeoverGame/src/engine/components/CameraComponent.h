@@ -42,6 +42,8 @@ namespace vlk
 		Matrix4 GetView() const;
 
 		Boolean autoResize;
+
+		//Feild of view is measured in degrees for readability purposes
 		Float fov;
 		Vector2 viewport;
 

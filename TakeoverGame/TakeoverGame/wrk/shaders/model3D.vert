@@ -9,11 +9,15 @@ in vec3 inNormal;
 in mat4 inTransform;
 
 out vec2 moveUV;
+out vec3 movePos;
 
 uniform mat4 uViewport;
 
 void main()
 {
-    gl_Position = uViewport * (inTransform * vec4(inPos, 1.0));
+    vec4 worldPos = (inTransform * vec4(inPos, 1.0));
+
+    gl_Position = uViewport * worldPos;
     moveUV = inUV;
+    movePos = worldPos.xyz / worldPos.w;
 }

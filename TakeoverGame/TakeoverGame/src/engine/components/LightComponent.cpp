@@ -7,7 +7,7 @@ ILight::ILight() :
 {
 	constant = 1.0f;
 	linear = 1.0f;
-	quadratic = 0.0f;
+	quadratic = 1.0f;
 }
 
 const AmbientLightComponent3D* AmbientLightComponent3D::ACTIVE = nullptr;

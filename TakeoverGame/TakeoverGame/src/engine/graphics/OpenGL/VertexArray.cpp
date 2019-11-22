@@ -184,19 +184,29 @@ ModelVAO::ModelVAO() :
 	modelBuffer(GL_ARRAY_BUFFER),
 	instanceBuffer(GL_ARRAY_BUFFER)
 {
-	shaderProgram = 0;
-	vao = 0;
-	viewportBinding = 0;
-	transformBinding = 0;
+	this->shaderProgram = 0;
+	this->vao = 0;
+	this->viewportBinding = 0;
+	this->transformBinding = 0;
 
-	ambBinding = 0;
-	difBinding = 0;
-	spcBinding = 0;
-	expBinding = 0;
-	alpBinding = 0;
+	this->ambBinding = 0;
+	this->difBinding = 0;
+	this->spcBinding = 0;
+	this->expBinding = 0;
+	this->alpBinding = 0;
 
-	ambLightColBinding = 0;
-	ambLightIntBinding = 0;
+	this->ambLightColBinding = 0;
+	this->ambLightIntBinding = 0;
+
+	this->pntLightColBinding = 0;
+	this->pntLightIntBinding = 0;
+	this->pntLightPosBinding = 0;
+	this->pntLightNumBinding = 0;
+
+	this->dirLightColBinding = 0;
+	this->dirLightIntBinding = 0;
+	this->dirLightDirBinding = 0;
+	this->dirLightNumBinding = 0;
 }
 
 void ModelVAO::Create()
@@ -252,6 +262,16 @@ void ModelVAO::Create()
 
 	this->ambLightColBinding = glGetUniformLocation(this->shaderProgram, "uAmbientColor");
 	this->ambLightIntBinding = glGetUniformLocation(this->shaderProgram, "uAmbientIntensity");
+
+	this->pntLightColBinding = glGetUniformLocation(this->shaderProgram, "uPointColor");
+	this->pntLightIntBinding = glGetUniformLocation(this->shaderProgram, "uPointIntensity");
+	this->pntLightPosBinding = glGetUniformLocation(this->shaderProgram, "uPointLocation");
+	this->pntLightNumBinding = glGetUniformLocation(this->shaderProgram, "uPointCount");
+
+	this->dirLightColBinding = glGetUniformLocation(this->shaderProgram, "uDirectionColor");
+	this->dirLightIntBinding = glGetUniformLocation(this->shaderProgram, "uDirectionIntensity");
+	this->dirLightDirBinding = glGetUniformLocation(this->shaderProgram, "uDirectionVector");
+	this->dirLightNumBinding = glGetUniformLocation(this->shaderProgram, "uDirectionCount");
 
 	//viewport uniform
 	this->viewportBinding = glGetUniformLocation(this->shaderProgram, "uViewport");

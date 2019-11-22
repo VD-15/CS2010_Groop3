@@ -13,18 +13,10 @@ void OnUpdate(UpdateEvent& ev)
 
 	TestComponent::ForEach([](TestComponent* c)
 	{
-		c->transform->rotation *= Quaternion::AxisAngle(Vector3::UP, VLKTime::DeltaTime<Float>());
+		//c->transform->rotation *= Quaternion::AxisAngle(Vector3::UP, VLKTime::DeltaTime<Float>());
 	});
 
 	theta += VLKTime::DeltaTime<Float>();
-
-	AmbientLightComponent3D::ForEach([](AmbientLightComponent3D* c)
-	{
-		c->color.r = std::clamp(std::sinf(theta), 0.0f, 1.0f);
-		c->color.g = std::clamp(std::sinf(theta + vlk::TwoPi / 3), 0.0f, 1.0f);
-		c->color.b = std::clamp(std::sinf(theta - vlk::TwoPi / 3), 0.0f, 1.0f);
-		c->constant = std::clamp(std::sinf(theta / 3.0f), 0.0f, 1.0f);
-	});
 }
 
 void TestSystem::Init()
@@ -81,6 +73,7 @@ TestUnitEntity2::TestUnitEntity2(const Vector3& location)
 	this->test = CreateComponent<TestComponent>(transform);
 
 	this->transform->location = location;
+	this->transform->rotation = Quaternion::AxisAngle(Vector3::UP, vlk::Pi);
 }
 
 void TestUnitEntity2::OnDelete()

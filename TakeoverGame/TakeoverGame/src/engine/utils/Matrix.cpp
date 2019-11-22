@@ -477,12 +477,13 @@ Matrix4 Matrix4::CreatePerspective(Float fov, Float aspect, Float far, Float nea
 {
 	Matrix4 m;
 
-	Float s = 1.0f / (std::tanf(fov / 2.0f));
+	Float s = 1.0f / (aspect * std::tanf(fov / 2.0f));
+	Float a = 1.0f / (std::tanf(fov / 2.0f));
 
-	m.At(0, 0) = s * aspect;
+	m.At(0, 0) = a;
 	m.At(1, 1) = s;
-	m.At(2, 2) = -(far / (far - near));
-	m.At(2, 3) = -((far * near) / (far - near));
+	m.At(2, 2) = -((far + near) / (far - near));
+	m.At(2, 3) = -((2.0f * far * near) / (far - near));
 
 	m.At(3, 2) = -1.0f;
 	m.At(3, 3) = 0.0f;

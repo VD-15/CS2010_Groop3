@@ -38,6 +38,9 @@ namespace
 	Texture2DVAO texture2Dvao;
 	ModelVAO modelVAO;
 
+	constexpr UInt MAX_POINT_LIGHTS = 64;
+	constexpr UInt MAX_DRCTN_LIGHTS = 4;
+
 	void OnFramebufferResize(vlk::WindowFramebufferEvent& ev)
 	{
 		glViewport(0, 0, ev.width, ev.height);
@@ -133,8 +136,95 @@ namespace
 
 		//bind light uniforms
 		{
-			glUniform3f(modelVAO.ambLightColBinding, AmbientLightComponent3D::ACTIVE->color.r, AmbientLightComponent3D::ACTIVE->color.g, AmbientLightComponent3D::ACTIVE->color.b);
-			glUniform1f(modelVAO.ambLightIntBinding, AmbientLightComponent3D::ACTIVE->constant);
+			std::vector<float> pointCol;
+			std::vector<float> pointInt;
+			std::vector<float> pointLoc;
+
+			std::vector<Float> dirCol;
+			std::vector<Float> dirInt;
+			std::vector<Float> dirDir;
+
+			pointCol.reserve(MAX_POINT_LIGHTS * 3);
+			pointInt.reserve(MAX_POINT_LIGHTS * 3);
+			pointLoc.reserve(MAX_POINT_LIGHTS * 3);
+			UInt pointCount = 0;
+
+			dirCol.reserve(MAX_DRCTN_LIGHTS * 3);
+			dirInt.reserve(MAX_DRCTN_LIGHTS * 3);
+			dirDir.reserve(MAX_DRCTN_LIGHTS * 3);
+			UInt dirCount = 0;
+
+			PointLightComponent3D::ForEach([&pointCol, &pointInt, &pointLoc, &pointCount](PointLightComponent3D* c)
+			{
+				if (pointCount < MAX_POINT_LIGHTS)
+				{
+					//push light color
+					pointCol.push_back(c->color.r);
+					pointCol.push_back(c->color.g);
+					pointCol.push_back(c->color.b);
+
+					//push light intensity falloff
+					pointInt.push_back(c->quadratic);
+					pointInt.push_back(c->linear);
+					pointInt.push_back(c->constant);
+
+					//Push point light location
+					pointLoc.push_back(c->transform->location.x);
+					pointLoc.push_back(c->transform->location.y);
+					pointLoc.push_back(c->transform->location.z);
+
+					pointCount++;
+				}
+			});
+
+			DirectionLightComponent3D::ForEach([&dirCol, &dirInt, &dirDir, &dirCount](DirectionLightComponent3D* c)
+			{
+				if (dirCount < MAX_DRCTN_LIGHTS)
+				{
+					//push light color
+					dirCol.push_back(c->color.r);
+					dirCol.push_back(c->color.g);
+					dirCol.push_back(c->color.b);
+
+					//push light intensity falloff
+					dirInt.push_back(c->quadratic);
+					dirInt.push_back(c->linear);
+					dirInt.push_back(c->constant);
+
+					//puish direction of light
+					Vector3 v(Quaternion::Rotate(Vector3::DOWN, c->transform->rotation));
+
+					dirDir.push_back(v.x);
+					dirDir.push_back(v.y);
+					dirDir.push_back(v.z);
+
+					dirCount++;
+				}
+			});
+
+			//Point lights
+			glUniform1i(modelVAO.pntLightNumBinding, pointCount);
+			glUniform3fv(modelVAO.pntLightColBinding, pointCount, pointCol.data());
+			glUniform3fv(modelVAO.pntLightIntBinding, pointCount, pointInt.data());
+			glUniform3fv(modelVAO.pntLightPosBinding, pointCount, pointLoc.data());
+
+			//Directional lights
+			glUniform1i(modelVAO.dirLightNumBinding, dirCount);
+			glUniform3fv(modelVAO.dirLightColBinding, dirCount, dirCol.data());
+			glUniform3fv(modelVAO.dirLightIntBinding, dirCount, dirInt.data());
+			glUniform3fv(modelVAO.dirLightDirBinding, dirCount, dirDir.data());
+
+			//Ambient Light
+			if (AmbientLightComponent3D::ACTIVE)
+			{
+				glUniform3f(modelVAO.ambLightColBinding, AmbientLightComponent3D::ACTIVE->color.r, AmbientLightComponent3D::ACTIVE->color.g, AmbientLightComponent3D::ACTIVE->color.b);
+				glUniform1f(modelVAO.ambLightIntBinding, AmbientLightComponent3D::ACTIVE->constant);
+			}
+			else
+			{
+				glUniform3f(modelVAO.ambLightColBinding, 1.0f, 1.0f, 1.0f);
+				glUniform1f(modelVAO.ambLightIntBinding, 0.0f);
+			}
 		}
 
 		glEnable(GL_DEPTH_TEST);
@@ -232,9 +322,9 @@ namespace
 					glActiveTexture(GL_TEXTURE0 + 3);
 					glBindTexture(GL_TEXTURE_2D, textureMap[material->alphaMap]);
 
-					glUniform4f(modelVAO.ambBinding, material->ambient.r, material->ambient.g, material->ambient.b, material->ambient.a);
-					glUniform4f(modelVAO.difBinding, material->diffuse.r, material->diffuse.g, material->diffuse.b, material->diffuse.a);
-					glUniform4f(modelVAO.spcBinding, material->specular.r, material->specular.g, material->specular.b, material->specular.a);
+					glUniform3f(modelVAO.ambBinding, material->ambient.r, material->ambient.g, material->ambient.b);
+					glUniform3f(modelVAO.difBinding, material->diffuse.r, material->diffuse.g, material->diffuse.b);
+					glUniform3f(modelVAO.spcBinding, material->specular.r, material->specular.g, material->specular.b);
 					glUniform1f(modelVAO.expBinding, material->exponent);
 					glUniform1f(modelVAO.alpBinding, material->transparency);
 				}

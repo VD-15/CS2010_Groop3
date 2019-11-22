@@ -63,16 +63,30 @@ void GameManager::Init()
 	//TestUnitEntity::CreateEntity(Team::Team1, Vector2(64.0f, 0.0f));
 	//TestUnitEntity::CreateEntity(Team::Team1, Vector2(-64.0f, 0.0f));
 
-	TestUnitEntity2::CreateEntity(Vector3(0.0f, 0.0f, 2.0f));
-	TestUnitEntity2::CreateEntity(Vector3(-5.0f, 0.0f, 2.0f))->transform->scale.y = 5.0f;
-	TestUnitEntity2::CreateEntity(Vector3(5.0f, 0.0f, 2.0f))->transform->scale = 2.5f;
+	TestUnitEntity2::CreateEntity(Vector3(0.0f, 0.0f, 10.0f));
+	TestUnitEntity2::CreateEntity(Vector3(-5.0f, 0.0f, 10.0f));
+	TestUnitEntity2::CreateEntity(Vector3(5.0f, 0.0f, 10.0f));
 
 	auto c = CameraComponent3D::CreateComponent(nullptr, TransformComponent3D::CreateComponent(nullptr));
 	CameraComponent2D::CreateComponent(nullptr, TransformComponent2D::CreateComponent(nullptr));
 
 	const_cast<TransformComponent3D*>(c->transform)->location.z += 2.0f;
 
-	AmbientLightComponent3D::CreateComponent(nullptr);
+	AmbientLightComponent3D::CreateComponent(nullptr)->color = Color(0.05f, 0.05f, 0.05f, 1.0f);
+
+	{
+		TransformComponent3D* t1 = TransformComponent3D::CreateComponent(nullptr);
+		t1->location.x = -5.0f;
+		t1->location.y = 1.0f;
+		t1->location.z = 10.0f;
+		PointLightComponent3D::CreateComponent(nullptr, t1);// ->color = Color::GREEN;
+
+		TransformComponent3D* t2 = TransformComponent3D::CreateComponent(nullptr);
+		t2->location.x = 5.0f;
+		t2->location.y = 1.0f;
+		t2->location.z = 10.0f;
+		PointLightComponent3D::CreateComponent(nullptr, t2);// ->color = Color::RED;
+	}
 
 	constexpr UInt startingUnits = 8;
 	Float inc = vlk::TwoPi / startingUnits;
