@@ -34,7 +34,12 @@ namespace
 	Matrix4 viewport2D;
 	Matrix4 viewport3D;
 
+	//Maps textures to their handles
 	std::map<const Texture2D*, UInt> textureMap;
+
+	//Maps models to mesh buffers
+	std::map<const Model*, std::vector<GLBuffer>> modelMap;
+
 	Texture2DVAO texture2Dvao;
 	ModelVAO modelVAO;
 
@@ -44,6 +49,55 @@ namespace
 	void OnFramebufferResize(vlk::WindowFramebufferEvent& ev)
 	{
 		glViewport(0, 0, ev.width, ev.height);
+	}
+
+	void OnModelLoad(vlk::ContentLoadedEvent<Model>& ev)
+	{
+		const Model* model = ev.content;
+
+		ULong meshCount = model->GetMeshes().size();
+
+		std::vector<UInt> rawBuffers;
+		glGenBuffers(meshCount, rawBuffers.data());
+
+		for (ULong i = 0; i < meshCount; i++)
+		{
+			std::vector<UInt> mesh = model->GetMeshes()[i];
+
+			ByteBuffer b;
+			b.Allocate(mesh.size() * (3 * 2 * 3) * 4);
+
+			//Assemble mesh data into perVertexBuffer
+			for (ULong j = 0; j < mesh.size(); j += 3)
+			{
+				ULong vertex = static_cast<ULong>(mesh[j + 0] - 1) * 3;
+				ULong coord = static_cast<ULong>(mesh[j + 1] - 1) * 2;
+				ULong norm = static_cast<ULong>(mesh[j + 2] - 1) * 3;
+
+				b.Put<Float>(model->GetVertices()[vertex + 0]);
+				b.Put<Float>(model->GetVertices()[vertex + 1]);
+				b.Put<Float>(model->GetVertices()[vertex + 2]);
+
+				b.Put<Float>(model->GetCoords()[coord + 0]);
+				b.Put<Float>(model->GetCoords()[coord + 1]);
+
+				b.Put<Float>(model->GetNormals()[norm + 0]);
+				b.Put<Float>(model->GetNormals()[norm + 1]);
+				b.Put<Float>(model->GetNormals()[norm + 2]);
+			}
+
+			glBindBuffer(GL_COPY_READ_BUFFER, rawBuffers[i]);
+			glBufferData(GL_COPY_READ_BUFFER, b.Size(), b.Data(), GL_STATIC_COPY);
+		}
+
+		glBindBuffer(GL_COPY_READ_BUFFER, 0);
+	}
+
+	void OnModelUnload(vlk::ContentUnloadedEvent<Model>& ev)
+	{
+		std::vector<UInt> buffers(modelMap[ev.content]);
+
+		glDeleteBuffers(buffers.size(), buffers.data());
 	}
 
 	void OnTextureLoad(vlk::ContentLoadedEvent<Texture2D>& ev)
@@ -267,8 +321,7 @@ namespace
 			{
 				DrawModelComponent3D* c = *it;
 
-				Matrix4 transform =		
-										Matrix4::CreateScale(c->transform->scale) *
+				Matrix4 transform =		Matrix4::CreateScale(c->transform->scale) *
 										Matrix4::CreateTranslation(c->transform->location) *
 										Matrix4::CreateRotation(c->transform->rotation);
 
@@ -281,35 +334,14 @@ namespace
 			//draw meshes
 			for (ULong i = 0; i < model->GetMeshes().size(); i++)
 			{
-				const std::vector<UInt>& mesh = model->GetMeshes()[i];
 				const Material* material = model->GetMaterials()[i];
 
-				//Contains the mesh data
-				ByteBuffer perVertexBuffer;
-				perVertexBuffer.Allocate(mesh.size() * (3 * 2 * 3) * 4);
+				glBindBuffer(GL_COPY_READ_BUFFER, modelMap[model][i]);
+				glBindBuffer(GL_COPY_WRITE_BUFFER, modelVAO.modelBuffer.handle);
 
-				//Assemble mesh data into perVertexBuffer
-				for (ULong j = 0; j < mesh.size(); j += 3)
-				{
-					ULong vertex = static_cast<ULong>(mesh[j + 0] - 1) * 3;
-					ULong coord = static_cast<ULong>(mesh[j + 1] - 1) * 2;
-					ULong norm = static_cast<ULong>(mesh[j + 2] - 1) * 3;
+				glCopyBufferSubData()
 
-					perVertexBuffer.Put<Float>(model->GetVertices()[vertex + 0]);
-					perVertexBuffer.Put<Float>(model->GetVertices()[vertex + 1]);
-					perVertexBuffer.Put<Float>(model->GetVertices()[vertex + 2]);
-
-					perVertexBuffer.Put<Float>(model->GetCoords()[coord + 0]);
-					perVertexBuffer.Put<Float>(model->GetCoords()[coord + 1]);
-
-					perVertexBuffer.Put<Float>(model->GetNormals()[norm + 0]);
-					perVertexBuffer.Put<Float>(model->GetNormals()[norm + 1]);
-					perVertexBuffer.Put<Float>(model->GetNormals()[norm + 2]);
-				}
-
-				modelVAO.modelBuffer.Fill(perVertexBuffer);
 				modelVAO.instanceBuffer.Fill(perInstanceBuffer);
-				glBindBuffer(GL_ARRAY_BUFFER, 0);
 
 				//Send material to uniforms
 				{
