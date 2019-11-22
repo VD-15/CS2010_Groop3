@@ -147,11 +147,28 @@ void Model::LoadContent(const std::string& path, const std::string& name)
 			ULong split1 = vert.find_first_of(" ");
 			ULong split2 = vert.find_last_of(" ");
 
-			std::string vert1(vert.substr(0, split1));
-			std::string vert2(vert.substr(split1 + 1, (split2 - 1) - split1));
-			std::string vert3(vert.substr(split2 + 1));
+			std::string verts[3]
+			{
+				vert.substr(0, split1),							//sub between start and first split
+				vert.substr(split1 + 1, (split2 - 1) - split1),	//sub between both splits
+				vert.substr(split2 + 1)							//sub between second split and end
+			};
 
-			throw "this ain't working!";
+			for (Byte i = 0; i < 3; i++)
+			{
+				split1 = verts[i].find_first_of("/");
+				split2 = verts[i].find_last_of("/");
+
+				UInt iVert = std::stoi(verts[i].substr(0, split1));
+				UInt iText = std::stoi(verts[i].substr(split1 + 1, (split2 - 1) - split1));
+				UInt iNorm = std::stoi(verts[i].substr(split2 + 1));
+
+				this->meshes[meshGroups - 1].push_back(iVert);
+				this->meshes[meshGroups - 1].push_back(iText);
+				this->meshes[meshGroups - 1].push_back(iNorm);
+
+				((void)0);
+			}
 
 			continue;
 		}

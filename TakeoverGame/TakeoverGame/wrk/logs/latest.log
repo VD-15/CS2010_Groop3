@@ -1,21 +1,21 @@
-EventBus ApplicationStartEvent                   [INFO]: Adding event listener: 0x00007FF6C2D26C01
-EventBus PreUpdateEvent                          [INFO]: Adding event listener: 0x00007FF6C2D1E141
+EventBus ApplicationStartEvent                   [INFO]: Adding event listener: 0x00007FF6026FFB52
+EventBus PreUpdateEvent                          [INFO]: Adding event listener: 0x00007FF6026F716E
 Window                                           [INFO]: Initializing.
-EventBus ApplicationStartEvent                   [INFO]: Adding event listener: 0x00007FF6C2D1A86B
-EventBus ApplicationExitEvent                    [INFO]: Adding event listener: 0x00007FF6C2D25D56
-EventBus PreUpdateEvent                          [INFO]: Adding event listener: 0x00007FF6C2D2CDBD
+EventBus ApplicationStartEvent                   [INFO]: Adding event listener: 0x00007FF6026F3857
+EventBus ApplicationExitEvent                    [INFO]: Adding event listener: 0x00007FF6026FECB6
+EventBus PreUpdateEvent                          [INFO]: Adding event listener: 0x00007FF602705D31
 Keyboard                                         [INFO]: Initializing.
-EventBus CharEvent                               [INFO]: Adding event listener: 0x00007FF6C2E46420
-EventBus KeyEvent                                [INFO]: Adding event listener: 0x00007FF6C2E46490
-EventBus PostUpdateEvent                         [INFO]: Adding event listener: 0x00007FF6C2E45A10
+EventBus CharEvent                               [INFO]: Adding event listener: 0x00007FF602817D40
+EventBus KeyEvent                                [INFO]: Adding event listener: 0x00007FF602817DB0
+EventBus PostUpdateEvent                         [INFO]: Adding event listener: 0x00007FF6028173B0
 Mouse                                            [INFO]: Initializing
-EventBus CursorPosEvent                          [INFO]: Adding event listener: 0x00007FF6C2E55530
-EventBus MouseButtonEvent                        [INFO]: Adding event listener: 0x00007FF6C2E55200
-EventBus ScrollEvent                             [INFO]: Adding event listener: 0x00007FF6C2E556E0
-EventBus PostUpdateEvent                         [INFO]: Adding event listener: 0x00007FF6C2E555C0
-Renderer                                         [INFO]: Init() set to: 0x00007FF6C2D1DDD6
-Renderer                                         [INFO]: Draw() set to: 0x00007FF6C2D1A7A3
-Renderer                                         [INFO]: Destroy() set to: 0x00007FF6C2D1DFDE
+EventBus CursorPosEvent                          [INFO]: Adding event listener: 0x00007FF6028252B0
+EventBus MouseButtonEvent                        [INFO]: Adding event listener: 0x00007FF602824F90
+EventBus ScrollEvent                             [INFO]: Adding event listener: 0x00007FF602825450
+EventBus PostUpdateEvent                         [INFO]: Adding event listener: 0x00007FF602825340
+Renderer                                         [INFO]: Init() set to: 0x00007FF6026F6E03
+Renderer                                         [INFO]: Draw() set to: 0x00007FF6026F378A
+Renderer                                         [INFO]: Destroy() set to: 0x00007FF6026F7006
 Renderer                                         [INFO]: Initializing.
 GLRenderer                                       [VERB]: Shader compiled successfully
 GLRenderer                                       [VERB]: Shader compiled successfully
@@ -23,22 +23,203 @@ GLRenderer                                       [VERB]: Program compiled succes
 GLRenderer                                       [VERB]: Shader compiled successfully
 GLRenderer                                       [VERB]: Shader compiled successfully
 GLRenderer                                       [VERB]: Program compiled successfully
-EventBus WindowFramebufferEvent                  [INFO]: Adding event listener: 0x00007FF6C2EC00D0
-EventBus Texture2D>                              [INFO]: Adding event listener: 0x00007FF6C2EC0150
-EventBus Texture2D>                              [INFO]: Adding event listener: 0x00007FF6C2EC05E0
-EventBus PostUpdateEvent                         [INFO]: Adding event listener: 0x00007FF6C2D2A5D6
-EventBus LateUpdateEvent                         [INFO]: Adding event listener: 0x00007FF6C2E0F860
-EventBus WindowFramebufferEvent                  [INFO]: Adding event listener: 0x00007FF6C2DF6930
-EventBus WindowFramebufferEvent                  [INFO]: Adding event listener: 0x00007FF6C2E32A00
-EventBus UpdateEvent                             [INFO]: Adding event listener: 0x00007FF6C2E32B10
-Valkyrie Engine                                  [INFO]: VLKinit took 0.736040 Seconds
+EventBus WindowFramebufferEvent                  [INFO]: Adding event listener: 0x00007FF602741250
+EventBus Texture2D>                              [INFO]: Adding event listener: 0x00007FF60288E310
+EventBus Texture2D>                              [INFO]: Adding event listener: 0x00007FF60288E790
+EventBus PostUpdateEvent                         [INFO]: Adding event listener: 0x00007FF60270353B
+EventBus LateUpdateEvent                         [INFO]: Adding event listener: 0x00007FF6027E3EE0
+EventBus WindowFramebufferEvent                  [INFO]: Adding event listener: 0x00007FF6027CB950
+EventBus WindowFramebufferEvent                  [INFO]: Adding event listener: 0x00007FF602806300
+EventBus UpdateEvent                             [INFO]: Adding event listener: 0x00007FF602806410
+Valkyrie Engine                                  [INFO]: VLKinit took 1.747750 Seconds
 Window                                           [INFO]: Set window swap interval to: 1
-EventBus UpdateEvent                             [INFO]: Adding event listener: 0x00007FF6C2D26DFA
-EventBus MouseSelectEvent                        [INFO]: Adding event listener: 0x00007FF6C2F0FD90
-EventBus EarlyUpdateEvent                        [INFO]: Adding event listener: 0x00007FF6C2F0FCC0
-EventBus UpdateEvent                             [INFO]: Adding event listener: 0x00007FF6C2F0FFB0
-EventBus UpdateEvent                             [INFO]: Adding event listener: 0x00007FF6C2F22130
-EventBus UpdateEvent                             [INFO]: Adding event listener: 0x00007FF6C2EF81A0
-EventBus MouseSelectEvent                        [INFO]: Adding event listener: 0x00007FF6C2DAB250
-EventBus EarlyUpdateEvent                        [INFO]: Adding event listener: 0x00007FF6C2DAAC30
-EventBus CommandIssuedEvent                      [INFO]: Adding event li
+EventBus UpdateEvent                             [INFO]: Adding event listener: 0x00007FF6026FFD3C
+EventBus MouseSelectEvent                        [INFO]: Adding event listener: 0x00007FF6028DC3F0
+EventBus EarlyUpdateEvent                        [INFO]: Adding event listener: 0x00007FF6028DC320
+EventBus UpdateEvent                             [INFO]: Adding event listener: 0x00007FF6028DC600
+EventBus UpdateEvent                             [INFO]: Adding event listener: 0x00007FF6028EE050
+EventBus UpdateEvent                             [INFO]: Adding event listener: 0x00007FF6028C50F0
+EventBus MouseSelectEvent                        [INFO]: Adding event listener: 0x00007FF602782330
+EventBus EarlyUpdateEvent                        [INFO]: Adding event listener: 0x00007FF602781D30
+EventBus CommandIssuedEvent                      [INFO]: Adding event listener: 0x00007FF60276E4B0
+EventBus UpdateEvent                             [INFO]: Adding event listener: 0x00007FF60276E580
+Material Library                                 [WARN]: Unknown command: Ke
+Material Library                                 [WARN]: Unknown command: Ni
+Material Library                                 [WARN]: Unknown command: illum
+Material Library                                 [WARN]: Unknown command: 
+Material Library                                 [WARN]: Unknown command: Ke
+Material Library                                 [WARN]: Unknown command: Ni
+Material Library                                 [WARN]: Unknown command: illum
+Material Library                                 [WARN]: Unknown command: 
+Material Library                                 [WARN]: Unknown command: Ke
+Material Library                                 [WARN]: Unknown command: Ni
+Material Library                                 [WARN]: Unknown command: illum
+Model                                            [WARN]: Unknown command while passing file: o
+Model                                            [WARN]: Unknown command while passing file: s
+EventBus ApplicationExitEvent                    [INFO]: Adding event listener: 0x00007FF6026F616A
+ChunkAllocator TestUnitEntity2                   [VERB]: Allocating new object
+Chunk TestUnitEntity2                            [VERB]: Creating new chunk.
+Chunk TestUnitEntity2                            [VERB]: Allocated at: 0x000001BE7EFE7060
+Chunk TestUnitEntity2                            [VERB]: Inserting new object.
+Entity TestUnitEntity2                           [VERB]: Creating Component for: 0x000001BE7EFE7060
+Component TransformComponent3D                   [VERB]: Creating Component
+EventBus ApplicationExitEvent                    [INFO]: Adding event listener: 0x00007FF6026F7C27
+ChunkAllocator TransformComponent3D              [VERB]: Allocating new object
+Chunk TransformComponent3D                       [VERB]: Creating new chunk.
+Chunk TransformComponent3D                       [VERB]: Allocated at: 0x000001BE7EFBAFC0
+Chunk TransformComponent3D                       [VERB]: Inserting new object.
+ChunkAllocator TransformComponent3D              [VERB]: Object allocated at: 0x000001BE7EFBAFC0
+Entity TestUnitEntity2                           [VERB]: Creating Component for: 0x000001BE7EFE7060
+Component DrawModelComponent3D                   [VERB]: Creating Component
+EventBus ApplicationExitEvent                    [INFO]: Adding event listener: 0x00007FF6026F9351
+ChunkAllocator DrawModelComponent3D              [VERB]: Allocating new object
+Chunk DrawModelComponent3D                       [VERB]: Creating new chunk.
+Chunk DrawModelComponent3D                       [VERB]: Allocated at: 0x000001BE7EFACDF0
+Chunk DrawModelComponent3D                       [VERB]: Inserting new object.
+ChunkAllocator DrawModelComponent3D              [VERB]: Object allocated at: 0x000001BE7EFACDF0
+Entity TestUnitEntity2                           [VERB]: Creating Component for: 0x000001BE7EFE7060
+Component TestComponent                          [VERB]: Creating Component
+EventBus ApplicationExitEvent                    [INFO]: Adding event listener: 0x00007FF6027009BC
+ChunkAllocator TestComponent                     [VERB]: Allocating new object
+Chunk TestComponent                              [VERB]: Creating new chunk.
+Chunk TestComponent                              [VERB]: Allocated at: 0x000001BE7EF915F0
+Chunk TestComponent                              [VERB]: Inserting new object.
+ChunkAllocator TestComponent                     [VERB]: Object allocated at: 0x000001BE7EF915F0
+ChunkAllocator TestUnitEntity2                   [VERB]: Object allocated at: 0x000001BE7EFE7060
+Entity TestUnitEntity2                           [VERB]: Entity created: 0x000001BE7EFE7060
+ChunkAllocator TestUnitEntity2                   [VERB]: Allocating new object
+Chunk TestUnitEntity2                            [VERB]: Inserting new object.
+Entity TestUnitEntity2                           [VERB]: Creating Component for: 0x000001BE7EFE7088
+Component TransformComponent3D                   [VERB]: Creating Component
+ChunkAllocator TransformComponent3D              [VERB]: Allocating new object
+Chunk TransformComponent3D                       [VERB]: Inserting new object.
+ChunkAllocator TransformComponent3D              [VERB]: Object allocated at: 0x000001BE7EFBAFF8
+Entity TestUnitEntity2                           [VERB]: Creating Component for: 0x000001BE7EFE7088
+Component DrawModelComponent3D                   [VERB]: Creating Component
+ChunkAllocator DrawModelComponent3D              [VERB]: Allocating new object
+Chunk DrawModelComponent3D                       [VERB]: Inserting new object.
+ChunkAllocator DrawModelComponent3D              [VERB]: Object allocated at: 0x000001BE7EFACE10
+Entity TestUnitEntity2                           [VERB]: Creating Component for: 0x000001BE7EFE7088
+Component TestComponent                          [VERB]: Creating Component
+ChunkAllocator TestComponent                     [VERB]: Allocating new object
+Chunk TestComponent                              [VERB]: Inserting new object.
+ChunkAllocator TestComponent                     [VERB]: Object allocated at: 0x000001BE7EF91608
+ChunkAllocator TestUnitEntity2                   [VERB]: Object allocated at: 0x000001BE7EFE7088
+Entity TestUnitEntity2                           [VERB]: Entity created: 0x000001BE7EFE7088
+ChunkAllocator TestUnitEntity2                   [VERB]: Allocating new object
+Chunk TestUnitEntity2                            [VERB]: Inserting new object.
+Entity TestUnitEntity2                           [VERB]: Creating Component for: 0x000001BE7EFE70B0
+Component TransformComponent3D                   [VERB]: Creating Component
+ChunkAllocator TransformComponent3D              [VERB]: Allocating new object
+Chunk TransformComponent3D                       [VERB]: Inserting new object.
+ChunkAllocator TransformComponent3D              [VERB]: Object allocated at: 0x000001BE7EFBB030
+Entity TestUnitEntity2                           [VERB]: Creating Component for: 0x000001BE7EFE70B0
+Component DrawModelComponent3D                   [VERB]: Creating Component
+ChunkAllocator DrawModelComponent3D              [VERB]: Allocating new object
+Chunk DrawModelComponent3D                       [VERB]: Inserting new object.
+ChunkAllocator DrawModelComponent3D              [VERB]: Object allocated at: 0x000001BE7EFACE30
+Entity TestUnitEntity2                           [VERB]: Creating Component for: 0x000001BE7EFE70B0
+Component TestComponent                          [VERB]: Creating Component
+ChunkAllocator TestComponent                     [VERB]: Allocating new object
+Chunk TestComponent                              [VERB]: Inserting new object.
+ChunkAllocator TestComponent                     [VERB]: Object allocated at: 0x000001BE7EF91620
+ChunkAllocator TestUnitEntity2                   [VERB]: Object allocated at: 0x000001BE7EFE70B0
+Entity TestUnitEntity2                           [VERB]: Entity created: 0x000001BE7EFE70B0
+Component TransformComponent3D                   [VERB]: Creating Component
+ChunkAllocator TransformComponent3D              [VERB]: Allocating new object
+Chunk TransformComponent3D                       [VERB]: Inserting new object.
+ChunkAllocator TransformComponent3D              [VERB]: Object allocated at: 0x000001BE7EFBB068
+Component CameraComponent3D                      [VERB]: Creating Component
+EventBus ApplicationExitEvent                    [INFO]: Adding event listener: 0x00007FF6026F82E9
+ChunkAllocator CameraComponent3D                 [VERB]: Allocating new object
+Chunk CameraComponent3D                          [VERB]: Creating new chunk.
+Chunk CameraComponent3D                          [VERB]: Allocated at: 0x000001BE7EFBBE00
+Chunk CameraComponent3D                          [VERB]: Inserting new object.
+ChunkAllocator CameraComponent3D                 [VERB]: Object allocated at: 0x000001BE7EFBBE00
+Component TransformComponent2D                   [VERB]: Creating Component
+EventBus ApplicationExitEvent                    [INFO]: Adding event listener: 0x00007FF6026F4B35
+ChunkAllocator TransformComponent2D              [VERB]: Allocating new object
+Chunk TransformComponent2D                       [VERB]: Creating new chunk.
+Chunk TransformComponent2D                       [VERB]: Allocated at: 0x000001BE7EFBC840
+Chunk TransformComponent2D                       [VERB]: Inserting new object.
+ChunkAllocator TransformComponent2D              [VERB]: Object allocated at: 0x000001BE7EFBC840
+Component CameraComponent2D                      [VERB]: Creating Component
+EventBus ApplicationExitEvent                    [INFO]: Adding event listener: 0x00007FF6026F8C0D
+ChunkAllocator CameraComponent2D                 [VERB]: Allocating new object
+Chunk CameraComponent2D                          [VERB]: Creating new chunk.
+Chunk CameraComponent2D                          [VERB]: Allocated at: 0x000001BE7EFBD4C0
+Chunk CameraComponent2D                          [VERB]: Inserting new object.
+ChunkAllocator CameraComponent2D                 [VERB]: Object allocated at: 0x000001BE7EFBD4C0
+Component TransformComponent3D                   [VERB]: Creating Component
+ChunkAllocator TransformComponent3D              [VERB]: Allocating new object
+Chunk TransformComponent3D                       [VERB]: Inserting new object.
+ChunkAllocator TransformComponent3D              [VERB]: Object allocated at: 0x000001BE7EFBB0A0
+Component PointLightComponent3D                  [VERB]: Creating Component
+EventBus ApplicationExitEvent                    [INFO]: Adding event listener: 0x00007FF6026FADFF
+ChunkAllocator PointLightComponent3D             [VERB]: Allocating new object
+Chunk PointLightComponent3D                      [VERB]: Creating new chunk.
+Chunk PointLightComponent3D                      [VERB]: Allocated at: 0x000001BE7EFBE340
+Chunk PointLightComponent3D                      [VERB]: Inserting new object.
+ChunkAllocator PointLightComponent3D             [VERB]: Object allocated at: 0x000001BE7EFBE340
+Component TransformComponent3D                   [VERB]: Creating Component
+ChunkAllocator TransformComponent3D              [VERB]: Allocating new object
+Chunk TransformComponent3D                       [VERB]: Inserting new object.
+ChunkAllocator TransformComponent3D              [VERB]: Object allocated at: 0x000001BE7EFBB0D8
+Component PointLightComponent3D                  [VERB]: Creating Component
+ChunkAllocator PointLightComponent3D             [VERB]: Allocating new object
+Chunk PointLightComponent3D                      [VERB]: Inserting new object.
+ChunkAllocator PointLightComponent3D             [VERB]: Object allocated at: 0x000001BE7EFBE378
+Application                                      [INFO]: Application starting.
+Window                                           [INFO]: Showing window.
+EventBus ApplicationExitEvent                    [INFO]: Adding event listener: 0x00007FF6026F6FE8
+EventBus ApplicationExitEvent                    [INFO]: Adding event listener: 0x00007FF6026FDB54
+EventBus ApplicationExitEvent                    [INFO]: Adding event listener: 0x00007FF6026F3C58
+EventBus ApplicationExitEvent                    [INFO]: Adding event listener: 0x00007FF6026F49F0
+EventBus ApplicationExitEvent                    [INFO]: Adding event listener: 0x00007FF60270136C
+EventBus ApplicationExitEvent                    [INFO]: Adding event listener: 0x00007FF6027048B4
+EventBus ApplicationExitEvent                    [INFO]: Adding event listener: 0x00007FF6026F5873
+EventBus ApplicationExitEvent                    [INFO]: Adding event listener: 0x00007FF6026FDA87
+EventBus ApplicationExitEvent                    [INFO]: Adding event listener: 0x00007FF6026FC3B2
+EventBus ApplicationExitEvent                    [INFO]: Adding event listener: 0x00007FF6026F5DD2
+EventBus ApplicationExitEvent                    [INFO]: Adding event listener: 0x00007FF6026FDCA8
+Application                                      [INFO]: Application exiting.
+Window                                           [INFO]: Hiding window.
+Chunk TestUnitEntity2                            [VERB]: Deleting chunk.
+Chunk TransformComponent3D                       [VERB]: Deleting chunk.
+Chunk DrawModelComponent3D                       [VERB]: Deleting chunk.
+Chunk TestComponent                              [VERB]: Deleting chunk.
+Chunk CameraComponent3D                          [VERB]: Deleting chunk.
+Chunk TransformComponent2D                       [VERB]: Deleting chunk.
+Chunk CameraComponent2D                          [VERB]: Deleting chunk.
+Chunk PointLightComponent3D                      [VERB]: Deleting chunk.
+EventBus CommandIssuedEvent                      [INFO]: Removing event listener: 0x00007FF60276E4B0
+EventBus UpdateEvent                             [INFO]: Removing event listener: 0x00007FF60276E580
+EventBus MouseSelectEvent                        [INFO]: Removing event listener: 0x00007FF602782330
+EventBus EarlyUpdateEvent                        [INFO]: Removing event listener: 0x00007FF602781D30
+EventBus UpdateEvent                             [INFO]: Removing event listener: 0x00007FF6028C50F0
+EventBus UpdateEvent                             [INFO]: Removing event listener: 0x00007FF6028EE050
+EventBus MouseSelectEvent                        [INFO]: Removing event listener: 0x00007FF6028DC3F0
+EventBus EarlyUpdateEvent                        [INFO]: Removing event listener: 0x00007FF6028DC320
+EventBus UpdateEvent                             [INFO]: Removing event listener: 0x00007FF6028DC600
+EventBus UpdateEvent                             [INFO]: Removing event listener: 0x00007FF6026FFD3C
+EventBus WindowFramebufferEvent                  [INFO]: Removing event listener: 0x00007FF602806300
+EventBus UpdateEvent                             [INFO]: Removing event listener: 0x00007FF602806410
+EventBus WindowFramebufferEvent                  [INFO]: Removing event listener: 0x00007FF6027CB950
+EventBus LateUpdateEvent                         [INFO]: Removing event listener: 0x00007FF6027E3EE0
+Renderer                                         [INFO]: Destroying.
+EventBus PostUpdateEvent                         [INFO]: Adding event listener: 0x00007FF60270353B
+Mouse                                            [INFO]: Destroying.
+EventBus CursorPosEvent                          [INFO]: Removing event listener: 0x00007FF6028252B0
+EventBus MouseButtonEvent                        [INFO]: Removing event listener: 0x00007FF602824F90
+EventBus ScrollEvent                             [INFO]: Removing event listener: 0x00007FF602825450
+Keyboard                                         [INFO]: Destroying.
+EventBus CharEvent                               [INFO]: Removing event listener: 0x00007FF602817D40
+EventBus KeyEvent                                [INFO]: Removing event listener: 0x00007FF602817DB0
+EventBus PostUpdateEvent                         [INFO]: Removing event listener: 0x00007FF6028173B0
+Window                                           [INFO]: Destroying.
+EventBus ApplicationStartEvent                   [INFO]: Removing event listener: 0x00007FF6026F3857
+EventBus ApplicationExitEvent                    [INFO]: Removing event listener: 0x00007FF6026FECB6
+EventBus PreUpdateEvent                          [INFO]: Removing event listener: 0x00007FF602705D31
+EventBus ApplicationStartEvent                   [INFO]: Removing event listener: 0x00007FF6026FFB52
+EventBus PreUpdateEvent                          [INFO]: Removing event listener: 0x00007FF6026F716E
+Valkyrie Engine                                  [INFO]: Destroyed Successfully.

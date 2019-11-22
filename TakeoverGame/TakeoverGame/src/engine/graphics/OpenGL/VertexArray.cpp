@@ -11,7 +11,7 @@ namespace
 {
 	//Maximum number of texture draws at once
 	constexpr UInt MAX_TEXTURES = 1024;
-	constexpr UInt MAX_MESH_SIZE = 1048576;
+	constexpr UInt MAX_MESH_SIZE = 16777216; 
 	constexpr UInt MAX_MODEL_INSTANCES = 32768;
 
 	UInt CreateShader(UInt type, const std::string& path)
