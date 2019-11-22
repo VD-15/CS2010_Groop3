@@ -5,6 +5,7 @@
 
 in vec2 moveUV;
 in vec3 movePos;
+in vec3 moveNorm;
 
 out vec4 outColor;
 
@@ -22,6 +23,7 @@ uniform sampler2D tExponent;	//set to texture unit 2
 uniform sampler2D tAlpha;		//set to texture unit 3
 
 //Lights
+uniform vec3 uViewPos;
 
 //Ambient light
 uniform vec3  uAmbientColor;
@@ -41,17 +43,52 @@ uniform uint uDirectionCount;
 
 void main()
 {
-	//just use diffuse color for now
+	//ambient color
 	vec3 ambCol = uAmbient * (uAmbientColor * uAmbientIntensity);
+
+	//cumulative diffuse color from all lights
 	vec3 difCol = vec3(0.0, 0.0, 0.0);
+
+	//cumulative specular color from all lights
+	vec3 specCol = vec3(0.0, 0.0, 0.0);
 
 	for (uint i = 0u; i < MAX_POINT_LIGHTS; i++)
 	{
-		float dist = length(uPointLocation[i] - movePos);
+		//difference between surface and light
+		vec3 diff = uPointLocation[i] - movePos;
+
+		//adjusted normal of surface
+		vec3 norm = normalize(uPointLocation[i] - moveNorm);
+
+		//distance between light and surface
+		float dist = length(diff);
+
+		//direction towards light
+		vec3 dir = normalize(diff);
+
+		//direction the surface is being viewed from
+		vec3 viewDir = normalize(uViewPos - movePos);
+
+		//reflected normal
+		vec3 reflectDir = reflect(-dir, norm);
+
+		//calculate specular strength
+		float specular = pow(max(dot(viewDir, reflectDir), 0.0), uExponent);
+
+		//calculate angle between surface and light
+		float angle = max(dot(norm, dir), 0.0);
+
+		//diffuse strength of the point light at current distance
 		float attenuation = 1.0 / (1.0 + (uPointIntensity[i].y * dist) + (uPointIntensity[i].x * dist * dist));
-		difCol += uDiffuse * (uPointColor[i] * attenuation * uPointIntensity[i].z);
+
+		//add diffuse color
+		difCol += uDiffuse * (uPointColor[i] * attenuation * uPointIntensity[i].z * angle);
+
+		//add specular color
+		specCol += uSpecular * (uPointColor[i] * specular);
+
 	}
 
-	//outColor = uDiffuse * vec4((uAmbientColor * uAmbientIntensity), 1.0);
-	outColor = vec4(ambCol + difCol, 1.0);
+	//combine all colors
+	outColor = vec4(ambCol + difCol + specCol, 1.0);
 }

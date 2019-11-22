@@ -202,6 +202,9 @@ namespace
 				}
 			});
 
+			//Camera position
+			glUniform3f(modelVAO.cameraPosBinding, CameraComponent3D::ACTIVE->transform->location.x, CameraComponent3D::ACTIVE->transform->location.y, CameraComponent3D::ACTIVE->transform->location.z);
+
 			//Point lights
 			glUniform1i(modelVAO.pntLightNumBinding, pointCount);
 			glUniform3fv(modelVAO.pntLightColBinding, pointCount, pointCol.data());

@@ -13,7 +13,7 @@ void OnUpdate(UpdateEvent& ev)
 
 	TestComponent::ForEach([](TestComponent* c)
 	{
-		//c->transform->rotation *= Quaternion::AxisAngle(Vector3::UP, VLKTime::DeltaTime<Float>());
+		c->transform->rotation *= Quaternion::AxisAngle(Vector3::UP, VLKTime::DeltaTime<Float>());
 	});
 
 	theta += VLKTime::DeltaTime<Float>();
@@ -69,7 +69,7 @@ void TestUnitEntity::OnDelete()
 TestUnitEntity2::TestUnitEntity2(const Vector3& location)
 {
 	this->transform = CreateComponent<TransformComponent3D>();
-	this->draw = CreateComponent<DrawModelComponent3D>(transform, ContentManager<Model>::Get().GetContent("monkey"));
+	this->draw = CreateComponent<DrawModelComponent3D>(transform, ContentManager<Model>::Get().GetContent("monkey_hd"));
 	this->test = CreateComponent<TestComponent>(transform);
 
 	this->transform->location = location;

@@ -20,6 +20,7 @@
     <texture name="cap_9" path="textures/capture/capture_9.png"></texture>
     <texture name="cap_10" path="textures/capture/capture_10.png"></texture>
 	<model name="monkey" path="models/monkey.obj"></model>
+    <model name="monkey_hd" path="models/monkey_hd.obj"></model>
 	<material name="monkey_blue" path="models/monkey.mtl"></material> 
 	<material name="monkey_green" path="models/monkey.mtl"></material> 
 	<material name="monkey_yellow" path="models/monkey.mtl"></material> 

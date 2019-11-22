@@ -6,8 +6,8 @@ ILight::ILight() :
 	color(Color::WHITE)
 {
 	constant = 1.0f;
-	linear = 1.0f;
-	quadratic = 1.0f;
+	linear = 2.0f;
+	quadratic = 0.0f;
 }
 
 const AmbientLightComponent3D* AmbientLightComponent3D::ACTIVE = nullptr;

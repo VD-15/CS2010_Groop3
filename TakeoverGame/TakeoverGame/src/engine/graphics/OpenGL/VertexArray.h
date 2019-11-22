@@ -97,6 +97,9 @@ namespace vlk
 		//Ambient light intensity binding
 		UInt ambLightIntBinding;
 
+		//Camera position
+		UInt cameraPosBinding;
+
 		UInt pntLightColBinding;
 		UInt pntLightIntBinding;
 		UInt pntLightPosBinding;

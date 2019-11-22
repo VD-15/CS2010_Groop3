@@ -52,7 +52,7 @@ void GameManager::Init()
 	ContentManager<Material>::Get().LoadContent("monkey_green");
 	ContentManager<Material>::Get().LoadContent("monkey_blue");
 	ContentManager<Material>::Get().LoadContent("monkey_yellow");
-	ContentManager<Model>::Get().LoadContent("monkey");
+	ContentManager<Model>::Get().LoadContent("monkey_hd");
 
 	//Create a camera entity and make it's camera active
 	//PlayerCameraEntity::CreateEntity()->camera->Activate();
@@ -63,28 +63,28 @@ void GameManager::Init()
 	//TestUnitEntity::CreateEntity(Team::Team1, Vector2(64.0f, 0.0f));
 	//TestUnitEntity::CreateEntity(Team::Team1, Vector2(-64.0f, 0.0f));
 
-	TestUnitEntity2::CreateEntity(Vector3(0.0f, 0.0f, 10.0f));
-	TestUnitEntity2::CreateEntity(Vector3(-5.0f, 0.0f, 10.0f));
-	TestUnitEntity2::CreateEntity(Vector3(5.0f, 0.0f, 10.0f));
+	TestUnitEntity2::CreateEntity(Vector3( 0.0f, 0.0f, 5.0f));
+	TestUnitEntity2::CreateEntity(Vector3(-5.0f, 0.0f, 5.0f));
+	TestUnitEntity2::CreateEntity(Vector3( 5.0f, 0.0f, 5.0f));
 
 	auto c = CameraComponent3D::CreateComponent(nullptr, TransformComponent3D::CreateComponent(nullptr));
 	CameraComponent2D::CreateComponent(nullptr, TransformComponent2D::CreateComponent(nullptr));
 
 	const_cast<TransformComponent3D*>(c->transform)->location.z += 2.0f;
 
-	AmbientLightComponent3D::CreateComponent(nullptr)->color = Color(0.05f, 0.05f, 0.05f, 1.0f);
+	//AmbientLightComponent3D::CreateComponent(nullptr)->color = Color(0.05f, 0.05f, 0.05f, 1.0f);
 
 	{
 		TransformComponent3D* t1 = TransformComponent3D::CreateComponent(nullptr);
-		t1->location.x = -5.0f;
-		t1->location.y = 1.0f;
-		t1->location.z = 10.0f;
+		t1->location.x = -2.0f;
+		t1->location.y = 0.0f;
+		t1->location.z = 5.0f;
 		PointLightComponent3D::CreateComponent(nullptr, t1);// ->color = Color::GREEN;
 
 		TransformComponent3D* t2 = TransformComponent3D::CreateComponent(nullptr);
-		t2->location.x = 5.0f;
-		t2->location.y = 1.0f;
-		t2->location.z = 10.0f;
+		t2->location.x = 2.0f;
+		t2->location.y = -0.0f;
+		t2->location.z = 5.0f;
 		PointLightComponent3D::CreateComponent(nullptr, t2);// ->color = Color::RED;
 	}
 
@@ -112,7 +112,7 @@ void GameManager::Destroy()
 	ContentManager<Material>::Get().UnloadContent("monkey_green");
 	ContentManager<Material>::Get().UnloadContent("monkey_blue");
 	ContentManager<Material>::Get().UnloadContent("monkey_yellow");
-	ContentManager<Model>::Get().UnloadContent("monkey");
+	ContentManager<Model>::Get().UnloadContent("monkey_hd");
 
 	ContentManager<Texture2D>::Get().UnloadContent("cap_0");
 	ContentManager<Texture2D>::Get().UnloadContent("cap_1");

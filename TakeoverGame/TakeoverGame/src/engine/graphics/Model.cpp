@@ -142,22 +142,17 @@ void Model::LoadContent(const std::string& path, const std::string& name)
 		}
 		else if (command == "f")
 		{
-			ULong newPos = 0;
+			std::string vert(line.substr(pos + 1));
 
-			for (Byte i = 0; i < 3; i++) //loop whitespace
-			{
-				pos = line.find_first_of(" ", pos); //find next ' ' character
+			ULong split1 = vert.find_first_of(" ");
+			ULong split2 = vert.find_last_of(" ");
 
-				for (Byte j = 0; j < 3; j++) //loop slashes
-				{
-					newPos = line.find_first_of("/", pos); //find next '/' character
-					std::string sub = line.substr(pos + 1, newPos);
+			std::string vert1(vert.substr(0, split1));
+			std::string vert2(vert.substr(split1 + 1, (split2 - 1) - split1));
+			std::string vert3(vert.substr(split2 + 1));
 
-					meshes[meshGroups - 1].push_back(std::stoul(sub));
+			throw "this ain't working!";
 
-					pos = newPos;
-				}
-			}
 			continue;
 		}
 		else if (command == "usemtl")

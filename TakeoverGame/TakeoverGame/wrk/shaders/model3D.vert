@@ -10,6 +10,7 @@ in mat4 inTransform;
 
 out vec2 moveUV;
 out vec3 movePos;
+out vec3 moveNorm;
 
 uniform mat4 uViewport;
 
@@ -20,4 +21,8 @@ void main()
     gl_Position = uViewport * worldPos;
     moveUV = inUV;
     movePos = worldPos.xyz / worldPos.w;
+
+    vec4 worldNorm = (inTransform * vec4(inNormal, 1.0));
+
+    moveNorm = worldNorm.xyz / worldNorm.w;
 }

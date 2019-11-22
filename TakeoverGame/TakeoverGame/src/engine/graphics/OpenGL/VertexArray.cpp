@@ -263,6 +263,8 @@ void ModelVAO::Create()
 	this->ambLightColBinding = glGetUniformLocation(this->shaderProgram, "uAmbientColor");
 	this->ambLightIntBinding = glGetUniformLocation(this->shaderProgram, "uAmbientIntensity");
 
+	this->cameraPosBinding = glGetUniformLocation(this->shaderProgram, "uViewPos");
+
 	this->pntLightColBinding = glGetUniformLocation(this->shaderProgram, "uPointColor");
 	this->pntLightIntBinding = glGetUniformLocation(this->shaderProgram, "uPointIntensity");
 	this->pntLightPosBinding = glGetUniformLocation(this->shaderProgram, "uPointLocation");
