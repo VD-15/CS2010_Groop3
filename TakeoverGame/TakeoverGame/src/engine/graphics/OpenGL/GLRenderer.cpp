@@ -57,8 +57,12 @@ namespace
 
 		ULong meshCount = model->GetMeshes().size();
 
-		std::vector<UInt> rawBuffers;
-		glGenBuffers(meshCount, rawBuffers.data());
+		std::vector<UInt> rawBuffers(meshCount);
+
+		modelMap[model] = std::vector<GLBuffer>();
+		std::vector<GLBuffer>& buffers = modelMap[model];
+		buffers.reserve(meshCount);
+		glGenBuffers(static_cast<UInt>(meshCount), rawBuffers.data());
 
 		for (ULong i = 0; i < meshCount; i++)
 		{
@@ -86,8 +90,13 @@ namespace
 				b.Put<Float>(model->GetNormals()[norm + 2]);
 			}
 
+			buffers.push_back(GLBuffer(GL_COPY_READ_BUFFER));
+			buffers[i].handle = rawBuffers[i];
+			buffers[i].size = b.Size();
+
 			glBindBuffer(GL_COPY_READ_BUFFER, rawBuffers[i]);
 			glBufferData(GL_COPY_READ_BUFFER, b.Size(), b.Data(), GL_STATIC_COPY);
+
 		}
 
 		glBindBuffer(GL_COPY_READ_BUFFER, 0);
@@ -95,9 +104,16 @@ namespace
 
 	void OnModelUnload(vlk::ContentUnloadedEvent<Model>& ev)
 	{
-		std::vector<UInt> buffers(modelMap[ev.content]);
+		std::vector<GLBuffer> buffers(modelMap[ev.content]);
 
-		glDeleteBuffers(buffers.size(), buffers.data());
+		std::vector<UInt> rawBuffers(buffers.size());
+
+		for (UInt i = 0; i < buffers.size(); i++)
+		{
+			rawBuffers[i] = buffers[i];
+		}
+
+		glDeleteBuffers(buffers.size(), rawBuffers.data());
 	}
 
 	void OnTextureLoad(vlk::ContentLoadedEvent<Texture2D>& ev)
@@ -336,10 +352,10 @@ namespace
 			{
 				const Material* material = model->GetMaterials()[i];
 
-				glBindBuffer(GL_COPY_READ_BUFFER, modelMap[model][i]);
+				glBindBuffer(GL_COPY_READ_BUFFER, modelMap[model][i].handle);
 				glBindBuffer(GL_COPY_WRITE_BUFFER, modelVAO.modelBuffer.handle);
 
-				glCopyBufferSubData()
+				glCopyBufferSubData(GL_COPY_READ_BUFFER, GL_COPY_WRITE_BUFFER, 0, 0, modelMap[model][i].size);
 
 				modelVAO.instanceBuffer.Fill(perInstanceBuffer);
 
@@ -364,7 +380,7 @@ namespace
 					glUniform1f(modelVAO.alpBinding, material->transparency);
 				}
 
-				glDrawArraysInstanced(GL_TRIANGLES, 0, static_cast<UInt>(mesh.size() / 3), static_cast<UInt>(thisDraw.size()));
+				glDrawArraysInstanced(GL_TRIANGLES, 0, static_cast<UInt>(modelMap[model][i].size / (3 * 4)), static_cast<UInt>(thisDraw.size()));
 			}
 		}
 
@@ -532,6 +548,8 @@ void GLRenderer::Init()
 	EventBus<vlk::WindowFramebufferEvent>::Get().AddEventListener(OnFramebufferResize);
 	EventBus<vlk::ContentLoadedEvent<Texture2D>>::Get().AddEventListener(OnTextureLoad);
 	EventBus<vlk::ContentUnloadedEvent<Texture2D>>::Get().AddEventListener(OnTextureUnload);
+	EventBus<vlk::ContentLoadedEvent<Model>>::Get().AddEventListener(OnModelLoad);
+	EventBus<vlk::ContentUnloadedEvent<Model>>::Get().AddEventListener(OnModelUnload);
 }
 
 void GLRenderer::Draw()

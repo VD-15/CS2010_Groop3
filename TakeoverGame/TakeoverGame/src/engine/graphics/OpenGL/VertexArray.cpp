@@ -73,6 +73,20 @@ GLBuffer::GLBuffer(UInt _type) :
 	this->size = 0;
 }
 
+GLBuffer::GLBuffer(const GLBuffer& other) :
+	type(other.type)
+{
+	this->handle = other.handle;
+	this->size = other.size;
+}
+
+GLBuffer::GLBuffer(GLBuffer&& other) noexcept :
+	type(other.type)
+{
+	this->handle = other.handle;
+	this->size = other.size;
+}
+
 void GLBuffer::Fill(const ByteBuffer& b)
 {
 	glBindBuffer(this->type, this->handle);

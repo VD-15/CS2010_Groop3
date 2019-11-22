@@ -9,6 +9,9 @@ namespace vlk
 	{
 		GLBuffer(UInt _type);
 
+		GLBuffer(const GLBuffer& other);
+		GLBuffer(GLBuffer&& other) noexcept;
+
 		inline operator const UInt() const { return handle; }
 
 		void Fill(const ByteBuffer& b);
