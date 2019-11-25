@@ -12,7 +12,7 @@ XmlDocument::~XmlDocument()
 
 }
 
-void XmlDocument::LoadContent(const std::string& name)
+void XmlDocument::LoadContent(const std::string& path, const std::string& name)
 {
 	pugi::xml_parse_result result = this->load_file(name.c_str());
 

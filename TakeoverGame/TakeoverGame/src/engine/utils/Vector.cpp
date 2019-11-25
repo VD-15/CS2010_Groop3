@@ -97,8 +97,6 @@ Vector2& Vector2::operator=(const Vector2& other)
 	return *this;
 }
 
-Vector2::~Vector2() {}
-
 void Vector2::Set(Float x, Float y)
 {
 	this->x = x;
@@ -299,6 +297,13 @@ Vector3::Vector3()
 	this->z = 0.0f;
 }
 
+Vector3::Vector3(Float xyz)
+{
+	this->x = xyz;
+	this->y = xyz;
+	this->z = xyz;
+}
+
 Vector3::Vector3(Float x, Float y, Float z)
 {
 	this->x = x;
@@ -342,7 +347,79 @@ Vector3& Vector3::operator=(const Vector3& other)
 	return *this;
 }
 
-Vector3::~Vector3() {}
+void Vector3::Set(Float x, Float y, Float z)
+{
+	this->x = x;
+	this->y = y;
+	this->z = z;
+}
+
+void Vector3::Normalize()
+{
+	Float mag = std::sqrtf((x * x) + (y * y) + (z * z));
+
+	this->x /= mag;
+	this->y /= mag;
+	this->z /= mag;
+}
+
+void Vector3::Normalize(Float magnitude)
+{
+	this->x /= magnitude;
+	this->y /= magnitude;
+	this->z /= magnitude;
+}
+
+Float Vector3::Magnitude() const
+{
+	return std::sqrtf((x * x) + (y * y) + (z * z));
+}
+
+void Vector3::Round()
+{
+	this->x = std::roundf(this->x);
+	this->y = std::roundf(this->y);
+	this->z = std::roundf(this->z);
+}
+
+Float Vector3::AngleBetween(const Vector3& a, const Vector3& b)
+{
+	Float dot = (a.x * b.x) + (a.y * b.y) + (a.z * b.z);
+	Float magA = std::sqrtf((a.x * a.x) + (a.y * a.y) + (a.z * a.z));
+	Float magB = std::sqrtf((b.x * b.x) + (b.y * b.y) + (b.z * b.z));
+
+	return std::acosf(dot / (magA * magB));
+}
+
+Vector3 Vector3::CrossProduct(const Vector3& a, const Vector3& b)
+{
+	return Vector3(
+		a.y * b.z - a.z * b.y,
+		a.z * b.x - a.x * b.z,
+		a.x * b.y - a.y * b.x
+	);
+}
+
+Float Vector3::DotProduct(const Vector3& a, const Vector3& b)
+{
+	return (a.x * b.x) + (a.y * b.y) + (a.z * b.z);
+}
+
+Vector3 Vector3::Normalize(const Vector3& v)
+{
+	Float f = std::sqrtf((v.x * v.x) + (v.y * v.y) + (v.z * v.z));
+
+	return Vector3(
+		v.x / f,
+		v.y / f,
+		v.z / f
+	);
+}
+
+Float Vector3::Magnitude(const Vector3& v)
+{
+	return std::sqrtf((v.x * v.x) + (v.y * v.y) + (v.z * v.z));
+}
 
 const Vector3 Vector3::UP = Vector3(0.0f, 1.0f, 0.0f);
 
@@ -352,13 +429,95 @@ const Vector3 Vector3::LEFT = Vector3(-1.0f, 0.0f, 0.0f);
 
 const Vector3 Vector3::RIGHT = Vector3(1.0f, 0.0f, 0.0f);
 
-const Vector3 Vector3::FORWARD = Vector3(0.0f, 0.0f, 1.0f);
+const Vector3 Vector3::FORWARD = Vector3(0.0f, 0.0f, -1.0f);
 
-const Vector3 Vector3::BACKWARD = Vector3(0.0f, 0.0f, -1.0f);
+const Vector3 Vector3::BACKWARD = Vector3(0.0f, 0.0f, 1.0f);
 
 const Vector3 Vector3::ONE = Vector3(1.0f, 1.0f, 1.0f);
 
 const Vector3 Vector3::IDENTITY = Vector3(0.0f, 0.0f, 1.0f);
+
+Quaternion::Quaternion()
+{
+	this->x = 0.0f;
+	this->y = 0.0f;
+	this->z = 0.0f;
+	this->w = 1.0f;
+}
+
+Quaternion::Quaternion(Float x, Float y, Float z, Float w)
+{
+	this->x = x;
+	this->y = y;
+	this->z = z;
+	this->w = w;
+}
+
+Quaternion Quaternion::AxisAngle(const Vector3& axis, Float angle)
+{
+	Float sinA = std::sinf(angle / 2.0f);
+
+	return Quaternion(
+		axis.x * sinA,
+		axis.y * sinA,
+		axis.z * sinA,
+		std::cosf(angle / 2.0f)
+	);
+}
+
+Quaternion Quaternion::FromEuler(const Vector3& v)
+{
+	//Bank = x
+	//Heading = y
+	//Attitude = z
+
+	Float c1 = std::cosf(v.y / 2.0f);
+	Float c2 = std::cosf(v.z / 2.0f);
+	Float c3 = std::cosf(v.x / 2.0f);
+
+	Float s1 = std::sinf(v.y / 2.0f);
+	Float s2 = std::sinf(v.z / 2.0f);
+	Float s3 = std::sinf(v.x / 2.0f);
+
+	return Quaternion(
+		s1 * s2 * c3 + c1 * c2 * s3,
+		s1 * c2 * c3 + c1 * s2 * s3,
+		c1 * s2 * c3 - s1 * c2 * s3,
+		c1 * c2 * c3 - s1 * s2 * s3
+	);
+}
+
+Quaternion Quaternion::Conjugate(const Quaternion& q)
+{
+	return Quaternion(
+		-q.x,
+		-q.y,
+		-q.z,
+		q.w
+	);
+}
+
+Vector3 Quaternion::Rotate(const Vector3& v, const Quaternion& q)
+{
+	Quaternion p(v.x, v.y, v.z, 0.0f);	//pure quaternion from v
+	Quaternion c(-q.x, -q.y, -q.z, q.w); //conjugate quaternion
+
+	Quaternion q1(c * p * q); //multiply quaternions
+
+	return Vector3(q1.x, q1.y, q1.z);	//q1 should be a pure quaternion by this point.
+}
+
+Vector3 Quaternion::RotateAround(const Vector3& origin, const Vector3& v, const Quaternion& q)
+{
+	Vector3 adj(v - origin);
+
+	Quaternion p(adj.x, adj.y, adj.z, 0.0f);
+	Quaternion c(-q.x, -q.y, -q.z, q.w);
+
+	Quaternion q1(q * p * c);
+
+	return Vector3(q1.x + origin.x, q1.y + origin.y, q1.y + origin.y);
+}
 
 Vector4::Vector4()
 {
@@ -450,20 +609,11 @@ Vector4& Vector4::operator=(const Vector4& other)
 	return *this;
 }
 
-Vector4::~Vector4() {}
-
 const Vector4 Vector4::UP =			Vector4(0.0f, 1.0f, 0.0f);
-
 const Vector4 Vector4::DOWN =		Vector4(0.0f, -1.0f, 0.0f);
-
 const Vector4 Vector4::LEFT =		Vector4(-1.0f, 0.0f, 0.0f);
-
 const Vector4 Vector4::RIGHT =		Vector4(1.0f, 0.0f, 0.0f);
-
 const Vector4 Vector4::FORWARD =	Vector4(0.0f, 0.0f, 1.0f);
-
 const Vector4 Vector4::BACKWARD =	Vector4(0.0f, 0.0f, -1.0f);
-
 const Vector4 Vector4::ONE =		Vector4(1.0f, 1.0f, 1.0f);
-
 const Vector4 Vector4::IDENTITY =	Vector4(0.0f, 0.0f, 0.0f);

@@ -66,6 +66,7 @@
       <SubSystem>Console</SubSystem>
       <AdditionalLibraryDirectories>$(ProjectDir)dep/GLEW/$(Configuration)/;$(ProjectDir)dep/GLFW/$(Configuration)/;$(ProjectDir)dep/Pugixml/$(Configuration)/;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <AdditionalDependencies>pugixml.lib;opengl32.lib;libglew32.lib;glfw3.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalOptions>/NODEFAULTLIB:MSVCRTD %(AdditionalOptions)</AdditionalOptions>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
@@ -87,10 +88,15 @@
       <OptimizeReferences>true</OptimizeReferences>
       <AdditionalDependencies>pugixml.lib;opengl32.lib;libglew32.lib;glfw3.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <AdditionalLibraryDirectories>$(ProjectDir)dep/GLEW/$(Configuration)/;$(ProjectDir)dep/GLFW/$(Configuration)/;$(ProjectDir)dep/Pugixml/$(Configuration)/;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>/NODEFAULTLIB:MSVCRT %(AdditionalOptions)</AdditionalOptions>
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="src\engine\components\DrawModelComponent3D.cpp" />
+    <ClCompile Include="src\engine\components\LightComponent.cpp" />
     <ClCompile Include="src\engine\core\Content.cpp" />
+    <ClCompile Include="src\engine\graphics\Material.cpp" />
+    <ClCompile Include="src\engine\graphics\Model.cpp" />
     <ClCompile Include="src\engine\graphics\OpenGL\VertexArray.cpp" />
     <ClCompile Include="src\engine\utils\XmlDocument.cpp" />
     <ClCompile Include="src\game\components\CommandReciever.cpp" />
@@ -139,7 +145,11 @@
     <ClCompile Include="src\game\units\TestUnitEntity.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="src\engine\components\DrawModelComponent.h" />
+    <ClInclude Include="src\engine\components\LightComponent.h" />
     <ClInclude Include="src\engine\core\Content.h" />
+    <ClInclude Include="src\engine\graphics\Material.h" />
+    <ClInclude Include="src\engine\graphics\Model.h" />
     <ClInclude Include="src\engine\graphics\OpenGL\VertexArray.h" />
     <ClInclude Include="src\engine\utils\XmlDocument.h" />
     <ClInclude Include="src\game\components\CommandReciever.h" />

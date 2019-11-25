@@ -36,8 +36,6 @@ Matrix3& Matrix3::operator=(const Matrix3& other)
 	return *this;
 }
 
-Matrix3::~Matrix3() {}
-
 Boolean Matrix3::operator==(const Matrix3& other) const
 {
 	for (UInt i = 0; i < 9; i++)
@@ -196,40 +194,35 @@ Matrix3 Matrix3::CreateRotation(const Float angle)
 }
 
 Matrix4::Matrix4() :
-	data {0.0f}
+	data()
 {
 
+}
+
+Matrix4::Matrix4(const std::array<Float, 16> data) :
+	data(data)
+{
+	
 }
 
 Matrix4::Matrix4(const Matrix4& other) :
-	data {}
+	data(other.data)
 {
-	for (UInt i = 0; i < 16; i++)
-	{
-		data[i] = other.data[i];
-	}
+
 }
 
 Matrix4::Matrix4(Matrix4&& other) noexcept :
-	data {}
+	data(other.data)
 {
-	for (UInt i = 0; i < 16; i++)
-	{
-		data[i] = other.data[i];
-	}
+
 }
 
 Matrix4& Matrix4::operator=(const Matrix4& other)
 {
-	for (UInt i = 0; i < 16; i++)
-	{
-		data[i] = other.data[i];
-	}
+	this->data = other.data;
 
 	return *this;
 }
-
-Matrix4::~Matrix4() {}
 
 Boolean Matrix4::operator==(const Matrix4& other) const
 {
@@ -434,7 +427,29 @@ Matrix4 Matrix4::CreateRotationZ(Float angle)
 	return m;
 }
 
-Matrix4 Matrix4::CreateLookAt(Vector3 right, Vector3 up, Vector3 direction, Vector3 position)
+Matrix4 Matrix4::CreateRotation(const Quaternion& q)
+{
+	std::array<Float, 16> mD = {
+		q.w, q.z, -q.y, q.x,
+		-q.z, q.w, q.x, q.y,
+		q.y, -q.x, q.w, q.z,
+		-q.x, -q.y, -q.z, q.w
+	};
+
+	std::array<Float, 16> nD = {
+		q.w, q.z, -q.y, -q.x,
+		-q.z, q.w, q.x, -q.y,
+		q.y, -q.x, q.w, -q.z,
+		q.x, q.y, q.z, q.w
+	};
+
+	Matrix4 m(mD);
+	Matrix4 n(nD);
+
+	return m * n;
+}
+
+Matrix4 Matrix4::CreateLookAt(const Vector3& right, const Vector3& up, const Vector3& direction, const Vector3& position)
 {
 	Matrix4 m(Matrix4::CreateIdentity());
 	Matrix4 n(Matrix4::CreateIdentity());
@@ -458,17 +473,20 @@ Matrix4 Matrix4::CreateLookAt(Vector3 right, Vector3 up, Vector3 direction, Vect
 	return m * n;
 }
 
-Matrix4 Matrix4::CreatePerspective(Float left, Float right, Float top, Float bottom, Float near, Float far)
+Matrix4 Matrix4::CreatePerspective(Float fov, Float aspect, Float far, Float near)
 {
 	Matrix4 m;
 
-	m.At(0, 0) = (2.0f * near) / (right - left);
-	m.At(2, 0) = (right + left) / (right - left);
-	m.At(1, 1) = (2.0f * near) / (top - bottom);
-	m.At(2, 1) = (top + bottom) / (top - bottom);
-	m.At(2, 2) = (-far - near) / (far - near);
-	m.At(3, 2) = (-2.0f * far * near) / (far - near);
-	m.At(2, 3) = -1.0f;
+	Float s = 1.0f / (aspect * std::tanf(fov / 2.0f));
+	Float a = 1.0f / (std::tanf(fov / 2.0f));
+
+	m.At(0, 0) = a;
+	m.At(1, 1) = s;
+	m.At(2, 2) = -((far + near) / (far - near));
+	m.At(2, 3) = -((2.0f * far * near) / (far - near));
+
+	m.At(3, 2) = -1.0f;
+	m.At(3, 3) = 0.0f;
 
 	return m;
 }

@@ -8,12 +8,14 @@
 #include <fstream>
 #include <sstream>
 #include <vector>
-#include <unordered_map>
+#include <set>
 
 #include "../../components/DrawPrimitiveComponent.h"
 #include "../../components/DrawTextureComponent.h"
 #include "../../components/DrawStringComponent.h"
+#include "../../components/DrawModelComponent.h"
 #include "../../components/CameraComponent.h"
+#include "../../components/LightComponent.h"
 #include "../../memory/ChunkAllocator.hpp"
 #include "../../utils/StringCollection.h"
 #include "../../utils/ByteBuffer.hpp"
@@ -32,12 +34,86 @@ namespace
 	Matrix4 viewport2D;
 	Matrix4 viewport3D;
 
+	//Maps textures to their handles
 	std::map<const Texture2D*, UInt> textureMap;
+
+	//Maps models to mesh buffers
+	std::map<const Model*, std::vector<GLBuffer>> modelMap;
+
 	Texture2DVAO texture2Dvao;
+	ModelVAO modelVAO;
+
+	constexpr UInt MAX_POINT_LIGHTS = 64;
+	constexpr UInt MAX_DRCTN_LIGHTS = 4;
 
 	void OnFramebufferResize(vlk::WindowFramebufferEvent& ev)
 	{
 		glViewport(0, 0, ev.width, ev.height);
+	}
+
+	void OnModelLoad(vlk::ContentLoadedEvent<Model>& ev)
+	{
+		const Model* model = ev.content;
+
+		ULong meshCount = model->GetMeshes().size();
+
+		std::vector<UInt> rawBuffers(meshCount);
+
+		modelMap[model] = std::vector<GLBuffer>();
+		std::vector<GLBuffer>& buffers = modelMap[model];
+		buffers.reserve(meshCount);
+		glGenBuffers(static_cast<UInt>(meshCount), rawBuffers.data());
+
+		for (ULong i = 0; i < meshCount; i++)
+		{
+			std::vector<UInt> mesh = model->GetMeshes()[i];
+
+			ByteBuffer b;
+			b.Allocate(mesh.size() * (3 * 2 * 3) * 4);
+
+			//Assemble mesh data into perVertexBuffer
+			for (ULong j = 0; j < mesh.size(); j += 3)
+			{
+				ULong vertex = static_cast<ULong>(mesh[j + 0] - 1) * 3;
+				ULong coord = static_cast<ULong>(mesh[j + 1] - 1) * 2;
+				ULong norm = static_cast<ULong>(mesh[j + 2] - 1) * 3;
+
+				b.Put<Float>(model->GetVertices()[vertex + 0]);
+				b.Put<Float>(model->GetVertices()[vertex + 1]);
+				b.Put<Float>(model->GetVertices()[vertex + 2]);
+
+				b.Put<Float>(model->GetCoords()[coord + 0]);
+				b.Put<Float>(model->GetCoords()[coord + 1]);
+
+				b.Put<Float>(model->GetNormals()[norm + 0]);
+				b.Put<Float>(model->GetNormals()[norm + 1]);
+				b.Put<Float>(model->GetNormals()[norm + 2]);
+			}
+
+			buffers.push_back(GLBuffer(GL_COPY_READ_BUFFER));
+			buffers[i].handle = rawBuffers[i];
+			buffers[i].size = b.Size();
+
+			glBindBuffer(GL_COPY_READ_BUFFER, rawBuffers[i]);
+			glBufferData(GL_COPY_READ_BUFFER, b.Size(), b.Data(), GL_STATIC_COPY);
+
+		}
+
+		glBindBuffer(GL_COPY_READ_BUFFER, 0);
+	}
+
+	void OnModelUnload(vlk::ContentUnloadedEvent<Model>& ev)
+	{
+		std::vector<GLBuffer> buffers(modelMap[ev.content]);
+
+		std::vector<UInt> rawBuffers(buffers.size());
+
+		for (UInt i = 0; i < buffers.size(); i++)
+		{
+			rawBuffers[i] = buffers[i];
+		}
+
+		glDeleteBuffers(buffers.size(), rawBuffers.data());
 	}
 
 	void OnTextureLoad(vlk::ContentLoadedEvent<Texture2D>& ev)
@@ -99,6 +175,216 @@ namespace
 		UInt texture = textureMap[ev.content];
 
 		glDeleteTextures(1, &texture);
+	}
+
+	void DrawModels3D()
+	{
+		std::vector<DrawModelComponent3D*> models(0);
+		models.reserve(DrawModelComponent3D::GetCount());
+
+		if (models.capacity() == 0) return;
+
+		std::set<const Model*> uniqueModels;
+
+		DrawModelComponent3D::ForEach([&models, &uniqueModels](DrawModelComponent3D* c)
+		{
+			models.push_back(c);
+			uniqueModels.emplace(c->model);
+		});
+
+		//sort by models
+		std::sort(models.begin(), models.end(), [](DrawModelComponent3D* m1, DrawModelComponent3D* m2)
+		{
+			return m1->model > m2->model;
+		});
+
+		std::vector<DrawModelComponent3D*> thisDraw;
+		thisDraw.reserve(models.size());
+
+		modelVAO.Bind();
+		glUniformMatrix4fv(modelVAO.viewportBinding, 1, GL_FALSE, viewport3D.Data());
+
+		//bind light uniforms
+		{
+			std::vector<float> pointCol;
+			std::vector<float> pointInt;
+			std::vector<float> pointLoc;
+
+			std::vector<Float> dirCol;
+			std::vector<Float> dirInt;
+			std::vector<Float> dirDir;
+
+			pointCol.reserve(MAX_POINT_LIGHTS * 3);
+			pointInt.reserve(MAX_POINT_LIGHTS * 3);
+			pointLoc.reserve(MAX_POINT_LIGHTS * 3);
+			UInt pointCount = 0;
+
+			dirCol.reserve(MAX_DRCTN_LIGHTS * 3);
+			dirInt.reserve(MAX_DRCTN_LIGHTS * 3);
+			dirDir.reserve(MAX_DRCTN_LIGHTS * 3);
+			UInt dirCount = 0;
+
+			PointLightComponent3D::ForEach([&pointCol, &pointInt, &pointLoc, &pointCount](PointLightComponent3D* c)
+			{
+				if (pointCount < MAX_POINT_LIGHTS)
+				{
+					//push light color
+					pointCol.push_back(c->color.r);
+					pointCol.push_back(c->color.g);
+					pointCol.push_back(c->color.b);
+
+					//push light intensity falloff
+					pointInt.push_back(c->quadratic);
+					pointInt.push_back(c->linear);
+					pointInt.push_back(c->constant);
+
+					//Push point light location
+					pointLoc.push_back(c->transform->location.x);
+					pointLoc.push_back(c->transform->location.y);
+					pointLoc.push_back(c->transform->location.z);
+
+					pointCount++;
+				}
+			});
+
+			DirectionLightComponent3D::ForEach([&dirCol, &dirInt, &dirDir, &dirCount](DirectionLightComponent3D* c)
+			{
+				if (dirCount < MAX_DRCTN_LIGHTS)
+				{
+					//push light color
+					dirCol.push_back(c->color.r);
+					dirCol.push_back(c->color.g);
+					dirCol.push_back(c->color.b);
+
+					//push light intensity falloff
+					dirInt.push_back(c->quadratic);
+					dirInt.push_back(c->linear);
+					dirInt.push_back(c->constant);
+
+					//puish direction of light
+					Vector3 v(Quaternion::Rotate(Vector3::DOWN, c->transform->rotation));
+
+					dirDir.push_back(v.x);
+					dirDir.push_back(v.y);
+					dirDir.push_back(v.z);
+
+					dirCount++;
+				}
+			});
+
+			//Camera position
+			glUniform3f(modelVAO.cameraPosBinding, CameraComponent3D::ACTIVE->transform->location.x, CameraComponent3D::ACTIVE->transform->location.y, CameraComponent3D::ACTIVE->transform->location.z);
+
+			//Point lights
+			glUniform1i(modelVAO.pntLightNumBinding, pointCount);
+			glUniform3fv(modelVAO.pntLightColBinding, pointCount, pointCol.data());
+			glUniform3fv(modelVAO.pntLightIntBinding, pointCount, pointInt.data());
+			glUniform3fv(modelVAO.pntLightPosBinding, pointCount, pointLoc.data());
+
+			//Directional lights
+			glUniform1i(modelVAO.dirLightNumBinding, dirCount);
+			glUniform3fv(modelVAO.dirLightColBinding, dirCount, dirCol.data());
+			glUniform3fv(modelVAO.dirLightIntBinding, dirCount, dirInt.data());
+			glUniform3fv(modelVAO.dirLightDirBinding, dirCount, dirDir.data());
+
+			//Ambient Light
+			if (AmbientLightComponent3D::ACTIVE)
+			{
+				glUniform3f(modelVAO.ambLightColBinding, AmbientLightComponent3D::ACTIVE->color.r, AmbientLightComponent3D::ACTIVE->color.g, AmbientLightComponent3D::ACTIVE->color.b);
+				glUniform1f(modelVAO.ambLightIntBinding, AmbientLightComponent3D::ACTIVE->constant);
+			}
+			else
+			{
+				glUniform3f(modelVAO.ambLightColBinding, 1.0f, 1.0f, 1.0f);
+				glUniform1f(modelVAO.ambLightIntBinding, 0.0f);
+			}
+		}
+
+		glEnable(GL_DEPTH_TEST);
+		glDepthFunc(GL_LESS);
+
+		glEnable(GL_BLEND);
+		glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
+
+		glEnable(GL_CULL_FACE);
+		glFrontFace(GL_CW);
+		//glCullFace(GL_FRONT);
+
+		//Draw unique models in groups
+		for (auto iModel = uniqueModels.begin(); iModel != uniqueModels.end(); iModel++)
+		{
+			const Model* model = *iModel;
+
+			//Get all DrawModelComponents that use this model and move them into thisDraw
+			{
+				thisDraw.clear();
+				auto it = std::remove_if(models.begin(), models.end(), [model](const DrawModelComponent3D* d)
+				{
+					return d->model == model;
+				});
+
+				//Move components from models to thisDraw
+				std::move(it, models.end(), std::back_inserter(thisDraw));
+				models.erase(it, models.end());
+			}
+
+			//Contains all the transforms for the model renders
+			ByteBuffer perInstanceBuffer;
+			perInstanceBuffer.Allocate(thisDraw.size() * 16 * 4);
+
+			//Load transform matrices into perInstanceBuffer
+			for (auto it = thisDraw.begin(); it != thisDraw.end(); it++)
+			{
+				DrawModelComponent3D* c = *it;
+
+				Matrix4 transform =		Matrix4::CreateScale(c->transform->scale) *
+										Matrix4::CreateTranslation(c->transform->location) *
+										Matrix4::CreateRotation(c->transform->rotation);
+
+				for (UInt i = 0; i < 16; i++)
+				{
+					perInstanceBuffer.Put<Float>(transform.Data()[i]);
+				}
+			}
+
+			//draw meshes
+			for (ULong i = 0; i < model->GetMeshes().size(); i++)
+			{
+				const Material* material = model->GetMaterials()[i];
+
+				glBindBuffer(GL_COPY_READ_BUFFER, modelMap[model][i].handle);
+				glBindBuffer(GL_COPY_WRITE_BUFFER, modelVAO.modelBuffer.handle);
+
+				glCopyBufferSubData(GL_COPY_READ_BUFFER, GL_COPY_WRITE_BUFFER, 0, 0, modelMap[model][i].size);
+
+				modelVAO.instanceBuffer.Fill(perInstanceBuffer);
+
+				//Send material to uniforms
+				{
+					glActiveTexture(GL_TEXTURE0 + 0);
+					glBindTexture(GL_TEXTURE_2D, textureMap[material->diffuseMap]);
+
+					glActiveTexture(GL_TEXTURE0 + 1);
+					glBindTexture(GL_TEXTURE_2D, textureMap[material->specularMap]);
+
+					glActiveTexture(GL_TEXTURE0 + 2);
+					glBindTexture(GL_TEXTURE_2D, textureMap[material->exponentMap]);
+
+					glActiveTexture(GL_TEXTURE0 + 3);
+					glBindTexture(GL_TEXTURE_2D, textureMap[material->alphaMap]);
+
+					glUniform3f(modelVAO.ambBinding, material->ambient.r, material->ambient.g, material->ambient.b);
+					glUniform3f(modelVAO.difBinding, material->diffuse.r, material->diffuse.g, material->diffuse.b);
+					glUniform3f(modelVAO.spcBinding, material->specular.r, material->specular.g, material->specular.b);
+					glUniform1f(modelVAO.expBinding, material->exponent);
+					glUniform1f(modelVAO.alpBinding, material->transparency);
+				}
+
+				glDrawArraysInstanced(GL_TRIANGLES, 0, static_cast<UInt>(modelMap[model][i].size / (3 * 4)), static_cast<UInt>(thisDraw.size()));
+			}
+		}
+
+		modelVAO.Unbind();
 	}
 
 	void DrawTextures2D()
@@ -221,6 +507,8 @@ namespace
 		glEnable(GL_BLEND);
 		glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
 
+		glDisable(GL_CULL_FACE);
+
 		UInt lastDraw = 0;
 		UInt thisTex = 0;
 
@@ -255,10 +543,13 @@ void GLRenderer::Init()
 	glClearColor(0.0f, 0.0f, 0.0f, 1.0f);
 
 	texture2Dvao.Create();
+	modelVAO.Create();
 	
 	EventBus<vlk::WindowFramebufferEvent>::Get().AddEventListener(OnFramebufferResize);
 	EventBus<vlk::ContentLoadedEvent<Texture2D>>::Get().AddEventListener(OnTextureLoad);
 	EventBus<vlk::ContentUnloadedEvent<Texture2D>>::Get().AddEventListener(OnTextureUnload);
+	EventBus<vlk::ContentLoadedEvent<Model>>::Get().AddEventListener(OnModelLoad);
+	EventBus<vlk::ContentUnloadedEvent<Model>>::Get().AddEventListener(OnModelUnload);
 }
 
 void GLRenderer::Draw()
@@ -266,7 +557,9 @@ void GLRenderer::Draw()
 	glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 	
 	viewport2D = CameraComponent2D::ACTIVE->GetView() * CameraComponent2D::ACTIVE->GetProjection();
+	viewport3D = CameraComponent3D::ACTIVE->GetView() * CameraComponent3D::ACTIVE->GetProjection();
 
+	DrawModels3D();
 	DrawTextures2D();
 	/*
 	DrawStrings();
@@ -275,7 +568,11 @@ void GLRenderer::Draw()
 }
 
 void GLRenderer::Destroy()
-{/*
+{
+	texture2Dvao.Delete();
+	modelVAO.Delete();
+
+	/*
 	DestroyPrimitive2DVertexArray();
 	DestroyTexture2DVertexArray();
 

@@ -7,12 +7,14 @@
 
 #include "EventBus.hpp"
 #include "../utils/VLKIO.h"
+#include "../graphics/Texture.h"
 
 using namespace vlk;
 
 namespace
 {
 	pugi::xml_document contentDoc;
+	Texture2D* DEFAULT_TEXTURE;
 }
 
 void ContentSystem::Init()
@@ -24,10 +26,19 @@ void ContentSystem::Init()
 		LogError("ContentManager", "Failed to open content file: " + std::string(result.description()));
 		throw std::exception("Failed to open content file.");
 	}
+
+	//init default content:
+	Byte data[4] { 255, 255, 255, 255 };
+	DEFAULT_TEXTURE = new Texture2D(data, 4, 1, 1);
+	ContentManager<Texture2D>::Get().AddContent("VLK_DEFAULT_TEXTURE", DEFAULT_TEXTURE);
 }
 
 void ContentSystem::Destroy()
 {
+	//Destroy default content
+	ContentManager<Texture2D>::Get().UnloadContent("VLK_DEFAULT_TEXTURE");
+	DEFAULT_TEXTURE = nullptr;
+
 	contentDoc.reset();
 }
 
