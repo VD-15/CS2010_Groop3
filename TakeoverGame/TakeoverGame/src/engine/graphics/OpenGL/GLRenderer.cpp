@@ -43,7 +43,7 @@ namespace
 	Texture2DVAO texture2Dvao;
 	ModelVAO modelVAO;
 
-	constexpr UInt MAX_POINT_LIGHTS = 64;
+	constexpr UInt MAX_POINT_LIGHTS = 16;
 	constexpr UInt MAX_DRCTN_LIGHTS = 4;
 
 	void OnFramebufferResize(vlk::WindowFramebufferEvent& ev)
@@ -347,17 +347,18 @@ namespace
 				}
 			}
 
+			modelVAO.instanceBuffer.Fill(perInstanceBuffer);
+
 			//draw meshes
 			for (ULong i = 0; i < model->GetMeshes().size(); i++)
 			{
 				const Material* material = model->GetMaterials()[i];
 
+				//glBindBuffer(GL_ARRAY_BUFFER, modelMap[model][i].handle);
 				glBindBuffer(GL_COPY_READ_BUFFER, modelMap[model][i].handle);
 				glBindBuffer(GL_COPY_WRITE_BUFFER, modelVAO.modelBuffer.handle);
 
 				glCopyBufferSubData(GL_COPY_READ_BUFFER, GL_COPY_WRITE_BUFFER, 0, 0, modelMap[model][i].size);
-
-				modelVAO.instanceBuffer.Fill(perInstanceBuffer);
 
 				//Send material to uniforms
 				{

@@ -1,6 +1,6 @@
 #version 330 core
 
-#define MAX_POINT_LIGHTS 64u
+#define MAX_POINT_LIGHTS 16u
 #define MAX_DRCTN_LIGHTS 4u
 
 in vec2 moveUV;
