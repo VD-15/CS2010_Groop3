@@ -45,7 +45,7 @@ namespace vlk
 		const UInt severity; 
 		const std::string& message; 
 	};
-
+	
 	//Signals that the application has started
 	struct ApplicationStartEvent : Event {};
 

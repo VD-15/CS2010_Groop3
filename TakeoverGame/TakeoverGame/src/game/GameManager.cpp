@@ -49,10 +49,8 @@ void GameManager::Init()
 	ContentManager<Texture2D>::Get().LoadContent("cap_9");
 	ContentManager<Texture2D>::Get().LoadContent("cap_10");
 
-	ContentManager<Material>::Get().LoadContent("monkey_green");
-	ContentManager<Material>::Get().LoadContent("monkey_blue");
-	ContentManager<Material>::Get().LoadContent("monkey_yellow");
-	ContentManager<Model>::Get().LoadContent("monkey_hd");
+	ContentManager<Material>::Get().LoadContent("cube_tex");
+	ContentManager<Model>::Get().LoadContent("cube");
 
 	//Create a camera entity and make it's camera active
 	//PlayerCameraEntity::CreateEntity()->camera->Activate();

@@ -33,13 +33,11 @@ uniform float uAmbientIntensity;
 uniform vec3 uPointColor[MAX_POINT_LIGHTS];
 uniform vec3 uPointIntensity[MAX_POINT_LIGHTS];
 uniform vec3 uPointLocation[MAX_POINT_LIGHTS];
-uniform uint uPointCount;
 
 //Directional lights
 uniform vec3 uDirectionColor[MAX_DRCTN_LIGHTS];
 uniform vec3 uDirectionIntensity[MAX_DRCTN_LIGHTS];
 uniform vec3 uDirectionVector[MAX_DRCTN_LIGHTS];
-uniform uint uDirectionCount;
 
 void main()
 {
@@ -51,6 +49,9 @@ void main()
 
 	//cumulative specular color from all lights
 	vec3 specCol = vec3(0.0, 0.0, 0.0);
+
+	vec3 diffAddCol = uDiffuse * texture(tDiffuse, moveUV).xyz;
+	vec3 specAddCol = uSpecular * texture(tSpecular, moveUV).xyz;
 
 	for (uint i = 0u; i < MAX_POINT_LIGHTS; i++)
 	{
@@ -82,13 +83,12 @@ void main()
 		float attenuation = 1.0 / (1.0 + (uPointIntensity[i].y * dist) + (uPointIntensity[i].x * dist * dist));
 
 		//add diffuse color
-		difCol += uDiffuse * (uPointColor[i] * attenuation * uPointIntensity[i].z * angle);
+		difCol += diffAddCol * (uPointColor[i] * attenuation * uPointIntensity[i].z * angle);
 
 		//add specular color
-		specCol += uSpecular * (uPointColor[i] * specular);
-
+		specCol += specAddCol * (uPointColor[i] * specular);
 	}
 
 	//combine all colors
-	outColor = vec4(ambCol + difCol + specCol, 1.0);
+	outColor = vec4(ambCol + difCol + specCol, texture(tAlpha, moveUV).w);
 }

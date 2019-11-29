@@ -546,8 +546,10 @@ void GLRenderer::Init()
 	modelVAO.Create();
 	
 	EventBus<vlk::WindowFramebufferEvent>::Get().AddEventListener(OnFramebufferResize);
+
 	EventBus<vlk::ContentLoadedEvent<Texture2D>>::Get().AddEventListener(OnTextureLoad);
 	EventBus<vlk::ContentUnloadedEvent<Texture2D>>::Get().AddEventListener(OnTextureUnload);
+
 	EventBus<vlk::ContentLoadedEvent<Model>>::Get().AddEventListener(OnModelLoad);
 	EventBus<vlk::ContentUnloadedEvent<Model>>::Get().AddEventListener(OnModelUnload);
 }

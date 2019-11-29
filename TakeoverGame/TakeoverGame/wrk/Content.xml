@@ -24,4 +24,6 @@
 	<material name="monkey_blue" path="models/monkey.mtl"></material> 
 	<material name="monkey_green" path="models/monkey.mtl"></material> 
 	<material name="monkey_yellow" path="models/monkey.mtl"></material> 
+	<model name="cube" path="models/cube.obj"></model>
+	<material name="cube_tex" path="models/cube.mtl"></material> 
 </content>
