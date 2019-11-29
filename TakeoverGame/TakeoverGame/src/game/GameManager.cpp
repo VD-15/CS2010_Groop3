@@ -13,10 +13,10 @@
 #include "units/TestUnitEntity.h"
 
 using namespace tkv;
-using namespace vlk;
 
 namespace
 {
+	  
 
 }
 
@@ -66,6 +66,7 @@ void GameManager::Init()
 	TestUnitEntity2::CreateEntity(Vector3( 0.0f, 0.0f, 5.0f));
 	TestUnitEntity2::CreateEntity(Vector3(-5.0f, 0.0f, 5.0f));
 	TestUnitEntity2::CreateEntity(Vector3( 5.0f, 0.0f, 5.0f));
+	
 
 	auto c = CameraComponent3D::CreateComponent(nullptr, TransformComponent3D::CreateComponent(nullptr));
 	CameraComponent2D::CreateComponent(nullptr, TransformComponent2D::CreateComponent(nullptr));
@@ -99,6 +100,7 @@ void GameManager::Init()
 		//TestUnitEntity::CreateEntity(Team::Team1, -p1);
 	}
 }
+
 
 void GameManager::Destroy()
 {

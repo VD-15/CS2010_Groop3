@@ -19,6 +19,27 @@ namespace tkv
 		void Destroy();
 	}
 
+	typedef UInt ResourceID;
+	constexpr ResourceID RESOURCE_STEEL =		0;
+	constexpr ResourceID RESOURCE_OIL =			1;
+	constexpr ResourceID RESOURCE_SILICONE =	2;
+	constexpr ResourceID RESOURCE_RUBBER =		3;
+	constexpr ResourceID RESOURCE_ALUMINIUM =	4;
+	constexpr ResourceID RESOURCE_URANIUM =		5;
+
+	struct InventoryComponent : public Component<InventoryComponent>, public HeapAllocateComponent
+	{
+		InventoryComponent(IEntity* e, const TeamComponent* team);
+
+		void AddResource(ResourceID r, Double amount);
+		Double GetResource(ResourceID r);
+
+		const TeamComponent* const team;
+
+	private:
+		std::array<Double, 6> resources;
+	};
+
 	struct CursorComponent : public Component<CursorComponent>, public HeapAllocateComponent
 	{
 		CursorComponent(IEntity* e);
