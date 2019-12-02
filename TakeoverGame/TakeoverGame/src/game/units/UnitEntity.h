@@ -22,21 +22,23 @@ namespace tkv
 		void Init();
 		void Destroy();
 	}
+
 	struct ProtoUnit {
-		double health, damage, range, atkspd, speed;
-	}
+		double health, damage, range, atkspd, speed, aggro;
+	};
 	constexpr ProtoUnit meleeUnit {
-		10, 4, 1, 1, 1
+		10, 4, 1, 1, 1, 8
 	};
 	constexpr ProtoUnit rangedUnit {
-		8, 4, 5, 2, 1
+		8, 4, 5, 2, 1, 8
 	};
 	constexpr ProtoUnit flyingUnit {
-		6, 2, 5, 1, 2
+		6, 2, 5, 1, 2, 8
 	};
 	constexpr ProtoUnit commander{
-		500, 10, 3, 1, 1
-	}
+		500, 10, 3, 1, 1, 8
+	};
+
 	struct UnitEntity : public Entity<UnitEntity>
 	{
 		UnitEntity(Team t, Vector2 location, ProtoUnit p);

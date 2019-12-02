@@ -6,19 +6,19 @@ void OnUpdate(UpdateEvent& ev)
 {
 	static Float theta;
 
-	TestComponent::ForEach([](TestComponent* c)
+	UnitComponent::ForEach([](UnitComponent* c)
 	{
 		c->transform->rotation *= Quaternion::AxisAngle(Vector3::UP, VLKTime::DeltaTime<Float>());
 	});
 
 	theta += VLKTime::DeltaTime<Float>();
 }
-void TestSystem::Init()
+void UnitSystem::Init()
 {
 	EventBus<UpdateEvent>::Get().AddEventListener(OnUpdate);
 }
 
-void TestSystem::Destroy()
+void UnitSystem::Destroy()
 {
 	EventBus<UpdateEvent>::Get().RemoveEventListener(OnUpdate);
 }
@@ -31,6 +31,7 @@ UnitEntity::UnitEntity(Team t, Vector2 location, ProtoUnit p)
 	this->capture = CreateComponent<CaptureContributorComponent>(transform, team);
 	this->select = CreateComponent<SelectableComponent>(transform, team);
 	this->reciever = CreateComponent<CommandRecieverComponent>(transform, select);
+	this->logic = CreateComponent<UnitComponent>(p, t);
 
 	this->transform->location = location;
 	this->team->team = t;
@@ -50,4 +51,5 @@ void UnitEntity::OnDelete()
 	team->Delete();
 	draw->Delete();
 	transform->Delete();
+	logic->Delete();
 }
