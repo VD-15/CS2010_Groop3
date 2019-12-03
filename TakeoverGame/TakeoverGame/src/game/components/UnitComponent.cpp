@@ -4,25 +4,21 @@ using namespace tkv;
 
 namespace
 {
-//have a system to check if units are in range
-void OnLateUpdate(LateUpdateEvent& ev){
-
-}
-//use on lateupdate - so units react after theyve moved
-}
-
-
+	//have a system to check if units are in range
+	void OnLateUpdate(LateUpdateEvent& ev){
+		UnitComponent::ForEach([](UnitComponent* c)
+		{
+			
+		});
+	
 }
 
 void CombatSystem::Init()
-{
-
-}
+{}
 
 void CombatSystem::Destroy()
-{
+{}
 
-}
 UnitComponent::UnitComponent(IEntity* e, const ProtoUnit* p, Team t):
 							Component<UnitComponent>(e)
 							{
@@ -33,5 +29,14 @@ UnitComponent::UnitComponent(IEntity* e, const ProtoUnit* p, Team t):
 	this->atkspd = p->atkspd;
 	this->speed = p->speed;
 	this->aggro = p->aggro;
-							}
+	this->foundEnemy = false;
+	}
 
+AttackEvent::AttackEvent(IEntity* e, double damage){
+	//raise damaged event of enitiy?
+	
+}
+
+DamagedEvent::DamagedEvent(double damage){
+	this->health -= damage;
+}

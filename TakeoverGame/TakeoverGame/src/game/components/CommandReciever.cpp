@@ -20,7 +20,7 @@ namespace
 			}
 		});
 	}
-
+	-
 	void OnUpdate(UpdateEvent& ev)
 	{
 		CommandRecieverComponent::ForEach([](CommandRecieverComponent* c)
