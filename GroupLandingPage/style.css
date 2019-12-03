@@ -25,7 +25,7 @@ h1 {
   font-size: 40;
 }
 #header {
-    background: url("banner1.jpg") no-repeat center center;
+    background: url("BG space 3.jpg") no-repeat center center;
     background-size: cover;
     height: 100vh;
     width: 100%;
@@ -39,7 +39,7 @@ h1 {
     right: 0;
     top: 0;
     bottom: 0;
-    background: rgba(0, 0, 0, .8);
+    /*background: rgba(0, 0, 0, .8);*/
 }
 
 #logo {
@@ -47,6 +47,7 @@ h1 {
     float: left;
     margin: 8px 36px;
     color: #fff;
+
 }
 
 nav {
@@ -65,6 +66,40 @@ nav ul {
     text-align: right;
     transition: 1s;
 }
+
+/* social media icons*/
+.s-m{
+  /*position: relative;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%,-50%);*/
+}
+#footer-content a{
+  display: inline-flex;
+  width: 40px;
+  height: 40px;
+  background: #2c3e50;
+  color: white;
+  margin: 0 6px;
+  border-radius: 50%;
+  justify-content: center;
+  align-items: center;
+  transition: 0.4s;
+  font-size: 22px;
+  margin-bottom: 20px
+}
+#footer-content a:hover{
+  background: #e67e22;
+
+}
+#footer-content a i{
+  transition: 0.4s all;
+}
+#footer-content a:hover > i{
+  transform: scale(1.6) rotate(25deg);
+}
+
+/*social media icons end*/
 
 nav.black ul {
     background: #000;
@@ -136,8 +171,8 @@ nav.black ul {
     margin-right: auto;
     left: 0;
     right: 0;
-    width: 160px;
-    background-color: #19BDB7;
+    width: 180px;
+    background-color: black;
     font-size: 20px;
     color: #fff;
     padding: 8px;
@@ -168,18 +203,35 @@ font-family: 'Roboto', sans-serif;
 }
 
 #header-button:hover {
-    background-color: #1BCFC9;
+    background-color: white;
+    color: black;
 }
 
 #about-section {
-  background: url("space.jpg");
-
+  background: url("BG space 2.jpg");
   margin: auto;
   max-width: auto;
   color: #000000;
   text-align: center;
   padding: 50px 0;
 }
+
+
+
+#devblog {
+  background: url("BG space 5.jpg");
+  margin: auto;
+  max-width: auto;
+  color: #000000;
+  text-align: center;
+  padding: 50px 0;
+}
+
+
+
+
+
+
 
 
 /* #about-section, */
@@ -201,6 +253,7 @@ font-family: 'Roboto', sans-serif;
     font-size: 22px;
 }
 
+
 #features,
 #downloads {
     display: flex;
@@ -210,28 +263,16 @@ font-family: 'Roboto', sans-serif;
     margin-top: 50px;
     max-width: 1100px;
 }
-#commanders-section{
-    background-color: #696969 !important;
-}
+/* this is all the new code for commander section*/
 
+#testimonials{
 
-
-.commanders{
-  padding: 40px 0;
-  background: url("comBack.jpg");
-
-  background-size: cover;
-  height: 100vh;
-  width: 100%;
-  top: : 0;
-
-
-  color: #FFFFFF;
+  background: url("BG space 3.jpg");
+  margin: auto;
+  max-width: auto;
+  color: #fff;
   text-align: center;
-}
-
-.colouredText{
-  color: #FFFFFF;
+  padding: 50px 0;
 }
 .inner{
   max-width: 1200px;
@@ -252,75 +293,30 @@ font-family: 'Roboto', sans-serif;
   flex-wrap: wrap;
   justify-content: center;
 }
-
-/* This is for the boxes in the commander section */
 .col{
-  flex: 20.33%;
-  max-width: 25.33%;
+  flex: 25%;
+  max-width: 25.0%;
   box-sizing: border-box;
   padding: 15px;
 }
-
-/* changed this */
-.zohron{
-  background: #FFA07A;
+.testimonial{
+  background: #fff;
   padding: 30px;
-  height: 500px;
-  background-image: url("forest.jpeg");
-
+  color: #fff;
 }
-/* changes this */
-.zohron img{
+.testimonial img{
   width: 100px;
   height: 100px;
   border-radius: 50%;
 }
-/* changed this */
-.karan{
-  background: #FFA07A;
-  padding: 30px;
-  height: 500px;
-  background-image: url("karan.jpeg");
-}
-/* changes this */
-.karan img{
-  width: 100px;
-  height: 100px;
-  border-radius: 50%;
-}
-/* changed this */
-.valk{
-  background: #FFA07A;
-  padding: 30px;
-  height: 500px;
-  background-image: url("valk.jpeg");
-}
-/* changes this */
-.valk img{
-  width: 100px;
-  height: 100px;
-  border-radius: 50%;
-}
-/* changed this */
-.p3{
-  background: #FFA07A;
-  padding: 30px;
-  height: 500px;
-  background-image: url("p3.png");
-}
-/* changes this */
-.p3 img{
-  width: 100px;
-  height: 100px;
-  border-radius: 50%;
-}
-
-
 .name{
   font-size: 20px;
   margin: 20px 0;
 }
-
+.stars{
+  color: #6ab04c;
+  margin-bottom: 20px;
+}
 
 
 @media screen and (max-width:960px) {
@@ -335,6 +331,47 @@ font-family: 'Roboto', sans-serif;
   flex: 100%;
   max-width: 100%;
 }
+.testimonials h1{
+  position: relative;
+  right: 13px;
+  flex: 100%;
+  max-width: 100%;
+}
+}
+
+
+
+
+
+
+
+
+
+
+
+/*end of new code for commander section*/
+
+
+
+.colouredText{
+  color: #FFFFFF;
+}
+
+.border{
+  width: 160px;
+  height: 5px;
+  background: black;
+  margin: 26px auto;
+}
+
+#GameDownload{
+  background: url("BG alien 3.jpg");
+  margin: auto;
+  max-width: auto;
+  color: #fff;
+  text-align: center;
+  padding: 50px 0;
+
 }
 
 
@@ -371,23 +408,25 @@ font-family: 'Roboto', sans-serif;
     text-decoration: none;
 }
 
-#download-button{
-    display: block;
-    width: 160px;
-    background-color: #19BDB7;
-    font-size: 20px;
-    color: #fff;
-    padding: 8px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    letter-spacing: 2px;
-    outline: none;
-    margin: 20px auto;
+.download-button{
+background-color: black;
+border: none;
+color: white;
+padding: 12px 30px;
+cursor: pointer;
+font-size: 20px;
+margin-top: 20px;
+position: relative;
+left: 3px;
+}
+#download-logo-container img{
+   width: 25%;
+   height: auto;
 }
 
-#download-button:hover {
-    background-color: #1BCFC9;
+.download-button:hover {
+    background-color: white;
+    color: black;
 }
 
 #contact-section {
@@ -474,6 +513,7 @@ footer p {
     padding-bottom: 20px;
     text-align: center
 }
+
 
 @media(max-width: 580px) {
     #logo {
