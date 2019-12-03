@@ -561,6 +561,11 @@ left: 3px;
     color: black;
 }
 
+#dev-images img {
+  width: 50%;
+  height:auto;
+}
+
 #contact-section {
     background-color: #35404a;
 }
