@@ -14,10 +14,14 @@ namespace
 }
 
 void CombatSystem::Init()
-{}
+{
+	EventBus<DamagedEvent>::Get().AddEventListener(DamagedEvent);
+}
 
 void CombatSystem::Destroy()
-{}
+{
+	EventBus<DamagedEvent>::Get().RemoveEventListener(DamagedEvent);
+}
 
 UnitComponent::UnitComponent(IEntity* e, const ProtoUnit* p, Team t):
 							Component<UnitComponent>(e)
@@ -32,8 +36,8 @@ UnitComponent::UnitComponent(IEntity* e, const ProtoUnit* p, Team t):
 	this->foundEnemy = false;
 	}
 
-AttackEvent::AttackEvent(IEntity* e, double damage){
-	//raise damaged event of enitiy?
+AttackEvent::AttackEvent(UnitComponent* c, double damage){
+	c->EventBus<DamagedEvent>::Get().PostEvent({/*?*/});
 	
 }
 
