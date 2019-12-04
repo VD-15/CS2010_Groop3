@@ -92,6 +92,8 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="src\game\ui\MenuButtonEntity.cpp" />
+    <ClCompile Include="src\game\ui\MainMenuEntity.cpp" />
     <ClCompile Include="src\engine\components\DrawModelComponent3D.cpp" />
     <ClCompile Include="src\engine\components\LightComponent.cpp" />
     <ClCompile Include="src\engine\core\Content.cpp" />
@@ -145,6 +147,8 @@
     <ClCompile Include="src\game\units\TestUnitEntity.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="src\game\ui\MenuButtonEntity.h" />
+    <ClInclude Include="src\game\ui\MainMenuEntity.h" />
     <ClInclude Include="src\engine\components\DrawModelComponent.h" />
     <ClInclude Include="src\engine\components\LightComponent.h" />
     <ClInclude Include="src\engine\core\Content.h" />

@@ -6,7 +6,7 @@ using namespace tkv;
 
 MainMenuEntity::MainMenuEntity() {
 	this->transform = CreateComponent<TransformComponent3D>();
-	this->draw = CreateComponent<DrawTextureComponent2D>(transform, ContentManager<Texture2D>::Get().GetContent("unit"));
+	this->draw = CreateComponent<DrawTextureComponent2D>(transform, ContentManager<Texture2D>::Get().GetContent("Main_Menu1(1)"));
 
 
 }
