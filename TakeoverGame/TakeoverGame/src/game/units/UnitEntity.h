@@ -25,24 +25,39 @@ namespace tkv
 
 	struct ProtoUnit {
 		double health, damage, range, atkspd, speed, aggro;
+		bool isCommander=false;
+		void UpgradeUnit();
 	};
 	constexpr ProtoUnit meleeUnit {
 		10, 4, 1, 1, 1, 8
+		UpgradeUnit(){
+			health*=1.5;
+			damage*=1.5;
+		}
 	};
 	constexpr ProtoUnit rangedUnit {
 		8, 4, 5, 2, 1, 8
+		UpgradeUnit(){
+			health*=1.5;
+			damage*=1.5;
+		}
 	};
 	constexpr ProtoUnit flyingUnit {
 		6, 2, 5, 1, 2, 8
+		UpgradeUnit(){
+			health*=1.5;
+			damage*=1.5;
+		}
 	};
 	constexpr ProtoUnit commander{
 		500, 10, 3, 1, 1, 8
+		isCommander=true;
 	};
 
 	struct UnitEntity : public Entity<UnitEntity>
 	{
 		UnitEntity(Team t, Vector2 location, ProtoUnit p);
-		void onDelete() override;
+		void OnDelete() override;
 
 		TransformComponent3D* transform;
 		DrawModelComponent3D* draw;
@@ -51,5 +66,6 @@ namespace tkv
 		SelectableComponent* select;
 		CommandRecieverComponent* reciever;
 		UnitComponent* logic;
+
 	};
 }
