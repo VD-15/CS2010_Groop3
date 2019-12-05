@@ -21,8 +21,10 @@ namespace tkv {
 	struct UnitComponent : public Component<UnitComponent>
 	{
 		UnitComponent(IEntity* e, const ProtoUnit* p, Team t);
-
+		void UpgradeUnit();
 		// CheckForEnemies() maybe?
+
+		int tier = 1;
 		double health, damage, range, atkspd, speed, aggro;
 		TeamComponent* team;
 		bool foundEnemy;

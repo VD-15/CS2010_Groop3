@@ -35,12 +35,13 @@ UnitComponent::UnitComponent(IEntity* e, const ProtoUnit* p, Team t):
 	this->aggro = p->aggro;
 	this->foundEnemy = false;
 	}
-
-AttackEvent::AttackEvent(UnitComponent* c, double damage){
-	c->EventBus<DamagedEvent>::Get().PostEvent({/*?*/});
 	
-}
 
 DamagedEvent::DamagedEvent(double damage){
 	this->health -= damage;
+}
+void UnitComponent::UpgadeUnit(){
+	this->health *= 1.5;
+	this->damage *= 1.5;
+	this->tier +=1;
 }
