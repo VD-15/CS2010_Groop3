@@ -31,9 +31,12 @@ namespace
 		{
 			c->transform->location.y += vertDir;
 
-			c->transform->location.y = std::clamp(c->transform->location.y, 3.0f, 50.0f);
+			c->transform->location.y = std::clamp(c->transform->location.y, 3.0f, 50.0f); //vertical clamp
 
 			c->transform->location += dir * c->transform->location.y / 3.0f;
+
+			c->transform->location.x = std::clamp(c->transform->location.x, -512.0f, 512.0f); //Horizontal clamp
+			c->transform->location.z = std::clamp(c->transform->location.z, -462.0f, 562.0f); //Lateral clamp
 
 			c->camera3D->target = Rotate(-Vector3Z, c->transform->rotation) + c->transform->location;
 		});
