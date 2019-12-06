@@ -36,8 +36,12 @@ namespace vlk
 
 	struct DirectionLightComponent3D : public ILight, public Component<DirectionLightComponent3D>
 	{
+		static const DirectionLightComponent3D* ACTIVE;
+
 		DirectionLightComponent3D(IEntity* e, const TransformComponent3D* transform);
 
 		const TransformComponent3D* const transform;
+
+		void Activate();
 	};
 }

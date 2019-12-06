@@ -1,94 +1,57 @@
-#version 330 core
+#version 330
 
-#define MAX_POINT_LIGHTS 16u
-#define MAX_DRCTN_LIGHTS 4u
+out vec4 outCol;
 
-in vec2 moveUV;
+in vec2 moveTex;
+in vec3 moveNml;
 in vec3 movePos;
-in vec3 moveNorm;
 
-out vec4 outColor;
-
-//Material info
-uniform vec3 uAmbient;
-uniform vec3 uDiffuse;
-uniform vec3 uSpecular;
-uniform float uExponent;
-uniform float uAlpha;
-
-//Material textures
-uniform sampler2D tDiffuse;		//set to texture unit 0
-uniform sampler2D tSpecular;	//set to texture unit 1
-uniform sampler2D tExponent;	//set to texture unit 2
-uniform sampler2D tAlpha;		//set to texture unit 3
-
-//Lights
-uniform vec3 uViewPos;
+//Directional light
+uniform vec3 dirLightPos;
+uniform vec3 dirLightCol;
+uniform float dirLightInt;
 
 //Ambient light
-uniform vec3  uAmbientColor;
-uniform float uAmbientIntensity;
+uniform vec3 ambLightCol;
+uniform float ambLightInt;
 
-//Point lights
-uniform vec3 uPointColor[MAX_POINT_LIGHTS];
-uniform vec3 uPointIntensity[MAX_POINT_LIGHTS];
-uniform vec3 uPointLocation[MAX_POINT_LIGHTS];
+//Camera position
+uniform vec3 cameraPos;
 
-//Directional lights
-uniform vec3 uDirectionColor[MAX_DRCTN_LIGHTS];
-uniform vec3 uDirectionIntensity[MAX_DRCTN_LIGHTS];
-uniform vec3 uDirectionVector[MAX_DRCTN_LIGHTS];
+//Material information
+uniform vec3 ambMaterialCol;
+uniform vec3 difMaterialCol;
+uniform vec3 spcMaterialCol;
+uniform float spcMaterialExp;
+uniform float materialAlp;
+
+uniform sampler2D ambTex; //0
+uniform sampler2D difTex; //1
+uniform sampler2D spcTex; //2
+uniform sampler2D alpTex; //3
+
+float ColToBW(vec3 col)
+{
+    return (col.x + col.y + col.z) / 3.0;
+}
 
 void main()
 {
-	//ambient color
-	vec3 ambCol = uAmbient * (uAmbientColor * uAmbientIntensity);
+    //Ambient light
+    vec3 ambientColor = ambLightCol * ambLightInt * ambMaterialCol * texture(ambTex, moveTex).xyz;
 
-	//cumulative diffuse color from all lights
-	vec3 difCol = vec3(0.0, 0.0, 0.0);
+    //Directional light
+    float dirDiffuseAmount = max(dot(moveNml, normalize(dirLightPos)), 0.0);
+    vec3 directionalColor = dirDiffuseAmount * dirLightInt * dirLightCol * difMaterialCol * texture(difTex, moveTex).xyz;
 
-	//cumulative specular color from all lights
-	vec3 specCol = vec3(0.0, 0.0, 0.0);
+    //Directional light specular highlight
+    vec3 viewDir = normalize(cameraPos - movePos);
+    vec3 dirReflectDir = reflect(-dirLightPos, moveNml);
+    float dirSpecularAmount = pow(max(dot(viewDir, dirReflectDir), 0.0), spcMaterialExp);
+    float specularBrightness = ColToBW(texture(spcTex, moveTex).xyz);
+    vec3 directionalSpecular = dirSpecularAmount * dirLightInt * dirLightCol * spcMaterialCol * specularBrightness;
 
-	vec3 diffAddCol = uDiffuse * texture(tDiffuse, moveUV).xyz;
-	vec3 specAddCol = uSpecular * texture(tSpecular, moveUV).xyz;
-
-	for (uint i = 0u; i < MAX_POINT_LIGHTS; i++)
-	{
-		//difference between surface and light
-		vec3 diff = uPointLocation[i] - movePos;
-
-		//adjusted normal of surface
-		vec3 norm = normalize(uPointLocation[i] - moveNorm);
-
-		//distance between light and surface
-		float dist = length(diff);
-
-		//direction towards light
-		vec3 dir = normalize(diff);
-
-		//direction the surface is being viewed from
-		vec3 viewDir = normalize(uViewPos - movePos);
-
-		//reflected normal
-		vec3 reflectDir = reflect(-dir, norm);
-
-		//calculate specular strength
-		float specular = pow(max(dot(viewDir, reflectDir), 0.0), uExponent);
-
-		//calculate angle between surface and light
-		float angle = max(dot(norm, dir), 0.0);
-
-		//diffuse strength of the point light at current distance
-		float attenuation = 1.0 / (1.0 + (uPointIntensity[i].y * dist) + (uPointIntensity[i].x * dist * dist));
-
-		//add diffuse color
-		difCol += diffAddCol * (uPointColor[i] * attenuation * uPointIntensity[i].z * angle);
-
-		//add specular color
-		specCol += specAddCol * (uPointColor[i] * specular);
-	}
-
-	//combine all colors
-	outColor = vec4(ambCol + difCol + specCol, texture(tAlpha, moveUV).w);
+	//outCol = vec4(1.0, 1.0, 1.0, 1.0);
+	//outCol = vec4(directionalColor, 1.0);
+    outCol = vec4(ambientColor + directionalColor + directionalSpecular, materialAlp * ColToBW(texture(alpTex, moveTex).xyz));
 }

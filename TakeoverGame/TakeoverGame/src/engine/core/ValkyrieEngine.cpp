@@ -48,7 +48,7 @@ void vlk::Init()
 		Renderer::SetRenderer(GLRenderer::Init, GLRenderer::Draw, GLRenderer::Destroy);
 		Renderer::Init();
 
-		CollisionSystem::Init();
+		//CollisionSystem::Init();
 		Camera::Init();
 		UISystem::Init();
 
@@ -66,7 +66,7 @@ void vlk::Destroy()
 	{
 		UISystem::Destroy();
 		Camera::Destroy();
-		CollisionSystem::Destroy();
+		//CollisionSystem::Destroy();
 
 		Renderer::Destroy();
 		ContentSystem::Destroy();

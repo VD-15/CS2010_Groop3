@@ -2,8 +2,38 @@
 
 #include "../core/ValkyrieEngine.h"
 
+#include "glm/glm.hpp"
+#include "glm/gtc/quaternion.hpp"
+
 namespace vlk
 {
+	typedef glm::vec2 Vector2;
+	typedef glm::vec3 Vector3;
+	typedef glm::vec4 Vector4;
+	typedef glm::quat Quaternion;
+
+	inline Vector2 Normalize(const Vector2& v) { return glm::normalize(v); }
+	inline Vector3 Normalize(const Vector3& v) { return glm::normalize(v); }
+
+	inline Float Distance(const Vector2& v1, const Vector2& v2) { return glm::distance(v1, v2); }
+	inline Float Distance(const Vector3& v1, const Vector3& v2) { return glm::distance(v1, v2); }
+
+	inline Float Magnitude(const Vector2& v) { return glm::length(v); }
+	inline Float Magnitude(const Vector3& v) { return glm::length(v); }
+
+	constexpr Vector2 Vector2X = Vector2(1.0f, 0.0f);
+	constexpr Vector2 Vector2Y = Vector2(0.0f, 1.0f);
+	constexpr Vector2 Vector2One = Vector2(1.0f, 1.0f);
+
+	constexpr Vector3 Vector3Y = Vector3(0.0f, 1.0f, 0.0f);
+	constexpr Vector3 Vector3Z = Vector3(0.0f, 0.0f, 1.0f);
+	constexpr Vector3 Vector3X = Vector3(1.0f, 0.0f, 0.0f);
+	constexpr Vector3 Vector3One = Vector3(1.0f, 1.0f, 1.0f);
+
+	inline Quaternion Identity() { return glm::identity<Quaternion>(); }
+	inline Vector3 Rotate(const Vector3& v, const Quaternion& q) { return v * q; }
+	inline Quaternion AngleAxis(Float angle, const Vector3& axis) { return glm::angleAxis(angle, axis); }
+	
 	template <class T>
 	class Pair final
 	{
@@ -34,7 +64,7 @@ namespace vlk
 			T end;
 		};
 	};
-	
+	/*
 	class Vector2 final
 	{
 		public:
@@ -227,5 +257,5 @@ namespace vlk
 		static const Vector4 BACKWARD;
 		static const Vector4 ONE;
 		static const Vector4 IDENTITY;
-	};
+	};*/
 }

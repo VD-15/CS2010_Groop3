@@ -18,10 +18,9 @@ namespace tkv
 
 	struct PlayerCameraComponent : public Component<PlayerCameraComponent>
 	{
-		PlayerCameraComponent(IEntity* e, CameraComponent2D* camera, TransformComponent2D* transform);
+		PlayerCameraComponent(IEntity* e, TransformComponent3D* transform);
 
-		CameraComponent2D* camera;
-		TransformComponent2D* transform;
+		TransformComponent3D* transform;
 	};
 
 	struct PlayerCameraEntity : public Entity<PlayerCameraEntity>
@@ -29,8 +28,10 @@ namespace tkv
 		PlayerCameraEntity();
 		void OnDelete() override;
 
-		TransformComponent2D* transform;
-		CameraComponent2D* camera;
+		TransformComponent3D* transform3D;
+		TransformComponent2D* transform2D;
+		CameraComponent3D* camera3D;
+		CameraComponent2D* camera2D;
 		PlayerCameraComponent* logic;
 	};
 }

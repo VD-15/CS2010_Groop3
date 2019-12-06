@@ -42,7 +42,7 @@ Material::Material() :
 	specularMap = t;
 	exponentMap = t;
 	alphaMap = t;
-	this->transparency = 0.0f;
+	this->transparency = 1.0f;
 	this->exponent = 500.0f;
 }
 

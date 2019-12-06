@@ -1,28 +1,24 @@
-#version 330 core
+#version 330
 
-//per vertex attributes
-in vec3 inPos;
-in vec2 inUV;
-in vec3 inNormal;
-
-//per instance attributes
-in mat4 inTransform;
-
-out vec2 moveUV;
+out vec2 moveTex;
+out vec3 moveNml;
 out vec3 movePos;
-out vec3 moveNorm;
+
+in vec3 inPos;
+in vec2 inTex;
+in vec3 inNml;
 
 uniform mat4 uViewport;
+in mat4 inTransform;
+in mat4 inRotation;
 
 void main()
 {
-    vec4 worldPos = (inTransform * vec4(inPos, 1.0));
-
+    vec4 worldPos = inTransform * vec4(inPos, 1.0);
+    vec4 worldNml = inRotation * vec4(inNml, 1.0);
     gl_Position = uViewport * worldPos;
-    moveUV = inUV;
-    movePos = worldPos.xyz / worldPos.w;
 
-    vec4 worldNorm = (inTransform * vec4(inNormal, 1.0));
-
-    moveNorm = worldNorm.xyz / worldNorm.w;
+    moveTex = inTex;
+    moveNml = worldNml.xyz;
+    movePos = worldPos.xyz;
 }

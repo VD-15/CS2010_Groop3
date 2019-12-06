@@ -5,6 +5,7 @@
 
 namespace vlk
 {
+	/*
 	namespace CollisionSystem
 	{
 		void Init();
@@ -61,5 +62,5 @@ namespace vlk
 		ColliderBaseComponent2D* const collider1;
 		ColliderBaseComponent2D* const collider2;
 	};
-
+	*/
 }

@@ -97,6 +97,9 @@
     <ClCompile Include="src\engine\core\Content.cpp" />
     <ClCompile Include="src\engine\graphics\Material.cpp" />
     <ClCompile Include="src\engine\graphics\Model.cpp" />
+    <ClCompile Include="src\engine\graphics\OpenGL\Buffer.cpp" />
+    <ClCompile Include="src\engine\graphics\OpenGL\Shader.cpp" />
+    <ClCompile Include="src\engine\graphics\OpenGL\ShaderProgram.cpp" />
     <ClCompile Include="src\engine\graphics\OpenGL\VertexArray.cpp" />
     <ClCompile Include="src\engine\utils\XmlDocument.cpp" />
     <ClCompile Include="src\game\components\CommandReciever.cpp" />
@@ -150,6 +153,9 @@
     <ClInclude Include="src\engine\core\Content.h" />
     <ClInclude Include="src\engine\graphics\Material.h" />
     <ClInclude Include="src\engine\graphics\Model.h" />
+    <ClInclude Include="src\engine\graphics\OpenGL\Buffer.h" />
+    <ClInclude Include="src\engine\graphics\OpenGL\Shader.h" />
+    <ClInclude Include="src\engine\graphics\OpenGL\ShaderProgram.h" />
     <ClInclude Include="src\engine\graphics\OpenGL\VertexArray.h" />
     <ClInclude Include="src\engine\utils\XmlDocument.h" />
     <ClInclude Include="src\game\components\CommandReciever.h" />
@@ -203,6 +209,7 @@
     <ClInclude Include="src\game\ui\PlayerCamera.h" />
     <ClInclude Include="src\game\components\TeamComponent.h" />
     <ClInclude Include="src\game\units\TestUnitEntity.h" />
+    <ClInclude Include="src\game\units\Unit.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

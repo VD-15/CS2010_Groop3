@@ -19,7 +19,7 @@ namespace vlk
 		inline const std::vector<Float>& GetNormals() const { return normals; }
 
 		inline const std::vector<std::vector<UInt>>& GetMeshes() const { return meshes; }
-		inline const std::vector<const Material*> GetMaterials() const { return materials; }
+		inline const std::vector<const Material*>& GetMaterials() const { return materials; }
 
 		private:
 		std::vector<Float> vertices;

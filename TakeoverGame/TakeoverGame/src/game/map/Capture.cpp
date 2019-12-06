@@ -17,7 +17,7 @@ namespace
 			{
 				if (cap->team->team == c->team->team) return;
 
-				if ((c->transform->location - cap->transform->location).Magnitude() < c->captureRange)
+				if (Distance(c->transform->location, cap->transform->location) < c->captureRange)
 				{
 					if (c->capturingTeam == Team::Neutral && cap->team->team != c->team->team)
 					{

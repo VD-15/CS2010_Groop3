@@ -6,11 +6,12 @@ ILight::ILight() :
 	color(Color::WHITE)
 {
 	constant = 1.0f;
-	linear = 2.0f;
+	linear = 0.0f;
 	quadratic = 0.0f;
 }
 
 const AmbientLightComponent3D* AmbientLightComponent3D::ACTIVE = nullptr;
+const DirectionLightComponent3D* DirectionLightComponent3D::ACTIVE = nullptr;
 
 AmbientLightComponent3D::AmbientLightComponent3D(IEntity* e) :
 	Component<AmbientLightComponent3D>(e)
@@ -37,5 +38,13 @@ DirectionLightComponent3D::DirectionLightComponent3D(IEntity* e, const Transform
 	Component<DirectionLightComponent3D>(e),
 	transform(transform)
 {
+	if (!DirectionLightComponent3D::ACTIVE)
+	{
+		DirectionLightComponent3D::ACTIVE = this;
+	}
+}
 
+void DirectionLightComponent3D::Activate()
+{
+	DirectionLightComponent3D::ACTIVE = this;
 }

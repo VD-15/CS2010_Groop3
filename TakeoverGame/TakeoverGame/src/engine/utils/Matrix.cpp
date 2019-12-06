@@ -1,7 +1,7 @@
 #include "Matrix.h"
 
 using namespace vlk;
-
+/*
 Matrix3::Matrix3() :
 	data {}
 {
@@ -466,11 +466,11 @@ Matrix4 Matrix4::CreateLookAt(const Vector3& right, const Vector3& up, const Vec
 	m.At(1, 2) = direction.y;
 	m.At(2, 2) = direction.z;
 
-	n.At(0, 3) = -position.x;
-	n.At(1, 3) = -position.y;
-	n.At(2, 3) = -position.z;
+	m.At(0, 3) = position.x;
+	m.At(1, 3) = position.y;
+	m.At(2, 3) = position.z;
 
-	return m * n;
+	return m;
 }
 
 Matrix4 Matrix4::CreatePerspective(Float fov, Float aspect, Float far, Float near)
@@ -504,4 +504,4 @@ Matrix4 Matrix4::CreateOrthographic(Float right, Float left, Float top, Float bo
 	m.At(3, 3) = 1.0f;
 
 	return m;
-}
+}*/
