@@ -5,7 +5,13 @@
 
 	<model name="cube" path="models/cube.obj"></model>
 	<model name="map_snow" path="models/map_snow.obj"></model>
+	<model name="factory" path="models/factory.obj"></model>
+	<model name="quarry" path="models/quarry.obj"></model>
 
 	<material name="cube_tex" path="models/cube.mtl"></material> 
     <material name="map_snow" path="models/map_snow.mtl"></material>
+    <material name="black" path="models/factory.mtl"></material>
+    <material name="brick" path="models/factory.mtl"></material>
+    <material name="glass" path="models/factory.mtl"></material>
+    <material name="quarry" path="models/quarry.mtl"></material>
 </content>

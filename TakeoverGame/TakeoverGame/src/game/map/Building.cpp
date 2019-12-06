@@ -3,7 +3,7 @@
 
 
 using namespace tkv;
-
+/*
 BuildingEntity::BuildingEntity()
 {
 	this->transform = CreateComponent<TransformComponent2D>();
@@ -23,6 +23,35 @@ void BuildingEntity::OnDelete()
 	this->select->Delete();
 	this->capture->Delete();
 	this->team->Delete();
+	this->draw->Delete();
+	this->transform->Delete();
+}*/
+
+FactoryEntity::FactoryEntity(const Vector3& location)
+{
+	this->transform = CreateComponent<TransformComponent3D>();
+	this->draw = CreateComponent<DrawModelComponent3D>(this->transform, ContentManager<Model>::Get().GetContent("factory"));
+
+	this->transform->location = location;
+}
+
+void FactoryEntity::OnDelete()
+{
+	this->draw->Delete();
+	this->transform->Delete();
+}
+
+QuarryEntity::QuarryEntity(const Vector3& location)
+{
+	this->transform = CreateComponent<TransformComponent3D>();
+	this->draw = CreateComponent<DrawModelComponent3D>(this->transform, ContentManager<Model>::Get().GetContent("quarry"));
+
+	this->transform->location = location;
+	this->transform->scale = Vector3(2.0f);
+}
+
+void QuarryEntity::OnDelete()
+{
 	this->draw->Delete();
 	this->transform->Delete();
 }

@@ -43,9 +43,6 @@ namespace
 	//Texture2DVAO texture2Dvao;
 	ModelVAO* modelVAO;
 
-	constexpr UInt MAX_POINT_LIGHTS = 16;
-	constexpr UInt MAX_DRCTN_LIGHTS = 4;
-
 	void OnFramebufferResize(vlk::WindowFramebufferEvent& ev)
 	{
 		glViewport(0, 0, ev.width, ev.height);

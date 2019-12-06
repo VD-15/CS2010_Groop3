@@ -29,16 +29,22 @@ void GameManager::Init()
 
 	ContentManager<Material>::Get().LoadContent("cube_tex");
 	ContentManager<Material>::Get().LoadContent("map_snow");
+	ContentManager<Material>::Get().LoadContent("brick");
+	ContentManager<Material>::Get().LoadContent("black");
+	ContentManager<Material>::Get().LoadContent("glass");
+	ContentManager<Material>::Get().LoadContent("quarry");
 
 	ContentManager<Model>::Get().LoadContent("cube");
 	ContentManager<Model>::Get().LoadContent("map_snow");
+	ContentManager<Model>::Get().LoadContent("factory");
+	ContentManager<Model>::Get().LoadContent("quarry");
 
 	{
 		auto t = TransformComponent3D::CreateComponent(nullptr);
 		auto l = DirectionLightComponent3D::CreateComponent(nullptr, t);
-		t->location = Normalize(Vector3(0.0f, 1.0f, 0.0f));
+		t->location = Normalize(Vector3(0.0f, 1.0f, -0.5f));
 		l->constant = 0.5f;
-		l->color = Color(1.0f, 1.0f, 0.75f, 1.0f);
+		l->color = Color(1.0f, 1.0f, 1.0f, 1.0f);
 	}
 
 	{
@@ -48,13 +54,12 @@ void GameManager::Init()
 		t->scale = Vector3(512.0f, 1.0f, 512.0f);
 	}
 
-	for (Int i = -1; i < 2; i++)
 	{
-		auto t = TransformComponent3D::CreateComponent(nullptr);
-		t->location.z = -10.0f;
-		t->location.x = i * 2.5f;
-		//t->rotation *= Quaternion::AxisAngle(Vector3(1.0f, 0.0f, 0.0f), vlk::Pi / 3.0f) * Quaternion::AxisAngle(Vector3(0.0f, 1.0f, 0.0f), vlk::Pi / 3.0f);
-		DrawModelComponent3D::CreateComponent(nullptr, t, ContentManager<Model>::Get().GetContent("cube"));
+		auto f = FactoryEntity::CreateEntity(Vector3(0.0f, 0.0f, 0.0f));
+		f->transform->rotation = AngleAxis(vlk::PiOverTwo, Vector3Y);
+
+		auto q1 = QuarryEntity::CreateEntity(Vector3(448.0f, 0.0f, 448.0f));
+		auto q2 = QuarryEntity::CreateEntity(Vector3(-448.0f, 0.0f, -448.0f));
 	}
 
 	//PointLightComponent3D::CreateComponent(nullptr, t);

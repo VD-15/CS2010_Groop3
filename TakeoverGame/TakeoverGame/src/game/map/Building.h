@@ -8,13 +8,13 @@
 
 #include "../../engine/core/GameEntity.hpp"
 #include "../../engine/components/TransformComponent.h"
-#include "../../engine/components/DrawTextureComponent.h"
-#include "../../engine/components/UIComponent.h"
+#include "../../engine/components/DrawModelComponent.h"
 
 using namespace vlk;
 
 namespace tkv
 {
+	/*
 	struct BuildingEntity : public Entity<BuildingEntity>
 	{
 		BuildingEntity();
@@ -25,5 +25,23 @@ namespace tkv
 		TeamComponent* team;
 		CaptureComponent* capture;
 		SelectableComponent* select;
+	};*/
+
+	struct FactoryEntity : public Entity<FactoryEntity>
+	{
+		FactoryEntity(const Vector3& location);
+		void OnDelete() override;
+
+		TransformComponent3D* transform;
+		DrawModelComponent3D* draw;
+	};
+
+	struct QuarryEntity : public Entity<QuarryEntity>
+	{
+		QuarryEntity(const Vector3& quarry);
+		void OnDelete() override;
+
+		TransformComponent3D* transform;
+		DrawModelComponent3D* draw;
 	};
 }
