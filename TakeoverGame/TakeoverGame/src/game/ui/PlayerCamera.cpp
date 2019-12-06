@@ -13,19 +13,29 @@ namespace
 	{
 		Vector3 dir = Vector3();
 
-		if (Keyboard::IsKeyDown(Keys::W)) dir.z += 1.0f;
-		if (Keyboard::IsKeyDown(Keys::S)) dir.z -= 1.0f;
+		constexpr Float horzMoveSpeed = 8.0f;
+		constexpr Float vertMoveSpeed = 0.5f;
+
+		if (Keyboard::IsKeyDown(Keys::W)) dir.z -= 1.0f;
+		if (Keyboard::IsKeyDown(Keys::S)) dir.z += 1.0f;
 		if (Keyboard::IsKeyDown(Keys::A)) dir.x -= 1.0f;
 		if (Keyboard::IsKeyDown(Keys::D)) dir.x += 1.0f;
-		dir.y += Mouse::GetScrollDelta().y;
 
 		if (Magnitude(dir) > 1.0f) Normalize(dir);
-		dir *= VLKTime::DeltaTime<Float>();
+		dir *= VLKTime::DeltaTime<Float>() * horzMoveSpeed;
 
-		auto move = PlayerCameraComponent::ForEach([dir](PlayerCameraComponent* c)
+
+		Float vertDir = Mouse::GetScrollDelta().y * vertMoveSpeed;
+		
+		auto move = PlayerCameraComponent::ForEach([dir, vertDir](PlayerCameraComponent* c)
 		{
-			c->transform->location += dir;
-			Window::SetTitle(std::to_string(c->transform->location.z));
+			c->transform->location.y += vertDir;
+
+			c->transform->location.y = std::clamp(c->transform->location.y, 3.0f, 50.0f);
+
+			c->transform->location += dir * c->transform->location.y / 3.0f;
+
+			c->camera3D->target = Rotate(-Vector3Z, c->transform->rotation) + c->transform->location;
 		});
 	}
 }
@@ -39,10 +49,11 @@ void CameraSystem::Destroy()
 	EventBus<UpdateEvent>::Get().RemoveEventListener(OnUpdate);
 }
 
-PlayerCameraComponent::PlayerCameraComponent(IEntity* e, TransformComponent3D* transform) :
+PlayerCameraComponent::PlayerCameraComponent(IEntity* e, TransformComponent3D* transform, CameraComponent3D* camera3D) :
 	Component(e)
 {
 	this->transform = transform;
+	this->camera3D = camera3D;
 }
 
 PlayerCameraEntity::PlayerCameraEntity()
@@ -51,10 +62,10 @@ PlayerCameraEntity::PlayerCameraEntity()
 	this->transform3D = CreateComponent<TransformComponent3D>();
 	this->camera2D = CreateComponent<CameraComponent2D>(transform2D);
 	this->camera3D = CreateComponent<CameraComponent3D>(transform3D);
-	this->logic = CreateComponent<PlayerCameraComponent>(transform3D);
+	this->logic = CreateComponent<PlayerCameraComponent>(transform3D, camera3D);
 
-	//this->transform3D->location = Vector3(0.0f, 0.0f, 0.0f);
-	//this->transform3D->rotation = Quaternion::AxisAngle(Vector3::RIGHT, vlk::PiOverTwo);
+	this->transform3D->location = Vector3(0.0f, 10.0f, 0.0f);
+	this->transform3D->rotation = AngleAxis(vlk::Pi / 4.0f, Vector3X);
 }
 
 void PlayerCameraEntity::OnDelete()

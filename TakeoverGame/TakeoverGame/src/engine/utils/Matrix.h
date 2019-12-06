@@ -17,6 +17,7 @@ namespace vlk
 	inline Matrix4 CreateLookAt(const Vector3& position, const Vector3& target, const Vector3& up) { return glm::lookAt(position, target, up); }
 	inline Matrix4 CreateRotation(const Quaternion& q) { return glm::toMat4(q); }
 	inline Matrix4 CreateTranslation(const Vector3& v) { return glm::translate(v); }
+	inline Matrix4 CreateScale(const Vector3& v) { return glm::scale(v); }
 
 	/*
 	class Matrix3

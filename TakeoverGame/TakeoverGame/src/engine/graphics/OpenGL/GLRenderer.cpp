@@ -253,7 +253,7 @@ namespace
 				const DrawModelComponent3D* instance = *iInstance;
 
 				Matrix4 rotation(CreateRotation(instance->transform->rotation));
-				Matrix4 transform = CreateTranslation(instance->transform->location) * /* CreateScale(instance->transform->scale) **/ rotation;
+				Matrix4 transform = CreateTranslation(instance->transform->location) * CreateScale(instance->transform->scale) * rotation;
 
 				instanceBuffer.Put(transform);
 				instanceBuffer.Put(rotation);

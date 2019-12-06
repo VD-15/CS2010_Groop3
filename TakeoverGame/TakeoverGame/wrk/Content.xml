@@ -1,8 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <content>
     <texture name="unit" path="textures/unit.png"></texture>
+    <texture name="map_snow" path="textures/snow.png"></texture>
 
 	<model name="cube" path="models/cube.obj"></model>
+	<model name="map_snow" path="models/map_snow.obj"></model>
 
 	<material name="cube_tex" path="models/cube.mtl"></material> 
+    <material name="map_snow" path="models/map_snow.mtl"></material>
 </content>

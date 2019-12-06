@@ -25,10 +25,28 @@ void GameManager::Init()
 	CameraSystem::Init();
 
 	ContentManager<Texture2D>::Get().LoadContent("unit");
+	ContentManager<Texture2D>::Get().LoadContent("map_snow");
 
 	ContentManager<Material>::Get().LoadContent("cube_tex");
+	ContentManager<Material>::Get().LoadContent("map_snow");
 
 	ContentManager<Model>::Get().LoadContent("cube");
+	ContentManager<Model>::Get().LoadContent("map_snow");
+
+	{
+		auto t = TransformComponent3D::CreateComponent(nullptr);
+		auto l = DirectionLightComponent3D::CreateComponent(nullptr, t);
+		t->location = Normalize(Vector3(0.0f, 1.0f, 0.0f));
+		l->constant = 0.5f;
+		l->color = Color(1.0f, 1.0f, 0.75f, 1.0f);
+	}
+
+	{
+		auto t = TransformComponent3D::CreateComponent(nullptr);
+		auto d = DrawModelComponent3D::CreateComponent(nullptr, t, ContentManager<Model>::Get().GetContent("map_snow"));
+
+		t->scale = Vector3(512.0f, 1.0f, 512.0f);
+	}
 
 	for (Int i = -1; i < 2; i++)
 	{

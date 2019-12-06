@@ -18,9 +18,10 @@ namespace tkv
 
 	struct PlayerCameraComponent : public Component<PlayerCameraComponent>
 	{
-		PlayerCameraComponent(IEntity* e, TransformComponent3D* transform);
+		PlayerCameraComponent(IEntity* e, TransformComponent3D* transform, CameraComponent3D* camera3D);
 
 		TransformComponent3D* transform;
+		CameraComponent3D* camera3D;
 	};
 
 	struct PlayerCameraEntity : public Entity<PlayerCameraEntity>

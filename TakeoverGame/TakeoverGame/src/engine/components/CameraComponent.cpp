@@ -83,7 +83,8 @@ Matrix4 CameraComponent2D::GetView() const
 CameraComponent3D::CameraComponent3D(IEntity* e, TransformComponent3D* transform) : 
 	Component<CameraComponent3D>(e),
 	transform(transform),
-	viewport(1.0f)
+	viewport(1.0f),
+	target()
 {
 	this->fov = 90.0f;
 	this->autoResize = true;
@@ -101,17 +102,17 @@ void CameraComponent3D::Activate()
 
 Matrix4 CameraComponent3D::GetProjection() const
 {
-	Float aspect = viewport.y / viewport.x;
+	Float aspect = viewport.x / viewport.y;
 	Float radians = fov * (vlk::Pi / 180.0f);
 	
-	return CreatePerspective(radians, aspect, 0.01f, 100.0f);
+	//TODO: expose near & far planes somewhere
+	return CreatePerspective(radians, aspect, 0.01f, 1000.0f);
 	//return CreateInfPerspective(radians, aspect);
 }
 
 Matrix4 CameraComponent3D::GetView() const
 {
-	Vector3 up(Vector3Y);
-	Vector3 forward(Rotate(-Vector3Z, this->transform->rotation));
+	Vector3 up(Rotate(Vector3Y, this->transform->rotation));
 
-	return CreateLookAt(this->transform->location, Vector3(0.0f, 0.0f, -10.0f), Vector3Y);
+	return CreateLookAt(this->transform->location, target, up);
 }
