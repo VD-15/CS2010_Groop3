@@ -145,8 +145,20 @@ namespace
 		glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, filterEnumMin);
 		glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, filterEnumMax);
 
+
 		//Generate mipmaps if specified.
-		if (genMipMapEnum) glGenerateMipmap(GL_TEXTURE_2D);
+		if (genMipMapEnum)
+		{
+			//enable anisotropic filtering, if supported
+			if (GLEW_EXT_texture_filter_anisotropic)
+			{
+				Float aniso = 0.0f;
+				glGetFloatv(GL_MAX_TEXTURE_MAX_ANISOTROPY_EXT, &aniso);
+				glTexParameterf(GL_TEXTURE_2D, GL_TEXTURE_MAX_ANISOTROPY_EXT, aniso);
+			}
+
+			glGenerateMipmap(GL_TEXTURE_2D);
+		}
 
 		//Add texture handle to texture map
 		textureMap[ev.content] = texture;
