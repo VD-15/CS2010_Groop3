@@ -219,7 +219,10 @@ font-family: 'Roboto', sans-serif;
   padding: 50px 0;
 }
 
-
+#text {
+  font-family: "Helvetica", Times, serif;
+  font-size: 20px;
+}
 
 #day1 {
   background-color: black;
