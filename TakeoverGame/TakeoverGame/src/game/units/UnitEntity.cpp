@@ -23,6 +23,12 @@ void UnitSystem::Destroy()
 	EventBus<UpdateEvent>::Get().RemoveEventListener(OnUpdate);
 }
 
+ProtoUnit::ProtoUnit(double health, double damage, double range, double atkspd,
+		double speed, double aggro, bool isCommander)
+{
+	this->isCommander = isCommander;
+}
+
 UnitEntity::UnitEntity(Team t, Vector2 location, ProtoUnit p)
 {
 	this->transform = CreateComponent<TransformComponent3D>();

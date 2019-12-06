@@ -24,9 +24,13 @@ namespace tkv
 	}
 
 	struct ProtoUnit {
+		ProtoUnit(double health, double damage, double range, double atkspd,
+				double speed, double aggro, bool isCommander = false);
+
 		double health, damage, range, atkspd, speed, aggro;
-		bool isCommander=false;
+		bool isCommander;
 	};
+
 	constexpr ProtoUnit meleeUnit {
 		10, 4, 1, 1, 1, 8
 	};
@@ -38,7 +42,7 @@ namespace tkv
 	};
 	constexpr ProtoUnit commander{
 		500, 10, 3, 1, 1, 8
-		true;
+		true
 	};
 
 	struct UnitEntity : public Entity<UnitEntity>
