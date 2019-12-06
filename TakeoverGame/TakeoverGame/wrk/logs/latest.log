@@ -30,7 +30,7 @@ EventBus PostUpdateEvent                         [INFO]: Adding event listener: 
 EventBus WindowFramebufferEvent                  [INFO]: Adding event listener: 0x00007FF6A29DAF50
 EventBus WindowFramebufferEvent                  [INFO]: Adding event listener: 0x00007FF6A29F9A50
 EventBus UpdateEvent                             [INFO]: Adding event listener: 0x00007FF6A29F9B50
-Valkyrie Engine                                  [INFO]: VLKinit took 0.727516 Seconds
+Valkyrie Engine                                  [INFO]: VLKinit took 0.995812 Seconds
 Window                                           [INFO]: Set window swap interval to: 1
 EventBus UpdateEvent                             [INFO]: Adding event listener: 0x00007FF6A2AF3560
 Material Library                                 [WARN]: Unknown command: Ke
@@ -49,123 +49,379 @@ Component TransformComponent3D                   [VERB]: Creating Component
 EventBus ApplicationExitEvent                    [INFO]: Adding event listener: 0x00007FF6A290EDB2
 ChunkAllocator TransformComponent3D              [VERB]: Allocating new object
 Chunk TransformComponent3D                       [VERB]: Creating new chunk.
-Chunk TransformComponent3D                       [VERB]: Allocated at: 0x0000019DD8289EA0
+Chunk TransformComponent3D                       [VERB]: Allocated at: 0x0000028991EA4FC0
 Chunk TransformComponent3D                       [VERB]: Inserting new object.
-ChunkAllocator TransformComponent3D              [VERB]: Object allocated at: 0x0000019DD8289EA0
+ChunkAllocator TransformComponent3D              [VERB]: Object allocated at: 0x0000028991EA4FC0
 Component DirectionLightComponent3D              [VERB]: Creating Component
 EventBus ApplicationExitEvent                    [INFO]: Adding event listener: 0x00007FF6A290D011
 ChunkAllocator DirectionLightComponent3D         [VERB]: Allocating new object
 Chunk DirectionLightComponent3D                  [VERB]: Creating new chunk.
-Chunk DirectionLightComponent3D                  [VERB]: Allocated at: 0x0000019DD8328000
+Chunk DirectionLightComponent3D                  [VERB]: Allocated at: 0x0000028991EAD040
 Chunk DirectionLightComponent3D                  [VERB]: Inserting new object.
-ChunkAllocator DirectionLightComponent3D         [VERB]: Object allocated at: 0x0000019DD8328000
+ChunkAllocator DirectionLightComponent3D         [VERB]: Object allocated at: 0x0000028991EAD040
 Component TransformComponent3D                   [VERB]: Creating Component
 ChunkAllocator TransformComponent3D              [VERB]: Allocating new object
 Chunk TransformComponent3D                       [VERB]: Inserting new object.
-ChunkAllocator TransformComponent3D              [VERB]: Object allocated at: 0x0000019DD8289ED8
+ChunkAllocator TransformComponent3D              [VERB]: Object allocated at: 0x0000028991EA4FF8
 Component DrawModelComponent3D                   [VERB]: Creating Component
 EventBus ApplicationExitEvent                    [INFO]: Adding event listener: 0x00007FF6A2910491
 ChunkAllocator DrawModelComponent3D              [VERB]: Allocating new object
 Chunk DrawModelComponent3D                       [VERB]: Creating new chunk.
-Chunk DrawModelComponent3D                       [VERB]: Allocated at: 0x0000019DD82955F0
+Chunk DrawModelComponent3D                       [VERB]: Allocated at: 0x0000028991EAC030
 Chunk DrawModelComponent3D                       [VERB]: Inserting new object.
-ChunkAllocator DrawModelComponent3D              [VERB]: Object allocated at: 0x0000019DD82955F0
+ChunkAllocator DrawModelComponent3D              [VERB]: Object allocated at: 0x0000028991EAC030
 Component TransformComponent3D                   [VERB]: Creating Component
 ChunkAllocator TransformComponent3D              [VERB]: Allocating new object
 Chunk TransformComponent3D                       [VERB]: Inserting new object.
-ChunkAllocator TransformComponent3D              [VERB]: Object allocated at: 0x0000019DD8289F10
+ChunkAllocator TransformComponent3D              [VERB]: Object allocated at: 0x0000028991EA5030
 Component DrawModelComponent3D                   [VERB]: Creating Component
 ChunkAllocator DrawModelComponent3D              [VERB]: Allocating new object
 Chunk DrawModelComponent3D                       [VERB]: Inserting new object.
-ChunkAllocator DrawModelComponent3D              [VERB]: Object allocated at: 0x0000019DD8295610
+ChunkAllocator DrawModelComponent3D              [VERB]: Object allocated at: 0x0000028991EAC050
 Component TransformComponent3D                   [VERB]: Creating Component
 ChunkAllocator TransformComponent3D              [VERB]: Allocating new object
 Chunk TransformComponent3D                       [VERB]: Inserting new object.
-ChunkAllocator TransformComponent3D              [VERB]: Object allocated at: 0x0000019DD8289F48
+ChunkAllocator TransformComponent3D              [VERB]: Object allocated at: 0x0000028991EA5068
 Component DrawModelComponent3D                   [VERB]: Creating Component
 ChunkAllocator DrawModelComponent3D              [VERB]: Allocating new object
 Chunk DrawModelComponent3D                       [VERB]: Inserting new object.
-ChunkAllocator DrawModelComponent3D              [VERB]: Object allocated at: 0x0000019DD8295630
+ChunkAllocator DrawModelComponent3D              [VERB]: Object allocated at: 0x0000028991EAC070
 Component TransformComponent3D                   [VERB]: Creating Component
 ChunkAllocator TransformComponent3D              [VERB]: Allocating new object
 Chunk TransformComponent3D                       [VERB]: Inserting new object.
-ChunkAllocator TransformComponent3D              [VERB]: Object allocated at: 0x0000019DD8289F80
+ChunkAllocator TransformComponent3D              [VERB]: Object allocated at: 0x0000028991EA50A0
 Component DrawModelComponent3D                   [VERB]: Creating Component
 ChunkAllocator DrawModelComponent3D              [VERB]: Allocating new object
 Chunk DrawModelComponent3D                       [VERB]: Inserting new object.
-ChunkAllocator DrawModelComponent3D              [VERB]: Object allocated at: 0x0000019DD8295650
+ChunkAllocator DrawModelComponent3D              [VERB]: Object allocated at: 0x0000028991EAC090
 EventBus ApplicationExitEvent                    [INFO]: Adding event listener: 0x00007FF6A291A63A
 ChunkAllocator PlayerCameraEntity                [VERB]: Allocating new object
 Chunk PlayerCameraEntity                         [VERB]: Creating new chunk.
-Chunk PlayerCameraEntity                         [VERB]: Allocated at: 0x0000019DD832AE60
+Chunk PlayerCameraEntity                         [VERB]: Allocated at: 0x0000028991EADE80
 Chunk PlayerCameraEntity                         [VERB]: Inserting new object.
-Entity PlayerCameraEntity                        [VERB]: Creating Component for: 0x0000019DD832AE60
+Entity PlayerCameraEntity                        [VERB]: Creating Component for: 0x0000028991EADE80
 Component TransformComponent2D                   [VERB]: Creating Component
 EventBus ApplicationExitEvent                    [INFO]: Adding event listener: 0x00007FF6A290BDC9
 ChunkAllocator TransformComponent2D              [VERB]: Allocating new object
 Chunk TransformComponent2D                       [VERB]: Creating new chunk.
-Chunk TransformComponent2D                       [VERB]: Allocated at: 0x0000019DD832BCA0
+Chunk TransformComponent2D                       [VERB]: Allocated at: 0x0000028991EAFCD0
 Chunk TransformComponent2D                       [VERB]: Inserting new object.
-ChunkAllocator TransformComponent2D              [VERB]: Object allocated at: 0x0000019DD832BCA0
-Entity PlayerCameraEntity                        [VERB]: Creating Component for: 0x0000019DD832AE60
+ChunkAllocator TransformComponent2D              [VERB]: Object allocated at: 0x0000028991EAFCD0
+Entity PlayerCameraEntity                        [VERB]: Creating Component for: 0x0000028991EADE80
 Component TransformComponent3D                   [VERB]: Creating Component
 ChunkAllocator TransformComponent3D              [VERB]: Allocating new object
 Chunk TransformComponent3D                       [VERB]: Inserting new object.
-ChunkAllocator TransformComponent3D              [VERB]: Object allocated at: 0x0000019DD8289FB8
-Entity PlayerCameraEntity                        [VERB]: Creating Component for: 0x0000019DD832AE60
+ChunkAllocator TransformComponent3D              [VERB]: Object allocated at: 0x0000028991EA50D8
+Entity PlayerCameraEntity                        [VERB]: Creating Component for: 0x0000028991EADE80
 Component CameraComponent2D                      [VERB]: Creating Component
 EventBus ApplicationExitEvent                    [INFO]: Adding event listener: 0x00007FF6A290FD61
 ChunkAllocator CameraComponent2D                 [VERB]: Allocating new object
 Chunk CameraComponent2D                          [VERB]: Creating new chunk.
-Chunk CameraComponent2D                          [VERB]: Allocated at: 0x0000019DD832C6E0
+Chunk CameraComponent2D                          [VERB]: Allocated at: 0x0000028991F3A0E0
 Chunk CameraComponent2D                          [VERB]: Inserting new object.
-ChunkAllocator CameraComponent2D                 [VERB]: Object allocated at: 0x0000019DD832C6E0
-Entity PlayerCameraEntity                        [VERB]: Creating Component for: 0x0000019DD832AE60
+ChunkAllocator CameraComponent2D                 [VERB]: Object allocated at: 0x0000028991F3A0E0
+Entity PlayerCameraEntity                        [VERB]: Creating Component for: 0x0000028991EADE80
 Component CameraComponent3D                      [VERB]: Creating Component
 EventBus ApplicationExitEvent                    [INFO]: Adding event listener: 0x00007FF6A290F47E
 ChunkAllocator CameraComponent3D                 [VERB]: Allocating new object
 Chunk CameraComponent3D                          [VERB]: Creating new chunk.
-Chunk CameraComponent3D                          [VERB]: Allocated at: 0x0000019DD832D560
+Chunk CameraComponent3D                          [VERB]: Allocated at: 0x0000028991F3AD20
 Chunk CameraComponent3D                          [VERB]: Inserting new object.
-ChunkAllocator CameraComponent3D                 [VERB]: Object allocated at: 0x0000019DD832D560
-Entity PlayerCameraEntity                        [VERB]: Creating Component for: 0x0000019DD832AE60
+ChunkAllocator CameraComponent3D                 [VERB]: Object allocated at: 0x0000028991F3AD20
+Entity PlayerCameraEntity                        [VERB]: Creating Component for: 0x0000028991EADE80
 Component PlayerCameraComponent                  [VERB]: Creating Component
 EventBus ApplicationExitEvent                    [INFO]: Adding event listener: 0x00007FF6A291821D
 ChunkAllocator PlayerCameraComponent             [VERB]: Allocating new object
 Chunk PlayerCameraComponent                      [VERB]: Creating new chunk.
-Chunk PlayerCameraComponent                      [VERB]: Allocated at: 0x0000019DD832E5E0
+Chunk PlayerCameraComponent                      [VERB]: Allocated at: 0x0000028991F3BB60
 Chunk PlayerCameraComponent                      [VERB]: Inserting new object.
-ChunkAllocator PlayerCameraComponent             [VERB]: Object allocated at: 0x0000019DD832E5E0
-ChunkAllocator PlayerCameraEntity                [VERB]: Object allocated at: 0x0000019DD832AE60
-Entity PlayerCameraEntity                        [VERB]: Entity created: 0x0000019DD832AE60
+ChunkAllocator PlayerCameraComponent             [VERB]: Object allocated at: 0x0000028991F3BB60
+ChunkAllocator PlayerCameraEntity                [VERB]: Object allocated at: 0x0000028991EADE80
+Entity PlayerCameraEntity                        [VERB]: Entity created: 0x0000028991EADE80
 Application                                      [INFO]: Application starting.
 Window                                           [INFO]: Showing window.
 EventBus ApplicationExitEvent                    [INFO]: Adding event listener: 0x00007FF6A290ACC1
-Keyboard                                         [VERB]: Key pressed: 87
-Keyboard                                         [VERB]: Key released: 87
-Keyboard                                         [VERB]: Key pressed: 83
-Keyboard                                         [VERB]: Key released: 83
-Keyboard                                         [VERB]: Key pressed: 87
-Keyboard                                         [VERB]: Key released: 87
-Keyboard                                         [VERB]: Key pressed: 83
-Keyboard                                         [VERB]: Key released: 83
-Keyboard                                         [VERB]: Key pressed: 87
-Keyboard                                         [VERB]: Key released: 87
-Keyboard                                         [VERB]: Key pressed: 87
-Keyboard                                         [VERB]: Key released: 87
-Keyboard                                         [VERB]: Key pressed: 87
-Keyboard                                         [VERB]: Key released: 87
-Keyboard                                         [VERB]: Key pressed: 87
-Keyboard                                         [VERB]: Key released: 87
-Keyboard                                         [VERB]: Key pressed: 87
-Keyboard                                         [VERB]: Key released: 87
-Keyboard                                         [VERB]: Key pressed: 87
-Keyboard                                         [VERB]: Key released: 87
-Keyboard                                         [VERB]: Key pressed: 87
-Keyboard                                         [VERB]: Key released: 87
 Keyboard                                         [VERB]: Key pressed: 83
 Keyboard                                         [VERB]: Key pressed: 65
 Keyboard                                         [VERB]: Key released: 65
+Keyboard                                         [VERB]: Key pressed: 68
+Keyboard                                         [VERB]: Key released: 83
+Keyboard                                         [VERB]: Key released: 68
+Keyboard                                         [VERB]: Key pressed: 83
+Keyboard                                         [VERB]: Key pressed: 65
+Keyboard                                         [VERB]: Key released: 83
+Keyboard                                         [VERB]: Key pressed: 87
+Keyboard                                         [VERB]: Key released: 65
+Keyboard                                         [VERB]: Key pressed: 65
+Keyboard                                         [VERB]: Key released: 65
+Keyboard                                         [VERB]: Key pressed: 65
+Keyboard                                         [VERB]: Key released: 65
+Keyboard                                         [VERB]: Key pressed: 68
+Keyboard                                         [VERB]: Key released: 87
+Keyboard                                         [VERB]: Key pressed: 83
+Keyboard                                         [VERB]: Key released: 68
+Keyboard                                         [VERB]: Key released: 83
+Keyboard                                         [VERB]: Key pressed: 68
+Keyboard                                         [VERB]: Key pressed: 87
+Keyboard                                         [VERB]: Key released: 87
+Keyboard                                         [VERB]: Key released: 68
+Keyboard                                         [VERB]: Key pressed: 87
+Keyboard                                         [VERB]: Key pressed: 68
+Keyboard                                         [VERB]: Key released: 68
+Keyboard                                         [VERB]: Key released: 87
+Keyboard                                         [VERB]: Key pressed: 83
+Keyboard                                         [VERB]: Key pressed: 68
+Keyboard                                         [VERB]: Key released: 83
+Keyboard                                         [VERB]: Key pressed: 83
+Keyboard                                         [VERB]: Key released: 83
+Keyboard                                         [VERB]: Key released: 68
+Keyboard                                         [VERB]: Key pressed: 87
+Keyboard                                         [VERB]: Key pressed: 65
+Keyboard                                         [VERB]: Key released: 87
+Keyboard                                         [VERB]: Key released: 65
+Mouse                                            [VERB]: Button pressed: 0
+Keyboard                                         [VERB]: Key pressed: 87
+Mouse                                            [VERB]: Button released: 0
+Keyboard                                         [VERB]: Key pressed: 68
+Keyboard                                         [VERB]: Key released: 68
+Keyboard                                         [VERB]: Key released: 87
+Keyboard                                         [VERB]: Key pressed: 68
+Keyboard                                         [VERB]: Key pressed: 87
+Keyboard                                         [VERB]: Key released: 87
+Keyboard                                         [VERB]: Key released: 68
+Keyboard                                         [VERB]: Key pressed: 83
+Keyboard                                         [VERB]: Key pressed: 65
+Keyboard                                         [VERB]: Key released: 83
+Keyboard                                         [VERB]: Key released: 65
+Keyboard                                         [VERB]: Key pressed: 87
+Keyboard                                         [VERB]: Key pressed: 68
+Keyboard                                         [VERB]: Key released: 87
+Keyboard                                         [VERB]: Key pressed: 87
+Keyboard                                         [VERB]: Key released: 87
+Keyboard                                         [VERB]: Key released: 68
+Keyboard                                         [VERB]: Key pressed: 65
+Keyboard                                         [VERB]: Key pressed: 83
+Keyboard                                         [VERB]: Key pressed: 68
+Keyboard                                         [VERB]: Key released: 65
+Keyboard                                         [VERB]: Key released: 83
+Keyboard                                         [VERB]: Key pressed: 87
+Keyboard                                         [VERB]: Key released: 68
+Keyboard                                         [VERB]: Key pressed: 65
+Keyboard                                         [VERB]: Key released: 65
+Keyboard                                         [VERB]: Key released: 87
+Keyboard                                         [VERB]: Key pressed: 68
+Keyboard                                         [VERB]: Key pressed: 83
+Keyboard                                         [VERB]: Key released: 68
+Keyboard                                         [VERB]: Key pressed: 65
+Keyboard                                         [VERB]: Key released: 83
+Keyboard                                         [VERB]: Key released: 65
+Keyboard                                         [VERB]: Key pressed: 83
+Keyboard                                         [VERB]: Key pressed: 68
+Keyboard                                         [VERB]: Key released: 83
+Keyboard                                         [VERB]: Key released: 68
+Keyboard                                         [VERB]: Key pressed: 83
+Keyboard                                         [VERB]: Key released: 83
+Keyboard                                         [VERB]: Key pressed: 87
+Keyboard                                         [VERB]: Key released: 87
+Keyboard                                         [VERB]: Key pressed: 65
+Keyboard                                         [VERB]: Key released: 65
+Keyboard                                         [VERB]: Key pressed: 68
+Keyboard                                         [VERB]: Key released: 68
+Keyboard                                         [VERB]: Key pressed: 65
+Keyboard                                         [VERB]: Key pressed: 87
+Keyboard                                         [VERB]: Key pressed: 68
+Keyboard                                         [VERB]: Key released: 65
+Keyboard                                         [VERB]: Key released: 87
+Keyboard                                         [VERB]: Key released: 68
+Keyboard                                         [VERB]: Key pressed: 83
+Keyboard                                         [VERB]: Key pressed: 65
+Keyboard                                         [VERB]: Key released: 83
+Keyboard                                         [VERB]: Key pressed: 87
+Keyboard                                         [VERB]: Key released: 65
+Keyboard                                         [VERB]: Key pressed: 68
+Keyboard                                         [VERB]: Key released: 87
+Keyboard                                         [VERB]: Key pressed: 83
+Keyboard                                         [VERB]: Key released: 68
+Keyboard                                         [VERB]: Key pressed: 65
+Keyboard                                         [VERB]: Key released: 83
+Keyboard                                         [VERB]: Key pressed: 87
+Keyboard                                         [VERB]: Key released: 65
+Keyboard                                         [VERB]: Key pressed: 68
+Keyboard                                         [VERB]: Key released: 87
+Keyboard                                         [VERB]: Key pressed: 83
+Keyboard                                         [VERB]: Key released: 68
+Keyboard                                         [VERB]: Key pressed: 65
+Keyboard                                         [VERB]: Key released: 83
+Keyboard                                         [VERB]: Key pressed: 87
+Keyboard                                         [VERB]: Key released: 65
+Keyboard                                         [VERB]: Key pressed: 68
+Keyboard                                         [VERB]: Key released: 87
+Keyboard                                         [VERB]: Key released: 68
+Keyboard                                         [VERB]: Key pressed: 83
+Keyboard                                         [VERB]: Key pressed: 65
+Keyboard                                         [VERB]: Key released: 83
+Keyboard                                         [VERB]: Key pressed: 83
+Keyboard                                         [VERB]: Key released: 65
+Keyboard                                         [VERB]: Key pressed: 68
+Keyboard                                         [VERB]: Key released: 83
+Keyboard                                         [VERB]: Key released: 68
+Keyboard                                         [VERB]: Key pressed: 83
+Keyboard                                         [VERB]: Key pressed: 65
+Keyboard                                         [VERB]: Key released: 83
+Keyboard                                         [VERB]: Key pressed: 83
+Keyboard                                         [VERB]: Key released: 83
+Keyboard                                         [VERB]: Key released: 65
+Keyboard                                         [VERB]: Key pressed: 68
+Keyboard                                         [VERB]: Key released: 68
+Keyboard                                         [VERB]: Key pressed: 65
+Keyboard                                         [VERB]: Key pressed: 87
+Keyboard                                         [VERB]: Key released: 65
+Keyboard                                         [VERB]: Key released: 87
+Keyboard                                         [VERB]: Key pressed: 68
+Keyboard                                         [VERB]: Key pressed: 83
+Keyboard                                         [VERB]: Key released: 68
+Keyboard                                         [VERB]: Key pressed: 65
+Keyboard                                         [VERB]: Key released: 83
+Keyboard                                         [VERB]: Key pressed: 83
+Keyboard                                         [VERB]: Key released: 83
+Keyboard                                         [VERB]: Key pressed: 87
+Keyboard                                         [VERB]: Key released: 87
+Keyboard                                         [VERB]: Key pressed: 83
+Keyboard                                         [VERB]: Key released: 65
+Keyboard                                         [VERB]: Key pressed: 68
+Keyboard                                         [VERB]: Key released: 83
+Keyboard                                         [VERB]: Key pressed: 83
+Keyboard                                         [VERB]: Key released: 68
+Keyboard                                         [VERB]: Key pressed: 65
+Keyboard                                         [VERB]: Key released: 83
+Keyboard                                         [VERB]: Key pressed: 83
+Keyboard                                         [VERB]: Key pressed: 68
+Keyboard                                         [VERB]: Key released: 83
+Keyboard                                         [VERB]: Key released: 68
+Keyboard                                         [VERB]: Key pressed: 87
+Keyboard                                         [VERB]: Key released: 87
+Keyboard                                         [VERB]: Key pressed: 90
+Keyboard                                         [VERB]: Key pressed: 68
+Keyboard                                         [VERB]: Key released: 90
+Keyboard                                         [VERB]: Key released: 65
+Keyboard                                         [VERB]: Key pressed: 83
+Keyboard                                         [VERB]: Key released: 68
+Keyboard                                         [VERB]: Key pressed: 65
+Keyboard                                         [VERB]: Key pressed: 68
+Keyboard                                         [VERB]: Key released: 83
+Keyboard                                         [VERB]: Key released: 65
+Keyboard                                         [VERB]: Key pressed: 65
+Keyboard                                         [VERB]: Key released: 68
+Keyboard                                         [VERB]: Key pressed: 87
+Keyboard                                         [VERB]: Key pressed: 68
+Keyboard                                         [VERB]: Key released: 87
+Keyboard                                         [VERB]: Key released: 68
+Keyboard                                         [VERB]: Key pressed: 83
+Keyboard                                         [VERB]: Key pressed: 68
+Keyboard                                         [VERB]: Key released: 65
+Keyboard                                         [VERB]: Key released: 83
+Keyboard                                         [VERB]: Key pressed: 83
+Keyboard                                         [VERB]: Key released: 68
+Keyboard                                         [VERB]: Key pressed: 65
+Keyboard                                         [VERB]: Key released: 83
+Keyboard                                         [VERB]: Key pressed: 83
+Keyboard                                         [VERB]: Key released: 65
+Keyboard                                         [VERB]: Key pressed: 68
+Keyboard                                         [VERB]: Key released: 83
+Keyboard                                         [VERB]: Key pressed: 83
+Keyboard                                         [VERB]: Key released: 68
+Keyboard                                         [VERB]: Key pressed: 65
+Keyboard                                         [VERB]: Key released: 83
+Keyboard                                         [VERB]: Key pressed: 87
+Keyboard                                         [VERB]: Key released: 65
+Keyboard                                         [VERB]: Key pressed: 68
+Keyboard                                         [VERB]: Key released: 87
+Keyboard                                         [VERB]: Key released: 68
+Keyboard                                         [VERB]: Key pressed: 65
+Keyboard                                         [VERB]: Key pressed: 83
+Keyboard                                         [VERB]: Key pressed: 68
+Keyboard                                         [VERB]: Key released: 65
+Keyboard                                         [VERB]: Key released: 83
+Keyboard                                         [VERB]: Key pressed: 83
+Keyboard                                         [VERB]: Key pressed: 65
+Keyboard                                         [VERB]: Key released: 68
+Keyboard                                         [VERB]: Key released: 83
+Keyboard                                         [VERB]: Key pressed: 83
+Keyboard                                         [VERB]: Key pressed: 68
+Keyboard                                         [VERB]: Key released: 65
+Keyboard                                         [VERB]: Key released: 83
+Keyboard                                         [VERB]: Key pressed: 87
+Keyboard                                         [VERB]: Key pressed: 65
+Keyboard                                         [VERB]: Key released: 68
+Keyboard                                         [VERB]: Key released: 87
+Keyboard                                         [VERB]: Key pressed: 83
+Keyboard                                         [VERB]: Key released: 65
+Keyboard                                         [VERB]: Key pressed: 68
+Keyboard                                         [VERB]: Key released: 83
+Keyboard                                         [VERB]: Key pressed: 83
+Keyboard                                         [VERB]: Key released: 68
+Keyboard                                         [VERB]: Key pressed: 65
+Keyboard                                         [VERB]: Key released: 83
+Keyboard                                         [VERB]: Key pressed: 87
+Keyboard                                         [VERB]: Key released: 65
+Keyboard                                         [VERB]: Key pressed: 68
+Keyboard                                         [VERB]: Key released: 87
+Keyboard                                         [VERB]: Key pressed: 83
+Keyboard                                         [VERB]: Key released: 68
+Keyboard                                         [VERB]: Key pressed: 65
+Keyboard                                         [VERB]: Key released: 83
+Keyboard                                         [VERB]: Key pressed: 83
+Keyboard                                         [VERB]: Key pressed: 68
+Keyboard                                         [VERB]: Key released: 65
+Keyboard                                         [VERB]: Key released: 83
+Keyboard                                         [VERB]: Key pressed: 65
+Keyboard                                         [VERB]: Key released: 68
+Keyboard                                         [VERB]: Key pressed: 83
+Keyboard                                         [VERB]: Key released: 83
+Keyboard                                         [VERB]: Key pressed: 83
+Keyboard                                         [VERB]: Key pressed: 68
+Keyboard                                         [VERB]: Key released: 65
+Keyboard                                         [VERB]: Key released: 83
+Keyboard                                         [VERB]: Key pressed: 65
+Keyboard                                         [VERB]: Key released: 68
+Keyboard                                         [VERB]: Key pressed: 83
+Keyboard                                         [VERB]: Key released: 65
+Keyboard                                         [VERB]: Key released: 83
+Keyboard                                         [VERB]: Key pressed: 68
+Keyboard                                         [VERB]: Key pressed: 87
+Keyboard                                         [VERB]: Key released: 87
+Keyboard                                         [VERB]: Key released: 68
+Keyboard                                         [VERB]: Key pressed: 83
+Keyboard                                         [VERB]: Key pressed: 65
+Keyboard                                         [VERB]: Key released: 65
+Keyboard                                         [VERB]: Key released: 83
+Keyboard                                         [VERB]: Key pressed: 83
+Keyboard                                         [VERB]: Key pressed: 65
+Keyboard                                         [VERB]: Key released: 83
+Keyboard                                         [VERB]: Key released: 65
+Keyboard                                         [VERB]: Key pressed: 83
+Keyboard                                         [VERB]: Key pressed: 65
+Keyboard                                         [VERB]: Key released: 65
+Keyboard                                         [VERB]: Key released: 83
+Keyboard                                         [VERB]: Key pressed: 65
+Keyboard                                         [VERB]: Key pressed: 83
+Keyboard                                         [VERB]: Key released: 65
+Keyboard                                         [VERB]: Key pressed: 65
+Keyboard                                         [VERB]: Key released: 65
+Keyboard                                         [VERB]: Key released: 83
+Keyboard                                         [VERB]: Key pressed: 68
+Keyboard                                         [VERB]: Key pressed: 83
+Keyboard                                         [VERB]: Key released: 68
+Keyboard                                         [VERB]: Key pressed: 68
+Keyboard                                         [VERB]: Key released: 83
+Keyboard                                         [VERB]: Key pressed: 87
+Keyboard                                         [VERB]: Key released: 68
+Keyboard                                         [VERB]: Key pressed: 68
+Keyboard                                         [VERB]: Key released: 68
+Keyboard                                         [VERB]: Key released: 87
+Keyboard                                         [VERB]: Key pressed: 87
+Keyboard                                         [VERB]: Key released: 87
+Keyboard                                         [VERB]: Key pressed: 83
 Keyboard                                         [VERB]: Key released: 83
 Application                                      [INFO]: Application exiting.
 Window                                           [INFO]: Hiding window.
