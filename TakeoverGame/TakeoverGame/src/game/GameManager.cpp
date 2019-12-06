@@ -11,6 +11,7 @@
 #include "components/Selectable.h"
 #include "components/CommandReciever.h"
 #include "units/TestUnitEntity.h"
+#include "ui/MainMenuEntity.h"
 
 using namespace tkv;
 using namespace vlk;
@@ -28,7 +29,9 @@ void GameManager::Init()
 	CaptureSystem::Init();
 	SelectionSystem::Init();
 	CommandRecieverSystem::Init();
+	MainMenuSystem::Init();
 
+	ContentManager<Texture2D>::Get().LoadContent("MainMenu");
 	ContentManager<Texture2D>::Get().LoadContent("cursor");
 	ContentManager<Texture2D>::Get().LoadContent("map");
 	ContentManager<Texture2D>::Get().LoadContent("factory");
@@ -36,6 +39,8 @@ void GameManager::Init()
 	ContentManager<Texture2D>::Get().LoadContent("select_outline");
 	ContentManager<Texture2D>::Get().LoadContent("hover_outline");
 	ContentManager<Texture2D>::Get().LoadContent("unit");
+	ContentManager < Texture2D>::Get().LoadContent("PlayButton");
+	ContentManager < Texture2D>::Get().LoadContent("ExitButton");
 
 	ContentManager<Texture2D>::Get().LoadContent("cap_0");
 	ContentManager<Texture2D>::Get().LoadContent("cap_1");
@@ -52,7 +57,11 @@ void GameManager::Init()
 	ContentManager<Material>::Get().LoadContent("monkey_green");
 	ContentManager<Material>::Get().LoadContent("monkey_blue");
 	ContentManager<Material>::Get().LoadContent("monkey_yellow");
-	ContentManager<Model>::Get().LoadContent("monkey_hd");
+	//ContentManager<Model>::Get().LoadContent("monkey_hd");
+
+
+	MainMenuEntity::CreateEntity();
+
 
 	//Create a camera entity and make it's camera active
 	//PlayerCameraEntity::CreateEntity()->camera->Activate();
@@ -62,14 +71,14 @@ void GameManager::Init()
 
 	//TestUnitEntity::CreateEntity(Team::Team1, Vector2(64.0f, 0.0f));
 	//TestUnitEntity::CreateEntity(Team::Team1, Vector2(-64.0f, 0.0f));
-
+	/*
 	TestUnitEntity2::CreateEntity(Vector3( 0.0f, 0.0f, 5.0f));
 	TestUnitEntity2::CreateEntity(Vector3(-5.0f, 0.0f, 5.0f));
 	TestUnitEntity2::CreateEntity(Vector3( 5.0f, 0.0f, 5.0f));
-
+	*/
 	auto c = CameraComponent3D::CreateComponent(nullptr, TransformComponent3D::CreateComponent(nullptr));
 	CameraComponent2D::CreateComponent(nullptr, TransformComponent2D::CreateComponent(nullptr));
-
+	/*
 	const_cast<TransformComponent3D*>(c->transform)->location.z += 2.0f;
 
 	//AmbientLightComponent3D::CreateComponent(nullptr)->color = Color(0.05f, 0.05f, 0.05f, 1.0f);
@@ -97,11 +106,12 @@ void GameManager::Init()
 
 		//TestUnitEntity::CreateEntity(Team::Team2, p1);
 		//TestUnitEntity::CreateEntity(Team::Team1, -p1);
-	}
+	}*/
 }
 
 void GameManager::Destroy()
 {
+	MainMenuSystem::Destroy();
 	CommandRecieverSystem::Destroy();
 	SelectionSystem::Destroy();
 	CaptureSystem::Destroy();

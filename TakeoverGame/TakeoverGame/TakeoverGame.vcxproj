@@ -92,7 +92,6 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="src\game\ui\MenuButtonEntity.cpp" />
     <ClCompile Include="src\game\ui\MainMenuEntity.cpp" />
     <ClCompile Include="src\engine\components\DrawModelComponent3D.cpp" />
     <ClCompile Include="src\engine\components\LightComponent.cpp" />

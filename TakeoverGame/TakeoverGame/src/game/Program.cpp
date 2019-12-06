@@ -33,7 +33,7 @@ int main()
 
 	//Lock framerate to refresh rate
 	vlk::Window::SetSwapInterval(1);
-	vlk::Window::HideCursor();
+	//vlk::Window::HideCursor();
 
 	tkv::GameManager::Init();
 

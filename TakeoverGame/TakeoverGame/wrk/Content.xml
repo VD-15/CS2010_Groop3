@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <content>
+  <texture name="MainMenu" path="textures/Main_Menu1 (1).png"></texture>
+  <texture name ="PlayButton" path="textures/play.png"></texture>
+  <texture name ="ExitButton" path="textures/exit.png"></texture>
     <texture name="test_atlas" path="textures/test_atlas.png"></texture>
     <texture name="cursor" path="textures/cursor.png"></texture>
     <texture name="map" path="textures/test_map.png"></texture>
