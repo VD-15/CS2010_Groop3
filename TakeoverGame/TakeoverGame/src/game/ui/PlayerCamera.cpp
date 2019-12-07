@@ -66,8 +66,8 @@ PlayerCameraEntity::PlayerCameraEntity()
 	this->camera2D = CreateComponent<CameraComponent2D>(transform2D);
 	this->camera3D = CreateComponent<CameraComponent3D>(transform3D);
 	this->logic = CreateComponent<PlayerCameraComponent>(transform3D, camera3D);
-
-	this->transform3D->location = Vector3(0.0f, 10.0f, 0.0f);
+	
+	this->transform3D->location = Vector3(0.0f, 40.0f, 0.0f);
 	this->transform3D->rotation = AngleAxis(vlk::Pi / 4.0f, Vector3X);
 }
 

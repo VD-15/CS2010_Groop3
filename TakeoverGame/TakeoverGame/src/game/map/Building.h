@@ -27,7 +27,7 @@ namespace tkv
 		SelectableComponent* select;
 	};*/
 
-	struct FactoryEntity : public Entity<FactoryEntity>
+	struct FactoryEntity : public HeapAllocateEntity, public Entity<FactoryEntity>
 	{
 		FactoryEntity(const Vector3& location);
 		void OnDelete() override;
@@ -36,7 +36,7 @@ namespace tkv
 		DrawModelComponent3D* draw;
 	};
 
-	struct QuarryEntity : public Entity<QuarryEntity>
+	struct QuarryEntity : public HeapAllocateEntity, Entity<QuarryEntity>
 	{
 		QuarryEntity(const Vector3& quarry);
 		void OnDelete() override;
