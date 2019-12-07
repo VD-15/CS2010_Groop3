@@ -20,7 +20,7 @@ namespace
 			}
 		});
 	}
-	
+
 	void OnUpdate(UpdateEvent& ev)
 	{
 		CommandRecieverComponent::ForEach([](CommandRecieverComponent* c)
@@ -70,4 +70,5 @@ CommandRecieverComponent::CommandRecieverComponent(IEntity* e, TransformComponen
 {
 	this->isMoving = false;
 	this->speed = 0.0f;
+
 }
