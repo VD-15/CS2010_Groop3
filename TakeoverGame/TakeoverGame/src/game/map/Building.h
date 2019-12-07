@@ -34,6 +34,7 @@ namespace tkv
 
 		TransformComponent3D* transform;
 		DrawModelComponent3D* draw;
+		SelectableComponent* select;
 	};
 
 	struct QuarryEntity : public HeapAllocateEntity, Entity<QuarryEntity>
@@ -43,5 +44,6 @@ namespace tkv
 
 		TransformComponent3D* transform;
 		DrawModelComponent3D* draw;
+		SelectableComponent* select;
 	};
 }

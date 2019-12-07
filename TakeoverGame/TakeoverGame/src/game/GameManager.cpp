@@ -51,7 +51,7 @@ void GameManager::Init()
 		auto t = TransformComponent3D::CreateComponent(nullptr);
 		auto d = DrawModelComponent3D::CreateComponent(nullptr, t, ContentManager<Model>::Get().GetContent("map_snow"));
 
-		t->scale = Vector3(512.0f, 1.0f, 512.0f);
+		//t->scale = Vector3(512.0f, 1.0f, 512.0f);
 	}
 
 	{

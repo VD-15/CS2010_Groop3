@@ -141,8 +141,7 @@ namespace
 		glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, wrapEnum);
 		glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, filterEnumMin);
 		glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, filterEnumMax);
-
-
+		
 		//Generate mipmaps if specified.
 		if (genMipMapEnum)
 		{
