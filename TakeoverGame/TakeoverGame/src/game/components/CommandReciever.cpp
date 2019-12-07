@@ -70,5 +70,4 @@ CommandRecieverComponent::CommandRecieverComponent(IEntity* e, TransformComponen
 {
 	this->isMoving = false;
 	this->speed = 0.0f;
-
 }

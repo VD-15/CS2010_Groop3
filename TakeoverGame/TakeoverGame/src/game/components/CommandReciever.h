@@ -34,5 +34,4 @@ namespace tkv
 		Boolean isMoving;
 		Float speed;
 	};
-	
 }
