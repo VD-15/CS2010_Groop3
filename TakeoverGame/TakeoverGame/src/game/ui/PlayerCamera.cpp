@@ -54,15 +54,16 @@ namespace
 		{
 			//c->transform->location = c->camera->transform->location - Rotate(Vector3(-mousePos.x, -mousePos.y, 1.0f) * 2.0f, c->camera->transform->rotation);
 			
-			Matrix4 inv(glm::inverse(c->camera->GetProjection()) * glm::inverse(c->camera->GetView()));// * CreateRotation(c->camera->transform->rotation)));
+			Matrix4 inv(glm::inverse(c->camera->GetProjection()));// * CreateRotation(c->camera->transform->rotation)));
 
-			Vector4 v(mousePos, c->camera->transform->location.z, 1.0f);
+			Vector4 v(mousePos, 0.0f, 1.0f);
 
 			
 			Vector3 dir(inv * v);
+			//dir.x -= c->camera->transform->location.x;
 			//dir -= c->camera->transform->location;
-			//dir = Rotate(Normalize(dir), c->camera->transform->rotation);
-			//dir += c->camera->transform->location;
+			dir = Rotate(dir, c->camera->transform->rotation);
+			dir += c->camera->transform->location;
 
 			//dir -= c->camera->transform->location;
 			//dir = Rotate(dir, c->camera->transform->rotation);
@@ -122,7 +123,7 @@ PlayerCameraEntity::PlayerCameraEntity()
 	this->logic = CreateComponent<PlayerCameraComponent>(transform3D, camera3D);
 	
 	this->transform3D->location = Vector3(0.0f, 40.0f, 0.0f);
-	//this->transform3D->rotation = AngleAxis(vlk::Pi / 4.0f, Vector3X);
+	this->transform3D->rotation = AngleAxis(vlk::Pi / 4.0f, Vector3X);
 
 	this->follow = dynamic_cast<IEntity*>(CameraFollowEntity::CreateEntity(this->camera3D));
 }
