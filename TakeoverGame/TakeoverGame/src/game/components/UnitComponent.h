@@ -1,5 +1,11 @@
 #pragma once
 
+#include "../Takover.h"
+#include "../components/TeamComponent.h"
+
+#include "../../engine/core/GameEntity.hpp"
+#include "../../engine/components/TransformComponent.h"
+
 namespace tkv {
 
 	namespace CombatSystem{

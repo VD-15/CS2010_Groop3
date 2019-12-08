@@ -1,5 +1,9 @@
-#include UnitEntity.h
+#include "UnitEntity.h"
 
+#include "../../engine/core/ContentManager.hpp"
+#include "../../engine/components/LightComponent.h"
+
+#include "../../engine/core/VLKTime.h"
 using namespace tkv;
 
 void OnUpdate(UpdateEvent& ev)
