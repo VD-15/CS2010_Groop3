@@ -103,6 +103,7 @@
     <ClCompile Include="src\engine\graphics\OpenGL\VertexArray.cpp" />
     <ClCompile Include="src\engine\utils\XmlDocument.cpp" />
     <ClCompile Include="src\game\components\CommandReciever.cpp" />
+    <ClCompile Include="src\game\components\FollowComponent.cpp" />
     <ClCompile Include="src\game\components\Selectable.cpp" />
     <ClCompile Include="src\game\GameManager.cpp" />
     <ClCompile Include="src\engine\components\CameraComponent.cpp" />
@@ -160,6 +161,7 @@
     <ClInclude Include="src\engine\graphics\OpenGL\VertexArray.h" />
     <ClInclude Include="src\engine\utils\XmlDocument.h" />
     <ClInclude Include="src\game\components\CommandReciever.h" />
+    <ClInclude Include="src\game\components\FollowComponent.h" />
     <ClInclude Include="src\game\components\Selectable.h" />
     <ClInclude Include="src\game\GameManager.h" />
     <ClInclude Include="src\engine\components\CameraComponent.h" />

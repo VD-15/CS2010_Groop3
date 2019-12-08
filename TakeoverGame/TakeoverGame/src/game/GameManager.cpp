@@ -10,6 +10,7 @@
 #include "map/Building.h"
 #include "components/Selectable.h"
 #include "components/CommandReciever.h"
+#include "components/FollowComponent.h"
 #include "units/TestUnitEntity.h"
 
 using namespace tkv;
@@ -23,9 +24,13 @@ namespace
 void GameManager::Init()
 {
 	CameraSystem::Init();
+	FollowSystem::Init();
+	SelectionSystem::Init();
 
 	ContentManager<Texture2D>::Get().LoadContent("unit");
 	ContentManager<Texture2D>::Get().LoadContent("map_snow");
+	ContentManager<Texture2D>::Get().LoadContent("select_outline_dif");
+	ContentManager<Texture2D>::Get().LoadContent("select_outline_alp");
 
 	ContentManager<Material>::Get().LoadContent("cube_tex");
 	ContentManager<Material>::Get().LoadContent("map_snow");
@@ -33,11 +38,13 @@ void GameManager::Init()
 	ContentManager<Material>::Get().LoadContent("black");
 	ContentManager<Material>::Get().LoadContent("glass");
 	ContentManager<Material>::Get().LoadContent("quarry");
+	ContentManager<Material>::Get().LoadContent("select");
 
 	ContentManager<Model>::Get().LoadContent("cube");
 	ContentManager<Model>::Get().LoadContent("map_snow");
 	ContentManager<Model>::Get().LoadContent("factory");
 	ContentManager<Model>::Get().LoadContent("quarry");
+	ContentManager<Model>::Get().LoadContent("select_outline");
 
 	{
 		auto t = TransformComponent3D::CreateComponent(nullptr);
@@ -51,7 +58,7 @@ void GameManager::Init()
 		auto t = TransformComponent3D::CreateComponent(nullptr);
 		auto d = DrawModelComponent3D::CreateComponent(nullptr, t, ContentManager<Model>::Get().GetContent("map_snow"));
 
-		//t->scale = Vector3(512.0f, 1.0f, 512.0f);
+		t->scale = Vector3(512.0f, 1.0f, 512.0f);
 	}
 
 	{
@@ -76,4 +83,5 @@ void GameManager::Destroy()
 	ContentManager<Material>::Get().UnloadContent("cube_tex");
 
 	CameraSystem::Destroy();
+	FollowSystem::Destroy();
 }

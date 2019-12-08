@@ -2,81 +2,74 @@
 #include "../ui/Cursor.h"
 #include "../../engine/components/CameraComponent.h"
 #include "../../engine/core/ContentManager.hpp"
+#include "../../engine/core/Mouse.h"
+#include "../../engine/core/Keyboard.h"
+#include "../../engine/core/Window.h"
+#include "../../engine/core/VLKTime.h"
 
 using namespace tkv;
 
 namespace
 {
-	void OnSelect(MouseSelectEvent& ev)
+	void OnEarlyUpdate(EarlyUpdateEvent& ev)
 	{
-		LogInfo("Selectable", "OnSelect");
+		const CameraComponent3D* camera = CameraComponent3D::ACTIVE;
+		Vector2 mousePos(Mouse::GetCenteredPosition());
+		mousePos = Vector2(mousePos.x / (Window::GetWidth() / 2.0f), mousePos.y / (Window::GetHeight() / 2.0f));
 
-		if (ev.isStart) return;
+		Matrix4 inv(glm::inverse(camera->GetProjection()));// * CreateRotation(c->camera->transform->rotation)));
 
-		Vector2 startPos(ev.cursor->selectStartPos);
-		Vector2 endPos(CameraComponent2D::ACTIVE->GetMousePosition());
+		Vector4 v(mousePos, 0.0f, 1.0f);
 
-		auto x = std::minmax(startPos.x, endPos.x);
-		auto y = std::minmax(startPos.y, endPos.y);
+		Vector3 dir(inv * v);
+		dir = Rotate(dir, camera->transform->rotation);
 
-		Vector2 min(x.first, y.first);
-		Vector2 max(x.second, y.second);
+		Ray r(dir, camera->transform->location);
+		Bool select = Mouse::IsButtonPressed(MouseButtons::BUTTON_LEFT);
+		Bool multi = Keyboard::IsKeyDown(Keys::LEFT_SHIFT);
+		Float dt = VLKTime::DeltaTime<Float>();
 
-		std::vector<SelectableComponent*> selected;
-		selected.reserve(SelectableComponent::GetCount());
-
-		auto select = SelectableComponent::ForEach([min, max, endPos, &selected, &ev](SelectableComponent* c)
+		SelectableComponent::ForEach([&r, select, multi, dt](SelectableComponent* c)
 		{
-			if (c->team->team == ev.cursor->team->team)
-			{
-				if ((c->transform->location.x > min.x &&
-					c->transform->location.x < max.x &&
-					c->transform->location.y > min.y &&
-					c->transform->location.y < max.y) ||
-					Magnitude(endPos - c->transform->location) < c->hoverRadius && selected.size() < 1)
-				{
-					selected.push_back(c);
-				}
-				else
-				{
-					c->flags &= !TKV_FLAG_SELECTED;
+			c->transform->rotation *= AngleAxis(dt, Vector3Y);
 
+			Vector3 circlePos(c->transform->location);
+			circlePos.y = 0.0f;
+			CircleVolume volume(circlePos, c->hoverRadius);
+
+			if (volume.Intersects(r)) //If the ray is intersecting
+			{
+				if (!(c->flags & TKV_FLAG_HOVERED)) //if the hover flag is not raised
+				{
+					//Send hover signal and rise flag
+					c->OnHoverEnter();
+					c->flags |= TKV_FLAG_HOVERED;
+				}
+
+				if (select)
+				{
+					c->OnSelect();
+					c->flags |= TKV_FLAG_SELECTED;
+				}
+			}
+			else //Selection fails
+			{
+				if (c->flags & TKV_FLAG_HOVERED) //if hover flag is raised
+				{
+					//Send hover leave signal and lower flag
+					c->OnHoverLeave();
+					c->flags &= ~TKV_FLAG_HOVERED;
+				}
+
+				if (select && !multi && c->flags & TKV_FLAG_SELECTED) // if multi is not enabled and selected flag is raised
+				{
 					c->OnDeselect();
+					c->flags &= ~TKV_FLAG_SELECTED;
 				}
 			}
 		});
 
-		Int maxPriority = 0;
-
-		for (auto it = selected.begin(); it != selected.end(); it++)
-		{
-			SelectableComponent* c = *it;
-			if (c->priority > maxPriority) maxPriority = c->priority;
-		}
-
-		for (auto it = selected.begin(); it != selected.end(); it++)
-		{
-			SelectableComponent* c = *it;
-
-			if (c->priority == maxPriority)
-			{
-				c->flags |= TKV_FLAG_SELECTED;
-
-				c->OnSelect();
-			}
-			else
-			{
-				c->flags &= !TKV_FLAG_SELECTED;
-
-				c->OnDeselect();
-			}
-		}
-	}
-
-	void OnEarlyUpdate(EarlyUpdateEvent& ev)
-	{
-		Vector2 mousePos = CameraComponent2D::ACTIVE->GetMousePosition();
-
+		/*
 		SelectableComponent* s = nullptr;
 		Float minMag = std::numeric_limits<Float>::max();
 
@@ -107,100 +100,70 @@ namespace
 				s->flags |= TKV_FLAG_HOVERED;
 				s->OnHoverEnter();
 			}
-		}
+		}*/
 	}
 }
 
 void SelectionSystem::Init()
 {
-	EventBus<MouseSelectEvent>::Get().AddEventListener(OnSelect);
+	//EventBus<MouseSelectEvent>::Get().AddEventListener(OnSelect);
 	EventBus<EarlyUpdateEvent>::Get().AddEventListener(OnEarlyUpdate);
 }
 
 void SelectionSystem::Destroy()
 {
-	EventBus<MouseSelectEvent>::Get().RemoveEventListener(OnSelect);
+	//EventBus<MouseSelectEvent>::Get().RemoveEventListener(OnSelect);
 	EventBus<EarlyUpdateEvent>::Get().RemoveEventListener(OnEarlyUpdate);
 }
 
-SelectableComponent::SelectableComponent(IEntity* e, const TransformComponent2D* const transform, const TeamComponent* const team) :
+SelectableComponent::SelectableComponent(IEntity* e, const TransformComponent3D* const follow) :
 	Component<SelectableComponent>(e),
-	transform(transform),
-	team(team)
+	team(team),
+	transform(TransformComponent3D::CreateComponent(e)),
+	draw(DrawModelComponent3D::CreateComponent(e, transform, ContentManager<Model>::Get().GetContent("select_outline"))),
+	follow(FollowComponent::CreateComponent(e, follow, transform))
 {
-	this->priority = 0;
-	this->flags = 0b00000000;
-	this->hoverRadius = 1.0f;
-	this->draw = nullptr;
+	this->flags = 0;
+	this->hoverRadius = 20.0f;
+	this->follow->followType = TKV_FOLLOW_X | TKV_FOLLOW_Z;
+	this->transform->location.y = -100.0f;
+	this->transform->scale = Vector3(20.0f);
 }
 
 void SelectableComponent::OnDelete()
 {
-	if (this->draw) this->draw->Delete();
+	this->transform->Delete();
+	this->draw->Delete();
+	this->follow->Delete();
 }
 
 void SelectableComponent::OnSelect()
 {
 	LogInfo("Selectable", "Selected, flag is now: " + std::to_string(this->flags));
 
-	if (!this->draw)
-	{
-		this->draw = DrawTextureComponent2D::CreateComponent(this->GetParent(), this->transform, ContentManager<Texture2D>::Get().GetContent("select_outline"));
-		this->draw->size = Vector2(this->hoverRadius * 2.0f);
-	}
-	else
-	{
-		this->draw->texture = ContentManager<Texture2D>::Get().GetContent("select_outline");
-	}
+	this->transform->location.y = 1.0f;
 }
 
 void SelectableComponent::OnDeselect()
 {
 	LogInfo("Selectable", "DeSelected, flag is now: " + std::to_string(this->flags));
 
-	if (this->draw)
-	{
-		if (this->flags & TKV_FLAG_HOVERED)
-		{
-			this->draw->texture = ContentManager<Texture2D>::Get().GetContent("hover_outline");
-		}
-		else
-		{
-			this->draw->Delete();
-			this->draw = nullptr;
-		}
-	}
+	this->transform->location.y = -100.0f;
 }
 
 void SelectableComponent::OnHoverEnter()
 {
 	LogInfo("Selectable", "Hovered, flag is now: " + std::to_string(this->flags));
 
-	if (!this->draw)
-	{
-		this->draw = DrawTextureComponent2D::CreateComponent(this->GetParent(), this->transform, ContentManager<Texture2D>::Get().GetContent("hover_outline"));
-		this->draw->size = Vector2(this->hoverRadius * 2.0f);
-	}
-	else
-	{
-		this->draw->texture = ContentManager<Texture2D>::Get().GetContent("hover_outline");
-	}
+	this->transform->location.y = 1.0f;
 }
 
 void SelectableComponent::OnHoverLeave()
 {
 	LogInfo("Selectable", "UnHovered, flag is now: " + std::to_string(this->flags));
 
-	if (this->draw)
+	if (!(this->flags & TKV_FLAG_SELECTED))
 	{
-		if (this->flags & TKV_FLAG_SELECTED)
-		{
-			this->draw->texture = ContentManager<Texture2D>::Get().GetContent("select_outline");
-		}
-		else
-		{
-			this->draw->Delete();
-			this->draw = nullptr;
-		}
+		this->transform->location.y = -100.0f;
 	}
 }

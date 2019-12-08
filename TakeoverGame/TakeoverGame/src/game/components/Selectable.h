@@ -4,10 +4,12 @@
 
 #include "../../engine/core/GameEntity.hpp"
 #include "../../engine/components/TransformComponent.h"
-#include "../../engine/components/DrawTextureComponent.h"
+#include "../../engine/components/DrawModelComponent.h"
 #include "../../engine/components/UIComponent.h"
+#include "../util/Raycast.h"
 
 #include "TeamComponent.h"
+#include "FollowComponent.h"
 
 using namespace vlk;
 
@@ -24,17 +26,22 @@ namespace tkv
 
 	struct SelectableComponent : public Component<SelectableComponent>
 	{
-		SelectableComponent(IEntity* e, const TransformComponent2D* const transform, const TeamComponent* team);
+		//Creates a Selectable component
+		//follow => the transform this component is following
+		//team   => the team that is allowed to select this object
+		SelectableComponent(IEntity* e, const TransformComponent3D* const follow);
 		void OnDelete() override;
 
-		SByte priority;
 		Byte flags;
 		Float hoverRadius;
-		
-		const TransformComponent2D* const transform;
+
 		const TeamComponent* const team;
 
-		DrawTextureComponent2D* draw;
+		//Transform of the selectable outline
+		//Seperate from the entity this component is attached to because of rotations & the like
+		TransformComponent3D* const transform;
+		DrawModelComponent3D* const draw;
+		FollowComponent* const follow;
 
 		void OnSelect();
 		void OnDeselect();

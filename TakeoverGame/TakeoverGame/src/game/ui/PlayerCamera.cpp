@@ -41,10 +41,10 @@ namespace
 			c->transform->location.z = std::clamp(c->transform->location.z, -462.0f, 562.0f); //Lateral clamp
 
 			c->camera3D->target = Rotate(-Vector3Z, c->transform->rotation) + c->transform->location;
-
+			/*
 			Window::SetTitle(std::to_string(c->camera3D->transform->location.x) + ", " +
 							 std::to_string(c->camera3D->transform->location.y) + ", " +
-							 std::to_string(c->camera3D->transform->location.z));
+							 std::to_string(c->camera3D->transform->location.z));*/
 		});
 
 		Vector2 mousePos(Mouse::GetCenteredPosition());
@@ -57,20 +57,12 @@ namespace
 			Matrix4 inv(glm::inverse(c->camera->GetProjection()));// * CreateRotation(c->camera->transform->rotation)));
 
 			Vector4 v(mousePos, 0.0f, 1.0f);
-
 			
 			Vector3 dir(inv * v);
-			//dir.x -= c->camera->transform->location.x;
-			//dir -= c->camera->transform->location;
 			dir = Rotate(dir, c->camera->transform->rotation);
 			dir += c->camera->transform->location;
 
-			//dir -= c->camera->transform->location;
-			//dir = Rotate(dir, c->camera->transform->rotation);
-			//dir += c->camera->transform->location;
-
 			c->transform->location = dir;
-			//c->transform->rotation = c->camera->transform->rotation;
 		});
 	}
 }

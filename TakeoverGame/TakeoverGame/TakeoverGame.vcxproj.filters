@@ -180,6 +180,9 @@
     <ClCompile Include="src\game\util\Raycast.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="src\game\components\FollowComponent.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\engine\components\CameraComponent.h">
@@ -369,6 +372,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="src\game\util\Raycast.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\game\components\FollowComponent.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

@@ -42,7 +42,7 @@ TestUnitEntity::TestUnitEntity(Team t, Vector2 location)
 	this->draw = CreateComponent<DrawTextureComponent2D>(transform, ContentManager<Texture2D>::Get().GetContent("unit"));
 	this->team = CreateComponent<TeamComponent>();
 	this->capture = CreateComponent<CaptureContributorComponent>(transform, team);
-	this->select = CreateComponent<SelectableComponent>(transform, team);
+	//this->select = CreateComponent<SelectableComponent>(transform);
 	this->reciever = CreateComponent<CommandRecieverComponent>(transform, select);
 
 	this->transform->location = location;
@@ -53,7 +53,7 @@ TestUnitEntity::TestUnitEntity(Team t, Vector2 location)
 
 	this->reciever->speed = 64.0f;
 	this->select->hoverRadius = 32.0f;
-	this->select->priority = 1;
+	//this->select->priority = 1;
 }
 
 void TestUnitEntity::OnDelete()

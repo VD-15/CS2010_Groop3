@@ -1,38 +1,40 @@
-EventBus KeyEvent                                [INFO]: Adding event listener: 0x00007FF69E78C400
-EventBus ApplicationStartEvent                   [INFO]: Adding event listener: 0x00007FF69E5EBB7F
-EventBus PreUpdateEvent                          [INFO]: Adding event listener: 0x00007FF69E5E31BE
+EventBus KeyEvent                                [INFO]: Adding event listener: 0x00007FF638BCE5F0
+EventBus ApplicationStartEvent                   [INFO]: Adding event listener: 0x00007FF638A16D00
+EventBus PreUpdateEvent                          [INFO]: Adding event listener: 0x00007FF638A0E114
 Window                                           [INFO]: Initializing.
-EventBus ApplicationStartEvent                   [INFO]: Adding event listener: 0x00007FF69E5DF861
-EventBus ApplicationExitEvent                    [INFO]: Adding event listener: 0x00007FF69E5EACCF
-EventBus PreUpdateEvent                          [INFO]: Adding event listener: 0x00007FF69E5F1CF5
+EventBus ApplicationStartEvent                   [INFO]: Adding event listener: 0x00007FF638A0A88E
+EventBus ApplicationExitEvent                    [INFO]: Adding event listener: 0x00007FF638A15E14
+EventBus PreUpdateEvent                          [INFO]: Adding event listener: 0x00007FF638A1CF48
 Keyboard                                         [INFO]: Initializing.
-EventBus CharEvent                               [INFO]: Adding event listener: 0x00007FF69E6E4EF0
-EventBus KeyEvent                                [INFO]: Adding event listener: 0x00007FF69E6E4F60
-EventBus PostUpdateEvent                         [INFO]: Adding event listener: 0x00007FF69E6E4560
+EventBus CharEvent                               [INFO]: Adding event listener: 0x00007FF638B1C300
+EventBus KeyEvent                                [INFO]: Adding event listener: 0x00007FF638B1C370
+EventBus PostUpdateEvent                         [INFO]: Adding event listener: 0x00007FF638B1B8F0
 Mouse                                            [INFO]: Initializing
-EventBus CursorPosEvent                          [INFO]: Adding event listener: 0x00007FF69E6F24A0
-EventBus MouseButtonEvent                        [INFO]: Adding event listener: 0x00007FF69E6F2180
-EventBus ScrollEvent                             [INFO]: Adding event listener: 0x00007FF69E6F2630
-EventBus PostUpdateEvent                         [INFO]: Adding event listener: 0x00007FF69E6F2530
-Renderer                                         [INFO]: Init() set to: 0x00007FF69E5E2E53
-Renderer                                         [INFO]: Draw() set to: 0x00007FF69E5DF78A
-Renderer                                         [INFO]: Destroy() set to: 0x00007FF69E5E3051
+EventBus CursorPosEvent                          [INFO]: Adding event listener: 0x00007FF638B2B440
+EventBus MouseButtonEvent                        [INFO]: Adding event listener: 0x00007FF638B2B110
+EventBus ScrollEvent                             [INFO]: Adding event listener: 0x00007FF638B2B5E0
+EventBus PostUpdateEvent                         [INFO]: Adding event listener: 0x00007FF638B2B4D0
+Renderer                                         [INFO]: Init() set to: 0x00007FF638A0DDA4
+Renderer                                         [INFO]: Draw() set to: 0x00007FF638A0A7B2
+Renderer                                         [INFO]: Destroy() set to: 0x00007FF638A0DFAC
 Renderer                                         [INFO]: Initializing.
 GLRenderer                                       [VERB]: Shader compiled successfully
 GLRenderer                                       [VERB]: Shader compiled successfully
 GLRenderer                                       [VERB]: Program compiled successfully
-EventBus WindowFramebufferEvent                  [INFO]: Adding event listener: 0x00007FF69E75D440
-EventBus Texture2D>                              [INFO]: Adding event listener: 0x00007FF69E75DB00
-EventBus Texture2D>                              [INFO]: Adding event listener: 0x00007FF69E75DFD0
-EventBus Model>                                  [INFO]: Adding event listener: 0x00007FF69E75D4C0
-EventBus Model>                                  [INFO]: Adding event listener: 0x00007FF69E75DA90
-EventBus PostUpdateEvent                         [INFO]: Adding event listener: 0x00007FF69E5EF5A9
-EventBus WindowFramebufferEvent                  [INFO]: Adding event listener: 0x00007FF69E6B0D70
-EventBus WindowFramebufferEvent                  [INFO]: Adding event listener: 0x00007FF69E6CEA20
-EventBus UpdateEvent                             [INFO]: Adding event listener: 0x00007FF69E6CEB20
-Valkyrie Engine                                  [INFO]: VLKinit took 1.478984 Seconds
+EventBus WindowFramebufferEvent                  [INFO]: Adding event listener: 0x00007FF638B97BD0
+EventBus Texture2D>                              [INFO]: Adding event listener: 0x00007FF638B98290
+EventBus Texture2D>                              [INFO]: Adding event listener: 0x00007FF638B98770
+EventBus Model>                                  [INFO]: Adding event listener: 0x00007FF638B97C50
+EventBus Model>                                  [INFO]: Adding event listener: 0x00007FF638B98220
+EventBus PostUpdateEvent                         [INFO]: Adding event listener: 0x00007FF638A1A7C0
+EventBus WindowFramebufferEvent                  [INFO]: Adding event listener: 0x00007FF638AE4B80
+EventBus WindowFramebufferEvent                  [INFO]: Adding event listener: 0x00007FF638B054B0
+EventBus UpdateEvent                             [INFO]: Adding event listener: 0x00007FF638B055B0
+Valkyrie Engine                                  [INFO]: VLKinit took 0.727712 Seconds
 Window                                           [INFO]: Set window swap interval to: 1
-EventBus UpdateEvent                             [INFO]: Adding event listener: 0x00007FF69E7C3BA0
+EventBus UpdateEvent                             [INFO]: Adding event listener: 0x00007FF638C09D30
+EventBus LateUpdateEvent                         [INFO]: Adding event listener: 0x00007FF638A91840
+EventBus EarlyUpdateEvent                        [INFO]: Adding event listener: 0x00007FF638AA89D0
 Material Library                                 [WARN]: Unknown command: Ke
 Material Library                                 [WARN]: Unknown command: Ni
 Material Library                                 [WARN]: Unknown command: illum
@@ -53,6 +55,10 @@ Material Library                                 [WARN]: Unknown command: illum
 Material Library                                 [WARN]: Unknown command: Ke
 Material Library                                 [WARN]: Unknown command: Ni
 Material Library                                 [WARN]: Unknown command: illum
+Material Library                                 [WARN]: Unknown command: illum
+Model                                            [WARN]: Unknown command while passing file: mtllib
+Model                                            [WARN]: Unknown command while passing file: o
+Model                                            [WARN]: Unknown command while passing file: s
 Model                                            [WARN]: Unknown command while passing file: mtllib
 Model                                            [WARN]: Unknown command while passing file: o
 Model                                            [WARN]: Unknown command while passing file: s
@@ -66,578 +72,181 @@ Model                                            [WARN]: Unknown command while p
 Model                                            [WARN]: Unknown command while passing file: o
 Model                                            [WARN]: Unknown command while passing file: s
 Component TransformComponent3D                   [VERB]: Creating Component
-EventBus ApplicationExitEvent                    [INFO]: Adding event listener: 0x00007FF69E5E3C7C
+EventBus ApplicationExitEvent                    [INFO]: Adding event listener: 0x00007FF638A0EBFF
 ChunkAllocator TransformComponent3D              [VERB]: Allocating new object
 Chunk TransformComponent3D                       [VERB]: Creating new chunk.
-Chunk TransformComponent3D                       [VERB]: Allocated at: 0x0000020D3A1BD100
+Chunk TransformComponent3D                       [VERB]: Allocated at: 0x000002495B4DFED0
 Chunk TransformComponent3D                       [VERB]: Inserting new object.
-ChunkAllocator TransformComponent3D              [VERB]: Object allocated at: 0x0000020D3A1BD100
+ChunkAllocator TransformComponent3D              [VERB]: Object allocated at: 0x000002495B4DFED0
 Component DirectionLightComponent3D              [VERB]: Creating Component
-EventBus ApplicationExitEvent                    [INFO]: Adding event listener: 0x00007FF69E5E1E86
+EventBus ApplicationExitEvent                    [INFO]: Adding event listener: 0x00007FF638A0CDAA
 ChunkAllocator DirectionLightComponent3D         [VERB]: Allocating new object
 Chunk DirectionLightComponent3D                  [VERB]: Creating new chunk.
-Chunk DirectionLightComponent3D                  [VERB]: Allocated at: 0x0000020D3A1BDF40
+Chunk DirectionLightComponent3D                  [VERB]: Allocated at: 0x000002495B4E2F20
 Chunk DirectionLightComponent3D                  [VERB]: Inserting new object.
-ChunkAllocator DirectionLightComponent3D         [VERB]: Object allocated at: 0x0000020D3A1BDF40
+ChunkAllocator DirectionLightComponent3D         [VERB]: Object allocated at: 0x000002495B4E2F20
 Component TransformComponent3D                   [VERB]: Creating Component
 ChunkAllocator TransformComponent3D              [VERB]: Allocating new object
 Chunk TransformComponent3D                       [VERB]: Inserting new object.
-ChunkAllocator TransformComponent3D              [VERB]: Object allocated at: 0x0000020D3A1BD138
+ChunkAllocator TransformComponent3D              [VERB]: Object allocated at: 0x000002495B4DFF08
 Component DrawModelComponent3D                   [VERB]: Creating Component
-EventBus ApplicationExitEvent                    [INFO]: Adding event listener: 0x00007FF69E5E53DD
+EventBus ApplicationExitEvent                    [INFO]: Adding event listener: 0x00007FF638A103A6
 ChunkAllocator DrawModelComponent3D              [VERB]: Allocating new object
 Chunk DrawModelComponent3D                       [VERB]: Creating new chunk.
-Chunk DrawModelComponent3D                       [VERB]: Allocated at: 0x0000020D3A1BEFC0
+Chunk DrawModelComponent3D                       [VERB]: Allocated at: 0x000002495B4E3FA0
 Chunk DrawModelComponent3D                       [VERB]: Inserting new object.
-ChunkAllocator DrawModelComponent3D              [VERB]: Object allocated at: 0x0000020D3A1BEFC0
-EventBus ApplicationExitEvent                    [INFO]: Adding event listener: 0x00007FF69E5E829F
+ChunkAllocator DrawModelComponent3D              [VERB]: Object allocated at: 0x000002495B4E3FA0
+EventBus ApplicationExitEvent                    [INFO]: Adding event listener: 0x00007FF638A1333A
 HeapAllocator FactoryEntity                      [VERB]: Allocating new object
-Entity FactoryEntity                             [VERB]: Creating Component for: 0x0000020D31F4FD00
+Entity FactoryEntity                             [VERB]: Creating Component for: 0x000002495B409DF0
 Component TransformComponent3D                   [VERB]: Creating Component
 ChunkAllocator TransformComponent3D              [VERB]: Allocating new object
 Chunk TransformComponent3D                       [VERB]: Inserting new object.
-ChunkAllocator TransformComponent3D              [VERB]: Object allocated at: 0x0000020D3A1BD170
-Entity FactoryEntity                             [VERB]: Creating Component for: 0x0000020D31F4FD00
+ChunkAllocator TransformComponent3D              [VERB]: Object allocated at: 0x000002495B4DFF40
+Entity FactoryEntity                             [VERB]: Creating Component for: 0x000002495B409DF0
 Component DrawModelComponent3D                   [VERB]: Creating Component
 ChunkAllocator DrawModelComponent3D              [VERB]: Allocating new object
 Chunk DrawModelComponent3D                       [VERB]: Inserting new object.
-ChunkAllocator DrawModelComponent3D              [VERB]: Object allocated at: 0x0000020D3A1BEFE0
-HeapAllocator FactoryEntity                      [VERB]: Object allocated at: 0x0000020D31F4FD00
-Entity FactoryEntity                             [VERB]: Entity created: 0x0000020D31F4FD00
-EventBus ApplicationExitEvent                    [INFO]: Adding event listener: 0x00007FF69E5E52B1
+ChunkAllocator DrawModelComponent3D              [VERB]: Object allocated at: 0x000002495B4E3FC0
+Entity FactoryEntity                             [VERB]: Creating Component for: 0x000002495B409DF0
+Component SelectableComponent                    [VERB]: Creating Component
+EventBus ApplicationExitEvent                    [INFO]: Adding event listener: 0x00007FF638A14C99
+ChunkAllocator SelectableComponent               [VERB]: Allocating new object
+Chunk SelectableComponent                        [VERB]: Creating new chunk.
+Chunk SelectableComponent                        [VERB]: Allocated at: 0x000002495B4F16F0
+Chunk SelectableComponent                        [VERB]: Inserting new object.
+Component TransformComponent3D                   [VERB]: Creating Component
+ChunkAllocator TransformComponent3D              [VERB]: Allocating new object
+Chunk TransformComponent3D                       [VERB]: Inserting new object.
+ChunkAllocator TransformComponent3D              [VERB]: Object allocated at: 0x000002495B4DFF78
+Component DrawModelComponent3D                   [VERB]: Creating Component
+ChunkAllocator DrawModelComponent3D              [VERB]: Allocating new object
+Chunk DrawModelComponent3D                       [VERB]: Inserting new object.
+ChunkAllocator DrawModelComponent3D              [VERB]: Object allocated at: 0x000002495B4E3FE0
+Component FollowComponent                        [VERB]: Creating Component
+EventBus ApplicationExitEvent                    [INFO]: Adding event listener: 0x00007FF638A1239F
+ChunkAllocator FollowComponent                   [VERB]: Allocating new object
+Chunk FollowComponent                            [VERB]: Creating new chunk.
+Chunk FollowComponent                            [VERB]: Allocated at: 0x000002495B4F2770
+Chunk FollowComponent                            [VERB]: Inserting new object.
+ChunkAllocator FollowComponent                   [VERB]: Object allocated at: 0x000002495B4F2770
+ChunkAllocator SelectableComponent               [VERB]: Object allocated at: 0x000002495B4F16F0
+HeapAllocator FactoryEntity                      [VERB]: Object allocated at: 0x000002495B409DF0
+Entity FactoryEntity                             [VERB]: Entity created: 0x000002495B409DF0
+EventBus ApplicationExitEvent                    [INFO]: Adding event listener: 0x00007FF638A10275
 HeapAllocator QuarryEntity                       [VERB]: Allocating new object
-Entity QuarryEntity                              [VERB]: Creating Component for: 0x0000020D31F4FDE0
+Entity QuarryEntity                              [VERB]: Creating Component for: 0x000002495B4095A0
 Component TransformComponent3D                   [VERB]: Creating Component
 ChunkAllocator TransformComponent3D              [VERB]: Allocating new object
 Chunk TransformComponent3D                       [VERB]: Inserting new object.
-ChunkAllocator TransformComponent3D              [VERB]: Object allocated at: 0x0000020D3A1BD1A8
-Entity QuarryEntity                              [VERB]: Creating Component for: 0x0000020D31F4FDE0
+ChunkAllocator TransformComponent3D              [VERB]: Object allocated at: 0x000002495B4DFFB0
+Entity QuarryEntity                              [VERB]: Creating Component for: 0x000002495B4095A0
 Component DrawModelComponent3D                   [VERB]: Creating Component
 ChunkAllocator DrawModelComponent3D              [VERB]: Allocating new object
 Chunk DrawModelComponent3D                       [VERB]: Inserting new object.
-ChunkAllocator DrawModelComponent3D              [VERB]: Object allocated at: 0x0000020D3A1BF000
-HeapAllocator QuarryEntity                       [VERB]: Object allocated at: 0x0000020D31F4FDE0
-Entity QuarryEntity                              [VERB]: Entity created: 0x0000020D31F4FDE0
+ChunkAllocator DrawModelComponent3D              [VERB]: Object allocated at: 0x000002495B4E4000
+HeapAllocator QuarryEntity                       [VERB]: Object allocated at: 0x000002495B4095A0
+Entity QuarryEntity                              [VERB]: Entity created: 0x000002495B4095A0
 HeapAllocator QuarryEntity                       [VERB]: Allocating new object
-Entity QuarryEntity                              [VERB]: Creating Component for: 0x0000020D31F4FE50
+Entity QuarryEntity                              [VERB]: Creating Component for: 0x000002495B40A170
 Component TransformComponent3D                   [VERB]: Creating Component
 ChunkAllocator TransformComponent3D              [VERB]: Allocating new object
 Chunk TransformComponent3D                       [VERB]: Inserting new object.
-ChunkAllocator TransformComponent3D              [VERB]: Object allocated at: 0x0000020D3A1BD1E0
-Entity QuarryEntity                              [VERB]: Creating Component for: 0x0000020D31F4FE50
+ChunkAllocator TransformComponent3D              [VERB]: Object allocated at: 0x000002495B4DFFE8
+Entity QuarryEntity                              [VERB]: Creating Component for: 0x000002495B40A170
 Component DrawModelComponent3D                   [VERB]: Creating Component
 ChunkAllocator DrawModelComponent3D              [VERB]: Allocating new object
 Chunk DrawModelComponent3D                       [VERB]: Inserting new object.
-ChunkAllocator DrawModelComponent3D              [VERB]: Object allocated at: 0x0000020D3A1BF020
-HeapAllocator QuarryEntity                       [VERB]: Object allocated at: 0x0000020D31F4FE50
-Entity QuarryEntity                              [VERB]: Entity created: 0x0000020D31F4FE50
-EventBus ApplicationExitEvent                    [INFO]: Adding event listener: 0x00007FF69E5EF87E
+ChunkAllocator DrawModelComponent3D              [VERB]: Object allocated at: 0x000002495B4E4020
+HeapAllocator QuarryEntity                       [VERB]: Object allocated at: 0x000002495B40A170
+Entity QuarryEntity                              [VERB]: Entity created: 0x000002495B40A170
+EventBus ApplicationExitEvent                    [INFO]: Adding event listener: 0x00007FF638A1AAA9
 ChunkAllocator PlayerCameraEntity                [VERB]: Allocating new object
 Chunk PlayerCameraEntity                         [VERB]: Creating new chunk.
-Chunk PlayerCameraEntity                         [VERB]: Allocated at: 0x0000020D3A232770
+Chunk PlayerCameraEntity                         [VERB]: Allocated at: 0x000002495B4F33F0
 Chunk PlayerCameraEntity                         [VERB]: Inserting new object.
-Entity PlayerCameraEntity                        [VERB]: Creating Component for: 0x0000020D3A232770
+Entity PlayerCameraEntity                        [VERB]: Creating Component for: 0x000002495B4F33F0
 Component TransformComponent2D                   [VERB]: Creating Component
-EventBus ApplicationExitEvent                    [INFO]: Adding event listener: 0x00007FF69E5E0BF8
+EventBus ApplicationExitEvent                    [INFO]: Adding event listener: 0x00007FF638A0BAC7
 ChunkAllocator TransformComponent2D              [VERB]: Allocating new object
 Chunk TransformComponent2D                       [VERB]: Creating new chunk.
-Chunk TransformComponent2D                       [VERB]: Allocated at: 0x0000020D3A2337B0
+Chunk TransformComponent2D                       [VERB]: Allocated at: 0x000002495B4F4670
 Chunk TransformComponent2D                       [VERB]: Inserting new object.
-ChunkAllocator TransformComponent2D              [VERB]: Object allocated at: 0x0000020D3A2337B0
-Entity PlayerCameraEntity                        [VERB]: Creating Component for: 0x0000020D3A232770
+ChunkAllocator TransformComponent2D              [VERB]: Object allocated at: 0x000002495B4F4670
+Entity PlayerCameraEntity                        [VERB]: Creating Component for: 0x000002495B4F33F0
 Component TransformComponent3D                   [VERB]: Creating Component
 ChunkAllocator TransformComponent3D              [VERB]: Allocating new object
 Chunk TransformComponent3D                       [VERB]: Inserting new object.
-ChunkAllocator TransformComponent3D              [VERB]: Object allocated at: 0x0000020D3A1BD218
-Entity PlayerCameraEntity                        [VERB]: Creating Component for: 0x0000020D3A232770
+ChunkAllocator TransformComponent3D              [VERB]: Object allocated at: 0x000002495B4E0020
+Entity PlayerCameraEntity                        [VERB]: Creating Component for: 0x000002495B4F33F0
 Component CameraComponent2D                      [VERB]: Creating Component
-EventBus ApplicationExitEvent                    [INFO]: Adding event listener: 0x00007FF69E5E4C71
+EventBus ApplicationExitEvent                    [INFO]: Adding event listener: 0x00007FF638A0FC21
 ChunkAllocator CameraComponent2D                 [VERB]: Allocating new object
 Chunk CameraComponent2D                          [VERB]: Creating new chunk.
-Chunk CameraComponent2D                          [VERB]: Allocated at: 0x0000020D3A2341F0
+Chunk CameraComponent2D                          [VERB]: Allocated at: 0x000002495B4F52F0
 Chunk CameraComponent2D                          [VERB]: Inserting new object.
-ChunkAllocator CameraComponent2D                 [VERB]: Object allocated at: 0x0000020D3A2341F0
-Entity PlayerCameraEntity                        [VERB]: Creating Component for: 0x0000020D3A232770
+ChunkAllocator CameraComponent2D                 [VERB]: Object allocated at: 0x000002495B4F52F0
+Entity PlayerCameraEntity                        [VERB]: Creating Component for: 0x000002495B4F33F0
 Component CameraComponent3D                      [VERB]: Creating Component
-EventBus ApplicationExitEvent                    [INFO]: Adding event listener: 0x00007FF69E5E435C
+EventBus ApplicationExitEvent                    [INFO]: Adding event listener: 0x00007FF638A0F2F8
 ChunkAllocator CameraComponent3D                 [VERB]: Allocating new object
 Chunk CameraComponent3D                          [VERB]: Creating new chunk.
-Chunk CameraComponent3D                          [VERB]: Allocated at: 0x0000020D3A234E30
+Chunk CameraComponent3D                          [VERB]: Allocated at: 0x000002495B4F6170
 Chunk CameraComponent3D                          [VERB]: Inserting new object.
-ChunkAllocator CameraComponent3D                 [VERB]: Object allocated at: 0x0000020D3A234E30
-Entity PlayerCameraEntity                        [VERB]: Creating Component for: 0x0000020D3A232770
+ChunkAllocator CameraComponent3D                 [VERB]: Object allocated at: 0x000002495B4F6170
+Entity PlayerCameraEntity                        [VERB]: Creating Component for: 0x000002495B4F33F0
 Component PlayerCameraComponent                  [VERB]: Creating Component
-EventBus ApplicationExitEvent                    [INFO]: Adding event listener: 0x00007FF69E5ED39E
+EventBus ApplicationExitEvent                    [INFO]: Adding event listener: 0x00007FF638A18574
 ChunkAllocator PlayerCameraComponent             [VERB]: Allocating new object
 Chunk PlayerCameraComponent                      [VERB]: Creating new chunk.
-Chunk PlayerCameraComponent                      [VERB]: Allocated at: 0x0000020D3A235EB0
+Chunk PlayerCameraComponent                      [VERB]: Allocated at: 0x000002495B4F71F0
 Chunk PlayerCameraComponent                      [VERB]: Inserting new object.
-ChunkAllocator PlayerCameraComponent             [VERB]: Object allocated at: 0x0000020D3A235EB0
-EventBus ApplicationExitEvent                    [INFO]: Adding event listener: 0x00007FF69E5F1A93
+ChunkAllocator PlayerCameraComponent             [VERB]: Object allocated at: 0x000002495B4F71F0
+EventBus ApplicationExitEvent                    [INFO]: Adding event listener: 0x00007FF638A1CCE6
 ChunkAllocator CameraFollowEntity                [VERB]: Allocating new object
 Chunk CameraFollowEntity                         [VERB]: Creating new chunk.
-Chunk CameraFollowEntity                         [VERB]: Allocated at: 0x0000020D3A238700
+Chunk CameraFollowEntity                         [VERB]: Allocated at: 0x000002495B4F7C70
 Chunk CameraFollowEntity                         [VERB]: Inserting new object.
-Entity CameraFollowEntity                        [VERB]: Creating Component for: 0x0000020D3A238700
+Entity CameraFollowEntity                        [VERB]: Creating Component for: 0x000002495B4F7C70
 Component TransformComponent3D                   [VERB]: Creating Component
 ChunkAllocator TransformComponent3D              [VERB]: Allocating new object
 Chunk TransformComponent3D                       [VERB]: Inserting new object.
-ChunkAllocator TransformComponent3D              [VERB]: Object allocated at: 0x0000020D3A1BD250
-Entity CameraFollowEntity                        [VERB]: Creating Component for: 0x0000020D3A238700
+ChunkAllocator TransformComponent3D              [VERB]: Object allocated at: 0x000002495B4E0058
+Entity CameraFollowEntity                        [VERB]: Creating Component for: 0x000002495B4F7C70
 Component DrawModelComponent3D                   [VERB]: Creating Component
 ChunkAllocator DrawModelComponent3D              [VERB]: Allocating new object
 Chunk DrawModelComponent3D                       [VERB]: Inserting new object.
-ChunkAllocator DrawModelComponent3D              [VERB]: Object allocated at: 0x0000020D3A1BF040
-Entity CameraFollowEntity                        [VERB]: Creating Component for: 0x0000020D3A238700
+ChunkAllocator DrawModelComponent3D              [VERB]: Object allocated at: 0x000002495B4E4040
+Entity CameraFollowEntity                        [VERB]: Creating Component for: 0x000002495B4F7C70
 Component CameraFollowTest                       [VERB]: Creating Component
-EventBus ApplicationExitEvent                    [INFO]: Adding event listener: 0x00007FF69E5E64AE
+EventBus ApplicationExitEvent                    [INFO]: Adding event listener: 0x00007FF638A114B3
 ChunkAllocator CameraFollowTest                  [VERB]: Allocating new object
 Chunk CameraFollowTest                           [VERB]: Creating new chunk.
-Chunk CameraFollowTest                           [VERB]: Allocated at: 0x0000020D3A23A150
+Chunk CameraFollowTest                           [VERB]: Allocated at: 0x000002495B4F88F0
 Chunk CameraFollowTest                           [VERB]: Inserting new object.
-ChunkAllocator CameraFollowTest                  [VERB]: Object allocated at: 0x0000020D3A23A150
-ChunkAllocator CameraFollowEntity                [VERB]: Object allocated at: 0x0000020D3A238700
-Entity CameraFollowEntity                        [VERB]: Entity created: 0x0000020D3A238700
-ChunkAllocator PlayerCameraEntity                [VERB]: Object allocated at: 0x0000020D3A232770
-Entity PlayerCameraEntity                        [VERB]: Entity created: 0x0000020D3A232770
+ChunkAllocator CameraFollowTest                  [VERB]: Object allocated at: 0x000002495B4F88F0
+ChunkAllocator CameraFollowEntity                [VERB]: Object allocated at: 0x000002495B4F7C70
+Entity CameraFollowEntity                        [VERB]: Entity created: 0x000002495B4F7C70
+ChunkAllocator PlayerCameraEntity                [VERB]: Object allocated at: 0x000002495B4F33F0
+Entity PlayerCameraEntity                        [VERB]: Entity created: 0x000002495B4F33F0
 Application                                      [INFO]: Application starting.
 Window                                           [INFO]: Showing window.
-EventBus ApplicationExitEvent                    [INFO]: Adding event listener: 0x00007FF69E5DFC76
-Window                                           [INFO]: Set window title to {0.000000, 40.000000, 0.000000}
-Window                                           [INFO]: Set window title to {0.000000, 40.000000, 0.000000}
-Window                                           [INFO]: Set window title to {0.000000, 40.000000, 0.000000}
-Window                                           [INFO]: Set window title to {0.000000, 40.000000, 0.000000}
-Window                                           [INFO]: Set window title to {0.000000, 40.000000, 0.000000}
-Window                                           [INFO]: Set window title to {0.000000, 40.000000, 0.000000}
-Window                                           [INFO]: Set window title to {0.000000, 40.000000, 0.000000}
-Window                                           [INFO]: Set window title to {0.000000, 40.000000, 0.000000}
-Window                                           [INFO]: Set window title to {0.000000, 40.000000, 0.000000}
-Window                                           [INFO]: Set window title to {0.000000, 40.000000, 0.000000}
-Window                                           [INFO]: Set window title to {0.000000, 40.000000, 0.000000}
-Window                                           [INFO]: Set window title to {0.000000, 40.000000, 0.000000}
-Window                                           [INFO]: Set window title to {0.000000, 40.000000, 0.000000}
-Window                                           [INFO]: Set window title to {0.000000, 40.000000, 0.000000}
-Window                                           [INFO]: Set window title to {0.000000, 40.000000, 0.000000}
-Window                                           [INFO]: Set window title to {0.000000, 40.000000, 0.000000}
-Window                                           [INFO]: Set window title to {0.000000, 40.000000, 0.000000}
-Window                                           [INFO]: Set window title to {0.000000, 40.000000, 0.000000}
-Window                                           [INFO]: Set window title to {0.000000, 40.000000, 0.000000}
-Window                                           [INFO]: Set window title to {0.000000, 40.000000, 0.000000}
-Window                                           [INFO]: Set window title to {0.000000, 40.000000, 0.000000}
-Window                                           [INFO]: Set window title to {0.000000, 40.000000, 0.000000}
-Window                                           [INFO]: Set window title to {0.000000, 40.000000, 0.000000}
-Window                                           [INFO]: Set window title to {0.000000, 40.000000, 0.000000}
-Window                                           [INFO]: Set window title to {0.000000, 40.000000, 0.000000}
-Window                                           [INFO]: Set window title to {0.000000, 40.000000, 0.000000}
-Window                                           [INFO]: Set window title to {0.000000, 40.000000, 0.000000}
-Window                                           [INFO]: Set window title to {0.000000, 40.000000, 0.000000}
-Window                                           [INFO]: Set window title to {0.000000, 40.000000, 0.000000}
-Window                                           [INFO]: Set window title to {0.000000, 40.000000, 0.000000}
-Window                                           [INFO]: Set window title to {0.000000, 40.000000, 0.000000}
-Window                                           [INFO]: Set window title to {0.000000, 40.000000, 0.000000}
-Window                                           [INFO]: Set window title to {0.000000, 40.000000, 0.000000}
-Window                                           [INFO]: Set window title to {0.000000, 40.000000, 0.000000}
-Window                                           [INFO]: Set window title to {0.000000, 40.000000, 0.000000}
-Window                                           [INFO]: Set window title to {0.000000, 40.000000, 0.000000}
-Window                                           [INFO]: Set window title to {0.000000, 40.000000, 0.000000}
-Window                                           [INFO]: Set window title to {0.000000, 40.000000, 0.000000}
-Window                                           [INFO]: Set window title to {0.000000, 40.000000, 0.000000}
-Window                                           [INFO]: Set window title to {0.000000, 40.000000, 0.000000}
-Window                                           [INFO]: Set window title to {0.000000, 40.000000, 0.000000}
-Window                                           [INFO]: Set window title to {0.000000, 40.000000, 0.000000}
-Window                                           [INFO]: Set window title to {0.000000, 40.000000, 0.000000}
-Window                                           [INFO]: Set window title to {0.000000, 40.000000, 0.000000}
-Window                                           [INFO]: Set window title to {0.000000, 40.000000, 0.000000}
-Window                                           [INFO]: Set window title to {0.000000, 40.000000, 0.000000}
-Window                                           [INFO]: Set window title to {0.000000, 40.000000, 0.000000}
-Window                                           [INFO]: Set window title to {0.000000, 40.000000, 0.000000}
-Window                                           [INFO]: Set window title to {0.000000, 40.000000, 0.000000}
-Window                                           [INFO]: Set window title to {0.000000, 40.000000, 0.000000}
-Window                                           [INFO]: Set window title to {0.000000, 40.000000, 0.000000}
-Window                                           [INFO]: Set window title to {0.000000, 40.000000, 0.000000}
-Window                                           [INFO]: Set window title to {0.000000, 40.000000, 0.000000}
+EventBus ApplicationExitEvent                    [INFO]: Adding event listener: 0x00007FF638A0ACA3
 Keyboard                                         [VERB]: Key pressed: 83
-Window                                           [INFO]: Set window title to {0.000000, 40.000000, 1.730965}
-Window                                           [INFO]: Set window title to {0.000000, 40.000000, 3.922016}
-Window                                           [INFO]: Set window title to {0.000000, 40.000000, 5.250656}
-Window                                           [INFO]: Set window title to {0.000000, 40.000000, 6.943989}
-Window                                           [INFO]: Set window title to {0.000000, 40.000000, 8.806571}
-Window                                           [INFO]: Set window title to {0.000000, 40.000000, 10.497270}
-Window                                           [INFO]: Set window title to {0.000000, 40.000000, 12.322411}
-Window                                           [INFO]: Set window title to {0.000000, 40.000000, 14.056203}
-Window                                           [INFO]: Set window title to {0.000000, 40.000000, 15.906144}
-Window                                           [INFO]: Set window title to {0.000000, 40.000000, 17.601313}
-Window                                           [INFO]: Set window title to {0.000000, 40.000000, 19.468758}
-Window                                           [INFO]: Set window title to {0.000000, 40.000000, 21.342806}
-Window                                           [INFO]: Set window title to {0.000000, 40.000000, 23.002613}
-Window                                           [INFO]: Set window title to {0.000000, 40.000000, 24.906261}
-Window                                           [INFO]: Set window title to {0.000000, 40.000000, 26.508480}
-Window                                           [INFO]: Set window title to {0.000000, 40.000000, 28.351233}
-Window                                           [INFO]: Set window title to {0.000000, 40.000000, 30.069738}
-Window                                           [INFO]: Set window title to {0.000000, 40.000000, 31.920897}
-Window                                           [INFO]: Set window title to {0.000000, 40.000000, 33.609791}
-Window                                           [INFO]: Set window title to {0.000000, 40.000000, 35.466099}
-Window                                           [INFO]: Set window title to {0.000000, 40.000000, 37.194111}
-Window                                           [INFO]: Set window title to {0.000000, 40.000000, 39.005245}
-Window                                           [INFO]: Set window title to {0.000000, 40.000000, 40.793575}
-Keyboard                                         [VERB]: Key pressed: 65
 Keyboard                                         [VERB]: Key released: 83
-Window                                           [INFO]: Set window title to {-1.750571, 40.000000, 40.793575}
-Window                                           [INFO]: Set window title to {-4.110645, 40.000000, 40.793575}
-Window                                           [INFO]: Set window title to {-5.280843, 40.000000, 40.793575}
-Window                                           [INFO]: Set window title to {-7.081120, 40.000000, 40.793575}
-Window                                           [INFO]: Set window title to {-8.791382, 40.000000, 40.793575}
-Window                                           [INFO]: Set window title to {-10.663916, 40.000000, 40.793575}
-Window                                           [INFO]: Set window title to {-12.408663, 40.000000, 40.793575}
-Window                                           [INFO]: Set window title to {-14.221943, 40.000000, 40.793575}
-Window                                           [INFO]: Set window title to {-15.976951, 40.000000, 40.793575}
-Window                                           [INFO]: Set window title to {-17.802614, 40.000000, 40.793575}
-Window                                           [INFO]: Set window title to {-19.480129, 40.000000, 40.793575}
-Window                                           [INFO]: Set window title to {-21.356630, 40.000000, 40.793575}
-Window                                           [INFO]: Set window title to {-23.027254, 40.000000, 40.793575}
-Keyboard                                         [VERB]: Key pressed: 87
-Window                                           [INFO]: Set window title to {-24.885729, 40.000000, 38.935101}
-Window                                           [INFO]: Set window title to {-26.957952, 40.000000, 36.862877}
-Window                                           [INFO]: Set window title to {-28.335178, 40.000000, 35.485649}
-Window                                           [INFO]: Set window title to {-30.161482, 40.000000, 33.659344}
-Window                                           [INFO]: Set window title to {-32.030910, 40.000000, 31.789915}
-Window                                           [INFO]: Set window title to {-33.782280, 40.000000, 30.038544}
-Window                                           [INFO]: Set window title to {-35.520573, 40.000000, 28.300251}
-Window                                           [INFO]: Set window title to {-37.238270, 40.000000, 26.582556}
-Window                                           [INFO]: Set window title to {-39.068222, 40.000000, 24.752604}
-Window                                           [INFO]: Set window title to {-40.857502, 40.000000, 22.963324}
-Keyboard                                         [VERB]: Key released: 65
-Window                                           [INFO]: Set window title to {-40.857502, 40.000000, 21.149393}
-Window                                           [INFO]: Set window title to {-40.857502, 40.000000, 19.233009}
-Window                                           [INFO]: Set window title to {-40.857502, 40.000000, 17.658621}
-Window                                           [INFO]: Set window title to {-40.857502, 40.000000, 15.900167}
-Window                                           [INFO]: Set window title to {-40.857502, 40.000000, 14.076509}
-Window                                           [INFO]: Set window title to {-40.857502, 40.000000, 12.358962}
-Window                                           [INFO]: Set window title to {-40.857502, 40.000000, 10.510856}
-Window                                           [INFO]: Set window title to {-40.857502, 40.000000, 8.817170}
-Window                                           [INFO]: Set window title to {-40.857502, 40.000000, 7.030205}
-Window                                           [INFO]: Set window title to {-40.857502, 40.000000, 5.205991}
-Window                                           [INFO]: Set window title to {-40.857502, 40.000000, 3.443698}
-Window                                           [INFO]: Set window title to {-40.857502, 40.000000, 1.696861}
-Window                                           [INFO]: Set window title to {-40.857502, 40.000000, -0.124761}
-Window                                           [INFO]: Set window title to {-40.857502, 40.000000, -1.943022}
-Window                                           [INFO]: Set window title to {-40.857502, 40.000000, -3.759779}
-Window                                           [INFO]: Set window title to {-40.857502, 40.000000, -5.501753}
-Window                                           [INFO]: Set window title to {-40.857502, 40.000000, -7.231204}
-Window                                           [INFO]: Set window title to {-40.857502, 40.000000, -9.019320}
-Window                                           [INFO]: Set window title to {-40.857502, 40.000000, -10.775939}
-Window                                           [INFO]: Set window title to {-40.857502, 40.000000, -12.562478}
-Keyboard                                         [VERB]: Key released: 87
-Window                                           [INFO]: Set window title to {-40.857502, 40.000000, -12.562478}
-Window                                           [INFO]: Set window title to {-40.857502, 40.000000, -12.562478}
-Window                                           [INFO]: Set window title to {-40.857502, 40.000000, -12.562478}
-Window                                           [INFO]: Set window title to {-40.857502, 40.000000, -12.562478}
-Window                                           [INFO]: Set window title to {-40.857502, 40.000000, -12.562478}
-Window                                           [INFO]: Set window title to {-40.857502, 40.000000, -12.562478}
-Window                                           [INFO]: Set window title to {-40.857502, 40.000000, -12.562478}
-Window                                           [INFO]: Set window title to {-40.857502, 40.000000, -12.562478}
-Window                                           [INFO]: Set window title to {-40.857502, 40.000000, -12.562478}
-Window                                           [INFO]: Set window title to {-40.857502, 40.000000, -12.562478}
-Window                                           [INFO]: Set window title to {-40.857502, 40.000000, -12.562478}
-Window                                           [INFO]: Set window title to {-40.857502, 40.000000, -12.562478}
-Window                                           [INFO]: Set window title to {-40.857502, 40.000000, -12.562478}
-Window                                           [INFO]: Set window title to {-40.857502, 40.000000, -12.562478}
-Window                                           [INFO]: Set window title to {-40.857502, 40.000000, -12.562478}
-Window                                           [INFO]: Set window title to {-40.857502, 40.000000, -12.562478}
-Window                                           [INFO]: Set window title to {-40.857502, 40.000000, -12.562478}
-Window                                           [INFO]: Set window title to {-40.857502, 40.000000, -12.562478}
-Window                                           [INFO]: Set window title to {-40.857502, 40.000000, -12.562478}
-Window                                           [INFO]: Set window title to {-40.857502, 40.000000, -12.562478}
-Window                                           [INFO]: Set window title to {-40.857502, 40.000000, -12.562478}
-Window                                           [INFO]: Set window title to {-40.857502, 40.000000, -12.562478}
-Window                                           [INFO]: Set window title to {-40.857502, 40.000000, -12.562478}
-Window                                           [INFO]: Set window title to {-40.857502, 40.000000, -12.562478}
-Window                                           [INFO]: Set window title to {-40.857502, 40.000000, -12.562478}
-Window                                           [INFO]: Set window title to {-40.857502, 40.000000, -12.562478}
-Window                                           [INFO]: Set window title to {-40.857502, 40.000000, -12.562478}
-Window                                           [INFO]: Set window title to {-40.857502, 40.000000, -12.562478}
-Window                                           [INFO]: Set window title to {-40.857502, 40.000000, -12.562478}
-Window                                           [INFO]: Set window title to {-40.857502, 40.000000, -12.562478}
-Window                                           [INFO]: Set window title to {-40.857502, 40.000000, -12.562478}
-Window                                           [INFO]: Set window title to {-40.857502, 40.000000, -12.562478}
-Window                                           [INFO]: Set window title to {-40.857502, 40.000000, -12.562478}
-Window                                           [INFO]: Set window title to {-40.857502, 40.000000, -12.562478}
-Window                                           [INFO]: Set window title to {-40.857502, 40.000000, -12.562478}
-Window                                           [INFO]: Set window title to {-40.857502, 40.000000, -12.562478}
-Window                                           [INFO]: Set window title to {-40.857502, 40.000000, -12.562478}
-Window                                           [INFO]: Set window title to {-40.857502, 40.000000, -12.562478}
-Window                                           [INFO]: Set window title to {-40.857502, 40.000000, -12.562478}
-Window                                           [INFO]: Set window title to {-40.857502, 40.000000, -12.562478}
-Window                                           [INFO]: Set window title to {-40.857502, 40.000000, -12.562478}
-Window                                           [INFO]: Set window title to {-40.857502, 40.000000, -12.562478}
-Window                                           [INFO]: Set window title to {-40.857502, 40.000000, -12.562478}
-Window                                           [INFO]: Set window title to {-40.857502, 40.000000, -12.562478}
-Window                                           [INFO]: Set window title to {-40.857502, 40.000000, -12.562478}
-Window                                           [INFO]: Set window title to {-40.857502, 40.000000, -12.562478}
-Window                                           [INFO]: Set window title to {-40.857502, 40.000000, -12.562478}
-Window                                           [INFO]: Set window title to {-40.857502, 40.000000, -12.562478}
-Window                                           [INFO]: Set window title to {-40.857502, 40.000000, -12.562478}
-Window                                           [INFO]: Set window title to {-40.857502, 40.000000, -12.562478}
-Window                                           [INFO]: Set window title to {-40.857502, 40.000000, -12.562478}
-Window                                           [INFO]: Set window title to {-40.857502, 40.000000, -12.562478}
-Window                                           [INFO]: Set window title to {-40.857502, 40.000000, -12.562478}
-Window                                           [INFO]: Set window title to {-40.857502, 40.000000, -12.562478}
-Window                                           [INFO]: Set window title to {-40.857502, 40.000000, -12.562478}
-Window                                           [INFO]: Set window title to {-40.857502, 40.000000, -12.562478}
-Window                                           [INFO]: Set window title to {-40.857502, 40.000000, -12.562478}
-Window                                           [INFO]: Set window title to {-40.857502, 40.000000, -12.562478}
-Window                                           [INFO]: Set window title to {-40.857502, 40.000000, -12.562478}
-Window                                           [INFO]: Set window title to {-40.857502, 40.000000, -12.562478}
-Window                                           [INFO]: Set window title to {-40.857502, 40.000000, -12.562478}
-Window                                           [INFO]: Set window title to {-40.857502, 40.000000, -12.562478}
-Window                                           [INFO]: Set window title to {-40.857502, 40.000000, -12.562478}
-Window                                           [INFO]: Set window title to {-40.857502, 40.000000, -12.562478}
-Window                                           [INFO]: Set window title to {-40.857502, 40.000000, -12.562478}
-Window                                           [INFO]: Set window title to {-40.857502, 40.000000, -12.562478}
-Window                                           [INFO]: Set window title to {-40.857502, 40.000000, -12.562478}
-Window                                           [INFO]: Set window title to {-40.857502, 40.000000, -12.562478}
-Keyboard                                         [VERB]: Key pressed: 68
-Keyboard                                         [VERB]: Key pressed: 83
-Window                                           [INFO]: Set window title to {-39.003666, 40.000000, -10.708643}
-Window                                           [INFO]: Set window title to {-36.773682, 40.000000, -8.478659}
-Window                                           [INFO]: Set window title to {-35.488678, 40.000000, -7.193656}
-Window                                           [INFO]: Set window title to {-33.667355, 40.000000, -5.372334}
-Window                                           [INFO]: Set window title to {-31.945477, 40.000000, -3.650456}
-Window                                           [INFO]: Set window title to {-30.289541, 40.000000, -1.994520}
-Window                                           [INFO]: Set window title to {-28.480804, 40.000000, -0.185784}
-Window                                           [INFO]: Set window title to {-26.702021, 40.000000, 1.592999}
-Window                                           [INFO]: Set window title to {-24.861679, 40.000000, 3.433341}
-Window                                           [INFO]: Set window title to {-23.132185, 40.000000, 5.162834}
-Window                                           [INFO]: Set window title to {-21.358318, 40.000000, 6.936700}
-Keyboard                                         [VERB]: Key released: 83
-Window                                           [INFO]: Set window title to {-19.557465, 40.000000, 6.936700}
-Window                                           [INFO]: Set window title to {-17.550905, 40.000000, 6.936700}
-Window                                           [INFO]: Set window title to {-16.043919, 40.000000, 6.936700}
-Window                                           [INFO]: Set window title to {-14.206926, 40.000000, 6.936700}
-Window                                           [INFO]: Set window title to {-12.427022, 40.000000, 6.936700}
-Window                                           [INFO]: Set window title to {-10.708120, 40.000000, 6.936700}
-Window                                           [INFO]: Set window title to {-8.989870, 40.000000, 6.936700}
-Window                                           [INFO]: Set window title to {-7.199939, 40.000000, 6.936700}
-Window                                           [INFO]: Set window title to {-5.365785, 40.000000, 6.936700}
-Window                                           [INFO]: Set window title to {-3.512856, 40.000000, 6.936700}
-Window                                           [INFO]: Set window title to {-1.761902, 40.000000, 6.936700}
-Window                                           [INFO]: Set window title to {-0.096910, 40.000000, 6.936700}
-Window                                           [INFO]: Set window title to {1.742898, 40.000000, 6.936700}
-Window                                           [INFO]: Set window title to {3.482696, 40.000000, 6.936700}
-Window                                           [INFO]: Set window title to {5.324552, 40.000000, 6.936700}
-Window                                           [INFO]: Set window title to {7.074173, 40.000000, 6.936700}
-Window                                           [INFO]: Set window title to {9.078631, 40.000000, 6.936700}
-Window                                           [INFO]: Set window title to {10.607698, 40.000000, 6.936700}
-Window                                           [INFO]: Set window title to {12.525725, 40.000000, 6.936700}
-Window                                           [INFO]: Set window title to {14.165714, 40.000000, 6.936700}
-Window                                           [INFO]: Set window title to {15.961864, 40.000000, 6.936700}
-Window                                           [INFO]: Set window title to {17.677235, 40.000000, 6.936700}
-Window                                           [INFO]: Set window title to {19.555080, 40.000000, 6.936700}
-Window                                           [INFO]: Set window title to {21.325417, 40.000000, 6.936700}
-Window                                           [INFO]: Set window title to {23.122057, 40.000000, 6.936700}
-Window                                           [INFO]: Set window title to {24.927731, 40.000000, 6.936700}
-Window                                           [INFO]: Set window title to {26.689747, 40.000000, 6.936700}
-Window                                           [INFO]: Set window title to {28.455145, 40.000000, 6.936700}
-Window                                           [INFO]: Set window title to {30.226173, 40.000000, 6.936700}
-Window                                           [INFO]: Set window title to {32.014835, 40.000000, 6.936700}
-Window                                           [INFO]: Set window title to {33.679050, 40.000000, 6.936700}
-Keyboard                                         [VERB]: Key pressed: 87
-Window                                           [INFO]: Set window title to {35.539883, 40.000000, 5.075869}
-Window                                           [INFO]: Set window title to {37.501461, 40.000000, 3.114290}
-Window                                           [INFO]: Set window title to {39.088383, 40.000000, 1.527367}
-Window                                           [INFO]: Set window title to {40.794827, 40.000000, -0.179076}
-Window                                           [INFO]: Set window title to {42.694775, 40.000000, -2.079022}
-Keyboard                                         [VERB]: Key released: 68
-Window                                           [INFO]: Set window title to {42.694775, 40.000000, -3.808164}
-Window                                           [INFO]: Set window title to {42.694775, 40.000000, -5.839001}
-Window                                           [INFO]: Set window title to {42.694775, 40.000000, -7.384505}
-Keyboard                                         [VERB]: Key pressed: 65
-Window                                           [INFO]: Set window title to {40.923874, 40.000000, -9.155406}
-Window                                           [INFO]: Set window title to {38.846691, 40.000000, -11.232590}
-Window                                           [INFO]: Set window title to {37.426659, 40.000000, -12.652622}
-Window                                           [INFO]: Set window title to {35.634914, 40.000000, -14.444366}
-Keyboard                                         [VERB]: Key released: 87
-Window                                           [INFO]: Set window title to {33.841026, 40.000000, -14.444366}
-Window                                           [INFO]: Set window title to {31.897442, 40.000000, -14.444366}
-Window                                           [INFO]: Set window title to {30.208376, 40.000000, -14.444366}
-Window                                           [INFO]: Set window title to {28.589186, 40.000000, -14.444366}
-Window                                           [INFO]: Set window title to {26.709677, 40.000000, -14.444366}
-Window                                           [INFO]: Set window title to {24.921474, 40.000000, -14.444366}
-Window                                           [INFO]: Set window title to {23.103010, 40.000000, -14.444366}
-Window                                           [INFO]: Set window title to {21.467020, 40.000000, -14.444366}
-Window                                           [INFO]: Set window title to {19.687212, 40.000000, -14.444366}
-Window                                           [INFO]: Set window title to {17.857441, 40.000000, -14.444366}
-Window                                           [INFO]: Set window title to {16.044407, 40.000000, -14.444366}
-Window                                           [INFO]: Set window title to {14.291298, 40.000000, -14.444366}
-Window                                           [INFO]: Set window title to {12.486135, 40.000000, -14.444366}
-Window                                           [INFO]: Set window title to {10.692333, 40.000000, -14.444366}
-Window                                           [INFO]: Set window title to {9.034808, 40.000000, -14.444366}
-Window                                           [INFO]: Set window title to {7.254104, 40.000000, -14.444366}
-Window                                           [INFO]: Set window title to {5.400952, 40.000000, -14.444366}
-Window                                           [INFO]: Set window title to {3.617166, 40.000000, -14.444366}
-Keyboard                                         [VERB]: Key pressed: 83
-Window                                           [INFO]: Set window title to {1.832899, 40.000000, -12.660100}
-Window                                           [INFO]: Set window title to {-0.218258, 40.000000, -10.608943}
-Window                                           [INFO]: Set window title to {-1.742557, 40.000000, -9.084644}
-Window                                           [INFO]: Set window title to {-3.541575, 40.000000, -7.285626}
-Window                                           [INFO]: Set window title to {-5.318706, 40.000000, -5.508495}
-Window                                           [INFO]: Set window title to {-6.995751, 40.000000, -3.831450}
-Window                                           [INFO]: Set window title to {-8.822653, 40.000000, -2.004549}
-Window                                           [INFO]: Set window title to {-10.586311, 40.000000, -0.240890}
-Window                                           [INFO]: Set window title to {-12.394951, 40.000000, 1.567750}
-Window                                           [INFO]: Set window title to {-14.186204, 40.000000, 3.359003}
-Window                                           [INFO]: Set window title to {-15.938609, 40.000000, 5.111409}
-Window                                           [INFO]: Set window title to {-17.629158, 40.000000, 6.801958}
-Window                                           [INFO]: Set window title to {-19.501787, 40.000000, 8.674587}
-Window                                           [INFO]: Set window title to {-21.244091, 40.000000, 10.416891}
-Window                                           [INFO]: Set window title to {-22.982395, 40.000000, 12.155195}
-Window                                           [INFO]: Set window title to {-24.904966, 40.000000, 14.077766}
-Window                                           [INFO]: Set window title to {-26.704603, 40.000000, 15.877403}
-Window                                           [INFO]: Set window title to {-28.480370, 40.000000, 17.653168}
-Window                                           [INFO]: Set window title to {-30.174332, 40.000000, 19.347130}
-Window                                           [INFO]: Set window title to {-31.893318, 40.000000, 21.066116}
-Window                                           [INFO]: Set window title to {-33.672913, 40.000000, 22.845711}
-Window                                           [INFO]: Set window title to {-35.500751, 40.000000, 24.673552}
-Window                                           [INFO]: Set window title to {-37.246853, 40.000000, 26.419653}
-Window                                           [INFO]: Set window title to {-39.023964, 40.000000, 28.196762}
-Keyboard                                         [VERB]: Key released: 65
-Window                                           [INFO]: Set window title to {-39.023964, 40.000000, 30.006948}
-Window                                           [INFO]: Set window title to {-39.023964, 40.000000, 31.825434}
-Window                                           [INFO]: Set window title to {-39.023964, 40.000000, 33.528847}
-Window                                           [INFO]: Set window title to {-39.023964, 40.000000, 35.338413}
-Window                                           [INFO]: Set window title to {-39.023964, 40.000000, 37.110401}
-Window                                           [INFO]: Set window title to {-39.023964, 40.000000, 38.832096}
-Window                                           [INFO]: Set window title to {-39.023964, 40.000000, 40.715168}
-Window                                           [INFO]: Set window title to {-39.023964, 40.000000, 42.399029}
-Window                                           [INFO]: Set window title to {-39.023964, 40.000000, 44.271744}
-Keyboard                                         [VERB]: Key pressed: 68
-Window                                           [INFO]: Set window title to {-37.364380, 40.000000, 45.931328}
-Window                                           [INFO]: Set window title to {-35.266140, 40.000000, 48.029568}
-Window                                           [INFO]: Set window title to {-33.783226, 40.000000, 49.512482}
-Window                                           [INFO]: Set window title to {-32.055172, 40.000000, 51.240536}
-Window                                           [INFO]: Set window title to {-30.254650, 40.000000, 53.041058}
-Window                                           [INFO]: Set window title to {-28.492794, 40.000000, 54.802914}
-Window                                           [INFO]: Set window title to {-26.669445, 40.000000, 56.626263}
-Window                                           [INFO]: Set window title to {-24.842714, 40.000000, 58.452991}
-Window                                           [INFO]: Set window title to {-23.036016, 40.000000, 60.259689}
-Window                                           [INFO]: Set window title to {-21.376337, 40.000000, 61.919369}
-Window                                           [INFO]: Set window title to {-19.577713, 40.000000, 63.717995}
-Window                                           [INFO]: Set window title to {-17.695164, 40.000000, 65.600540}
-Keyboard                                         [VERB]: Key released: 68
-Window                                           [INFO]: Set window title to {-17.695164, 40.000000, 67.253052}
-Window                                           [INFO]: Set window title to {-17.695164, 40.000000, 69.440895}
-Window                                           [INFO]: Set window title to {-17.695164, 40.000000, 70.836403}
-Keyboard                                         [VERB]: Key released: 83
-Window                                           [INFO]: Set window title to {-17.695164, 40.000000, 70.836403}
-Window                                           [INFO]: Set window title to {-17.695164, 40.000000, 70.836403}
-Window                                           [INFO]: Set window title to {-17.695164, 40.000000, 70.836403}
-Window                                           [INFO]: Set window title to {-17.695164, 40.000000, 70.836403}
-Window                                           [INFO]: Set window title to {-17.695164, 40.000000, 70.836403}
-Window                                           [INFO]: Set window title to {-17.695164, 40.000000, 70.836403}
-Window                                           [INFO]: Set window title to {-17.695164, 40.000000, 70.836403}
-Window                                           [INFO]: Set window title to {-17.695164, 40.000000, 70.836403}
-Window                                           [INFO]: Set window title to {-17.695164, 40.000000, 70.836403}
-Window                                           [INFO]: Set window title to {-17.695164, 40.000000, 70.836403}
-Window                                           [INFO]: Set window title to {-17.695164, 40.000000, 70.836403}
-Window                                           [INFO]: Set window title to {-17.695164, 40.000000, 70.836403}
-Window                                           [INFO]: Set window title to {-17.695164, 40.000000, 70.836403}
-Window                                           [INFO]: Set window title to {-17.695164, 40.000000, 70.836403}
-Window                                           [INFO]: Set window title to {-17.695164, 40.000000, 70.836403}
-Window                                           [INFO]: Set window title to {-17.695164, 40.000000, 70.836403}
-Window                                           [INFO]: Set window title to {-17.695164, 40.000000, 70.836403}
-Window                                           [INFO]: Set window title to {-17.695164, 40.000000, 70.836403}
-Window                                           [INFO]: Set window title to {-17.695164, 40.000000, 70.836403}
-Window                                           [INFO]: Set window title to {-17.695164, 40.000000, 70.836403}
-Window                                           [INFO]: Set window title to {-17.695164, 40.000000, 70.836403}
-Window                                           [INFO]: Set window title to {-17.695164, 40.000000, 70.836403}
-Window                                           [INFO]: Set window title to {-17.695164, 40.000000, 70.836403}
-Window                                           [INFO]: Set window title to {-17.695164, 40.000000, 70.836403}
-Window                                           [INFO]: Set window title to {-17.695164, 40.000000, 70.836403}
-Window                                           [INFO]: Set window title to {-17.695164, 40.000000, 70.836403}
-Window                                           [INFO]: Set window title to {-17.695164, 40.000000, 70.836403}
-Window                                           [INFO]: Set window title to {-17.695164, 40.000000, 70.836403}
-Window                                           [INFO]: Set window title to {-17.695164, 40.000000, 70.836403}
-Window                                           [INFO]: Set window title to {-17.695164, 40.000000, 70.836403}
-Window                                           [INFO]: Set window title to {-17.695164, 40.000000, 70.836403}
-Window                                           [INFO]: Set window title to {-17.695164, 40.000000, 70.836403}
-Window                                           [INFO]: Set window title to {-17.695164, 40.000000, 70.836403}
-Window                                           [INFO]: Set window title to {-17.695164, 40.000000, 70.836403}
-Window                                           [INFO]: Set window title to {-17.695164, 40.000000, 70.836403}
-Window                                           [INFO]: Set window title to {-17.695164, 40.000000, 70.836403}
-Window                                           [INFO]: Set window title to {-17.695164, 40.000000, 70.836403}
-Window                                           [INFO]: Set window title to {-17.695164, 40.000000, 70.836403}
-Window                                           [INFO]: Set window title to {-17.695164, 40.000000, 70.836403}
-Window                                           [INFO]: Set window title to {-17.695164, 40.000000, 70.836403}
-Window                                           [INFO]: Set window title to {-17.695164, 40.000000, 70.836403}
-Window                                           [INFO]: Set window title to {-17.695164, 40.000000, 70.836403}
-Window                                           [INFO]: Set window title to {-17.695164, 40.000000, 70.836403}
-Window                                           [INFO]: Set window title to {-17.695164, 40.000000, 70.836403}
-Window                                           [INFO]: Set window title to {-17.695164, 40.000000, 70.836403}
-Window                                           [INFO]: Set window title to {-17.695164, 40.000000, 70.836403}
-Window                                           [INFO]: Set window title to {-17.695164, 40.000000, 70.836403}
-Window                                           [INFO]: Set window title to {-17.695164, 40.000000, 70.836403}
-Window                                           [INFO]: Set window title to {-17.695164, 40.000000, 70.836403}
-Window                                           [INFO]: Set window title to {-17.695164, 40.000000, 70.836403}
-Window                                           [INFO]: Set window title to {-17.695164, 40.000000, 70.836403}
-Window                                           [INFO]: Set window title to {-17.695164, 40.000000, 70.836403}
-Window                                           [INFO]: Set window title to {-17.695164, 40.000000, 70.836403}
-Window                                           [INFO]: Set window title to {-17.695164, 40.000000, 70.836403}
-Window                                           [INFO]: Set window title to {-17.695164, 40.000000, 70.836403}
-Window                                           [INFO]: Set window title to {-17.695164, 40.000000, 70.836403}
-Window                                           [INFO]: Set window title to {-17.695164, 40.000000, 70.836403}
-Window                                           [INFO]: Set window title to {-17.695164, 40.000000, 70.836403}
-Window                                           [INFO]: Set window title to {-17.695164, 40.000000, 70.836403}
-Window                                           [INFO]: Set window title to {-17.695164, 40.000000, 70.836403}
-Window                                           [INFO]: Set window title to {-17.695164, 40.000000, 70.836403}
-Window                                           [INFO]: Set window title to {-17.695164, 40.000000, 70.836403}
-Window                                           [INFO]: Set window title to {-17.695164, 40.000000, 70.836403}
-Window                                           [INFO]: Set window title to {-17.695164, 40.000000, 70.836403}
-Window                                           [INFO]: Set window title to {-17.695164, 40.000000, 70.836403}
-Window                                           [INFO]: Set window title to {-17.695164, 40.000000, 70.836403}
-Window                                           [INFO]: Set window title to {-17.695164, 40.000000, 70.836403}
-Window                                           [INFO]: Set window title to {-17.695164, 40.000000, 70.836403}
-Window                                           [INFO]: Set window title to {-17.695164, 40.000000, 70.836403}
-Window                                           [INFO]: Set window title to {-17.695164, 40.000000, 70.836403}
-Window                                           [INFO]: Set window title to {-17.695164, 40.000000, 70.836403}
-Window                                           [INFO]: Set window title to {-17.695164, 40.000000, 70.836403}
-Window                                           [INFO]: Set window title to {-17.695164, 40.000000, 70.836403}
-Window                                           [INFO]: Set window title to {-17.695164, 40.000000, 70.836403}
-Window                                           [INFO]: Set window title to {-17.695164, 40.000000, 70.836403}
-Window                                           [INFO]: Set window title to {-17.695164, 40.000000, 70.836403}
-Window                                           [INFO]: Set window title to {-17.695164, 40.000000, 70.836403}
-Window                                           [INFO]: Set window title to {-17.695164, 40.000000, 70.836403}
-Window                                           [INFO]: Set window title to {-17.695164, 40.000000, 70.836403}
-Window                                           [INFO]: Set window title to {-17.695164, 40.000000, 70.836403}
-Window                                           [INFO]: Set window title to {-17.695164, 40.000000, 70.836403}
-Window                                           [INFO]: Set window title to {-17.695164, 40.000000, 70.836403}
-Window                                           [INFO]: Set window title to {-17.695164, 40.000000, 70.836403}
-Window                                           [INFO]: Set window title to {-17.695164, 40.000000, 70.836403}
-Window                                           [INFO]: Set window title to {-17.695164, 40.000000, 70.836403}
-Window                                           [INFO]: Set window title to {-17.695164, 40.000000, 70.836403}
-Window                                           [INFO]: Set window title to {-17.695164, 40.000000, 70.836403}
-Window                                           [INFO]: Set window title to {-17.695164, 40.000000, 70.836403}
-Window                                           [INFO]: Set window title to {-17.695164, 40.000000, 70.836403}
-Window                                           [INFO]: Set window title to {-17.695164, 40.000000, 70.836403}
-Window                                           [INFO]: Set window title to {-17.695164, 40.000000, 70.836403}
-Window                                           [INFO]: Set window title to {-17.695164, 40.000000, 70.836403}
-Window                                           [INFO]: Set window title to {-17.695164, 40.000000, 70.836403}
-Window                                           [INFO]: Set window title to {-17.695164, 40.000000, 70.836403}
-Window                                           [INFO]: Set window title to {-17.695164, 40.000000, 70.836403}
-Window                                           [INFO]: Set window title to {-17.695164, 40.000000, 70.836403}
-Window                                           [INFO]: Set window title to {-17.695164, 40.000000, 70.836403}
-Window                                           [INFO]: Set window title to {-17.695164, 40.000000, 70.836403}
-Window                                           [INFO]: Set window title to {-17.695164, 40.000000, 70.836403}
-Window                                           [INFO]: Set window title to {-17.695164, 40.000000, 70.836403}
-Window                                           [INFO]: Set window title to {-17.695164, 40.000000, 70.836403}
-Window                                           [INFO]: Set window title to {-17.695164, 40.000000, 70.836403}
-Window                                           [INFO]: Set window title to {-17.695164, 40.000000, 70.836403}
-Window                                           [INFO]: Set window title to {-17.695164, 40.000000, 70.836403}
+Selectable                                       [INFO]: Hovered, flag is now: 0
+Selectable                                       [INFO]: UnHovered, flag is now: 2
+Selectable                                       [INFO]: Hovered, flag is now: 0
+Selectable                                       [INFO]: UnHovered, flag is now: 2
+Selectable                                       [INFO]: Hovered, flag is now: 0
+Selectable                                       [INFO]: UnHovered, flag is now: 2
 Application                                      [INFO]: Application exiting.
-Window                                           [INFO]: Set window title to {-17.695164, 40.000000, 70.836403}
 Window                                           [INFO]: Hiding window.
 Chunk TransformComponent3D                       [VERB]: Deleting chunk.
 Chunk DirectionLightComponent3D                  [VERB]: Deleting chunk.
 Chunk DrawModelComponent3D                       [VERB]: Deleting chunk.
+Chunk SelectableComponent                        [VERB]: Deleting chunk.
+Chunk FollowComponent                            [VERB]: Deleting chunk.
 Chunk PlayerCameraEntity                         [VERB]: Deleting chunk.
 Chunk TransformComponent2D                       [VERB]: Deleting chunk.
 Chunk CameraComponent2D                          [VERB]: Deleting chunk.
@@ -645,24 +254,25 @@ Chunk CameraComponent3D                          [VERB]: Deleting chunk.
 Chunk PlayerCameraComponent                      [VERB]: Deleting chunk.
 Chunk CameraFollowEntity                         [VERB]: Deleting chunk.
 Chunk CameraFollowTest                           [VERB]: Deleting chunk.
-EventBus UpdateEvent                             [INFO]: Removing event listener: 0x00007FF69E7C3BA0
-EventBus WindowFramebufferEvent                  [INFO]: Removing event listener: 0x00007FF69E6CEA20
-EventBus UpdateEvent                             [INFO]: Removing event listener: 0x00007FF69E6CEB20
-EventBus WindowFramebufferEvent                  [INFO]: Removing event listener: 0x00007FF69E6B0D70
+EventBus UpdateEvent                             [INFO]: Removing event listener: 0x00007FF638C09D30
+EventBus LateUpdateEvent                         [INFO]: Removing event listener: 0x00007FF638A91840
+EventBus WindowFramebufferEvent                  [INFO]: Removing event listener: 0x00007FF638B054B0
+EventBus UpdateEvent                             [INFO]: Removing event listener: 0x00007FF638B055B0
+EventBus WindowFramebufferEvent                  [INFO]: Removing event listener: 0x00007FF638AE4B80
 Renderer                                         [INFO]: Destroying.
-EventBus PostUpdateEvent                         [INFO]: Adding event listener: 0x00007FF69E5EF5A9
+EventBus PostUpdateEvent                         [INFO]: Adding event listener: 0x00007FF638A1A7C0
 Mouse                                            [INFO]: Destroying.
-EventBus CursorPosEvent                          [INFO]: Removing event listener: 0x00007FF69E6F24A0
-EventBus MouseButtonEvent                        [INFO]: Removing event listener: 0x00007FF69E6F2180
-EventBus ScrollEvent                             [INFO]: Removing event listener: 0x00007FF69E6F2630
+EventBus CursorPosEvent                          [INFO]: Removing event listener: 0x00007FF638B2B440
+EventBus MouseButtonEvent                        [INFO]: Removing event listener: 0x00007FF638B2B110
+EventBus ScrollEvent                             [INFO]: Removing event listener: 0x00007FF638B2B5E0
 Keyboard                                         [INFO]: Destroying.
-EventBus CharEvent                               [INFO]: Removing event listener: 0x00007FF69E6E4EF0
-EventBus KeyEvent                                [INFO]: Removing event listener: 0x00007FF69E6E4F60
-EventBus PostUpdateEvent                         [INFO]: Removing event listener: 0x00007FF69E6E4560
+EventBus CharEvent                               [INFO]: Removing event listener: 0x00007FF638B1C300
+EventBus KeyEvent                                [INFO]: Removing event listener: 0x00007FF638B1C370
+EventBus PostUpdateEvent                         [INFO]: Removing event listener: 0x00007FF638B1B8F0
 Window                                           [INFO]: Destroying.
-EventBus ApplicationStartEvent                   [INFO]: Removing event listener: 0x00007FF69E5DF861
-EventBus ApplicationExitEvent                    [INFO]: Removing event listener: 0x00007FF69E5EACCF
-EventBus PreUpdateEvent                          [INFO]: Removing event listener: 0x00007FF69E5F1CF5
-EventBus ApplicationStartEvent                   [INFO]: Removing event listener: 0x00007FF69E5EBB7F
-EventBus PreUpdateEvent                          [INFO]: Removing event listener: 0x00007FF69E5E31BE
+EventBus ApplicationStartEvent                   [INFO]: Removing event listener: 0x00007FF638A0A88E
+EventBus ApplicationExitEvent                    [INFO]: Removing event listener: 0x00007FF638A15E14
+EventBus PreUpdateEvent                          [INFO]: Removing event listener: 0x00007FF638A1CF48
+EventBus ApplicationStartEvent                   [INFO]: Removing event listener: 0x00007FF638A16D00
+EventBus PreUpdateEvent                          [INFO]: Removing event listener: 0x00007FF638A0E114
 Valkyrie Engine                                  [INFO]: Destroyed Successfully.

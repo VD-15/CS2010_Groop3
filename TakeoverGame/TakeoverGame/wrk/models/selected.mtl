@@ -7,6 +7,6 @@ Ka 1.0 1.0 1.0
 Kd 1.0 1.0 1.0
 Ks 0.0 0.0 0.0
 map_Kd select_outline_dif
-map_Tr select_outline_apl
+map_Tr select_outline_alp
 d 1
 illum 2
