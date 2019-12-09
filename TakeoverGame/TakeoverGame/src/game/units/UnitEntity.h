@@ -47,7 +47,7 @@ namespace tkv
 
 	struct UnitEntity : public Entity<UnitEntity>
 	{
-		UnitEntity(Team t, Vector2 location, ProtoUnit p);
+		UnitEntity(Team t, Vector3 location, ProtoUnit p);
 		void OnDelete() override;
 
 		TransformComponent3D* transform;

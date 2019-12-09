@@ -5,7 +5,7 @@
 #include "../components/TeamComponent.h"
 #include "../components/Selectable.h"
 #include "../map/Capture.h"
-#include "../components/ResourceFabricatorComponent.h"
+#include "../components/FabricatorComponent.h"
 
 #include "../../engine/core/GameEntity.hpp"
 #include "../../engine/components/TransformComponent.h"

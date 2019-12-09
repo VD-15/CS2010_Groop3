@@ -1,7 +1,8 @@
 #pragma once
-
+0
 #include "../Takover.h"
 #include "../components/TeamComponent.h"
+#include "../components/UnitComponent.h"
 
 #include "../../engine/core/GameEntity.hpp"
 #include "../../engine/components/TransformComponent.h"
@@ -17,16 +18,20 @@ namespace tkv {
 
     struct UnitFabricatorComponent : public Component<UnitFabricatorComponent>
     {
-        UnitFabricatorComponent(IEntity* e, Team t);
+        UnitFabricatorComponent(IEntity* e, TransformComponent3D transform, Team t, ProtoUnit* unit = meleeUnit);
+        ChangeUnit(ProtoUnit* unit);
 
+        ProtoUnit* unit;
+        TransformComponent3D transform;
         TeamComponent* team;
+        double cooldown;
     }
-
 
     struct ResourceFabricatorComponent : public Component<ResourceFabricatorComponent>
     {
         ResourceFabricatorComponent(IEntity* e, Team t);
 
         TeamComponent* team;
+        double cooldown;
     }
 }
