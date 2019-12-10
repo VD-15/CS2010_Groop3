@@ -5,6 +5,7 @@
 #include "../components/TeamComponent.h"
 #include "../components/Selectable.h"
 #include "../map/Capture.h"
+#include "../components/FabricatorComponent.h"
 
 #include "../../engine/core/GameEntity.hpp"
 #include "../../engine/components/TransformComponent.h"
@@ -19,7 +20,6 @@ namespace tkv
 	{
 		BuildingEntity();
 		void OnDelete() override;
-
 		TransformComponent2D* transform;
 		DrawTextureComponent2D* draw;
 		TeamComponent* team;
@@ -34,6 +34,10 @@ namespace tkv
 
 		TransformComponent3D* transform;
 		DrawModelComponent3D* draw;
+		TeamComponent* team;
+		CaptureComponent* capture;
+		SelectableComponent* select;
+		UnitFabricatorComponent* fabricate;
 	};
 
 	struct QuarryEntity : public HeapAllocateEntity, Entity<QuarryEntity>
@@ -43,5 +47,9 @@ namespace tkv
 
 		TransformComponent3D* transform;
 		DrawModelComponent3D* draw;
+		TeamComponent* team;
+		CaptureComponent* capture;
+		SelectableComponent* select;
+		ResourceFabricatorComponent* fabricate;
 	};
 }

@@ -11,13 +11,10 @@ BuildingEntity::BuildingEntity()
 	this->team = CreateComponent<TeamComponent>();
 	this->capture = CreateComponent<CaptureComponent>(transform, team);
 	this->select = CreateComponent<SelectableComponent>(transform, team);
-
 	this->draw->depth = tkv::DEPTH_BUILDING;
 	//this->draw->flags = VLK_TRANSLUCENT_BIT;
-
 	this->select->hoverRadius = 64.0f;
 }
-
 void BuildingEntity::OnDelete()
 {
 	this->select->Delete();
@@ -31,7 +28,10 @@ FactoryEntity::FactoryEntity(const Vector3& location)
 {
 	this->transform = CreateComponent<TransformComponent3D>();
 	this->draw = CreateComponent<DrawModelComponent3D>(this->transform, ContentManager<Model>::Get().GetContent("factory"));
-
+	this->team = CreateComponent<TeamComponent>();
+	this->capture = CreateComponent<CaptureComponent>(transform, team);
+	this->select = CreateComponent<SelectableComponent>(transform, team);
+	this->fabricate = CreateComponent<UnitFabricatorComponent>(t);
 	this->transform->location = location;
 }
 
@@ -46,6 +46,11 @@ QuarryEntity::QuarryEntity(const Vector3& location)
 	this->transform = CreateComponent<TransformComponent3D>();
 	this->draw = CreateComponent<DrawModelComponent3D>(this->transform, ContentManager<Model>::Get().GetContent("quarry"));
 
+	this->team = CreateComponent<TeamComponent>();
+	this->capture = CreateComponent<CaptureComponent>(transform, team);
+	this->select = CreateComponent<SelectableComponent>(transform, team);
+	this->fabricate = CreateComponent<ResourceFabricatorComponent>();
+
 	this->transform->location = location;
 	this->transform->scale = Vector3(2.0f);
 }
@@ -54,4 +59,5 @@ void QuarryEntity::OnDelete()
 {
 	this->draw->Delete();
 	this->transform->Delete();
+
 }

@@ -1,5 +1,9 @@
-#include UnitEntity.h
+#include "UnitEntity.h"
 
+#include "../../engine/core/ContentManager.hpp"
+#include "../../engine/components/LightComponent.h"
+
+#include "../../engine/core/VLKTime.h"
 using namespace tkv;
 
 void OnUpdate(UpdateEvent& ev)
@@ -29,7 +33,7 @@ ProtoUnit::ProtoUnit(double health, double damage, double range, double atkspd,
 	this->isCommander = isCommander;
 }
 
-UnitEntity::UnitEntity(Team t, Vector2 location, ProtoUnit p)
+UnitEntity::UnitEntity(Team t, Vector3 location, ProtoUnit p)
 {
 	this->transform = CreateComponent<TransformComponent3D>();
 	this->draw = CreateComponent<DrawModelComponent3D>(transform, ContentManager<Texture2D>::Get().GetContent("unit"));

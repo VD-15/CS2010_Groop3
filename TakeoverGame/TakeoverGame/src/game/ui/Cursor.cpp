@@ -91,6 +91,20 @@ void CursorSystem::Destroy()
 	EventBus<UpdateEvent>::Get().RemoveEventListener(OnUpdate);
 }
 
+InventoryComponent::InventoryComponent(IEntity* e, const TeamComponent* team) :
+	Component<InventoryComponent>(e),
+	team(team)
+{
+
+}
+void InventoryComponent::AddResource(ResourceID r, Double amount) {
+	this->resources[r] += amount;
+
+}
+Double InventoryComponent::GetResource(ResourceID r) {
+	return this->resources[r];
+}
+
 MouseSelectEvent::MouseSelectEvent(Boolean isStart, const CursorComponent* const cursor) :
 	cursor(cursor),
 	isStart(isStart)

@@ -1,10 +1,11 @@
 #pragma once
 
 #include "../GameManager.h"
-
+#include "Cursor.h"
 #include "../../engine/core/GameEntity.hpp"
 #include "../../engine/components/TransformComponent.h"
 #include "../../engine/components/CameraComponent.h"
+
 
 using namespace vlk;
 
@@ -34,5 +35,6 @@ namespace tkv
 		CameraComponent3D* camera3D;
 		CameraComponent2D* camera2D;
 		PlayerCameraComponent* logic;
+		InventoryComponent* inventory;
 	};
 }
