@@ -33,7 +33,7 @@ namespace
 					c->transform->location.x < max.x &&
 					c->transform->location.y > min.y &&
 					c->transform->location.y < max.y) ||
-					(endPos - c->transform->location).Magnitude() < c->hoverRadius && selected.size() < 1)
+					Magnitude(endPos - c->transform->location) < c->hoverRadius && selected.size() < 1)
 				{
 					selected.push_back(c);
 				}
@@ -82,7 +82,7 @@ namespace
 
 		auto hover = SelectableComponent::ForEach([mousePos, &s, &minMag](SelectableComponent* c)
 		{
-			Float mag = (mousePos - c->transform->location).Magnitude();
+			Float mag = Distance(mousePos, c->transform->location);
 
 			if (mag < c->hoverRadius && mag < minMag)
 			{
@@ -146,7 +146,7 @@ void SelectableComponent::OnSelect()
 	if (!this->draw)
 	{
 		this->draw = DrawTextureComponent2D::CreateComponent(this->GetParent(), this->transform, ContentManager<Texture2D>::Get().GetContent("select_outline"));
-		this->draw->size = this->hoverRadius * 2.0f;
+		this->draw->size = Vector2(this->hoverRadius * 2.0f);
 	}
 	else
 	{
@@ -179,7 +179,7 @@ void SelectableComponent::OnHoverEnter()
 	if (!this->draw)
 	{
 		this->draw = DrawTextureComponent2D::CreateComponent(this->GetParent(), this->transform, ContentManager<Texture2D>::Get().GetContent("hover_outline"));
-		this->draw->size = this->hoverRadius * 2.0f;
+		this->draw->size = Vector2(this->hoverRadius * 2.0f);
 	}
 	else
 	{

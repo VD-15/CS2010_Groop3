@@ -25,7 +25,7 @@ h1 {
   font-size: 40;
 }
 #header {
-    background: url("BG space 3.jpg") no-repeat center center;
+    background: url("banner1.jpg") no-repeat center center;
     background-size: cover;
     height: 100vh;
     width: 100%;
@@ -182,6 +182,9 @@ nav.black ul {
     letter-spacing: 2px;
     outline: none;
 }
+
+
+
 #Doc-info{
   background: white;
   display:flex;
@@ -207,7 +210,7 @@ font-family: 'Roboto', sans-serif;
     color: black;
 }
 
-#about-section {
+#index-section {
   background: url("BG space 2.jpg");
   margin: auto;
   max-width: auto;
@@ -216,10 +219,13 @@ font-family: 'Roboto', sans-serif;
   padding: 50px 0;
 }
 
+#text {
+  font-family: "Helvetica", Times, serif;
+  font-size: 20px;
+}
 
-
-#devblog {
-  background: url("BG space 5.jpg");
+#day1 {
+  background-color: black;
   margin: auto;
   max-width: auto;
   color: #000000;
@@ -227,11 +233,140 @@ font-family: 'Roboto', sans-serif;
   padding: 50px 0;
 }
 
+#day2 {
+  background-color: black;
+  margin: auto;
+  max-width: auto;
+  color: #000000;
+  text-align: center;
+  padding: 50px 0;
+}
 
+#day3 {
+  background-color: black;
+  margin: auto;
+  max-width: auto;
+  color: #000000;
+  text-align: center;
+  padding: 50px 0;
+}
 
+#day4 {
+  background-color: black;
+  margin: auto;
+  max-width: auto;
+  color: #000000;
+  text-align: center;
+  padding: 50px 0;
+}
 
+#day5 {
+  background-color: black;
+  margin: auto;
+  max-width: auto;
+  color: #000000;
+  text-align: center;
+  padding: 50px 0;
+}
 
+#day6 {
+  background-color: black;
+  margin: auto;
+  max-width: auto;
+  color: #000000;
+  text-align: center;
+  padding: 50px 0;
+}
 
+#day7 {
+  background-color: black;
+  margin: auto;
+  max-width: auto;
+  color: #000000;
+  text-align: center;
+  padding: 50px 0;
+}
+
+#day8 {
+  background-color: black;
+  margin: auto;
+  max-width: auto;
+  color: #000000;
+  text-align: center;
+  padding: 50px 0;
+}
+
+#day9 {
+  background-color: black;
+  margin: auto;
+  max-width: auto;
+  color: #000000;
+  text-align: center;
+  padding: 50px 0;
+}
+
+#day10 {
+  background-color: black;
+  margin: auto;
+  max-width: auto;
+  color: #000000;
+  text-align: center;
+  padding: 50px 0;
+}
+
+#day11 {
+  background-color: black;
+  margin: auto;
+  max-width: auto;
+  color: #000000;
+  text-align: center;
+  padding: 50px 0;
+}
+
+#day12 {
+  background-color: black;
+  margin: auto;
+  max-width: auto;
+  color: #000000;
+  text-align: center;
+  padding: 50px 0;
+}
+
+#day13 {
+  background-color: black;
+  margin: auto;
+  max-width: auto;
+  color: #000000;
+  text-align: center;
+  padding: 50px 0;
+}
+
+#day14 {
+  background-color: black;
+  margin: auto;
+  max-width: auto;
+  color: #000000;
+  text-align: center;
+  padding: 50px 0;
+}
+
+#day15 {
+  background-color: black;
+  margin: auto;
+  max-width: auto;
+  color: #000000;
+  text-align: center;
+  padding: 50px 0;
+}
+
+#day16 {
+  background-color: black;
+  margin: auto;
+  max-width: auto;
+  color: #000000;
+  text-align: center;
+  padding: 50px 0;
+}
 
 
 /* #about-section, */
@@ -427,6 +562,21 @@ left: 3px;
 .download-button:hover {
     background-color: white;
     color: black;
+}
+
+#dev-images img {
+  width: 50%;
+  height:auto;
+}
+
+#dev-images2 img {
+  width: 25%;
+  height:auto;
+}
+
+#dev-images3 img {
+  width: 0%;
+  height:auto;
 }
 
 #contact-section {

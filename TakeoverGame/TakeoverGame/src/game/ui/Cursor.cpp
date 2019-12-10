@@ -122,7 +122,7 @@ CursorComponent::CursorComponent(IEntity* e) :
 
 	this->ui->dock = DockType::Center;
 	this->draw->flags = VLK_SCREEN_RELATIVE_BIT;
-	this->draw->origin.Set(0.0f, 1.0f);
+	this->draw->origin = Vector2(0.0f, 1.0f);
 	this->draw->depth = tkv::DEPTH_CURSOR;
 
 	this->team->team = Team::Team1;

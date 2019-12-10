@@ -53,7 +53,7 @@ template class Pair<Long>;
 template class Pair<ULong>;
 template class Pair<Float>;
 template class Pair<Double>;
-
+/*
 Vector2::Vector2()
 {
 	this->x = 0.0f;
@@ -616,4 +616,4 @@ const Vector4 Vector4::RIGHT =		Vector4(1.0f, 0.0f, 0.0f);
 const Vector4 Vector4::FORWARD =	Vector4(0.0f, 0.0f, 1.0f);
 const Vector4 Vector4::BACKWARD =	Vector4(0.0f, 0.0f, -1.0f);
 const Vector4 Vector4::ONE =		Vector4(1.0f, 1.0f, 1.0f);
-const Vector4 Vector4::IDENTITY =	Vector4(0.0f, 0.0f, 0.0f);
+const Vector4 Vector4::IDENTITY =	Vector4(0.0f, 0.0f, 0.0f);*/

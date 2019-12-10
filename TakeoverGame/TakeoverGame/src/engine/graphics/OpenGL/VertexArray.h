@@ -3,118 +3,73 @@
 #include "../../core/ValkyrieEngine.h"
 #include "../../utils/ByteBuffer.hpp"
 
+#include "Buffer.h"
+#include "ShaderProgram.h"
+
 namespace vlk
 {
-	struct GLBuffer
-	{
-		GLBuffer(UInt _type);
-
-		GLBuffer(const GLBuffer& other);
-		GLBuffer(GLBuffer&& other) noexcept;
-
-		inline operator const UInt() const { return handle; }
-
-		void Fill(const ByteBuffer& b);
-
-		UInt handle;
-		UInt size;
-		const UInt type;
-	};
-
-	struct VertexArray
-	{
-		virtual void Create() = 0;
-		virtual void Bind() = 0;
-		virtual void Unbind() = 0;
-		virtual void Delete() = 0;
-	};
-
-	struct Texture2DVAO : VertexArray
-	{
-		Texture2DVAO();
-
-		Texture2DVAO(const Texture2DVAO& other) = delete;
-		Texture2DVAO(Texture2DVAO&& other) = delete;
-		Texture2DVAO& operator=(const Texture2DVAO& other) = delete;
-
-		void Create() override;
-		void Bind() override;
-		void Unbind() override;
-		void Delete() override;
-
-		UInt shaderProgram;
-		UInt vao;
-		UInt viewportBinding;
-
-		//Element
-		GLBuffer elementBuffer;
-
-		//X Y position
-		//depth
-		//RGBA
-		GLBuffer vertexBuffer;
-	};
-
-	struct ModelVAO : VertexArray
+	struct ModelVAO
 	{
 		ModelVAO();
+		~ModelVAO();
 
 		ModelVAO(const ModelVAO& other) = delete;
 		ModelVAO(ModelVAO&& other) = delete;
 		ModelVAO& operator=(const ModelVAO& other) = delete;
 
-		void Create() override;
-		void Bind() override;
-		void Unbind() override;
-		void Delete() override;
+		void Bind();
+		void Unbind();
 
-		UInt shaderProgram;
-		UInt vao;
+		inline GLBuffer& ModelBuffer() { return modelBuffer; }
+		inline GLBuffer& InstanceBuffer() { return instanceBuffer; }
 
-		//per draw viewport matrix binding
+		inline UInt Viewport() const { return this->viewportBinding; }
+		inline UInt CameraPos() const { return this->cameraPosBinding; }
+
+		inline UInt AmbTex() const { return this->ambTexBinding; }
+		inline UInt DifTex() const { return this->difTexBinding; }
+		inline UInt SpcTex() const { return this->spcTexBinding; }
+		inline UInt AlpTex() const { return this->alpTexBinding; }
+
+		inline UInt AmbCol() const { return this->ambBinding; }
+		inline UInt DifCol() const { return this->difBinding; }
+		inline UInt SpcCol() const { return this->spcBinding; }
+		inline UInt SpcExp() const { return this->expBinding; }
+		inline UInt AlpVal() const { return this->alpBinding; }
+
+		inline UInt AmbLightCol() const { return this->ambLightColBinding; }
+		inline UInt AmbLightInt() const { return this->ambLightIntBinding; }
+
+		inline UInt DirLightCol() const { return this->dirLightColBinding; }
+		inline UInt DirLightInt() const { return this->dirLightIntBinding; }
+		inline UInt DirLightDir() const { return this->dirLightDirBinding; }
+
+		private:
+		ShaderProgram shaderProgram;
+		UInt handle;
+
+		GLBuffer modelBuffer;
+		GLBuffer instanceBuffer;
+
 		UInt viewportBinding;
-
-		//per instance transform matrix binding
-		UInt transformBinding;
-
-		//Per material diffuse color bindings:
-
-		//Ambient color binding
-		UInt ambBinding;
-
-		//diffuse color binding
-		UInt difBinding;
-
-		//specular color binding
-		UInt spcBinding;
-
-		//specular exponent binding
-		UInt expBinding;
-
-		//transparency binding
-		UInt alpBinding;
-
-		//Ambient light color binding
-		UInt ambLightColBinding;
-
-		//Ambient light intensity binding
-		UInt ambLightIntBinding;
-
-		//Camera position
 		UInt cameraPosBinding;
 
-		UInt pntLightColBinding;
-		UInt pntLightIntBinding;
-		UInt pntLightPosBinding;
-		UInt pntLightNumBinding;
+		UInt ambTexBinding;
+		UInt difTexBinding;
+		UInt spcTexBinding;
+		UInt alpTexBinding;
+
+		UInt ambBinding;
+		UInt difBinding;
+		UInt spcBinding;
+		UInt expBinding;
+		UInt alpBinding;
+
+		UInt ambLightColBinding;
+		UInt ambLightIntBinding;
 
 		UInt dirLightColBinding;
 		UInt dirLightIntBinding;
 		UInt dirLightDirBinding;
-		UInt dirLightNumBinding;
-
-		GLBuffer modelBuffer;
-
-		GLBuffer instanceBuffer;
 	};
 }

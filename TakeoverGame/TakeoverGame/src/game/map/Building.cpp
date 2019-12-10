@@ -32,7 +32,6 @@ FactoryEntity::FactoryEntity(const Vector3& location)
 	this->capture = CreateComponent<CaptureComponent>(transform, team);
 	this->select = CreateComponent<SelectableComponent>(transform, team);
 	this->fabricate = CreateComponent<UnitFabricatorComponent>(t);
-
 	this->transform->location = location;
 }
 
@@ -46,6 +45,7 @@ QuarryEntity::QuarryEntity(const Vector3& location)
 {
 	this->transform = CreateComponent<TransformComponent3D>();
 	this->draw = CreateComponent<DrawModelComponent3D>(this->transform, ContentManager<Model>::Get().GetContent("quarry"));
+
 	this->team = CreateComponent<TeamComponent>();
 	this->capture = CreateComponent<CaptureComponent>(transform, team);
 	this->select = CreateComponent<SelectableComponent>(transform, team);
@@ -59,4 +59,5 @@ void QuarryEntity::OnDelete()
 {
 	this->draw->Delete();
 	this->transform->Delete();
+
 }

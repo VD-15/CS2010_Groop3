@@ -29,9 +29,9 @@ namespace
 			{
 				Vector2 moveDir = c->target - c->transform->location;
 
-				Vector2 moveAmount(Vector2::Normalize(moveDir) * c->speed * VLKTime::DeltaTime<Float>());
+				Vector2 moveAmount(Normalize(moveDir) * c->speed * VLKTime::DeltaTime<Float>());
 
-				if (moveAmount.Magnitude() > moveDir.Magnitude())
+				if (Magnitude(moveAmount) > Magnitude(moveDir))
 				{
 					c->transform->location = c->target;
 					c->isMoving = false;

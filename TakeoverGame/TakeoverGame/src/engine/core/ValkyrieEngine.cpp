@@ -43,15 +43,16 @@ void vlk::Init()
 		Window::Init();
 		Keyboard::Init();
 		Mouse::Init();
-		ContentSystem::Init();
 
 		//TODO: Expose this somewhere
 		Renderer::SetRenderer(GLRenderer::Init, GLRenderer::Draw, GLRenderer::Destroy);
 		Renderer::Init();
 
-		CollisionSystem::Init();
+		//CollisionSystem::Init();
 		Camera::Init();
 		UISystem::Init();
+
+		ContentSystem::Init();
 
 		LogInfo("Valkyrie Engine", "VLKinit took " + std::to_string(VLKTime::AbsVTime<Double>()) + " Seconds");
 
@@ -65,7 +66,7 @@ void vlk::Destroy()
 	{
 		UISystem::Destroy();
 		Camera::Destroy();
-		CollisionSystem::Destroy();
+		//CollisionSystem::Destroy();
 
 		Renderer::Destroy();
 		ContentSystem::Destroy();

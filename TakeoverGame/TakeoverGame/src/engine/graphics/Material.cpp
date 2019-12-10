@@ -42,7 +42,7 @@ Material::Material() :
 	specularMap = t;
 	exponentMap = t;
 	alphaMap = t;
-	this->transparency = 0.0f;
+	this->transparency = 1.0f;
 	this->exponent = 500.0f;
 }
 
@@ -102,31 +102,31 @@ void Material::LoadContent(const std::string& path, const std::string& name)
 					}
 					else if (command == "Ns")
 					{
-						this->exponent = std::stof(line.substr(pos));
+						this->exponent = std::stof(line.substr(pos + 1));
 					}
 					else if (command == "d")
 					{
-						this->transparency = std::stof(line.substr(pos));
+						this->transparency = std::stof(line.substr(pos + 1));
 					}
 					else if (command == "Tr")
 					{
-						this->transparency = 1.0f - std::stof(line.substr(pos));
+						this->transparency = 1.0f - std::stof(line.substr(pos + 1));
 					}
 					else if (command == "map_Kd")
 					{
-
+						this->diffuseMap = ContentManager<Texture2D>::Get().GetContent(line.substr(pos + 1));
 					}
 					else if (command == "map_Ks")
 					{
-
+						this->specularMap = ContentManager<Texture2D>::Get().GetContent(line.substr(pos + 1));
 					}
 					else if (command == "map_Ns")
 					{
-
+						this->exponentMap = ContentManager<Texture2D>::Get().GetContent(line.substr(pos + 1));
 					}
 					else if (command == "map_d" || command == "map_Tr")
 					{
-
+						this->alphaMap = ContentManager<Texture2D>::Get().GetContent(line.substr(pos + 1));
 					}
 					else if (command == "#")
 					{

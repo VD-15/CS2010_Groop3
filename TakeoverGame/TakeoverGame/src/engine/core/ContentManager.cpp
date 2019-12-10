@@ -15,6 +15,14 @@ namespace
 {
 	pugi::xml_document contentDoc;
 	Texture2D* DEFAULT_TEXTURE;
+
+	void OnApplicationStart(ApplicationStartEvent& ev)
+	{
+	}
+
+	void OnApplicationExit(ApplicationExitEvent& ev)
+	{
+	}
 }
 
 void ContentSystem::Init()
@@ -30,6 +38,7 @@ void ContentSystem::Init()
 	//init default content:
 	Byte data[4] { 255, 255, 255, 255 };
 	DEFAULT_TEXTURE = new Texture2D(data, 4, 1, 1);
+	DEFAULT_TEXTURE->AddMetaTag("wrap_mode", "repeat");
 	ContentManager<Texture2D>::Get().AddContent("VLK_DEFAULT_TEXTURE", DEFAULT_TEXTURE);
 }
 

@@ -2,6 +2,8 @@
 
 using namespace vlk;
 
+//Yea, all of this is broken :/
+/*
 namespace
 {
 	std::vector<std::pair<ULong, ULong>> collidingLayers;
@@ -198,4 +200,4 @@ CollisionEvent2D::CollisionEvent2D(ColliderBaseComponent2D* c1, ColliderBaseComp
 	collider2(c2)
 {
 
-}
+}*/

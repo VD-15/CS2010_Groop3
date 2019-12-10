@@ -46,7 +46,7 @@ CameraComponent2D::CameraComponent2D(IEntity* e, TransformComponent2D* transform
 	transform(transform)
 {
 	this->autoResize = true;
-	this->zoom = 1.0f;
+	this->zoom = Vector2(1.0f);
 
 	if (!CameraComponent2D::ACTIVE)
 	{
@@ -66,22 +66,25 @@ Vector2 CameraComponent2D::GetMousePosition() const
 
 Matrix4 CameraComponent2D::GetProjection() const
 {
-	return Matrix4::CreateOrthographic(	viewport.x *  (zoom.x), 
-										-viewport.x * (zoom.x), 
-										viewport.y *  (zoom.y), 
-										-viewport.y * (zoom.y), 
-										-1048576.0f, 
-										1048576.0f);
+	return CreateOrthographic(	viewport.x *  (zoom.x), 
+								-viewport.x * (zoom.x), 
+								viewport.y *  (zoom.y), 
+								-viewport.y * (zoom.y), 
+								-1048576.0f, 
+								1048576.0f);
 }
 
 Matrix4 CameraComponent2D::GetView() const
 {
-	return Matrix4::CreateLookAt(Vector3::RIGHT, Vector3::UP, Vector3::FORWARD, Vector3(this->transform->location, 0.0f));
+	//return Matrix4::CreateLookAt(this->transform->location, this->transform->location + Vector3::FORWARD);
+	return IdentityMatrix4();
 }
 
 CameraComponent3D::CameraComponent3D(IEntity* e, TransformComponent3D* transform) : 
 	Component<CameraComponent3D>(e),
-	transform(transform)
+	transform(transform),
+	viewport(1.0f),
+	target()
 {
 	this->fov = 90.0f;
 	this->autoResize = true;
@@ -99,22 +102,17 @@ void CameraComponent3D::Activate()
 
 Matrix4 CameraComponent3D::GetProjection() const
 {
-	Float aspect = viewport.y / viewport.x;
+	Float aspect = viewport.x / viewport.y;
 	Float radians = fov * (vlk::Pi / 180.0f);
 	
-	return Matrix4::CreatePerspective(radians, aspect, 100.0f, 0.1f);
+	//TODO: expose near & far planes somewhere
+	return CreatePerspective(radians, aspect, 0.01f, 1000.0f);
+	//return CreateInfPerspective(radians, aspect);
 }
 
 Matrix4 CameraComponent3D::GetView() const
 {
-	Vector3 right(Quaternion::Rotate(Vector3::RIGHT, this->transform->rotation));
-	Vector3 up(Quaternion::Rotate(Vector3::UP, this->transform->rotation));
-	Vector3 forward(Quaternion::Rotate(Vector3::FORWARD, this->transform->rotation));
+	Vector3 up(Rotate(Vector3Y, this->transform->rotation));
 
-	return Matrix4::CreateLookAt(
-		right,
-		up,
-		forward,
-		this->transform->location
-	);
+	return CreateLookAt(this->transform->location, target, up);
 }

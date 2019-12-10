@@ -16,7 +16,7 @@ namespace vlk
 
 		inline const ULong Size() const { return size; }
 		inline const void* Data() const { return data; }
-		inline void* Data() { return data; }
+		inline Byte* Data() { return data; }
 
 		void Allocate(ULong size);
 		void SetPos(ULong offset);
@@ -35,6 +35,24 @@ namespace vlk
 			T* tp = reinterpret_cast<T*>(position);
 			*tp = t;
 			position += sizeof(T);
+		}
+
+		template<class T>
+		void PutMany(const T* t, ULong count)
+		{
+			#ifdef _DEBUG
+			if (position + sizeof(T) * count > data + size)
+			{
+				throw std::exception("Buffer position out of range.");
+			}
+			#endif
+
+			for (ULong i = 0; i < count; i++)
+			{
+				T* tp = reinterpret_cast<T*>(position);
+				*tp = t[i];
+				position += sizeof(T);
+			}
 		}
 
 		template<class T>

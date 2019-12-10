@@ -121,6 +121,7 @@ namespace vlk
 		void AddContent(const std::string& name, T* content)
 		{
 			this->content.emplace(name, content);
+			EventBus<ContentLoadedEvent<T>>::Get().PostEvent({ content, name });
 		}
 
 		const T* GetContent(const std::string& name) const

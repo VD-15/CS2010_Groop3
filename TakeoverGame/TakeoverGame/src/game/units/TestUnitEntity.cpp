@@ -13,7 +13,7 @@ void OnUpdate(UpdateEvent& ev)
 
 	TestComponent::ForEach([](TestComponent* c)
 	{
-		c->transform->rotation *= Quaternion::AxisAngle(Vector3::UP, VLKTime::DeltaTime<Float>());
+		c->transform->rotation *= AngleAxis( VLKTime::DeltaTime<Float>(), Vector3Y);
 	});
 
 	theta += VLKTime::DeltaTime<Float>();
@@ -49,7 +49,7 @@ TestUnitEntity::TestUnitEntity(Team t, Vector2 location)
 	this->team->team = t;
 
 	this->draw->depth = tkv::DEPTH_UNIT;
-	this->draw->size = 32.0f;
+	this->draw->size = Vector2(32.0f);
 
 	this->reciever->speed = 64.0f;
 	this->select->hoverRadius = 32.0f;
@@ -69,11 +69,11 @@ void TestUnitEntity::OnDelete()
 TestUnitEntity2::TestUnitEntity2(const Vector3& location)
 {
 	this->transform = CreateComponent<TransformComponent3D>();
-	this->draw = CreateComponent<DrawModelComponent3D>(transform, ContentManager<Model>::Get().GetContent("monkey_hd"));
+	this->draw = CreateComponent<DrawModelComponent3D>(transform, ContentManager<Model>::Get().GetContent("cube"));
 	this->test = CreateComponent<TestComponent>(transform);
 
 	this->transform->location = location;
-	this->transform->rotation = Quaternion::AxisAngle(Vector3::UP, vlk::Pi);
+	this->transform->rotation = AngleAxis(vlk::Pi, Vector3Y);
 }
 
 void TestUnitEntity2::OnDelete()
