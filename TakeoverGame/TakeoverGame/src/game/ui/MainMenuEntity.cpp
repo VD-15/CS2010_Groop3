@@ -41,7 +41,7 @@ namespace
 
 	void Play()
 	{			
-		/*
+		
 		std::vector<ButtonComponent*> buttons;
 		ButtonComponent::ForEach([&buttons](ButtonComponent* c)
 		{
@@ -49,10 +49,10 @@ namespace
 		});	
 		for (auto it = buttons.begin(); it != buttons.end(); it++) {
 			ButtonComponent* c = *it;
-			c->Delete();
+			c->GetParent()->Delete();
 		}	
-		
-		
+
+		/*
 		MainMenuComponent* toDelete;
 		MainMenuComponent::ForEach([&toDelete](MainMenuComponent* c)
 		{
@@ -119,10 +119,6 @@ void MainMenuEntity::OnDelete() {
 	this->transform->Delete();
 	this->draw->Delete();
 	this->logic->Delete();
-	this->buttonPlay->transform->Delete();
-	this->buttonPlay->draw->Delete();
-	this->buttonPlay->ui->Delete();
-    this->buttonExit->transform->Delete();
-	this->buttonExit->draw->Delete();
-	this->buttonExit->ui->Delete();
+	this->buttonPlay->Delete();
+	this->buttonExit->Delete();
 }
