@@ -41,27 +41,26 @@ namespace
 
 	void Play()
 	{			
-		
+		/*
 		std::vector<ButtonComponent*> buttons;
 		ButtonComponent::ForEach([&buttons](ButtonComponent* c)
 		{
 			buttons.push_back(c);
 		});	
+
 		for (auto it = buttons.begin(); it != buttons.end(); it++) {
 			ButtonComponent* c = *it;
 			c->GetParent()->Delete();
 		}	
-
-		/*
+		*/
+		
 		MainMenuComponent* toDelete;
 		MainMenuComponent::ForEach([&toDelete](MainMenuComponent* c)
 		{
 			toDelete = c;
 		});
-		toDelete->Delete();
 		toDelete->GetParent()->Delete();
-		*/
-		//GameManager::Init()->playPressed = true;
+		
 		LogAnnounce("Button", "PLAY!");
 	}
 
