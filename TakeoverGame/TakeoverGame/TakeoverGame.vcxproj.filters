@@ -120,9 +120,6 @@
     <ClCompile Include="src\game\GameManager.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="src\game\units\TestUnitEntity.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="src\game\ui\PlayerCamera.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
@@ -181,6 +178,16 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="src\game\components\FollowComponent.cpp">
+    <ClCompile Include="src\game\units\UnitEntity.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\game\components\FabricatorComponent.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\game\units\Unit.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\game\components\CombatTarget.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
@@ -305,9 +312,6 @@
     <ClInclude Include="src\game\GameManager.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="src\game\units\TestUnitEntity.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="src\game\ui\PlayerCamera.h">
       <Filter>Header Files</Filter>
     </ClInclude>
@@ -375,6 +379,13 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="src\game\components\FollowComponent.h">
+    <ClInclude Include="src\game\units\UnitEntity.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\game\components\FabricatorComponent.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\game\components\CombatTarget.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

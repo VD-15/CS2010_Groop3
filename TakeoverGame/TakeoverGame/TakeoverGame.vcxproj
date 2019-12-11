@@ -102,8 +102,10 @@
     <ClCompile Include="src\engine\graphics\OpenGL\ShaderProgram.cpp" />
     <ClCompile Include="src\engine\graphics\OpenGL\VertexArray.cpp" />
     <ClCompile Include="src\engine\utils\XmlDocument.cpp" />
+    <ClCompile Include="src\game\components\CombatTarget.cpp" />
     <ClCompile Include="src\game\components\CommandReciever.cpp" />
     <ClCompile Include="src\game\components\FollowComponent.cpp" />
+    <ClCompile Include="src\game\components\FabricatorComponent.cpp" />
     <ClCompile Include="src\game\components\Selectable.cpp" />
     <ClCompile Include="src\game\GameManager.cpp" />
     <ClCompile Include="src\engine\components\CameraComponent.cpp" />
@@ -148,6 +150,8 @@
     <ClCompile Include="src\game\components\TeamComponent.cpp" />
     <ClCompile Include="src\game\units\TestUnitEntity.cpp" />
     <ClCompile Include="src\game\util\Raycast.cpp" />
+    <ClCompile Include="src\game\units\Unit.cpp" />
+    <ClCompile Include="src\game\units\UnitEntity.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\engine\components\DrawModelComponent.h" />
@@ -160,8 +164,10 @@
     <ClInclude Include="src\engine\graphics\OpenGL\ShaderProgram.h" />
     <ClInclude Include="src\engine\graphics\OpenGL\VertexArray.h" />
     <ClInclude Include="src\engine\utils\XmlDocument.h" />
+    <ClInclude Include="src\game\components\CombatTarget.h" />
     <ClInclude Include="src\game\components\CommandReciever.h" />
     <ClInclude Include="src\game\components\FollowComponent.h" />
+    <ClInclude Include="src\game\components\FabricatorComponent.h" />
     <ClInclude Include="src\game\components\Selectable.h" />
     <ClInclude Include="src\game\GameManager.h" />
     <ClInclude Include="src\engine\components\CameraComponent.h" />
@@ -211,9 +217,9 @@
     <ClInclude Include="src\game\ui\Cursor.h" />
     <ClInclude Include="src\game\ui\PlayerCamera.h" />
     <ClInclude Include="src\game\components\TeamComponent.h" />
-    <ClInclude Include="src\game\units\TestUnitEntity.h" />
     <ClInclude Include="src\game\units\Unit.h" />
     <ClInclude Include="src\game\util\Raycast.h" />
+    <ClInclude Include="src\game\units\UnitEntity.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
