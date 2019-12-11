@@ -59,9 +59,10 @@ void GameManager::Init()
 	ContentManager<Material>::Get().LoadContent("monkey_yellow");
 	//ContentManager<Model>::Get().LoadContent("monkey_hd");
 
+	
+	auto e = MainMenuEntity::CreateEntity();
 
-	MainMenuEntity::CreateEntity();
-
+	
 
 	//Create a camera entity and make it's camera active
 	//PlayerCameraEntity::CreateEntity()->camera->Activate();

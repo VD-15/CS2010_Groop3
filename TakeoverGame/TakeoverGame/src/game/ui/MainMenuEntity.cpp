@@ -40,6 +40,7 @@ namespace
 
 	void Play()
 	{
+		
 		LogAnnounce("Button", "PLAY!");
 	}
 
@@ -94,6 +95,13 @@ MainMenuEntity::MainMenuEntity() {
 	this->draw->size = Vector2(size.x, size.y);
 }
 void MainMenuEntity::OnDelete() {
-
-
+	this->transform->Delete();
+	this->draw->Delete();
+	this->logic->Delete();
+	this->buttonPlay->transform->Delete();
+	this->buttonPlay->draw->Delete();
+	this->buttonPlay->ui->Delete();
+    this->buttonExit->transform->Delete();
+	this->buttonExit->draw->Delete();
+	this->buttonExit->ui->Delete();
 }
