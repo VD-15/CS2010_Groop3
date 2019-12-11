@@ -59,8 +59,8 @@ void GameManager::Init()
 	ContentManager<Material>::Get().LoadContent("monkey_yellow");
 	//ContentManager<Model>::Get().LoadContent("monkey_hd");
 
-	
-	auto e = MainMenuEntity::CreateEntity();
+	//bool playPressed = false;
+	MainMenuEntity::CreateEntity();
 
 	
 
