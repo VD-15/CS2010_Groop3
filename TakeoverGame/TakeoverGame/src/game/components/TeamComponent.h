@@ -20,7 +20,7 @@ namespace tkv
 
 	struct TeamComponent : public Component<TeamComponent>
 	{
-		TeamComponent(IEntity* e);
+		TeamComponent(IEntity* e, Team t = Team::Neutral);
 
 		Team team;
 	};

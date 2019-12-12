@@ -141,8 +141,7 @@ namespace
 		glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, wrapEnum);
 		glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, filterEnumMin);
 		glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, filterEnumMax);
-
-
+		
 		//Generate mipmaps if specified.
 		if (genMipMapEnum)
 		{
@@ -303,7 +302,7 @@ namespace
 				glActiveTexture(GL_TEXTURE0 + 3);
 				glBindTexture(GL_TEXTURE_2D, textureMap[material->alphaMap]);
 
-				glDrawArraysInstanced(GL_TRIANGLES, 0, model->GetMeshes()[i].size() / 3, instances.size());
+				glDrawArraysInstanced(GL_TRIANGLES, 0, static_cast<UInt>(model->GetMeshes()[i].size() / 3), static_cast<UInt>(instances.size()));
 			}
 		}
 

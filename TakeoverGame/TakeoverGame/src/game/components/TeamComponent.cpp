@@ -2,8 +2,8 @@
 
 using namespace tkv;
 
-TeamComponent::TeamComponent(IEntity* e) :
+TeamComponent::TeamComponent(IEntity* e, Team t) :
 	Component<TeamComponent>(e)
 {
-	this->team = Team::Neutral;
+	this->team = t;
 }

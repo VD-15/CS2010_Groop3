@@ -18,19 +18,19 @@ namespace tkv
 
 	struct CommandIssuedEvent : public Event
 	{
-		CommandIssuedEvent(Vector2 target);
+		CommandIssuedEvent(Vector3 target);
 
-		const Vector2 target;
+		const Vector3 target;
 	};
 
 	struct CommandRecieverComponent : public Component<CommandRecieverComponent>
 	{
-		CommandRecieverComponent(IEntity* e, TransformComponent2D* const transform, const SelectableComponent* const select);
+		CommandRecieverComponent(IEntity* e, TransformComponent3D* const transform, const SelectableComponent* const select);
 
-		TransformComponent2D* const transform;
+		TransformComponent3D* const transform;
 		const SelectableComponent* const select;
 
-		Vector2 target;
+		Vector3 target;
 		Boolean isMoving;
 		Float speed;
 	};

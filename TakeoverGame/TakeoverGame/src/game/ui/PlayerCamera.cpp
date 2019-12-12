@@ -5,6 +5,8 @@
 #include "../../engine/core/VLKTime.h"
 #include "../../engine/core/Window.h"
 
+#include "../../engine/core/ContentManager.hpp"
+
 using namespace tkv;
 
 namespace
@@ -39,6 +41,28 @@ namespace
 			c->transform->location.z = std::clamp(c->transform->location.z, -462.0f, 562.0f); //Lateral clamp
 
 			c->camera3D->target = Rotate(-Vector3Z, c->transform->rotation) + c->transform->location;
+			/*
+			Window::SetTitle(std::to_string(c->camera3D->transform->location.x) + ", " +
+							 std::to_string(c->camera3D->transform->location.y) + ", " +
+							 std::to_string(c->camera3D->transform->location.z));*/
+		});
+
+		Vector2 mousePos(Mouse::GetCenteredPosition());
+		mousePos = Vector2(mousePos.x / (Window::GetWidth() / 2.0f), mousePos.y / (Window::GetHeight() / 2.0f));
+
+		auto follow = CameraFollowTest::ForEach([mousePos](CameraFollowTest* c)
+		{
+			//c->transform->location = c->camera->transform->location - Rotate(Vector3(-mousePos.x, -mousePos.y, 1.0f) * 2.0f, c->camera->transform->rotation);
+			
+			Matrix4 inv(glm::inverse(c->camera->GetProjection()));// * CreateRotation(c->camera->transform->rotation)));
+
+			Vector4 v(mousePos, 0.0f, 1.0f);
+			
+			Vector3 dir(inv * v);
+			dir = Rotate(dir, c->camera->transform->rotation);
+			dir += c->camera->transform->location;
+
+			c->transform->location = dir;
 		});
 	}
 }
@@ -50,6 +74,29 @@ void CameraSystem::Init()
 void CameraSystem::Destroy()
 {
 	EventBus<UpdateEvent>::Get().RemoveEventListener(OnUpdate);
+}
+
+CameraFollowTest::CameraFollowTest(IEntity* e, const CameraComponent3D* camera, TransformComponent3D* transform) :
+	Component<CameraFollowTest>(e)
+{
+	this->camera = camera;
+	this->transform = transform;
+}
+
+CameraFollowEntity::CameraFollowEntity(const CameraComponent3D* camera)
+{
+	this->transform = CreateComponent<TransformComponent3D>();
+	this->draw = CreateComponent<DrawModelComponent3D>(this->transform, ContentManager<Model>::Get().GetContent("cube"));
+	this->follow = CreateComponent<CameraFollowTest>(camera, this->transform);
+
+	this->transform->scale = Vector3(0.1f);
+}
+
+void CameraFollowEntity::OnDelete()
+{
+	this->transform->Delete();
+	this->draw->Delete();
+	this->follow->Delete();
 }
 
 PlayerCameraComponent::PlayerCameraComponent(IEntity* e, TransformComponent3D* transform, CameraComponent3D* camera3D) :
@@ -69,6 +116,8 @@ PlayerCameraEntity::PlayerCameraEntity()
 	
 	this->transform3D->location = Vector3(0.0f, 40.0f, 0.0f);
 	this->transform3D->rotation = AngleAxis(vlk::Pi / 4.0f, Vector3X);
+
+	//this->follow = dynamic_cast<IEntity*>(CameraFollowEntity::CreateEntity(this->camera3D));
 }
 
 void PlayerCameraEntity::OnDelete()
@@ -78,4 +127,6 @@ void PlayerCameraEntity::OnDelete()
 	this->camera3D->Delete();
 	this->transform2D->Delete();
 	this->transform3D->Delete();
+
+	//this->follow->Delete();
 }

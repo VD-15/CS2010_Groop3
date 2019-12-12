@@ -3,10 +3,11 @@
 #include "../Takover.h"
 #include "../GameManager.h"
 #include "../components/TeamComponent.h"
+#include "../components/FollowComponent.h"
 
 #include "../../engine/core/GameEntity.hpp"
 #include "../../engine/components/TransformComponent.h"
-#include "../../engine/components/DrawTextureComponent.h"
+#include "../../engine/components/DrawModelComponent.h"
 #include "../../engine/components/UIComponent.h"
 
 namespace tkv
@@ -19,10 +20,11 @@ namespace tkv
 
 	struct CaptureComponent : public Component<CaptureComponent>
 	{
-		CaptureComponent(IEntity* e, const TransformComponent2D* transform, TeamComponent* team);
+		CaptureComponent(IEntity* e, const TransformComponent3D* transform, TeamComponent* team);
 		void OnDelete() override;
 
-		const TransformComponent2D* transform;
+		FollowComponent* follow;
+		TransformComponent3D* transform;
 		TeamComponent* team;
 
 		Team capturingTeam;
@@ -32,7 +34,7 @@ namespace tkv
 		Boolean isPaused;
 
 		//TODO: Move to seperate Entity
-		DrawTextureComponent2D* draw;
+		DrawModelComponent3D* draw;
 	};
 
 	enum class CaptureAction
@@ -54,9 +56,9 @@ namespace tkv
 
 	struct CaptureContributorComponent : public Component<CaptureContributorComponent>
 	{
-		CaptureContributorComponent(IEntity* e, const TransformComponent2D* const transform, const TeamComponent* const team);
+		CaptureContributorComponent(IEntity* e, const TransformComponent3D* const transform, const TeamComponent* const team);
 		
-		const TransformComponent2D* const transform;
+		const TransformComponent3D* const transform;
 		const TeamComponent* const team;
 	};
 }

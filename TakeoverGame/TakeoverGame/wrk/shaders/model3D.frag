@@ -37,6 +37,10 @@ float ColToBW(vec3 col)
 
 void main()
 {
+    float fragAlpha = materialAlp * ColToBW(texture(alpTex, moveTex).xyz);
+
+    if (fragAlpha == 0.0) discard;
+
     //Ambient light
     vec3 ambientColor = ambLightCol * ambLightInt * ambMaterialCol * texture(ambTex, moveTex).xyz;
 
@@ -53,5 +57,5 @@ void main()
 
 	//outCol = vec4(1.0, 1.0, 1.0, 1.0);
 	//outCol = vec4(directionalColor, 1.0);
-    outCol = vec4(ambientColor + directionalColor + directionalSpecular, materialAlp * ColToBW(texture(alpTex, moveTex).xyz));
+    outCol = vec4(ambientColor + directionalColor + directionalSpecular, fragAlpha);
 }

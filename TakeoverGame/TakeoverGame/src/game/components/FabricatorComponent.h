@@ -1,37 +1,36 @@
 #pragma once
-0
+
 #include "../Takover.h"
 #include "../components/TeamComponent.h"
-#include "../components/UnitComponent.h"
+#include "../units/Unit.h"
 
 #include "../../engine/core/GameEntity.hpp"
 #include "../../engine/components/TransformComponent.h"
 
 using namespace vlk;
 
-namespace tkv {
+namespace tkv
+{
 
-    namespace FabricatorSystem{
-        void Init();
-        void Destroy();
-    }
+	namespace FabricatorSystem
+	{
+		void Init();
+		void Destroy();
+	}
 
-    struct UnitFabricatorComponent : public Component<UnitFabricatorComponent>
-    {
-        UnitFabricatorComponent(IEntity* e, TransformComponent3D transform, Team t, ProtoUnit* unit = meleeUnit);
-        ChangeUnit(ProtoUnit* unit);
+	struct UnitFabricatorComponent : public Component<UnitFabricatorComponent>
+	{
+		UnitFabricatorComponent(IEntity* e, const TransformComponent3D* transform, const TeamComponent* t, const ProtoUnit* unit);
 
-        ProtoUnit* unit;
-        TransformComponent3D transform;
-        TeamComponent* team;
-        double cooldown;
-    }
+		void ChangeUnit(const ProtoUnit* unit);
 
-    struct ResourceFabricatorComponent : public Component<ResourceFabricatorComponent>
-    {
-        ResourceFabricatorComponent(IEntity* e, Team t);
+		//The protounit this factory is making
+		const ProtoUnit* production;
 
-        TeamComponent* team;
-        double cooldown;
-    }
+		const TransformComponent3D* const transform;
+		const TeamComponent* const team;
+
+		Double cooldown;
+		Vector3 spawnLocation;
+	};
 }
