@@ -52,8 +52,8 @@ QuarryEntity::QuarryEntity(const Vector3& location)
 
 	this->team = CreateComponent<TeamComponent>();
 	this->capture = CreateComponent<CaptureComponent>(transform, team);
-	this->select = CreateComponent<SelectableComponent>(transform, team);
-	this->fabricate = CreateComponent<ResourceFabricatorComponent>();
+	this->select = CreateComponent<SelectableComponent>(transform);
+	//this->fabricate = CreateComponent<ResourceFabricatorComponent>();
 
 	this->transform->location = location;
 	this->transform->scale = Vector3(2.0f);
