@@ -54,6 +54,6 @@ namespace tkv
 		CameraComponent2D* camera2D;
 		PlayerCameraComponent* logic;
 
-		IEntity* follow;
+		//IEntity* follow;
 	};
 }

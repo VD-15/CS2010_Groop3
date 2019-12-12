@@ -11,6 +11,7 @@ namespace
 	{
 		std::vector<CombatTargetComponent*> deadTargets;
 
+		//Can't delete components inside a ForEach, so put them in a vector and defer deletion
 		CombatTargetComponent::ForEach([&deadTargets](CombatTargetComponent* c)
 		{
 			if (c->currentHealth < 0)

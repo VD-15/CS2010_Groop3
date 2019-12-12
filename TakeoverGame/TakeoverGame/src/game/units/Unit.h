@@ -35,30 +35,46 @@ namespace tkv
 		const char* modelName;
 	};
 
-	constexpr ProtoUnit T1Ground
+	namespace Units
 	{
-		10.0,
-		512.0,
-		1.0,
-		1.0,
+		constexpr ProtoUnit T1Ground
+		{
+			10.0,
+			512.0,
+			1.0,
+			1.0,
 
-		64.0,
-		false,
+			64.0,
+			false,
 
-		"unit"
-	};
+			"cube"
+		};
 
-	constexpr ProtoUnit Commander
-	{
-		100.0,
-		512.0,
-		5.0,
-		0.5,
+		constexpr ProtoUnit T1Air
+		{
+			10.0,
+			512.0,
+			1.0,
+			1.0,
 
-		16.0,
+			32.0,
+			false,
 
-		"commander"
-	};
+			"aqua"
+		};
+
+		constexpr ProtoUnit Commander
+		{
+			100.0,
+			512.0,
+			5.0,
+			0.5,
+
+			16.0,
+
+			"commander"
+		};
+	}
 
 	//Deals damage to any opposing combat targets in range.
 	struct UnitComponent : public Component<UnitComponent>

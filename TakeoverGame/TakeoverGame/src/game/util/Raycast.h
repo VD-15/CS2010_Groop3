@@ -16,7 +16,9 @@ namespace tkv
 
 	struct IVolume
 	{
-		virtual Bool Intersects(const Ray& r) = 0;
+		//TODO: combine these
+		virtual Bool Intersects(const Ray& r) const = 0;
+		virtual Vector3 GetIntersection(const Ray& r) const = 0;
 	};
 
 	//Circle volume lies on the X/Z plane
@@ -24,7 +26,8 @@ namespace tkv
 	{
 		CircleVolume(const Vector3& location = Vector3(0.0f, 0.0f, 0.0f), Float radius = 1.0f);
 
-		Bool Intersects(const Ray& r) override;
+		Bool Intersects(const Ray& r) const override;
+		Vector3 GetIntersection(const Ray& r) const override;
 
 		Vector3 location;
 		Float radius;

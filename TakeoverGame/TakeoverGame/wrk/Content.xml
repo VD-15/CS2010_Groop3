@@ -4,12 +4,15 @@
     <texture name="map_snow" path="textures/snow.png"></texture>
     <texture name="select_outline_dif" path="textures/select_outline_dif.png"></texture>
     <texture name="select_outline_alp" path="textures/select_outline_alp.png"></texture>
+    <texture name="aqua" path="textures/aqua.png"></texture>
 
 	<model name="cube" path="models/cube.obj"></model>
 	<model name="map_snow" path="models/map_snow.obj"></model>
 	<model name="factory" path="models/factory.obj"></model>
 	<model name="quarry" path="models/quarry.obj"></model>
     <model name="select_outline" path="models/selected.obj"></model> 
+    <model name="capture" path="models/capture.obj"></model> 
+    <model name="aqua" path="models/aqua.obj"></model> 
 
 	<material name="cube_tex" path="models/cube.mtl"></material> 
     <material name="map_snow" path="models/map_snow.mtl"></material>
@@ -18,4 +21,6 @@
     <material name="glass" path="models/factory.mtl"></material>
     <material name="quarry" path="models/quarry.mtl"></material>
     <material name="select" path="models/selected.mtl"></material> 
+    <material name="capture" path="models/capture.mtl"></material> 
+    <material name="aqua" path="models/aqua.mtl"></material> 
 </content>

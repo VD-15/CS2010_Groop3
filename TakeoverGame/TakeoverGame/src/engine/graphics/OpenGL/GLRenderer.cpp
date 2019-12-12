@@ -302,7 +302,7 @@ namespace
 				glActiveTexture(GL_TEXTURE0 + 3);
 				glBindTexture(GL_TEXTURE_2D, textureMap[material->alphaMap]);
 
-				glDrawArraysInstanced(GL_TRIANGLES, 0, model->GetMeshes()[i].size() / 3, instances.size());
+				glDrawArraysInstanced(GL_TRIANGLES, 0, static_cast<UInt>(model->GetMeshes()[i].size() / 3), static_cast<UInt>(instances.size()));
 			}
 		}
 

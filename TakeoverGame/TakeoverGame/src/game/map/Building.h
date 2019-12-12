@@ -4,6 +4,7 @@
 #include "../GameManager.h"
 #include "../components/TeamComponent.h"
 #include "../components/Selectable.h"
+#include "../components/FabricatorComponent.h"
 #include "../map/Capture.h"
 
 #include "../../engine/core/GameEntity.hpp"
@@ -35,6 +36,9 @@ namespace tkv
 		TransformComponent3D* transform;
 		DrawModelComponent3D* draw;
 		SelectableComponent* select;
+		TeamComponent* team;
+		CaptureComponent* capture;
+		UnitFabricatorComponent* fabricator;
 	};
 
 	struct QuarryEntity : public HeapAllocateEntity, Entity<QuarryEntity>
@@ -45,5 +49,7 @@ namespace tkv
 		TransformComponent3D* transform;
 		DrawModelComponent3D* draw;
 		SelectableComponent* select;
+		TeamComponent* team;
+		CaptureComponent* capture;
 	};
 }

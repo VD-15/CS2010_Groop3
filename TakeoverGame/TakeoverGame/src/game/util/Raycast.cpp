@@ -14,7 +14,7 @@ CircleVolume::CircleVolume(const Vector3& location, Float radius)
 	this->radius = radius;
 }
 
-Bool CircleVolume::Intersects(const Ray& r)
+Bool CircleVolume::Intersects(const Ray& r) const
 {
 	//Get X/Z location of ray at y-coord
 
@@ -29,4 +29,13 @@ Bool CircleVolume::Intersects(const Ray& r)
 	);
 
 	return (Distance(intersection, planePos) <= radius);
+}
+
+Vector3 CircleVolume::GetIntersection(const Ray& r) const
+{
+	return Vector3(
+		(-r.direction.x / r.direction.y) * (r.location.y - this->location.y) + r.location.x,
+		this->location.y,
+		(-r.direction.z / r.direction.y) * (r.location.y - this->location.y) + r.location.z
+	);
 }

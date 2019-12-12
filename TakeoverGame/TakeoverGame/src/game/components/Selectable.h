@@ -35,7 +35,7 @@ namespace tkv
 		Byte flags;
 		Float hoverRadius;
 
-		const TeamComponent* const team;
+		//const TeamComponent* const team;
 
 		//Transform of the selectable outline
 		//Seperate from the entity this component is attached to because of rotations & the like

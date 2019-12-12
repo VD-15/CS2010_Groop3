@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup Label="ProjectConfigurations">
     <ProjectConfiguration Include="Debug|x64">
@@ -106,6 +106,7 @@
     <ClCompile Include="src\game\components\CommandReciever.cpp" />
     <ClCompile Include="src\game\components\FollowComponent.cpp" />
     <ClCompile Include="src\game\components\FabricatorComponent.cpp" />
+    <ClCompile Include="src\game\components\Resource.cpp" />
     <ClCompile Include="src\game\components\Selectable.cpp" />
     <ClCompile Include="src\game\GameManager.cpp" />
     <ClCompile Include="src\engine\components\CameraComponent.cpp" />
@@ -145,13 +146,10 @@
     <ClCompile Include="src\game\map\Capture.cpp" />
     <ClCompile Include="src\game\map\GameMap.cpp" />
     <ClCompile Include="src\game\Program.cpp" />
-    <ClCompile Include="src\game\ui\Cursor.cpp" />
     <ClCompile Include="src\game\ui\PlayerCamera.cpp" />
     <ClCompile Include="src\game\components\TeamComponent.cpp" />
-    <ClCompile Include="src\game\units\TestUnitEntity.cpp" />
     <ClCompile Include="src\game\util\Raycast.cpp" />
     <ClCompile Include="src\game\units\Unit.cpp" />
-    <ClCompile Include="src\game\units\UnitEntity.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\engine\components\DrawModelComponent.h" />
@@ -168,6 +166,7 @@
     <ClInclude Include="src\game\components\CommandReciever.h" />
     <ClInclude Include="src\game\components\FollowComponent.h" />
     <ClInclude Include="src\game\components\FabricatorComponent.h" />
+    <ClInclude Include="src\game\components\Resource.h" />
     <ClInclude Include="src\game\components\Selectable.h" />
     <ClInclude Include="src\game\GameManager.h" />
     <ClInclude Include="src\engine\components\CameraComponent.h" />
@@ -214,12 +213,10 @@
     <ClInclude Include="src\game\map\Capture.h" />
     <ClInclude Include="src\game\map\GameMap.h" />
     <ClInclude Include="src\game\Takover.h" />
-    <ClInclude Include="src\game\ui\Cursor.h" />
     <ClInclude Include="src\game\ui\PlayerCamera.h" />
     <ClInclude Include="src\game\components\TeamComponent.h" />
     <ClInclude Include="src\game\units\Unit.h" />
     <ClInclude Include="src\game\util\Raycast.h" />
-    <ClInclude Include="src\game\units\UnitEntity.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

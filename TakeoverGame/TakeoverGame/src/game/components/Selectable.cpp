@@ -1,5 +1,4 @@
 #include "Selectable.h"
-#include "../ui/Cursor.h"
 #include "../../engine/components/CameraComponent.h"
 #include "../../engine/core/ContentManager.hpp"
 #include "../../engine/core/Mouse.h"
@@ -118,7 +117,7 @@ void SelectionSystem::Destroy()
 
 SelectableComponent::SelectableComponent(IEntity* e, const TransformComponent3D* const follow) :
 	Component<SelectableComponent>(e),
-	team(team),
+	//team(team),
 	transform(TransformComponent3D::CreateComponent(e)),
 	draw(DrawModelComponent3D::CreateComponent(e, transform, ContentManager<Model>::Get().GetContent("select_outline"))),
 	follow(FollowComponent::CreateComponent(e, follow, transform))
@@ -126,8 +125,8 @@ SelectableComponent::SelectableComponent(IEntity* e, const TransformComponent3D*
 	this->flags = 0;
 	this->hoverRadius = 20.0f;
 	this->follow->followType = TKV_FOLLOW_X | TKV_FOLLOW_Z;
-	this->transform->location.y = -100.0f;
-	this->transform->scale = Vector3(20.0f);
+	this->transform->location.y = 1.0f;
+	this->transform->scale = Vector3(0.0f);
 }
 
 void SelectableComponent::OnDelete()
@@ -141,21 +140,24 @@ void SelectableComponent::OnSelect()
 {
 	LogInfo("Selectable", "Selected, flag is now: " + std::to_string(this->flags));
 
-	this->transform->location.y = 1.0f;
+	this->transform->scale = Vector3(this->hoverRadius + 1.0f);
 }
 
 void SelectableComponent::OnDeselect()
 {
 	LogInfo("Selectable", "DeSelected, flag is now: " + std::to_string(this->flags));
 
-	this->transform->location.y = -100.0f;
+	this->transform->scale = Vector3(0.0f);
 }
 
 void SelectableComponent::OnHoverEnter()
 {
 	LogInfo("Selectable", "Hovered, flag is now: " + std::to_string(this->flags));
 
-	this->transform->location.y = 1.0f;
+	if (!(this->flags & TKV_FLAG_SELECTED))
+	{
+		this->transform->scale = Vector3(this->hoverRadius);
+	}
 }
 
 void SelectableComponent::OnHoverLeave()
@@ -164,6 +166,6 @@ void SelectableComponent::OnHoverLeave()
 
 	if (!(this->flags & TKV_FLAG_SELECTED))
 	{
-		this->transform->location.y = -100.0f;
+		this->transform->scale = Vector3(0.0f);
 	}
 }

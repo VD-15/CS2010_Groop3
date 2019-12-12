@@ -117,7 +117,7 @@ PlayerCameraEntity::PlayerCameraEntity()
 	this->transform3D->location = Vector3(0.0f, 40.0f, 0.0f);
 	this->transform3D->rotation = AngleAxis(vlk::Pi / 4.0f, Vector3X);
 
-	this->follow = dynamic_cast<IEntity*>(CameraFollowEntity::CreateEntity(this->camera3D));
+	//this->follow = dynamic_cast<IEntity*>(CameraFollowEntity::CreateEntity(this->camera3D));
 }
 
 void PlayerCameraEntity::OnDelete()
@@ -128,5 +128,5 @@ void PlayerCameraEntity::OnDelete()
 	this->transform2D->Delete();
 	this->transform3D->Delete();
 
-	this->follow->Delete();
+	//this->follow->Delete();
 }
