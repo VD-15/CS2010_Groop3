@@ -783,6 +783,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1425206436}
   - component: {fileID: 1425206438}
+  - component: {fileID: 1425206439}
   - component: {fileID: 1425206437}
   m_Layer: 8
   m_Name: Tank Unit
@@ -833,6 +834,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0ae7357e1346a884dadda868e83d36f1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1425206439
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1425206435}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cf9035ea3cca63d43813c0984da06067, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 1
 --- !u!1 &1859726115
 GameObject:
   m_ObjectHideFlags: 0
@@ -856,7 +870,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1859726115}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -865,7 +879,7 @@ Transform:
   - {fileID: 194837953}
   m_Father: {fileID: 1425206436}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
 --- !u!1 &1979706183
 GameObject:
   m_ObjectHideFlags: 0
