@@ -62,7 +62,7 @@ public class DaylightController : MonoBehaviour
 		else
 			this.light.color = MixColor(this.colorMidnight, this.colorSunrise, (this.timeOfDay - 0.75f) * 4f);
 
-		//this.light.intensity = Mathf.Sin(this.timeOfDay * Mathf.PI * 2f);
+		this.light.intensity = Mathf.Sin(this.timeOfDay * Mathf.PI * 2f);
 
     }
 
