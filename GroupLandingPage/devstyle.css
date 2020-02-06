@@ -368,6 +368,24 @@ font-family: 'Roboto', sans-serif;
   padding: 50px 0;
 }
 
+#day18 {
+  background-color: black;
+  margin: auto;
+  max-width: auto;
+  color: #000000;
+  text-align: center;
+  padding: 50px 0;
+}
+
+
+#day19 {
+  background-color: black;
+  margin: auto;
+  max-width: auto;
+  color: #000000;
+  text-align: center;
+  padding: 50px 0;
+}
 
 /* #about-section, */
 #downloads-section {
