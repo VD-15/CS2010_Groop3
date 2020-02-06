@@ -52,9 +52,9 @@ public class CameraController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-		MoveCamera();
-		ClampCamera();
-		RotateCamera();
+		this.MoveCamera();
+		this.ClampCamera();
+		this.RotateCamera();
 	}
 
 	void MoveCamera()

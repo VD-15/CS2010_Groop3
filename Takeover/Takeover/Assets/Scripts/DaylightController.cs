@@ -7,7 +7,7 @@ public class DaylightController : MonoBehaviour
 	//Length of a day in seconds
 	[SerializeField] private float dayLength;
 
-	//Midnight = 0.25, noon = 0.75
+	//noon = 0.25, midnight = 0.75
 	[SerializeField] private float timeOfDay;
 
 	[SerializeField] private Color colorNoon;
@@ -15,7 +15,7 @@ public class DaylightController : MonoBehaviour
 	[SerializeField] private Color colorSunset;
 	[SerializeField] private Color colorMidnight;
 
-	private Light light;
+	new private Light light;
 
     // Start is called before the first frame update
     void Start()
@@ -27,6 +27,25 @@ public class DaylightController : MonoBehaviour
     void Update()
     {
 		float timestep = Time.deltaTime / this.dayLength;
+
+		if (this.timeOfDay < 0.5f && this.timeOfDay + timestep >= 0.5f)
+		{
+			NightLightController[] lights = FindObjectsOfType<NightLightController>();
+
+			foreach (NightLightController n in lights)
+			{
+				n.TurnOn();
+			}
+		}
+		else if (this.timeOfDay < 1f && this.timeOfDay + timestep >= 1f)
+		{
+			NightLightController[] lights = FindObjectsOfType<NightLightController>();
+
+			foreach (NightLightController n in lights)
+			{
+				n.TurnOff();
+			}
+		}
 
 		this.timeOfDay += timestep;
 
@@ -43,7 +62,8 @@ public class DaylightController : MonoBehaviour
 		else
 			this.light.color = MixColor(this.colorMidnight, this.colorSunrise, (this.timeOfDay - 0.75f) * 4f);
 
-		this.light.intensity = Mathf.Sin(this.timeOfDay * Mathf.PI * 2f);
+		//this.light.intensity = Mathf.Sin(this.timeOfDay * Mathf.PI * 2f);
+
     }
 
 	private static Color MixColor(Color c1, Color c2, float f)
