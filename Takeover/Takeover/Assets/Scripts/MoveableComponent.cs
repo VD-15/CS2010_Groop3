@@ -6,11 +6,13 @@ public class MoveableComponent : MonoBehaviour
 {
     [SerializeField] private float speed;
     private List<Vector3> path;
+	private MapController mapController;
 
     // Start is called before the first frame update
     void Start()
     {
         this.path = new List<Vector3>();
+		this.mapController = FindObjectOfType<MapController>();
     }
 
     // Update is called once per frame
@@ -40,11 +42,12 @@ public class MoveableComponent : MonoBehaviour
 
     public void IssueMoveCommand(Vector3 newTarget)
     {
-        Vector3 target = new Vector3(Mathf.Floor(newTarget.x) + 0.5f, newTarget.y, Mathf.Floor(newTarget.z) + 0.5f);
+		MapNode goal = this.mapController.GetMapNode(new Vector2Int(Mathf.FloorToInt(newTarget.x), Mathf.FloorToInt(newTarget.z)));
+		MapNode start = this.mapController.GetMapNode(new Vector2Int(Mathf.FloorToInt(this.transform.position.x), Mathf.FloorToInt(this.transform.position.z)));
+		//Vector3 target = new Vector3(Mathf.Floor(newTarget.x) + 0.5f, newTarget.y, Mathf.Floor(newTarget.z) + 0.5f);
 
-        if (target != this.path[this.path.Count - 1])
-        {
-            this.path.Add(target);
-        }
-    }
+		this.mapController.Pathfind(start, goal, ref this.path);
+
+		//this.path.Add(goal.Location);
+	}
 }
