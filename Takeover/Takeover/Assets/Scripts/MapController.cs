@@ -11,16 +11,39 @@ public enum MapNodeSlopeDirection
 
 public class MapNode
 {
-	public MapNode(Vector2Int xz, float y, MapNodeSlopeDirection slopeDirection)
+	public MapNode(Vector2Int xz, float y, Vector3 normal)
 	{
 		this.Location = new Vector3(xz.x + 0.5f, y, xz.y + 0.5f);
-		this.Slope = slopeDirection;
 		this.neighbors = new List<MapNode>(4);
+		this.Normal = normal;
+
+		//Dot product shows how close the normal is to the up vector,
+		//if the dot product is equal to 1, the normal is facing upward.
+		//We use a value of 0.9 to allow some leeway.
+		float dot = Vector3.Dot(normal, Vector3.up);
+		//If the slope is flat
+		if (dot > 0.9f)
+		{
+			this.Slope = MapNodeSlopeDirection.None;
+		}
+		else
+		{
+			//If the tile is sloping in the x direction
+			if (Mathf.Abs(normal.x) > 0.01)
+			{
+				this.Slope = MapNodeSlopeDirection.X;
+			}
+			else
+			{
+				this.Slope = MapNodeSlopeDirection.Y;
+			}
+		}
 	}
 
 	public float Height { get { return this.Location.y; } }
 	public MapNodeSlopeDirection Slope { get; private set; }
 	public Vector3 Location { get; private set; }
+	public Vector3 Normal { get; private set; }
 
 	private readonly List<MapNode> neighbors;
 
@@ -60,36 +83,8 @@ public class MapController : MonoBehaviour
 				{
 					float height = hit.point.y;
 
-					//Dot product shows how close the normal is to the up vector,
-					//if the dot product is equal to 1, the normal is facing upward.
-					//We use a value of 0.9 to allow some leeway.
-					float dot = Vector3.Dot(hit.normal, Vector3.up);
-
-					MapNodeSlopeDirection slopeDirection;
-
-					//If the slope is flat
-					if (dot > 0.9f)
-					{
-						slopeDirection = MapNodeSlopeDirection.None;
-						//Debug.Log("Not sloping: " + x + " " + y);
-					}
-					else
-					{
-						//If the tile is sloping in the x direction
-						if (Mathf.Abs(hit.normal.x) > 0.01)
-						{
-							slopeDirection = MapNodeSlopeDirection.X;
-							//Debug.Log("Sloping in X direction: " + x + " " + y);
-						}
-						else
-						{
-							slopeDirection = MapNodeSlopeDirection.Y;
-							//Debug.Log("Sloping in Y direction: " + x + " " + y);
-						}						
-					}
-
 					Vector2Int v = new Vector2Int(x, y);
-					this.nodes.Add(v, new MapNode(v, height, slopeDirection));
+					this.nodes.Add(v, new MapNode(v, height, hit.normal));
 				}
 				else
 				{
@@ -154,7 +149,7 @@ public class MapController : MonoBehaviour
 		}
 	}
 
-	public void Pathfind(MapNode start, MapNode goal, ref List<Vector3> pathOut)
+	public void Pathfind(MapNode start, MapNode goal, ref List<MapNode> pathOut)
 	{
 		if (start == null || goal == null)
 		{
@@ -204,12 +199,12 @@ public class MapController : MonoBehaviour
 			if (currentNode == goal)
 			{
 				pathOut.Clear();
-				pathOut.Add(currentNode.Location);
+				pathOut.Add(currentNode);
 
 				while (cameFrom.ContainsKey(currentNode))
 				{
 					currentNode = cameFrom[currentNode];
-					pathOut.Add(currentNode.Location);
+					pathOut.Add(currentNode);
 				}
 
 				pathOut.Reverse();
