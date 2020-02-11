@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class MoveableComponent : MonoBehaviour
 {
+    private readonly int mapLayerMask = 1 << 9;
+
     [SerializeField] private float speed;
     private List<MapNode> path;
 	private MapController mapController;
@@ -22,11 +24,23 @@ public class MoveableComponent : MonoBehaviour
         {
             MapNode next = this.path[0];
 
-			//TODO: Height resolution via raycast
+            //TODO: Height resolution via raycast
+
+            Ray r = new Ray(new Vector3(this.transform.position.x, 5f, this.transform.position.z), Vector3.down);
+
+            float height = this.transform.position.y;
+            Vector3 normal = Vector3.up;
+
+            if (Physics.Raycast(r, out RaycastHit hit, 10.0f, mapLayerMask))
+            {
+                height = hit.point.y;
+                normal = hit.normal;
+            }
 
             Vector3 direction = (next.Location - this.transform.position);
+            direction.y = 0;
 
-			this.transform.rotation = Quaternion.FromToRotation(Vector3.up, next.Normal);
+            this.transform.rotation = Quaternion.FromToRotation(Vector3.up, normal) * Quaternion.LookRotation(direction);
 
             float moveAmount = this.speed * Time.deltaTime;
 
@@ -38,6 +52,9 @@ public class MoveableComponent : MonoBehaviour
             else
             {
                 this.transform.Translate(direction.normalized * moveAmount, Space.World);
+                Vector3 v = this.transform.position;
+                v.y = height;
+                this.transform.position = v;
             }
         }
     }
