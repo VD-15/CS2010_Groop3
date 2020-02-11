@@ -5,13 +5,13 @@ using UnityEngine;
 public class MoveableComponent : MonoBehaviour
 {
     [SerializeField] private float speed;
-    private List<Vector3> path;
+    private List<MapNode> path;
 	private MapController mapController;
 
     // Start is called before the first frame update
     void Start()
     {
-        this.path = new List<Vector3>();
+        this.path = new List<MapNode>();
 		this.mapController = FindObjectOfType<MapController>();
     }
 
@@ -20,17 +20,19 @@ public class MoveableComponent : MonoBehaviour
     {
         if (this.path.Count > 0)
         {
-            Vector3 next = this.path[0];
+            MapNode next = this.path[0];
 
-            Vector3 direction = (next - this.transform.position);
+			//TODO: Height resolution via raycast
 
-            this.transform.rotation = Quaternion.LookRotation(direction, Vector3.up);
+            Vector3 direction = (next.Location - this.transform.position);
+
+			this.transform.rotation = Quaternion.FromToRotation(Vector3.up, next.Normal);
 
             float moveAmount = this.speed * Time.deltaTime;
 
             if (direction.magnitude <= moveAmount)
             {
-                this.transform.position = next;
+                this.transform.position = next.Location;
                 this.path.RemoveAt(0);
             }
             else
