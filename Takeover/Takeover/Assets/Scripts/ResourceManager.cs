@@ -5,7 +5,7 @@ using UnityEngine;
 public class ResourceManager : MonoBehaviour
 {
   public static ResourceManager me;
-  public int Steel = 0, Aluminium = 0, Rubber = 0, Oil = 0, Silicone = 0, Uranium = 0;
+  public int steel = 0, aluminium = 0, rubber = 0, oil = 0, silicone = 0, uranium = 0;
 
     void Awake()
     {
