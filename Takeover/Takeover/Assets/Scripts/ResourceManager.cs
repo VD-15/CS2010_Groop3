@@ -24,7 +24,7 @@ public class ResourceManager : MonoBehaviour
 
     }
 
-    publoc void IncreaseResources(int resource, int amount)
+    publoc void IncreaseResources(int resource, int amount) //
     {
       alterResourceVal (resource, amount * -1);
     }
@@ -33,4 +33,48 @@ public class ResourceManager : MonoBehaviour
     {
       alterResourceVal (resource, amount);
     }
+
+    public bool resourceAmountCheck(string resource, int amount) //check we have enough of the required resource
+    {
+      switch (resource) {
+        case "steel":
+        if (steel > amount){
+          return true;
+        } else {
+          return false;
+        }
+        break;
+        case "aluminium":
+        if (aluminium > amount){
+          return true;
+        } else {
+          return false;
+        }
+        break;
+        case "rubber":
+        if (oil > amount){
+          return true;
+        } else {
+          return false;
+        }
+        break;
+        case "silicone":
+        if (silicone > amount){
+          return true;
+        } else {
+          return false;
+        }
+        break;
+        case "uranium":
+        if (uranium > amount){
+          return true;
+        } else {
+          return false;
+        }
+        break;
+      default:
+        break;
+      }
+    }
+
 }
