@@ -24,12 +24,12 @@ public class ResourceManager : MonoBehaviour
 
     }
 
-    publoc void IncreaseResources(int resource, int amount) //
+    public void IncreaseResources(string resource, int amount) //
     {
       alterResourceVal (resource, amount * -1);
     }
 
-    publoc void DecreaseResources(int resource, int amount)
+    public void DecreaseResources(string resource, int amount)
     {
       alterResourceVal (resource, amount);
     }
@@ -73,8 +73,31 @@ public class ResourceManager : MonoBehaviour
         }
         break;
       default:
-        break;
+        return false;
       }
     }
+
+  void alterResourceVal(string resource, int amount)
+  {
+    switch(resource){
+      case "steel":
+        steel += amount;
+        break;
+      case "aluminium":
+        aluminium += amount;
+        break;
+      case "rubber":
+        rubber += amount;
+        break;
+      case "silicone":
+        silicone += amount;
+        break;
+      case "uranium":
+        uranium += amount;
+        break;
+      default:
+      break;
+    }
+  }
 
 }
