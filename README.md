@@ -3,6 +3,8 @@ CS2010 Group Project
 
 [Designed Alliance](https://docs.google.com/document/d/1UyrTdt7ziUO9ym-NqMIcgA-ffnqi0-jOYuKz_UiY-rc/edit?usp=sharing)
 
+[Repo for website](https://github.com/Armaan19/Armaan19.github.io)
+
 [Website](https://Armaan19.github.io/Armaan19.github.io/)
 
 [Game Design Document](https://docs.google.com/document/d/1HlYA44ce1aOPXcEmsJgU3fhtHeeATdx3xW4TToKK8kc/edit?usp=sharing)
