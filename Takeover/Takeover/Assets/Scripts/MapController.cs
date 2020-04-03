@@ -11,16 +11,39 @@ public enum MapNodeSlopeDirection
 
 public class MapNode
 {
-	public MapNode(Vector2Int xz, float y, MapNodeSlopeDirection slopeDirection)
+	public MapNode(Vector2Int xz, float y, Vector3 normal)
 	{
 		this.Location = new Vector3(xz.x + 0.5f, y, xz.y + 0.5f);
-		this.Slope = slopeDirection;
 		this.neighbors = new List<MapNode>(4);
+		this.Normal = normal;
+
+		//Dot product shows how close the normal is to the up vector,
+		//if the dot product is equal to 1, the normal is facing upward.
+		//We use a value of 0.9 to allow some leeway.
+		float dot = Vector3.Dot(normal, Vector3.up);
+		//If the slope is flat
+		if (dot > 0.9f)
+		{
+			this.Slope = MapNodeSlopeDirection.None;
+		}
+		else
+		{
+			//If the tile is sloping in the x direction
+			if (Mathf.Abs(normal.x) > 0.01)
+			{
+				this.Slope = MapNodeSlopeDirection.X;
+			}
+			else
+			{
+				this.Slope = MapNodeSlopeDirection.Y;
+			}
+		}
 	}
 
 	public float Height { get { return this.Location.y; } }
 	public MapNodeSlopeDirection Slope { get; private set; }
 	public Vector3 Location { get; private set; }
+	public Vector3 Normal { get; private set; }
 
 	private readonly List<MapNode> neighbors;
 
@@ -43,11 +66,18 @@ public class MapController : MonoBehaviour
 	private readonly int mapLayerMask = 1 << 9;
 
 	private Dictionary<Vector2Int, MapNode> nodes;
+	private Dictionary<Vector2Int, TileOccupierController> occupiers;
+
+	public delegate void MapCompleteFun();
+	public event MapCompleteFun OnMapComplete;
+
+	public bool isComplete { get; private set; } = false;
 
     // Start is called before the first frame update
     void Start()
     {
 		this.nodes = new Dictionary<Vector2Int, MapNode>();
+		this.occupiers = new Dictionary<Vector2Int, TileOccupierController>();
 
 		//First iteration creats map nodes
         for (int y = -this.mapSize; y < this.mapSize; y++)
@@ -60,36 +90,8 @@ public class MapController : MonoBehaviour
 				{
 					float height = hit.point.y;
 
-					//Dot product shows how close the normal is to the up vector,
-					//if the dot product is equal to 1, the normal is facing upward.
-					//We use a value of 0.9 to allow some leeway.
-					float dot = Vector3.Dot(hit.normal, Vector3.up);
-
-					MapNodeSlopeDirection slopeDirection;
-
-					//If the slope is flat
-					if (dot > 0.9f)
-					{
-						slopeDirection = MapNodeSlopeDirection.None;
-						//Debug.Log("Not sloping: " + x + " " + y);
-					}
-					else
-					{
-						//If the tile is sloping in the x direction
-						if (Mathf.Abs(hit.normal.x) > 0.01)
-						{
-							slopeDirection = MapNodeSlopeDirection.X;
-							//Debug.Log("Sloping in X direction: " + x + " " + y);
-						}
-						else
-						{
-							slopeDirection = MapNodeSlopeDirection.Y;
-							//Debug.Log("Sloping in Y direction: " + x + " " + y);
-						}						
-					}
-
-					Vector2Int v = new Vector2Int(x, y);
-					this.nodes.Add(v, new MapNode(v, height, slopeDirection));
+					Vector2Int v = MapController.LocationToMapIndex(hit.point);
+					this.nodes.Add(v, new MapNode(v, height, hit.normal));
 				}
 				else
 				{
@@ -134,13 +136,37 @@ public class MapController : MonoBehaviour
 				}
 			}
 		}
+
+		this.isComplete = true;
+
+		if (this.OnMapComplete != null)
+		{
+			OnMapComplete.Invoke();
+
+			//Clear invocation list for safety
+			foreach (MapCompleteFun f in OnMapComplete.GetInvocationList())
+			{
+				OnMapComplete -= f;
+			}
+		}
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+	public TileOccupierController GetOccupier(Vector2Int location)
+	{
+		if (this.occupiers.ContainsKey(location))
+		{
+			return this.occupiers[location];
+		}
+		else
+		{
+			return null;
+		}
+	}
+
+	public void SetOccupier(Vector2Int location, TileOccupierController controller)
+	{
+		this.occupiers[location] = controller;
+	}
 
 	public MapNode GetMapNode(Vector2Int location)
 	{
@@ -154,11 +180,35 @@ public class MapController : MonoBehaviour
 		}
 	}
 
-	public void Pathfind(MapNode start, MapNode goal, ref List<Vector3> pathOut)
+	public bool IsAdjacent(Vector2Int l1, Vector2Int l2)
+	{
+		MapNode m1 = this.GetMapNode(l1);
+		MapNode m2 = this.GetMapNode(l2);
+
+		//This method doesn't take corners into account
+		m1.GetNeighbors(out MapNode[] neighbours);
+
+		foreach (MapNode m in neighbours)
+		{
+			if (m.Location == m2.Location)
+			{
+				return true;
+			}
+		}
+
+		return false;
+	}
+
+	public static Vector2Int LocationToMapIndex(Vector3 location)
+	{
+		return new Vector2Int(Mathf.FloorToInt(location.x), Mathf.FloorToInt(location.z));
+	}
+
+	public void Pathfind(MapNode start, MapNode goal, ref List<MapNode> pathOut)
 	{
 		if (start == null || goal == null)
 		{
-			Debug.LogError("Failed to pathfind from " + start + " to " + goal);
+			Debug.LogWarning("Failed to pathfind from " + start.Location.ToString() + " to " + goal.Location.ToString());
 			return;
 		}
 
@@ -204,12 +254,12 @@ public class MapController : MonoBehaviour
 			if (currentNode == goal)
 			{
 				pathOut.Clear();
-				pathOut.Add(currentNode.Location);
+				pathOut.Add(currentNode);
 
 				while (cameFrom.ContainsKey(currentNode))
 				{
 					currentNode = cameFrom[currentNode];
-					pathOut.Add(currentNode.Location);
+					pathOut.Add(currentNode);
 				}
 
 				pathOut.Reverse();
@@ -231,10 +281,9 @@ public class MapController : MonoBehaviour
 
 			foreach (MapNode neighbor in neighbors)
 			{
-				//Debug.Log("Examining neighbor: " + neighbor.Location);
+				if (this.GetOccupier(LocationToMapIndex(neighbor.Location))) continue;
 
 				if (!gScore.TryGetValue(neighbor, out float neighborScore)) neighborScore = Mathf.Infinity;
-				//Debug.Log("Neighbor score: " + neighborScore);
 
 				if (tenativeGScore < neighborScore)
 				{
@@ -252,6 +301,6 @@ public class MapController : MonoBehaviour
 			}
 		}
 
-		Debug.LogError("Failed to pathfind from " + start.Location + " to " + goal.Location);
+		Debug.LogWarning("Failed to pathfind from " + start.Location.ToString() + " to " + goal.Location.ToString());
 	}
 }

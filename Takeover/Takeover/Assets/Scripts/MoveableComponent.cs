@@ -4,50 +4,126 @@ using UnityEngine;
 
 public class MoveableComponent : MonoBehaviour
 {
+    private readonly int mapLayerMask = 1 << 9;
+
     [SerializeField] private float speed;
-    private List<Vector3> path;
+    private List<MapNode> path;
 	private MapController mapController;
+	private TileOccupierController occupierController;
 
     // Start is called before the first frame update
     void Start()
     {
-        this.path = new List<Vector3>();
+		//TODO: replace mapnodes with vector3
+		this.path = new List<MapNode>();
 		this.mapController = FindObjectOfType<MapController>();
+		this.occupierController = this.GetComponent<TileOccupierController>();
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        if (this.path.Count > 0)
-        {
-            Vector3 next = this.path[0];
+	private void OnEnable()
+	{
+		TurnManager.AddTurnEvent(this.OnTurn, TurnStage.Move);
+	}
 
-            Vector3 direction = (next - this.transform.position);
+	private void OnDisable()
+	{
+		TurnManager.RemoveTurnEvent(this.OnTurn, TurnStage.Move);
+	}
 
-            this.transform.rotation = Quaternion.LookRotation(direction, Vector3.up);
+	//Gradually moves the entity towards the next node in the path
+	IEnumerator MoveTowardsTarget()
+	{
+		using (TurnBlocker block = new TurnBlocker())
+		{
+			while (true)
+			{
+				Ray r = new Ray(new Vector3(this.transform.position.x, 5f, this.transform.position.z), Vector3.down);
 
-            float moveAmount = this.speed * Time.deltaTime;
+				float height = this.transform.position.y;
+				Vector3 normal = Vector3.up;
 
-            if (direction.magnitude <= moveAmount)
-            {
-                this.transform.position = next;
-                this.path.RemoveAt(0);
-            }
-            else
-            {
-                this.transform.Translate(direction.normalized * moveAmount, Space.World);
-            }
-        }
-    }
+				if (Physics.Raycast(r, out RaycastHit hit, 10.0f, mapLayerMask))
+				{
+					height = hit.point.y;
+					normal = hit.normal;
+				}
+
+				Vector3 direction = (this.path[0].Location - this.transform.position);
+				direction.y = 0;
+
+				float moveAmount = this.speed * Time.deltaTime;
+
+				if (direction.magnitude <= moveAmount)
+				{
+					this.transform.position = this.path[0].Location;
+					this.path.RemoveAt(0);
+
+					break;
+				}
+				else
+				{
+					this.transform.rotation = Quaternion.FromToRotation(Vector3.up, normal) * Quaternion.LookRotation(direction);
+					this.transform.Translate(direction.normalized * moveAmount, Space.World);
+					Vector3 v = this.transform.position;
+					v.y = height;
+					this.transform.position = v;
+
+					yield return null;
+				}
+			}
+		}
+	}
+
+	//Called when a turn is processed
+	void OnTurn()
+	{
+		//Advance path target
+		if (this.path.Count > 0)
+		{
+			Vector2Int newLoc = MapController.LocationToMapIndex(this.path[0].Location);
+
+			if (this.occupierController.CanMoveTo(newLoc))
+			{
+				this.occupierController.MoveTo(newLoc);
+				this.StartCoroutine(this.MoveTowardsTarget());
+			}
+			else
+			{
+				Debug.Log("Path occupied, cannot move");
+			}
+		}
+	}
 
     public void IssueMoveCommand(Vector3 newTarget)
     {
-		MapNode goal = this.mapController.GetMapNode(new Vector2Int(Mathf.FloorToInt(newTarget.x), Mathf.FloorToInt(newTarget.z)));
-		MapNode start = this.mapController.GetMapNode(new Vector2Int(Mathf.FloorToInt(this.transform.position.x), Mathf.FloorToInt(this.transform.position.z)));
-		//Vector3 target = new Vector3(Mathf.Floor(newTarget.x) + 0.5f, newTarget.y, Mathf.Floor(newTarget.z) + 0.5f);
+		TileOccupierController c = this.mapController.GetOccupier(MapController.LocationToMapIndex(newTarget));
 
-		this.mapController.Pathfind(start, goal, ref this.path);
+		if (c == null)
+		{
+			MapNode goal = this.mapController.GetMapNode(new Vector2Int(Mathf.FloorToInt(newTarget.x), Mathf.FloorToInt(newTarget.z)));
+			MapNode start = this.mapController.GetMapNode(new Vector2Int(Mathf.FloorToInt(this.transform.position.x), Mathf.FloorToInt(this.transform.position.z)));
+			//Vector3 target = new Vector3(Mathf.Floor(newTarget.x) + 0.5f, newTarget.y, Mathf.Floor(newTarget.z) + 0.5f);
 
-		//this.path.Add(goal.Location);
+			this.mapController.Pathfind(start, goal, ref this.path);
+
+			if (this.path.Count > 0)
+			{
+				this.path.RemoveAt(0);
+			}
+		}
+		else
+		{
+			Debug.Log("Tile occupied");
+		}
+	}
+
+	public void GetPath(out List<Vector3> path)
+	{
+		path = new List<Vector3>();
+
+		foreach (MapNode n in this.path)
+		{
+			path.Add(n.Location);
+		}
 	}
 }
