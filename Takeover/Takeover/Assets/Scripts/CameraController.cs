@@ -47,6 +47,7 @@ public class CameraController : MonoBehaviour
 		this.moveDir = new Vector3();
 
 		this.cameraComp = this.GetComponentInChildren<Camera>();
+		this.targetY = this.transform.position.y;
     }
 
     // Update is called once per frame
@@ -66,8 +67,8 @@ public class CameraController : MonoBehaviour
 		if (Input.GetKey(KeyCode.S)) this.moveDir.z -= 1f;
 		if (Input.GetKey(KeyCode.A)) this.moveDir.x -= 1f;
 		if (Input.GetKey(KeyCode.D)) this.moveDir.x += 1f;
-		if (Input.GetKey(KeyCode.Q)) rotAmount -= 1f;
-		if (Input.GetKey(KeyCode.E)) rotAmount += 1f;
+		//if (Input.GetKey(KeyCode.Q)) rotAmount -= 1f;
+		//if (Input.GetKey(KeyCode.E)) rotAmount += 1f;
 
 		if (this.moveDir.sqrMagnitude > 1f) this.moveDir.Normalize();
 
