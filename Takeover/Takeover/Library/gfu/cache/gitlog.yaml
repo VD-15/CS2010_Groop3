@@ -1,0 +1,2092 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &1
+MonoBehaviour:
+  m_ObjectHideFlags: 61
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -530159753, guid: 68c7e4565cde54155bb78d8e935f1ddb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cacheType: 3
+  lastUpdatedAtString: 2020-03-15T06:00:02.780+00:00
+  initializedAtString: 2020-03-15T06:00:01.848+00:00
+  log:
+  - commitID: d18e97ab0665a1a5b1ad0a7a8fae99e415bac8dd
+    mergeA: 
+    mergeB: 
+    authorName: VD-15
+    authorEmail: valkyriedev15@gmail.com
+    commitEmail: valkyriedev15@gmail.com
+    commitName: VD-15
+    summary: Implemented Resources
+    description: 
+    timeString: 2020-03-15T05:59:58.000+00:00
+    commitTimeString: 2020-03-15T05:59:58.000+00:00
+    changes:
+    - path: Assets\Materials\map_ground.mat
+      fullPath: C:\Users\Valkyrie\Documents\GitHub\Takeover\Assets\Materials\map_ground.mat
+      projectPath: Assets\Materials\map_ground.mat
+      originalPath: 
+      indexStatus: 3
+      workTreeStatus: 0
+    - path: Assets\Materials\map_rock.mat
+      fullPath: C:\Users\Valkyrie\Documents\GitHub\Takeover\Assets\Materials\map_rock.mat
+      projectPath: Assets\Materials\map_rock.mat
+      originalPath: 
+      indexStatus: 3
+      workTreeStatus: 0
+    - path: Assets\Prefabs\Capture Display.prefab
+      fullPath: C:\Users\Valkyrie\Documents\GitHub\Takeover\Assets\Prefabs\Capture
+        Display.prefab
+      projectPath: Assets\Prefabs\Capture Display.prefab
+      originalPath: 
+      indexStatus: 3
+      workTreeStatus: 0
+    - path: Assets\Prefabs\Rock.prefab
+      fullPath: C:\Users\Valkyrie\Documents\GitHub\Takeover\Assets\Prefabs\Rock.prefab
+      projectPath: Assets\Prefabs\Rock.prefab
+      originalPath: 
+      indexStatus: 3
+      workTreeStatus: 0
+    - path: Assets\Scenes\SampleScene.unity
+      fullPath: C:\Users\Valkyrie\Documents\GitHub\Takeover\Assets\Scenes\SampleScene.unity
+      projectPath: Assets\Scenes\SampleScene.unity
+      originalPath: 
+      indexStatus: 3
+      workTreeStatus: 0
+    - path: Assets\Scripts\MoveableComponent.cs
+      fullPath: C:\Users\Valkyrie\Documents\GitHub\Takeover\Assets\Scripts\MoveableComponent.cs
+      projectPath: Assets\Scripts\MoveableComponent.cs
+      originalPath: 
+      indexStatus: 3
+      workTreeStatus: 0
+    - path: Assets\Scripts\ResourceActorController.cs
+      fullPath: C:\Users\Valkyrie\Documents\GitHub\Takeover\Assets\Scripts\ResourceActorController.cs
+      projectPath: Assets\Scripts\ResourceActorController.cs
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: Assets\Scripts\ResourceActorController.cs.meta
+      fullPath: C:\Users\Valkyrie\Documents\GitHub\Takeover\Assets\Scripts\ResourceActorController.cs.meta
+      projectPath: Assets\Scripts\ResourceActorController.cs.meta
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: Assets\Scripts\ResourceDisplayController.cs
+      fullPath: C:\Users\Valkyrie\Documents\GitHub\Takeover\Assets\Scripts\ResourceDisplayController.cs
+      projectPath: Assets\Scripts\ResourceDisplayController.cs
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: Assets\Scripts\ResourceDisplayController.cs.meta
+      fullPath: C:\Users\Valkyrie\Documents\GitHub\Takeover\Assets\Scripts\ResourceDisplayController.cs.meta
+      projectPath: Assets\Scripts\ResourceDisplayController.cs.meta
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: Assets\Scripts\ResourceManager.cs
+      fullPath: C:\Users\Valkyrie\Documents\GitHub\Takeover\Assets\Scripts\ResourceManager.cs
+      projectPath: Assets\Scripts\ResourceManager.cs
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: Assets\Scripts\ResourceManager.cs.meta
+      fullPath: C:\Users\Valkyrie\Documents\GitHub\Takeover\Assets\Scripts\ResourceManager.cs.meta
+      projectPath: Assets\Scripts\ResourceManager.cs.meta
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: Assets\Scripts\TurnManager.cs
+      fullPath: C:\Users\Valkyrie\Documents\GitHub\Takeover\Assets\Scripts\TurnManager.cs
+      projectPath: Assets\Scripts\TurnManager.cs
+      originalPath: 
+      indexStatus: 3
+      workTreeStatus: 0
+    - path: Assets\Textures\brick_dif.png.meta
+      fullPath: C:\Users\Valkyrie\Documents\GitHub\Takeover\Assets\Textures\brick_dif.png.meta
+      projectPath: Assets\Textures\brick_dif.png.meta
+      originalPath: 
+      indexStatus: 3
+      workTreeStatus: 0
+    - path: Assets\Textures\brick_nml.png.meta
+      fullPath: C:\Users\Valkyrie\Documents\GitHub\Takeover\Assets\Textures\brick_nml.png.meta
+      projectPath: Assets\Textures\brick_nml.png.meta
+      originalPath: 
+      indexStatus: 3
+      workTreeStatus: 0
+    - path: Assets\Textures\metal_dif.png.meta
+      fullPath: C:\Users\Valkyrie\Documents\GitHub\Takeover\Assets\Textures\metal_dif.png.meta
+      projectPath: Assets\Textures\metal_dif.png.meta
+      originalPath: 
+      indexStatus: 3
+      workTreeStatus: 0
+    - path: Assets\Textures\metal_nml.png.meta
+      fullPath: C:\Users\Valkyrie\Documents\GitHub\Takeover\Assets\Textures\metal_nml.png.meta
+      projectPath: Assets\Textures\metal_nml.png.meta
+      originalPath: 
+      indexStatus: 3
+      workTreeStatus: 0
+    - path: Assets\Textures\snow_nml.png
+      fullPath: C:\Users\Valkyrie\Documents\GitHub\Takeover\Assets\Textures\snow_nml.png
+      projectPath: Assets\Textures\snow_nml.png
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: Assets\Textures\snow_nml.png.meta
+      fullPath: C:\Users\Valkyrie\Documents\GitHub\Takeover\Assets\Textures\snow_nml.png.meta
+      projectPath: Assets\Textures\snow_nml.png.meta
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: Assets\Textures\stone.jpg
+      fullPath: C:\Users\Valkyrie\Documents\GitHub\Takeover\Assets\Textures\stone.jpg
+      projectPath: Assets\Textures\stone.jpg
+      originalPath: Assets\Textures\rock.jpg
+      indexStatus: 6
+      workTreeStatus: 0
+    - path: Assets\Textures\stone.jpg.meta
+      fullPath: C:\Users\Valkyrie\Documents\GitHub\Takeover\Assets\Textures\stone.jpg.meta
+      projectPath: Assets\Textures\stone.jpg.meta
+      originalPath: Assets\Textures\rock.jpg.meta
+      indexStatus: 6
+      workTreeStatus: 0
+    - path: Assets\Textures\stone_nml.png
+      fullPath: C:\Users\Valkyrie\Documents\GitHub\Takeover\Assets\Textures\stone_nml.png
+      projectPath: Assets\Textures\stone_nml.png
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: Assets\Textures\stone_nml.png.meta
+      fullPath: C:\Users\Valkyrie\Documents\GitHub\Takeover\Assets\Textures\stone_nml.png.meta
+      projectPath: Assets\Textures\stone_nml.png.meta
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: Assets\Textures\tread_bmp.png.meta
+      fullPath: C:\Users\Valkyrie\Documents\GitHub\Takeover\Assets\Textures\tread_bmp.png.meta
+      projectPath: Assets\Textures\tread_bmp.png.meta
+      originalPath: 
+      indexStatus: 3
+      workTreeStatus: 0
+    - path: Assets\Textures\tread_dif.png.meta
+      fullPath: C:\Users\Valkyrie\Documents\GitHub\Takeover\Assets\Textures\tread_dif.png.meta
+      projectPath: Assets\Textures\tread_dif.png.meta
+      originalPath: 
+      indexStatus: 3
+      workTreeStatus: 0
+    - path: Assets\Textures\tread_dif_old.png.meta
+      fullPath: C:\Users\Valkyrie\Documents\GitHub\Takeover\Assets\Textures\tread_dif_old.png.meta
+      projectPath: Assets\Textures\tread_dif_old.png.meta
+      originalPath: 
+      indexStatus: 3
+      workTreeStatus: 0
+    - path: Packages\manifest.json
+      fullPath: C:\Users\Valkyrie\Documents\GitHub\Takeover\Packages\manifest.json
+      projectPath: Packages\manifest.json
+      originalPath: 
+      indexStatus: 3
+      workTreeStatus: 0
+    - path: ProjectSettings\EditorSettings.asset
+      fullPath: C:\Users\Valkyrie\Documents\GitHub\Takeover\ProjectSettings\EditorSettings.asset
+      projectPath: ProjectSettings\EditorSettings.asset
+      originalPath: 
+      indexStatus: 3
+      workTreeStatus: 0
+    - path: ProjectSettings\ProjectVersion.txt
+      fullPath: C:\Users\Valkyrie\Documents\GitHub\Takeover\ProjectSettings\ProjectVersion.txt
+      projectPath: ProjectSettings\ProjectVersion.txt
+      originalPath: 
+      indexStatus: 3
+      workTreeStatus: 0
+  - commitID: d6134ec93b203ff481b2cc99a7143576966a33ce
+    mergeA: 
+    mergeB: 
+    authorName: VD-15
+    authorEmail: valkyriedev15@gmail.com
+    commitEmail: valkyriedev15@gmail.com
+    commitName: VD-15
+    summary: Added capturable buildings
+    description: 
+    timeString: 2020-03-11T00:41:13.000+00:00
+    commitTimeString: 2020-03-11T00:41:13.000+00:00
+    changes:
+    - path: Assets\Prefabs\Capture Display.prefab
+      fullPath: C:\Users\Valkyrie\Documents\GitHub\Takeover\Assets\Prefabs\Capture
+        Display.prefab
+      projectPath: Assets\Prefabs\Capture Display.prefab
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: Assets\Prefabs\Capture Display.prefab.meta
+      fullPath: C:\Users\Valkyrie\Documents\GitHub\Takeover\Assets\Prefabs\Capture
+        Display.prefab.meta
+      projectPath: Assets\Prefabs\Capture Display.prefab.meta
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: Assets\Prefabs\Occupier.prefab
+      fullPath: C:\Users\Valkyrie\Documents\GitHub\Takeover\Assets\Prefabs\Occupier.prefab
+      projectPath: Assets\Prefabs\Occupier.prefab
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: Assets\Prefabs\Occupier.prefab.meta
+      fullPath: C:\Users\Valkyrie\Documents\GitHub\Takeover\Assets\Prefabs\Occupier.prefab.meta
+      projectPath: Assets\Prefabs\Occupier.prefab.meta
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: Assets\Prefabs\Rock.prefab
+      fullPath: C:\Users\Valkyrie\Documents\GitHub\Takeover\Assets\Prefabs\Rock.prefab
+      projectPath: Assets\Prefabs\Rock.prefab
+      originalPath: 
+      indexStatus: 3
+      workTreeStatus: 0
+    - path: Assets\Prefabs\Tank Unit.prefab
+      fullPath: C:\Users\Valkyrie\Documents\GitHub\Takeover\Assets\Prefabs\Tank Unit.prefab
+      projectPath: Assets\Prefabs\Tank Unit.prefab
+      originalPath: 
+      indexStatus: 3
+      workTreeStatus: 0
+    - path: Assets\Scenes\SampleScene.unity
+      fullPath: C:\Users\Valkyrie\Documents\GitHub\Takeover\Assets\Scenes\SampleScene.unity
+      projectPath: Assets\Scenes\SampleScene.unity
+      originalPath: 
+      indexStatus: 3
+      workTreeStatus: 0
+    - path: Assets\Scripts\CapturableController.cs
+      fullPath: C:\Users\Valkyrie\Documents\GitHub\Takeover\Assets\Scripts\CapturableController.cs
+      projectPath: Assets\Scripts\CapturableController.cs
+      originalPath: 
+      indexStatus: 3
+      workTreeStatus: 0
+    - path: Assets\Scripts\CaptureDisplayController.cs
+      fullPath: C:\Users\Valkyrie\Documents\GitHub\Takeover\Assets\Scripts\CaptureDisplayController.cs
+      projectPath: Assets\Scripts\CaptureDisplayController.cs
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: Assets\Scripts\CaptureDisplayController.cs.meta
+      fullPath: C:\Users\Valkyrie\Documents\GitHub\Takeover\Assets\Scripts\CaptureDisplayController.cs.meta
+      projectPath: Assets\Scripts\CaptureDisplayController.cs.meta
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: Assets\Scripts\CaptureManager.cs
+      fullPath: C:\Users\Valkyrie\Documents\GitHub\Takeover\Assets\Scripts\CaptureManager.cs
+      projectPath: Assets\Scripts\CaptureManager.cs
+      originalPath: 
+      indexStatus: 3
+      workTreeStatus: 0
+    - path: Assets\Scripts\CapturerController.cs
+      fullPath: C:\Users\Valkyrie\Documents\GitHub\Takeover\Assets\Scripts\CapturerController.cs
+      projectPath: Assets\Scripts\CapturerController.cs
+      originalPath: 
+      indexStatus: 3
+      workTreeStatus: 0
+    - path: Assets\Scripts\GameManager.cs
+      fullPath: C:\Users\Valkyrie\Documents\GitHub\Takeover\Assets\Scripts\GameManager.cs
+      projectPath: Assets\Scripts\GameManager.cs
+      originalPath: 
+      indexStatus: 3
+      workTreeStatus: 0
+    - path: Assets\Scripts\MapController.cs
+      fullPath: C:\Users\Valkyrie\Documents\GitHub\Takeover\Assets\Scripts\MapController.cs
+      projectPath: Assets\Scripts\MapController.cs
+      originalPath: 
+      indexStatus: 3
+      workTreeStatus: 0
+    - path: Assets\Scripts\MoveableComponent.cs
+      fullPath: C:\Users\Valkyrie\Documents\GitHub\Takeover\Assets\Scripts\MoveableComponent.cs
+      projectPath: Assets\Scripts\MoveableComponent.cs
+      originalPath: 
+      indexStatus: 3
+      workTreeStatus: 0
+    - path: Assets\Scripts\TeamController.cs
+      fullPath: C:\Users\Valkyrie\Documents\GitHub\Takeover\Assets\Scripts\TeamController.cs
+      projectPath: Assets\Scripts\TeamController.cs
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: Assets\Scripts\TeamController.cs.meta
+      fullPath: C:\Users\Valkyrie\Documents\GitHub\Takeover\Assets\Scripts\TeamController.cs.meta
+      projectPath: Assets\Scripts\TeamController.cs.meta
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: Assets\Scripts\TileOccupierController.cs
+      fullPath: C:\Users\Valkyrie\Documents\GitHub\Takeover\Assets\Scripts\TileOccupierController.cs
+      projectPath: Assets\Scripts\TileOccupierController.cs
+      originalPath: 
+      indexStatus: 3
+      workTreeStatus: 0
+    - path: Assets\Scripts\TurnManager.cs
+      fullPath: C:\Users\Valkyrie\Documents\GitHub\Takeover\Assets\Scripts\TurnManager.cs
+      projectPath: Assets\Scripts\TurnManager.cs
+      originalPath: 
+      indexStatus: 3
+      workTreeStatus: 0
+  - commitID: ede2e10f939f241a8d8dd30b37b5c1b0061a140d
+    mergeA: 
+    mergeB: 
+    authorName: VD-15
+    authorEmail: valkyriedev15@gmail.com
+    commitEmail: valkyriedev15@gmail.com
+    commitName: VD-15
+    summary: Fixed multiple turns being executed at once if you pressed the button
+      real quick
+    description: 
+    timeString: 2020-03-08T02:55:51.000+00:00
+    commitTimeString: 2020-03-08T02:55:51.000+00:00
+    changes:
+    - path: Assets\Scripts\MoveableComponent.cs
+      fullPath: C:\Users\Valkyrie\Documents\GitHub\Takeover\Assets\Scripts\MoveableComponent.cs
+      projectPath: Assets\Scripts\MoveableComponent.cs
+      originalPath: 
+      indexStatus: 3
+      workTreeStatus: 0
+    - path: Assets\Scripts\TurnManager.cs
+      fullPath: C:\Users\Valkyrie\Documents\GitHub\Takeover\Assets\Scripts\TurnManager.cs
+      projectPath: Assets\Scripts\TurnManager.cs
+      originalPath: 
+      indexStatus: 3
+      workTreeStatus: 0
+  - commitID: 4b52062793080e10f452a754c2dc1cac6b12ec16
+    mergeA: 
+    mergeB: 
+    authorName: VD-15
+    authorEmail: valkyriedev15@gmail.com
+    commitEmail: valkyriedev15@gmail.com
+    commitName: VD-15
+    summary: Fixed synchronisation issue in turnmanager
+    description: 
+    timeString: 2020-03-07T04:40:22.000+00:00
+    commitTimeString: 2020-03-07T04:40:22.000+00:00
+    changes:
+    - path: Assets\Materials\Rocks.meta
+      fullPath: C:\Users\Valkyrie\Documents\GitHub\Takeover\Assets\Materials\Rocks.meta
+      projectPath: Assets\Materials\Rocks.meta
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: Assets\Materials\Rocks\rock0.mat
+      fullPath: C:\Users\Valkyrie\Documents\GitHub\Takeover\Assets\Materials\Rocks\rock0.mat
+      projectPath: Assets\Materials\Rocks\rock0.mat
+      originalPath: Assets\Materials\rock.mat
+      indexStatus: 6
+      workTreeStatus: 0
+    - path: Assets\Materials\Rocks\rock0.mat.meta
+      fullPath: C:\Users\Valkyrie\Documents\GitHub\Takeover\Assets\Materials\Rocks\rock0.mat.meta
+      projectPath: Assets\Materials\Rocks\rock0.mat.meta
+      originalPath: Assets\Materials\rock.mat.meta
+      indexStatus: 6
+      workTreeStatus: 0
+    - path: Assets\Materials\Rocks\rock1.mat
+      fullPath: C:\Users\Valkyrie\Documents\GitHub\Takeover\Assets\Materials\Rocks\rock1.mat
+      projectPath: Assets\Materials\Rocks\rock1.mat
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: Assets\Materials\Rocks\rock1.mat.meta
+      fullPath: C:\Users\Valkyrie\Documents\GitHub\Takeover\Assets\Materials\Rocks\rock1.mat.meta
+      projectPath: Assets\Materials\Rocks\rock1.mat.meta
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: Assets\Materials\factory_brick.mat
+      fullPath: C:\Users\Valkyrie\Documents\GitHub\Takeover\Assets\Materials\factory_brick.mat
+      projectPath: Assets\Materials\factory_brick.mat
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: Assets\Materials\factory_brick.mat.meta
+      fullPath: C:\Users\Valkyrie\Documents\GitHub\Takeover\Assets\Materials\factory_brick.mat.meta
+      projectPath: Assets\Materials\factory_brick.mat.meta
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: Assets\Materials\factory_metal.mat
+      fullPath: C:\Users\Valkyrie\Documents\GitHub\Takeover\Assets\Materials\factory_metal.mat
+      projectPath: Assets\Materials\factory_metal.mat
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: Assets\Materials\factory_metal.mat.meta
+      fullPath: C:\Users\Valkyrie\Documents\GitHub\Takeover\Assets\Materials\factory_metal.mat.meta
+      projectPath: Assets\Materials\factory_metal.mat.meta
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: Assets\Materials\factory_surface.mat
+      fullPath: C:\Users\Valkyrie\Documents\GitHub\Takeover\Assets\Materials\factory_surface.mat
+      projectPath: Assets\Materials\factory_surface.mat
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: Assets\Materials\factory_surface.mat.meta
+      fullPath: C:\Users\Valkyrie\Documents\GitHub\Takeover\Assets\Materials\factory_surface.mat.meta
+      projectPath: Assets\Materials\factory_surface.mat.meta
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: Assets\Materials\factory_vantablack.mat
+      fullPath: C:\Users\Valkyrie\Documents\GitHub\Takeover\Assets\Materials\factory_vantablack.mat
+      projectPath: Assets\Materials\factory_vantablack.mat
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: Assets\Materials\factory_vantablack.mat.meta
+      fullPath: C:\Users\Valkyrie\Documents\GitHub\Takeover\Assets\Materials\factory_vantablack.mat.meta
+      projectPath: Assets\Materials\factory_vantablack.mat.meta
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: Assets\Models\Rocks.meta
+      fullPath: C:\Users\Valkyrie\Documents\GitHub\Takeover\Assets\Models\Rocks.meta
+      projectPath: Assets\Models\Rocks.meta
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: Assets\Models\Rocks\rock0.mtl
+      fullPath: C:\Users\Valkyrie\Documents\GitHub\Takeover\Assets\Models\Rocks\rock0.mtl
+      projectPath: Assets\Models\Rocks\rock0.mtl
+      originalPath: Assets\Models\rock.mtl
+      indexStatus: 6
+      workTreeStatus: 0
+    - path: Assets\Models\Rocks\rock0.mtl.meta
+      fullPath: C:\Users\Valkyrie\Documents\GitHub\Takeover\Assets\Models\Rocks\rock0.mtl.meta
+      projectPath: Assets\Models\Rocks\rock0.mtl.meta
+      originalPath: Assets\Models\rock.mtl.meta
+      indexStatus: 6
+      workTreeStatus: 0
+    - path: Assets\Models\Rocks\rock0.obj
+      fullPath: C:\Users\Valkyrie\Documents\GitHub\Takeover\Assets\Models\Rocks\rock0.obj
+      projectPath: Assets\Models\Rocks\rock0.obj
+      originalPath: Assets\Models\rock.obj
+      indexStatus: 6
+      workTreeStatus: 0
+    - path: Assets\Models\Rocks\rock0.obj.meta
+      fullPath: C:\Users\Valkyrie\Documents\GitHub\Takeover\Assets\Models\Rocks\rock0.obj.meta
+      projectPath: Assets\Models\Rocks\rock0.obj.meta
+      originalPath: Assets\Models\rock.obj.meta
+      indexStatus: 6
+      workTreeStatus: 0
+    - path: Assets\Models\Rocks\rock1.mtl
+      fullPath: C:\Users\Valkyrie\Documents\GitHub\Takeover\Assets\Models\Rocks\rock1.mtl
+      projectPath: Assets\Models\Rocks\rock1.mtl
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: Assets\Models\Rocks\rock1.mtl.meta
+      fullPath: C:\Users\Valkyrie\Documents\GitHub\Takeover\Assets\Models\Rocks\rock1.mtl.meta
+      projectPath: Assets\Models\Rocks\rock1.mtl.meta
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: Assets\Models\Rocks\rock1.obj
+      fullPath: C:\Users\Valkyrie\Documents\GitHub\Takeover\Assets\Models\Rocks\rock1.obj
+      projectPath: Assets\Models\Rocks\rock1.obj
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: Assets\Models\Rocks\rock1.obj.meta
+      fullPath: C:\Users\Valkyrie\Documents\GitHub\Takeover\Assets\Models\Rocks\rock1.obj.meta
+      projectPath: Assets\Models\Rocks\rock1.obj.meta
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: Assets\Models\factory.mtl
+      fullPath: C:\Users\Valkyrie\Documents\GitHub\Takeover\Assets\Models\factory.mtl
+      projectPath: Assets\Models\factory.mtl
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: Assets\Models\factory.mtl.meta
+      fullPath: C:\Users\Valkyrie\Documents\GitHub\Takeover\Assets\Models\factory.mtl.meta
+      projectPath: Assets\Models\factory.mtl.meta
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: Assets\Models\factory.obj
+      fullPath: C:\Users\Valkyrie\Documents\GitHub\Takeover\Assets\Models\factory.obj
+      projectPath: Assets\Models\factory.obj
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: Assets\Models\factory.obj.meta
+      fullPath: C:\Users\Valkyrie\Documents\GitHub\Takeover\Assets\Models\factory.obj.meta
+      projectPath: Assets\Models\factory.obj.meta
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: Assets\Prefabs.meta
+      fullPath: C:\Users\Valkyrie\Documents\GitHub\Takeover\Assets\Prefabs.meta
+      projectPath: Assets\Prefabs.meta
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: Assets\Prefabs\Rock.prefab
+      fullPath: C:\Users\Valkyrie\Documents\GitHub\Takeover\Assets\Prefabs\Rock.prefab
+      projectPath: Assets\Prefabs\Rock.prefab
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: Assets\Prefabs\Rock.prefab.meta
+      fullPath: C:\Users\Valkyrie\Documents\GitHub\Takeover\Assets\Prefabs\Rock.prefab.meta
+      projectPath: Assets\Prefabs\Rock.prefab.meta
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: Assets\Prefabs\Tank Unit.prefab
+      fullPath: C:\Users\Valkyrie\Documents\GitHub\Takeover\Assets\Prefabs\Tank Unit.prefab
+      projectPath: Assets\Prefabs\Tank Unit.prefab
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: Assets\Prefabs\Tank Unit.prefab.meta
+      fullPath: C:\Users\Valkyrie\Documents\GitHub\Takeover\Assets\Prefabs\Tank Unit.prefab.meta
+      projectPath: Assets\Prefabs\Tank Unit.prefab.meta
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: Assets\Scenes\SampleScene.unity
+      fullPath: C:\Users\Valkyrie\Documents\GitHub\Takeover\Assets\Scenes\SampleScene.unity
+      projectPath: Assets\Scenes\SampleScene.unity
+      originalPath: 
+      indexStatus: 3
+      workTreeStatus: 0
+    - path: Assets\Scripts\GameManager.cs
+      fullPath: C:\Users\Valkyrie\Documents\GitHub\Takeover\Assets\Scripts\GameManager.cs
+      projectPath: Assets\Scripts\GameManager.cs
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: Assets\Scripts\GameManager.cs.meta
+      fullPath: C:\Users\Valkyrie\Documents\GitHub\Takeover\Assets\Scripts\GameManager.cs.meta
+      projectPath: Assets\Scripts\GameManager.cs.meta
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: Assets\Scripts\MapController.cs
+      fullPath: C:\Users\Valkyrie\Documents\GitHub\Takeover\Assets\Scripts\MapController.cs
+      projectPath: Assets\Scripts\MapController.cs
+      originalPath: 
+      indexStatus: 3
+      workTreeStatus: 0
+    - path: Assets\Scripts\MoveableComponent.cs
+      fullPath: C:\Users\Valkyrie\Documents\GitHub\Takeover\Assets\Scripts\MoveableComponent.cs
+      projectPath: Assets\Scripts\MoveableComponent.cs
+      originalPath: 
+      indexStatus: 3
+      workTreeStatus: 0
+    - path: Assets\Scripts\TileOccupierController.cs
+      fullPath: C:\Users\Valkyrie\Documents\GitHub\Takeover\Assets\Scripts\TileOccupierController.cs
+      projectPath: Assets\Scripts\TileOccupierController.cs
+      originalPath: 
+      indexStatus: 3
+      workTreeStatus: 0
+    - path: Assets\Scripts\TurnManager.cs
+      fullPath: C:\Users\Valkyrie\Documents\GitHub\Takeover\Assets\Scripts\TurnManager.cs
+      projectPath: Assets\Scripts\TurnManager.cs
+      originalPath: 
+      indexStatus: 3
+      workTreeStatus: 0
+    - path: Assets\Textures\Rocks.meta
+      fullPath: C:\Users\Valkyrie\Documents\GitHub\Takeover\Assets\Textures\Rocks.meta
+      projectPath: Assets\Textures\Rocks.meta
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: Assets\Textures\Rocks\rock0_dif.png
+      fullPath: C:\Users\Valkyrie\Documents\GitHub\Takeover\Assets\Textures\Rocks\rock0_dif.png
+      projectPath: Assets\Textures\Rocks\rock0_dif.png
+      originalPath: Assets\Textures\rock_dif.png
+      indexStatus: 6
+      workTreeStatus: 0
+    - path: Assets\Textures\Rocks\rock0_dif.png.meta
+      fullPath: C:\Users\Valkyrie\Documents\GitHub\Takeover\Assets\Textures\Rocks\rock0_dif.png.meta
+      projectPath: Assets\Textures\Rocks\rock0_dif.png.meta
+      originalPath: Assets\Textures\rock_dif.png.meta
+      indexStatus: 6
+      workTreeStatus: 0
+    - path: Assets\Textures\Rocks\rock0_nml.png
+      fullPath: C:\Users\Valkyrie\Documents\GitHub\Takeover\Assets\Textures\Rocks\rock0_nml.png
+      projectPath: Assets\Textures\Rocks\rock0_nml.png
+      originalPath: Assets\Textures\rock_nml.png
+      indexStatus: 6
+      workTreeStatus: 0
+    - path: Assets\Textures\Rocks\rock0_nml.png.meta
+      fullPath: C:\Users\Valkyrie\Documents\GitHub\Takeover\Assets\Textures\Rocks\rock0_nml.png.meta
+      projectPath: Assets\Textures\Rocks\rock0_nml.png.meta
+      originalPath: Assets\Textures\rock_nml.png.meta
+      indexStatus: 6
+      workTreeStatus: 0
+    - path: Assets\Textures\Rocks\rock1_dif.png
+      fullPath: C:\Users\Valkyrie\Documents\GitHub\Takeover\Assets\Textures\Rocks\rock1_dif.png
+      projectPath: Assets\Textures\Rocks\rock1_dif.png
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: Assets\Textures\Rocks\rock1_dif.png.meta
+      fullPath: C:\Users\Valkyrie\Documents\GitHub\Takeover\Assets\Textures\Rocks\rock1_dif.png.meta
+      projectPath: Assets\Textures\Rocks\rock1_dif.png.meta
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: Assets\Textures\Rocks\rock1_nml.png
+      fullPath: C:\Users\Valkyrie\Documents\GitHub\Takeover\Assets\Textures\Rocks\rock1_nml.png
+      projectPath: Assets\Textures\Rocks\rock1_nml.png
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: Assets\Textures\Rocks\rock1_nml.png.meta
+      fullPath: C:\Users\Valkyrie\Documents\GitHub\Takeover\Assets\Textures\Rocks\rock1_nml.png.meta
+      projectPath: Assets\Textures\Rocks\rock1_nml.png.meta
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: Assets\Textures\brick_dif.png
+      fullPath: C:\Users\Valkyrie\Documents\GitHub\Takeover\Assets\Textures\brick_dif.png
+      projectPath: Assets\Textures\brick_dif.png
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: Assets\Textures\brick_dif.png.meta
+      fullPath: C:\Users\Valkyrie\Documents\GitHub\Takeover\Assets\Textures\brick_dif.png.meta
+      projectPath: Assets\Textures\brick_dif.png.meta
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: Assets\Textures\brick_nml.png
+      fullPath: C:\Users\Valkyrie\Documents\GitHub\Takeover\Assets\Textures\brick_nml.png
+      projectPath: Assets\Textures\brick_nml.png
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: Assets\Textures\brick_nml.png.meta
+      fullPath: C:\Users\Valkyrie\Documents\GitHub\Takeover\Assets\Textures\brick_nml.png.meta
+      projectPath: Assets\Textures\brick_nml.png.meta
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+  - commitID: 386d1215bd3ee2e56c5dc2f3e3105e61d53236b2
+    mergeA: 
+    mergeB: 
+    authorName: VD-15
+    authorEmail: valkyriedev15@gmail.com
+    commitEmail: valkyriedev15@gmail.com
+    commitName: VD-15
+    summary: did a thing?
+    description: 
+    timeString: 2020-02-20T16:14:37.000+00:00
+    commitTimeString: 2020-02-20T16:14:37.000+00:00
+    changes:
+    - path: Assets\Prefabs.meta
+      fullPath: C:\Users\Valkyrie\Documents\GitHub\Takeover\Assets\Prefabs.meta
+      projectPath: Assets\Prefabs.meta
+      originalPath: 
+      indexStatus: 5
+      workTreeStatus: 0
+  - commitID: 371fa103b7bbd9c9bca258733849baa413fe20f6
+    mergeA: 
+    mergeB: 
+    authorName: VD-15
+    authorEmail: valkyriedev15@gmail.com
+    commitEmail: valkyriedev15@gmail.com
+    commitName: VD-15
+    summary: Started work on capture
+    description: 
+    timeString: 2020-02-20T15:19:10.000+00:00
+    commitTimeString: 2020-02-20T15:19:10.000+00:00
+    changes:
+    - path: Assets\Prefabs.meta
+      fullPath: C:\Users\Valkyrie\Documents\GitHub\Takeover\Assets\Prefabs.meta
+      projectPath: Assets\Prefabs.meta
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: Assets\Scenes\SampleScene.unity
+      fullPath: C:\Users\Valkyrie\Documents\GitHub\Takeover\Assets\Scenes\SampleScene.unity
+      projectPath: Assets\Scenes\SampleScene.unity
+      originalPath: 
+      indexStatus: 3
+      workTreeStatus: 0
+    - path: Assets\Scripts\CapturableController.cs
+      fullPath: C:\Users\Valkyrie\Documents\GitHub\Takeover\Assets\Scripts\CapturableController.cs
+      projectPath: Assets\Scripts\CapturableController.cs
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: Assets\Scripts\CapturableController.cs.meta
+      fullPath: C:\Users\Valkyrie\Documents\GitHub\Takeover\Assets\Scripts\CapturableController.cs.meta
+      projectPath: Assets\Scripts\CapturableController.cs.meta
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: Assets\Scripts\CaptureManager.cs
+      fullPath: C:\Users\Valkyrie\Documents\GitHub\Takeover\Assets\Scripts\CaptureManager.cs
+      projectPath: Assets\Scripts\CaptureManager.cs
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: Assets\Scripts\CaptureManager.cs.meta
+      fullPath: C:\Users\Valkyrie\Documents\GitHub\Takeover\Assets\Scripts\CaptureManager.cs.meta
+      projectPath: Assets\Scripts\CaptureManager.cs.meta
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: Assets\Scripts\CapturerController.cs
+      fullPath: C:\Users\Valkyrie\Documents\GitHub\Takeover\Assets\Scripts\CapturerController.cs
+      projectPath: Assets\Scripts\CapturerController.cs
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: Assets\Scripts\CapturerController.cs.meta
+      fullPath: C:\Users\Valkyrie\Documents\GitHub\Takeover\Assets\Scripts\CapturerController.cs.meta
+      projectPath: Assets\Scripts\CapturerController.cs.meta
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: Assets\Scripts\MoveableComponent.cs
+      fullPath: C:\Users\Valkyrie\Documents\GitHub\Takeover\Assets\Scripts\MoveableComponent.cs
+      projectPath: Assets\Scripts\MoveableComponent.cs
+      originalPath: 
+      indexStatus: 3
+      workTreeStatus: 0
+    - path: Assets\Scripts\TileOccupierController.cs
+      fullPath: C:\Users\Valkyrie\Documents\GitHub\Takeover\Assets\Scripts\TileOccupierController.cs
+      projectPath: Assets\Scripts\TileOccupierController.cs
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: Assets\Scripts\TileOccupierController.cs.meta
+      fullPath: C:\Users\Valkyrie\Documents\GitHub\Takeover\Assets\Scripts\TileOccupierController.cs.meta
+      projectPath: Assets\Scripts\TileOccupierController.cs.meta
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: Assets\Scripts\TurnManager.cs
+      fullPath: C:\Users\Valkyrie\Documents\GitHub\Takeover\Assets\Scripts\TurnManager.cs
+      projectPath: Assets\Scripts\TurnManager.cs
+      originalPath: 
+      indexStatus: 3
+      workTreeStatus: 0
+  - commitID: b8f6d6b0677f0269aadc30a5a53a64b2891fc949
+    mergeA: 
+    mergeB: 
+    authorName: VD-15
+    authorEmail: valkyriedev15@gmail.com
+    commitEmail: valkyriedev15@gmail.com
+    commitName: VD-15
+    summary: I made a rock
+    description: 
+    timeString: 2020-02-19T18:41:58.000+00:00
+    commitTimeString: 2020-02-19T18:41:58.000+00:00
+    changes:
+    - path: Assets\Materials\rock.mat
+      fullPath: C:\Users\Valkyrie\Documents\GitHub\Takeover\Assets\Materials\rock.mat
+      projectPath: Assets\Materials\rock.mat
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: Assets\Materials\rock.mat.meta
+      fullPath: C:\Users\Valkyrie\Documents\GitHub\Takeover\Assets\Materials\rock.mat.meta
+      projectPath: Assets\Materials\rock.mat.meta
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: Assets\Models\rock.mtl
+      fullPath: C:\Users\Valkyrie\Documents\GitHub\Takeover\Assets\Models\rock.mtl
+      projectPath: Assets\Models\rock.mtl
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: Assets\Models\rock.mtl.meta
+      fullPath: C:\Users\Valkyrie\Documents\GitHub\Takeover\Assets\Models\rock.mtl.meta
+      projectPath: Assets\Models\rock.mtl.meta
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: Assets\Models\rock.obj
+      fullPath: C:\Users\Valkyrie\Documents\GitHub\Takeover\Assets\Models\rock.obj
+      projectPath: Assets\Models\rock.obj
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: Assets\Models\rock.obj.meta
+      fullPath: C:\Users\Valkyrie\Documents\GitHub\Takeover\Assets\Models\rock.obj.meta
+      projectPath: Assets\Models\rock.obj.meta
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: Assets\Scenes\SampleScene.unity
+      fullPath: C:\Users\Valkyrie\Documents\GitHub\Takeover\Assets\Scenes\SampleScene.unity
+      projectPath: Assets\Scenes\SampleScene.unity
+      originalPath: 
+      indexStatus: 3
+      workTreeStatus: 0
+    - path: Assets\Textures\rock_dif.png
+      fullPath: C:\Users\Valkyrie\Documents\GitHub\Takeover\Assets\Textures\rock_dif.png
+      projectPath: Assets\Textures\rock_dif.png
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: Assets\Textures\rock_dif.png.meta
+      fullPath: C:\Users\Valkyrie\Documents\GitHub\Takeover\Assets\Textures\rock_dif.png.meta
+      projectPath: Assets\Textures\rock_dif.png.meta
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: Assets\Textures\rock_nml.png
+      fullPath: C:\Users\Valkyrie\Documents\GitHub\Takeover\Assets\Textures\rock_nml.png
+      projectPath: Assets\Textures\rock_nml.png
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: Assets\Textures\rock_nml.png.meta
+      fullPath: C:\Users\Valkyrie\Documents\GitHub\Takeover\Assets\Textures\rock_nml.png.meta
+      projectPath: Assets\Textures\rock_nml.png.meta
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+  - commitID: 74ffafd859bd7389dc83c56cdb2f3293e60ab109
+    mergeA: 
+    mergeB: 
+    authorName: VD-15
+    authorEmail: valkyriedev15@gmail.com
+    commitEmail: valkyriedev15@gmail.com
+    commitName: VD-15
+    summary: Added turn manager & made MoveableController turn-based
+    description: 
+    timeString: 2020-02-18T23:41:26.000+00:00
+    commitTimeString: 2020-02-18T23:41:26.000+00:00
+    changes:
+    - path: Assets\Scenes\SampleScene.unity
+      fullPath: C:\Users\Valkyrie\Documents\GitHub\Takeover\Assets\Scenes\SampleScene.unity
+      projectPath: Assets\Scenes\SampleScene.unity
+      originalPath: 
+      indexStatus: 3
+      workTreeStatus: 0
+    - path: Assets\Scripts\MapController.cs
+      fullPath: C:\Users\Valkyrie\Documents\GitHub\Takeover\Assets\Scripts\MapController.cs
+      projectPath: Assets\Scripts\MapController.cs
+      originalPath: 
+      indexStatus: 3
+      workTreeStatus: 0
+    - path: Assets\Scripts\MoveableComponent.cs
+      fullPath: C:\Users\Valkyrie\Documents\GitHub\Takeover\Assets\Scripts\MoveableComponent.cs
+      projectPath: Assets\Scripts\MoveableComponent.cs
+      originalPath: 
+      indexStatus: 3
+      workTreeStatus: 0
+    - path: Assets\Scripts\TurnManager.cs
+      fullPath: C:\Users\Valkyrie\Documents\GitHub\Takeover\Assets\Scripts\TurnManager.cs
+      projectPath: Assets\Scripts\TurnManager.cs
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: Assets\Scripts\TurnManager.cs.meta
+      fullPath: C:\Users\Valkyrie\Documents\GitHub\Takeover\Assets\Scripts\TurnManager.cs.meta
+      projectPath: Assets\Scripts\TurnManager.cs.meta
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: ProjectSettings\InputManager.asset
+      fullPath: C:\Users\Valkyrie\Documents\GitHub\Takeover\ProjectSettings\InputManager.asset
+      projectPath: ProjectSettings\InputManager.asset
+      originalPath: 
+      indexStatus: 3
+      workTreeStatus: 0
+  - commitID: 1c0b07c5cdf4261153d959007c39167a42c226fb
+    mergeA: 
+    mergeB: 
+    authorName: VD-15
+    authorEmail: valkyriedev15@gmail.com
+    commitEmail: valkyriedev15@gmail.com
+    commitName: VD-15
+    summary: Initial commit
+    description: lol
+    timeString: 2020-02-18T14:42:37.000+00:00
+    commitTimeString: 2020-02-18T14:42:37.000+00:00
+    changes:
+    - path: Assets\Materials.meta
+      fullPath: C:\Users\Valkyrie\Documents\GitHub\Takeover\Assets\Materials.meta
+      projectPath: Assets\Materials.meta
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: Assets\Materials\map_ground.mat
+      fullPath: C:\Users\Valkyrie\Documents\GitHub\Takeover\Assets\Materials\map_ground.mat
+      projectPath: Assets\Materials\map_ground.mat
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: Assets\Materials\map_ground.mat.meta
+      fullPath: C:\Users\Valkyrie\Documents\GitHub\Takeover\Assets\Materials\map_ground.mat.meta
+      projectPath: Assets\Materials\map_ground.mat.meta
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: Assets\Materials\map_rock.mat
+      fullPath: C:\Users\Valkyrie\Documents\GitHub\Takeover\Assets\Materials\map_rock.mat
+      projectPath: Assets\Materials\map_rock.mat
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: Assets\Materials\map_rock.mat.meta
+      fullPath: C:\Users\Valkyrie\Documents\GitHub\Takeover\Assets\Materials\map_rock.mat.meta
+      projectPath: Assets\Materials\map_rock.mat.meta
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: Assets\Materials\tank_metal.mat
+      fullPath: C:\Users\Valkyrie\Documents\GitHub\Takeover\Assets\Materials\tank_metal.mat
+      projectPath: Assets\Materials\tank_metal.mat
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: Assets\Materials\tank_metal.mat.meta
+      fullPath: C:\Users\Valkyrie\Documents\GitHub\Takeover\Assets\Materials\tank_metal.mat.meta
+      projectPath: Assets\Materials\tank_metal.mat.meta
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: Assets\Materials\tank_tread.mat
+      fullPath: C:\Users\Valkyrie\Documents\GitHub\Takeover\Assets\Materials\tank_tread.mat
+      projectPath: Assets\Materials\tank_tread.mat
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: Assets\Materials\tank_tread.mat.meta
+      fullPath: C:\Users\Valkyrie\Documents\GitHub\Takeover\Assets\Materials\tank_tread.mat.meta
+      projectPath: Assets\Materials\tank_tread.mat.meta
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: Assets\Models.meta
+      fullPath: C:\Users\Valkyrie\Documents\GitHub\Takeover\Assets\Models.meta
+      projectPath: Assets\Models.meta
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: Assets\Models\map_snow.mtl
+      fullPath: C:\Users\Valkyrie\Documents\GitHub\Takeover\Assets\Models\map_snow.mtl
+      projectPath: Assets\Models\map_snow.mtl
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: Assets\Models\map_snow.mtl.meta
+      fullPath: C:\Users\Valkyrie\Documents\GitHub\Takeover\Assets\Models\map_snow.mtl.meta
+      projectPath: Assets\Models\map_snow.mtl.meta
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: Assets\Models\map_snow.obj
+      fullPath: C:\Users\Valkyrie\Documents\GitHub\Takeover\Assets\Models\map_snow.obj
+      projectPath: Assets\Models\map_snow.obj
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: Assets\Models\map_snow.obj.meta
+      fullPath: C:\Users\Valkyrie\Documents\GitHub\Takeover\Assets\Models\map_snow.obj.meta
+      projectPath: Assets\Models\map_snow.obj.meta
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: Assets\Models\tank.mtl
+      fullPath: C:\Users\Valkyrie\Documents\GitHub\Takeover\Assets\Models\tank.mtl
+      projectPath: Assets\Models\tank.mtl
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: Assets\Models\tank.mtl.meta
+      fullPath: C:\Users\Valkyrie\Documents\GitHub\Takeover\Assets\Models\tank.mtl.meta
+      projectPath: Assets\Models\tank.mtl.meta
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: Assets\Models\tank.obj
+      fullPath: C:\Users\Valkyrie\Documents\GitHub\Takeover\Assets\Models\tank.obj
+      projectPath: Assets\Models\tank.obj
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: Assets\Models\tank.obj.meta
+      fullPath: C:\Users\Valkyrie\Documents\GitHub\Takeover\Assets\Models\tank.obj.meta
+      projectPath: Assets\Models\tank.obj.meta
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: Assets\Plugins.meta
+      fullPath: C:\Users\Valkyrie\Documents\GitHub\Takeover\Assets\Plugins.meta
+      projectPath: Assets\Plugins.meta
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: Assets\Plugins\GitHub.meta
+      fullPath: C:\Users\Valkyrie\Documents\GitHub\Takeover\Assets\Plugins\GitHub.meta
+      projectPath: Assets\Plugins\GitHub.meta
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: Assets\Plugins\GitHub\Editor.meta
+      fullPath: C:\Users\Valkyrie\Documents\GitHub\Takeover\Assets\Plugins\GitHub\Editor.meta
+      projectPath: Assets\Plugins\GitHub\Editor.meta
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: Assets\Plugins\GitHub\Editor\AsyncBridge.Net35.dll
+      fullPath: C:\Users\Valkyrie\Documents\GitHub\Takeover\Assets\Plugins\GitHub\Editor\AsyncBridge.Net35.dll
+      projectPath: Assets\Plugins\GitHub\Editor\AsyncBridge.Net35.dll
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: Assets\Plugins\GitHub\Editor\AsyncBridge.Net35.dll.meta
+      fullPath: C:\Users\Valkyrie\Documents\GitHub\Takeover\Assets\Plugins\GitHub\Editor\AsyncBridge.Net35.dll.meta
+      projectPath: Assets\Plugins\GitHub\Editor\AsyncBridge.Net35.dll.meta
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: Assets\Plugins\GitHub\Editor\ExtensionLoader.cs
+      fullPath: C:\Users\Valkyrie\Documents\GitHub\Takeover\Assets\Plugins\GitHub\Editor\ExtensionLoader.cs
+      projectPath: Assets\Plugins\GitHub\Editor\ExtensionLoader.cs
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: Assets\Plugins\GitHub\Editor\ExtensionLoader.cs.meta
+      fullPath: C:\Users\Valkyrie\Documents\GitHub\Takeover\Assets\Plugins\GitHub\Editor\ExtensionLoader.cs.meta
+      projectPath: Assets\Plugins\GitHub\Editor\ExtensionLoader.cs.meta
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: Assets\Plugins\GitHub\Editor\GitHub.Api.45.dll
+      fullPath: C:\Users\Valkyrie\Documents\GitHub\Takeover\Assets\Plugins\GitHub\Editor\GitHub.Api.45.dll
+      projectPath: Assets\Plugins\GitHub\Editor\GitHub.Api.45.dll
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: Assets\Plugins\GitHub\Editor\GitHub.Api.45.dll.meta
+      fullPath: C:\Users\Valkyrie\Documents\GitHub\Takeover\Assets\Plugins\GitHub\Editor\GitHub.Api.45.dll.meta
+      projectPath: Assets\Plugins\GitHub\Editor\GitHub.Api.45.dll.meta
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: Assets\Plugins\GitHub\Editor\GitHub.Api.dll
+      fullPath: C:\Users\Valkyrie\Documents\GitHub\Takeover\Assets\Plugins\GitHub\Editor\GitHub.Api.dll
+      projectPath: Assets\Plugins\GitHub\Editor\GitHub.Api.dll
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: Assets\Plugins\GitHub\Editor\GitHub.Api.dll.meta
+      fullPath: C:\Users\Valkyrie\Documents\GitHub\Takeover\Assets\Plugins\GitHub\Editor\GitHub.Api.dll.meta
+      projectPath: Assets\Plugins\GitHub\Editor\GitHub.Api.dll.meta
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: Assets\Plugins\GitHub\Editor\GitHub.Logging.dll
+      fullPath: C:\Users\Valkyrie\Documents\GitHub\Takeover\Assets\Plugins\GitHub\Editor\GitHub.Logging.dll
+      projectPath: Assets\Plugins\GitHub\Editor\GitHub.Logging.dll
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: Assets\Plugins\GitHub\Editor\GitHub.Logging.dll.meta
+      fullPath: C:\Users\Valkyrie\Documents\GitHub\Takeover\Assets\Plugins\GitHub\Editor\GitHub.Logging.dll.meta
+      projectPath: Assets\Plugins\GitHub\Editor\GitHub.Logging.dll.meta
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: Assets\Plugins\GitHub\Editor\GitHub.Unity.45.dll
+      fullPath: C:\Users\Valkyrie\Documents\GitHub\Takeover\Assets\Plugins\GitHub\Editor\GitHub.Unity.45.dll
+      projectPath: Assets\Plugins\GitHub\Editor\GitHub.Unity.45.dll
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: Assets\Plugins\GitHub\Editor\GitHub.Unity.45.dll.meta
+      fullPath: C:\Users\Valkyrie\Documents\GitHub\Takeover\Assets\Plugins\GitHub\Editor\GitHub.Unity.45.dll.meta
+      projectPath: Assets\Plugins\GitHub\Editor\GitHub.Unity.45.dll.meta
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: Assets\Plugins\GitHub\Editor\GitHub.Unity.dll
+      fullPath: C:\Users\Valkyrie\Documents\GitHub\Takeover\Assets\Plugins\GitHub\Editor\GitHub.Unity.dll
+      projectPath: Assets\Plugins\GitHub\Editor\GitHub.Unity.dll
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: Assets\Plugins\GitHub\Editor\GitHub.Unity.dll.meta
+      fullPath: C:\Users\Valkyrie\Documents\GitHub\Takeover\Assets\Plugins\GitHub\Editor\GitHub.Unity.dll.meta
+      projectPath: Assets\Plugins\GitHub\Editor\GitHub.Unity.dll.meta
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: Assets\Plugins\GitHub\Editor\GitHub.UnityShim.dll
+      fullPath: C:\Users\Valkyrie\Documents\GitHub\Takeover\Assets\Plugins\GitHub\Editor\GitHub.UnityShim.dll
+      projectPath: Assets\Plugins\GitHub\Editor\GitHub.UnityShim.dll
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: Assets\Plugins\GitHub\Editor\GitHub.UnityShim.dll.meta
+      fullPath: C:\Users\Valkyrie\Documents\GitHub\Takeover\Assets\Plugins\GitHub\Editor\GitHub.UnityShim.dll.meta
+      projectPath: Assets\Plugins\GitHub\Editor\GitHub.UnityShim.dll.meta
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: Assets\Plugins\GitHub\Editor\Mono.Posix.dll
+      fullPath: C:\Users\Valkyrie\Documents\GitHub\Takeover\Assets\Plugins\GitHub\Editor\Mono.Posix.dll
+      projectPath: Assets\Plugins\GitHub\Editor\Mono.Posix.dll
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: Assets\Plugins\GitHub\Editor\Mono.Posix.dll.meta
+      fullPath: C:\Users\Valkyrie\Documents\GitHub\Takeover\Assets\Plugins\GitHub\Editor\Mono.Posix.dll.meta
+      projectPath: Assets\Plugins\GitHub\Editor\Mono.Posix.dll.meta
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: Assets\Plugins\GitHub\Editor\QuickGuide.pdf
+      fullPath: C:\Users\Valkyrie\Documents\GitHub\Takeover\Assets\Plugins\GitHub\Editor\QuickGuide.pdf
+      projectPath: Assets\Plugins\GitHub\Editor\QuickGuide.pdf
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: Assets\Plugins\GitHub\Editor\QuickGuide.pdf.meta
+      fullPath: C:\Users\Valkyrie\Documents\GitHub\Takeover\Assets\Plugins\GitHub\Editor\QuickGuide.pdf.meta
+      projectPath: Assets\Plugins\GitHub\Editor\QuickGuide.pdf.meta
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: Assets\Plugins\GitHub\Editor\ReadOnlyCollectionsInterfaces.dll
+      fullPath: C:\Users\Valkyrie\Documents\GitHub\Takeover\Assets\Plugins\GitHub\Editor\ReadOnlyCollectionsInterfaces.dll
+      projectPath: Assets\Plugins\GitHub\Editor\ReadOnlyCollectionsInterfaces.dll
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: Assets\Plugins\GitHub\Editor\ReadOnlyCollectionsInterfaces.dll.meta
+      fullPath: C:\Users\Valkyrie\Documents\GitHub\Takeover\Assets\Plugins\GitHub\Editor\ReadOnlyCollectionsInterfaces.dll.meta
+      projectPath: Assets\Plugins\GitHub\Editor\ReadOnlyCollectionsInterfaces.dll.meta
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: Assets\Plugins\GitHub\Editor\System.Threading.dll
+      fullPath: C:\Users\Valkyrie\Documents\GitHub\Takeover\Assets\Plugins\GitHub\Editor\System.Threading.dll
+      projectPath: Assets\Plugins\GitHub\Editor\System.Threading.dll
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: Assets\Plugins\GitHub\Editor\System.Threading.dll.meta
+      fullPath: C:\Users\Valkyrie\Documents\GitHub\Takeover\Assets\Plugins\GitHub\Editor\System.Threading.dll.meta
+      projectPath: Assets\Plugins\GitHub\Editor\System.Threading.dll.meta
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: Assets\Plugins\GitHub\Editor\UnityAPIWrapper.cs
+      fullPath: C:\Users\Valkyrie\Documents\GitHub\Takeover\Assets\Plugins\GitHub\Editor\UnityAPIWrapper.cs
+      projectPath: Assets\Plugins\GitHub\Editor\UnityAPIWrapper.cs
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: Assets\Plugins\GitHub\Editor\UnityAPIWrapper.cs.meta
+      fullPath: C:\Users\Valkyrie\Documents\GitHub\Takeover\Assets\Plugins\GitHub\Editor\UnityAPIWrapper.cs.meta
+      projectPath: Assets\Plugins\GitHub\Editor\UnityAPIWrapper.cs.meta
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: Assets\Plugins\GitHub\Editor\big-logo@2x.png
+      fullPath: C:\Users\Valkyrie\Documents\GitHub\Takeover\Assets\Plugins\GitHub\Editor\big-logo@2x.png
+      projectPath: Assets\Plugins\GitHub\Editor\big-logo@2x.png
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: Assets\Plugins\GitHub\Editor\big-logo@2x.png.meta
+      fullPath: C:\Users\Valkyrie\Documents\GitHub\Takeover\Assets\Plugins\GitHub\Editor\big-logo@2x.png.meta
+      projectPath: Assets\Plugins\GitHub\Editor\big-logo@2x.png.meta
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: Assets\Plugins\GitHub\Editor\credits.txt
+      fullPath: C:\Users\Valkyrie\Documents\GitHub\Takeover\Assets\Plugins\GitHub\Editor\credits.txt
+      projectPath: Assets\Plugins\GitHub\Editor\credits.txt
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: Assets\Plugins\GitHub\Editor\credits.txt.meta
+      fullPath: C:\Users\Valkyrie\Documents\GitHub\Takeover\Assets\Plugins\GitHub\Editor\credits.txt.meta
+      projectPath: Assets\Plugins\GitHub\Editor\credits.txt.meta
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: Assets\Plugins\GitHub\Editor\eula.txt
+      fullPath: C:\Users\Valkyrie\Documents\GitHub\Takeover\Assets\Plugins\GitHub\Editor\eula.txt
+      projectPath: Assets\Plugins\GitHub\Editor\eula.txt
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: Assets\Plugins\GitHub\Editor\eula.txt.meta
+      fullPath: C:\Users\Valkyrie\Documents\GitHub\Takeover\Assets\Plugins\GitHub\Editor\eula.txt.meta
+      projectPath: Assets\Plugins\GitHub\Editor\eula.txt.meta
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: Assets\Plugins\GitHub\Editor\libsfw.bundle
+      fullPath: C:\Users\Valkyrie\Documents\GitHub\Takeover\Assets\Plugins\GitHub\Editor\libsfw.bundle
+      projectPath: Assets\Plugins\GitHub\Editor\libsfw.bundle
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: Assets\Plugins\GitHub\Editor\libsfw.bundle.meta
+      fullPath: C:\Users\Valkyrie\Documents\GitHub\Takeover\Assets\Plugins\GitHub\Editor\libsfw.bundle.meta
+      projectPath: Assets\Plugins\GitHub\Editor\libsfw.bundle.meta
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: Assets\Plugins\GitHub\Editor\libsfw.so
+      fullPath: C:\Users\Valkyrie\Documents\GitHub\Takeover\Assets\Plugins\GitHub\Editor\libsfw.so
+      projectPath: Assets\Plugins\GitHub\Editor\libsfw.so
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: Assets\Plugins\GitHub\Editor\libsfw.so.meta
+      fullPath: C:\Users\Valkyrie\Documents\GitHub\Takeover\Assets\Plugins\GitHub\Editor\libsfw.so.meta
+      projectPath: Assets\Plugins\GitHub\Editor\libsfw.so.meta
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: Assets\Plugins\GitHub\Editor\sfw.net.dll
+      fullPath: C:\Users\Valkyrie\Documents\GitHub\Takeover\Assets\Plugins\GitHub\Editor\sfw.net.dll
+      projectPath: Assets\Plugins\GitHub\Editor\sfw.net.dll
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: Assets\Plugins\GitHub\Editor\sfw.net.dll.meta
+      fullPath: C:\Users\Valkyrie\Documents\GitHub\Takeover\Assets\Plugins\GitHub\Editor\sfw.net.dll.meta
+      projectPath: Assets\Plugins\GitHub\Editor\sfw.net.dll.meta
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: Assets\Plugins\GitHub\Editor\x64.meta
+      fullPath: C:\Users\Valkyrie\Documents\GitHub\Takeover\Assets\Plugins\GitHub\Editor\x64.meta
+      projectPath: Assets\Plugins\GitHub\Editor\x64.meta
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: Assets\Plugins\GitHub\Editor\x64\pthreadVC2.dll
+      fullPath: C:\Users\Valkyrie\Documents\GitHub\Takeover\Assets\Plugins\GitHub\Editor\x64\pthreadVC2.dll
+      projectPath: Assets\Plugins\GitHub\Editor\x64\pthreadVC2.dll
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: Assets\Plugins\GitHub\Editor\x64\pthreadVC2.dll.meta
+      fullPath: C:\Users\Valkyrie\Documents\GitHub\Takeover\Assets\Plugins\GitHub\Editor\x64\pthreadVC2.dll.meta
+      projectPath: Assets\Plugins\GitHub\Editor\x64\pthreadVC2.dll.meta
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: Assets\Plugins\GitHub\Editor\x64\sfw_x64.dll
+      fullPath: C:\Users\Valkyrie\Documents\GitHub\Takeover\Assets\Plugins\GitHub\Editor\x64\sfw_x64.dll
+      projectPath: Assets\Plugins\GitHub\Editor\x64\sfw_x64.dll
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: Assets\Plugins\GitHub\Editor\x64\sfw_x64.dll.meta
+      fullPath: C:\Users\Valkyrie\Documents\GitHub\Takeover\Assets\Plugins\GitHub\Editor\x64\sfw_x64.dll.meta
+      projectPath: Assets\Plugins\GitHub\Editor\x64\sfw_x64.dll.meta
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: Assets\Plugins\GitHub\Editor\x86.meta
+      fullPath: C:\Users\Valkyrie\Documents\GitHub\Takeover\Assets\Plugins\GitHub\Editor\x86.meta
+      projectPath: Assets\Plugins\GitHub\Editor\x86.meta
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: Assets\Plugins\GitHub\Editor\x86\pthreadVC2.dll
+      fullPath: C:\Users\Valkyrie\Documents\GitHub\Takeover\Assets\Plugins\GitHub\Editor\x86\pthreadVC2.dll
+      projectPath: Assets\Plugins\GitHub\Editor\x86\pthreadVC2.dll
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: Assets\Plugins\GitHub\Editor\x86\pthreadVC2.dll.meta
+      fullPath: C:\Users\Valkyrie\Documents\GitHub\Takeover\Assets\Plugins\GitHub\Editor\x86\pthreadVC2.dll.meta
+      projectPath: Assets\Plugins\GitHub\Editor\x86\pthreadVC2.dll.meta
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: Assets\Plugins\GitHub\Editor\x86\sfw_x86.dll
+      fullPath: C:\Users\Valkyrie\Documents\GitHub\Takeover\Assets\Plugins\GitHub\Editor\x86\sfw_x86.dll
+      projectPath: Assets\Plugins\GitHub\Editor\x86\sfw_x86.dll
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: Assets\Plugins\GitHub\Editor\x86\sfw_x86.dll.meta
+      fullPath: C:\Users\Valkyrie\Documents\GitHub\Takeover\Assets\Plugins\GitHub\Editor\x86\sfw_x86.dll.meta
+      projectPath: Assets\Plugins\GitHub\Editor\x86\sfw_x86.dll.meta
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: Assets\Scenes.meta
+      fullPath: C:\Users\Valkyrie\Documents\GitHub\Takeover\Assets\Scenes.meta
+      projectPath: Assets\Scenes.meta
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: Assets\Scenes\SampleScene.unity
+      fullPath: C:\Users\Valkyrie\Documents\GitHub\Takeover\Assets\Scenes\SampleScene.unity
+      projectPath: Assets\Scenes\SampleScene.unity
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: Assets\Scenes\SampleScene.unity.meta
+      fullPath: C:\Users\Valkyrie\Documents\GitHub\Takeover\Assets\Scenes\SampleScene.unity.meta
+      projectPath: Assets\Scenes\SampleScene.unity.meta
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: Assets\Scripts.meta
+      fullPath: C:\Users\Valkyrie\Documents\GitHub\Takeover\Assets\Scripts.meta
+      projectPath: Assets\Scripts.meta
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: Assets\Scripts\CameraController.cs
+      fullPath: C:\Users\Valkyrie\Documents\GitHub\Takeover\Assets\Scripts\CameraController.cs
+      projectPath: Assets\Scripts\CameraController.cs
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: Assets\Scripts\CameraController.cs.meta
+      fullPath: C:\Users\Valkyrie\Documents\GitHub\Takeover\Assets\Scripts\CameraController.cs.meta
+      projectPath: Assets\Scripts\CameraController.cs.meta
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: Assets\Scripts\DaylightController.cs
+      fullPath: C:\Users\Valkyrie\Documents\GitHub\Takeover\Assets\Scripts\DaylightController.cs
+      projectPath: Assets\Scripts\DaylightController.cs
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: Assets\Scripts\DaylightController.cs.meta
+      fullPath: C:\Users\Valkyrie\Documents\GitHub\Takeover\Assets\Scripts\DaylightController.cs.meta
+      projectPath: Assets\Scripts\DaylightController.cs.meta
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: Assets\Scripts\MapController.cs
+      fullPath: C:\Users\Valkyrie\Documents\GitHub\Takeover\Assets\Scripts\MapController.cs
+      projectPath: Assets\Scripts\MapController.cs
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: Assets\Scripts\MapController.cs.meta
+      fullPath: C:\Users\Valkyrie\Documents\GitHub\Takeover\Assets\Scripts\MapController.cs.meta
+      projectPath: Assets\Scripts\MapController.cs.meta
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: Assets\Scripts\MoveableComponent.cs
+      fullPath: C:\Users\Valkyrie\Documents\GitHub\Takeover\Assets\Scripts\MoveableComponent.cs
+      projectPath: Assets\Scripts\MoveableComponent.cs
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: Assets\Scripts\MoveableComponent.cs.meta
+      fullPath: C:\Users\Valkyrie\Documents\GitHub\Takeover\Assets\Scripts\MoveableComponent.cs.meta
+      projectPath: Assets\Scripts\MoveableComponent.cs.meta
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: Assets\Scripts\NightLightController.cs
+      fullPath: C:\Users\Valkyrie\Documents\GitHub\Takeover\Assets\Scripts\NightLightController.cs
+      projectPath: Assets\Scripts\NightLightController.cs
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: Assets\Scripts\NightLightController.cs.meta
+      fullPath: C:\Users\Valkyrie\Documents\GitHub\Takeover\Assets\Scripts\NightLightController.cs.meta
+      projectPath: Assets\Scripts\NightLightController.cs.meta
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: Assets\Scripts\SelectableController.cs
+      fullPath: C:\Users\Valkyrie\Documents\GitHub\Takeover\Assets\Scripts\SelectableController.cs
+      projectPath: Assets\Scripts\SelectableController.cs
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: Assets\Scripts\SelectableController.cs.meta
+      fullPath: C:\Users\Valkyrie\Documents\GitHub\Takeover\Assets\Scripts\SelectableController.cs.meta
+      projectPath: Assets\Scripts\SelectableController.cs.meta
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: Assets\Scripts\SelectableManager.cs
+      fullPath: C:\Users\Valkyrie\Documents\GitHub\Takeover\Assets\Scripts\SelectableManager.cs
+      projectPath: Assets\Scripts\SelectableManager.cs
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: Assets\Scripts\SelectableManager.cs.meta
+      fullPath: C:\Users\Valkyrie\Documents\GitHub\Takeover\Assets\Scripts\SelectableManager.cs.meta
+      projectPath: Assets\Scripts\SelectableManager.cs.meta
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: Assets\Textures.meta
+      fullPath: C:\Users\Valkyrie\Documents\GitHub\Takeover\Assets\Textures.meta
+      projectPath: Assets\Textures.meta
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: Assets\Textures\metal_dif.png
+      fullPath: C:\Users\Valkyrie\Documents\GitHub\Takeover\Assets\Textures\metal_dif.png
+      projectPath: Assets\Textures\metal_dif.png
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: Assets\Textures\metal_dif.png.meta
+      fullPath: C:\Users\Valkyrie\Documents\GitHub\Takeover\Assets\Textures\metal_dif.png.meta
+      projectPath: Assets\Textures\metal_dif.png.meta
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: Assets\Textures\metal_nml.png
+      fullPath: C:\Users\Valkyrie\Documents\GitHub\Takeover\Assets\Textures\metal_nml.png
+      projectPath: Assets\Textures\metal_nml.png
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: Assets\Textures\metal_nml.png.meta
+      fullPath: C:\Users\Valkyrie\Documents\GitHub\Takeover\Assets\Textures\metal_nml.png.meta
+      projectPath: Assets\Textures\metal_nml.png.meta
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: Assets\Textures\rock.jpg
+      fullPath: C:\Users\Valkyrie\Documents\GitHub\Takeover\Assets\Textures\rock.jpg
+      projectPath: Assets\Textures\rock.jpg
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: Assets\Textures\rock.jpg.meta
+      fullPath: C:\Users\Valkyrie\Documents\GitHub\Takeover\Assets\Textures\rock.jpg.meta
+      projectPath: Assets\Textures\rock.jpg.meta
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: Assets\Textures\snow.jpg
+      fullPath: C:\Users\Valkyrie\Documents\GitHub\Takeover\Assets\Textures\snow.jpg
+      projectPath: Assets\Textures\snow.jpg
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: Assets\Textures\snow.jpg.meta
+      fullPath: C:\Users\Valkyrie\Documents\GitHub\Takeover\Assets\Textures\snow.jpg.meta
+      projectPath: Assets\Textures\snow.jpg.meta
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: Assets\Textures\tread_bmp.png
+      fullPath: C:\Users\Valkyrie\Documents\GitHub\Takeover\Assets\Textures\tread_bmp.png
+      projectPath: Assets\Textures\tread_bmp.png
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: Assets\Textures\tread_bmp.png.meta
+      fullPath: C:\Users\Valkyrie\Documents\GitHub\Takeover\Assets\Textures\tread_bmp.png.meta
+      projectPath: Assets\Textures\tread_bmp.png.meta
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: Assets\Textures\tread_dif.png
+      fullPath: C:\Users\Valkyrie\Documents\GitHub\Takeover\Assets\Textures\tread_dif.png
+      projectPath: Assets\Textures\tread_dif.png
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: Assets\Textures\tread_dif.png.meta
+      fullPath: C:\Users\Valkyrie\Documents\GitHub\Takeover\Assets\Textures\tread_dif.png.meta
+      projectPath: Assets\Textures\tread_dif.png.meta
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: Assets\Textures\tread_dif_old.png
+      fullPath: C:\Users\Valkyrie\Documents\GitHub\Takeover\Assets\Textures\tread_dif_old.png
+      projectPath: Assets\Textures\tread_dif_old.png
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: Assets\Textures\tread_dif_old.png.meta
+      fullPath: C:\Users\Valkyrie\Documents\GitHub\Takeover\Assets\Textures\tread_dif_old.png.meta
+      projectPath: Assets\Textures\tread_dif_old.png.meta
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: Packages\manifest.json
+      fullPath: C:\Users\Valkyrie\Documents\GitHub\Takeover\Packages\manifest.json
+      projectPath: Packages\manifest.json
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: ProjectSettings\AudioManager.asset
+      fullPath: C:\Users\Valkyrie\Documents\GitHub\Takeover\ProjectSettings\AudioManager.asset
+      projectPath: ProjectSettings\AudioManager.asset
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: ProjectSettings\ClusterInputManager.asset
+      fullPath: C:\Users\Valkyrie\Documents\GitHub\Takeover\ProjectSettings\ClusterInputManager.asset
+      projectPath: ProjectSettings\ClusterInputManager.asset
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: ProjectSettings\DynamicsManager.asset
+      fullPath: C:\Users\Valkyrie\Documents\GitHub\Takeover\ProjectSettings\DynamicsManager.asset
+      projectPath: ProjectSettings\DynamicsManager.asset
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: ProjectSettings\EditorBuildSettings.asset
+      fullPath: C:\Users\Valkyrie\Documents\GitHub\Takeover\ProjectSettings\EditorBuildSettings.asset
+      projectPath: ProjectSettings\EditorBuildSettings.asset
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: ProjectSettings\EditorSettings.asset
+      fullPath: C:\Users\Valkyrie\Documents\GitHub\Takeover\ProjectSettings\EditorSettings.asset
+      projectPath: ProjectSettings\EditorSettings.asset
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: ProjectSettings\GraphicsSettings.asset
+      fullPath: C:\Users\Valkyrie\Documents\GitHub\Takeover\ProjectSettings\GraphicsSettings.asset
+      projectPath: ProjectSettings\GraphicsSettings.asset
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: ProjectSettings\InputManager.asset
+      fullPath: C:\Users\Valkyrie\Documents\GitHub\Takeover\ProjectSettings\InputManager.asset
+      projectPath: ProjectSettings\InputManager.asset
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: ProjectSettings\NavMeshAreas.asset
+      fullPath: C:\Users\Valkyrie\Documents\GitHub\Takeover\ProjectSettings\NavMeshAreas.asset
+      projectPath: ProjectSettings\NavMeshAreas.asset
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: ProjectSettings\Physics2DSettings.asset
+      fullPath: C:\Users\Valkyrie\Documents\GitHub\Takeover\ProjectSettings\Physics2DSettings.asset
+      projectPath: ProjectSettings\Physics2DSettings.asset
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: ProjectSettings\PresetManager.asset
+      fullPath: C:\Users\Valkyrie\Documents\GitHub\Takeover\ProjectSettings\PresetManager.asset
+      projectPath: ProjectSettings\PresetManager.asset
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: ProjectSettings\ProjectSettings.asset
+      fullPath: C:\Users\Valkyrie\Documents\GitHub\Takeover\ProjectSettings\ProjectSettings.asset
+      projectPath: ProjectSettings\ProjectSettings.asset
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: ProjectSettings\ProjectVersion.txt
+      fullPath: C:\Users\Valkyrie\Documents\GitHub\Takeover\ProjectSettings\ProjectVersion.txt
+      projectPath: ProjectSettings\ProjectVersion.txt
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: ProjectSettings\QualitySettings.asset
+      fullPath: C:\Users\Valkyrie\Documents\GitHub\Takeover\ProjectSettings\QualitySettings.asset
+      projectPath: ProjectSettings\QualitySettings.asset
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: ProjectSettings\TagManager.asset
+      fullPath: C:\Users\Valkyrie\Documents\GitHub\Takeover\ProjectSettings\TagManager.asset
+      projectPath: ProjectSettings\TagManager.asset
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: ProjectSettings\TimeManager.asset
+      fullPath: C:\Users\Valkyrie\Documents\GitHub\Takeover\ProjectSettings\TimeManager.asset
+      projectPath: ProjectSettings\TimeManager.asset
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: ProjectSettings\UnityConnectSettings.asset
+      fullPath: C:\Users\Valkyrie\Documents\GitHub\Takeover\ProjectSettings\UnityConnectSettings.asset
+      projectPath: ProjectSettings\UnityConnectSettings.asset
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: ProjectSettings\VFXManager.asset
+      fullPath: C:\Users\Valkyrie\Documents\GitHub\Takeover\ProjectSettings\VFXManager.asset
+      projectPath: ProjectSettings\VFXManager.asset
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: ProjectSettings\XRSettings.asset
+      fullPath: C:\Users\Valkyrie\Documents\GitHub\Takeover\ProjectSettings\XRSettings.asset
+      projectPath: ProjectSettings\XRSettings.asset
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: Takeover\Assets\Materials.meta
+      fullPath: C:\Users\Valkyrie\Documents\GitHub\Takeover\Takeover\Assets\Materials.meta
+      projectPath: Takeover\Assets\Materials.meta
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: Takeover\Assets\Materials\map_ground.mat
+      fullPath: C:\Users\Valkyrie\Documents\GitHub\Takeover\Takeover\Assets\Materials\map_ground.mat
+      projectPath: Takeover\Assets\Materials\map_ground.mat
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: Takeover\Assets\Materials\map_ground.mat.meta
+      fullPath: C:\Users\Valkyrie\Documents\GitHub\Takeover\Takeover\Assets\Materials\map_ground.mat.meta
+      projectPath: Takeover\Assets\Materials\map_ground.mat.meta
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: Takeover\Assets\Materials\map_rock.mat
+      fullPath: C:\Users\Valkyrie\Documents\GitHub\Takeover\Takeover\Assets\Materials\map_rock.mat
+      projectPath: Takeover\Assets\Materials\map_rock.mat
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: Takeover\Assets\Materials\map_rock.mat.meta
+      fullPath: C:\Users\Valkyrie\Documents\GitHub\Takeover\Takeover\Assets\Materials\map_rock.mat.meta
+      projectPath: Takeover\Assets\Materials\map_rock.mat.meta
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: Takeover\Assets\Materials\tank_metal.mat
+      fullPath: C:\Users\Valkyrie\Documents\GitHub\Takeover\Takeover\Assets\Materials\tank_metal.mat
+      projectPath: Takeover\Assets\Materials\tank_metal.mat
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: Takeover\Assets\Materials\tank_metal.mat.meta
+      fullPath: C:\Users\Valkyrie\Documents\GitHub\Takeover\Takeover\Assets\Materials\tank_metal.mat.meta
+      projectPath: Takeover\Assets\Materials\tank_metal.mat.meta
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: Takeover\Assets\Materials\tank_tread.mat
+      fullPath: C:\Users\Valkyrie\Documents\GitHub\Takeover\Takeover\Assets\Materials\tank_tread.mat
+      projectPath: Takeover\Assets\Materials\tank_tread.mat
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: Takeover\Assets\Materials\tank_tread.mat.meta
+      fullPath: C:\Users\Valkyrie\Documents\GitHub\Takeover\Takeover\Assets\Materials\tank_tread.mat.meta
+      projectPath: Takeover\Assets\Materials\tank_tread.mat.meta
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: Takeover\Assets\Models.meta
+      fullPath: C:\Users\Valkyrie\Documents\GitHub\Takeover\Takeover\Assets\Models.meta
+      projectPath: Takeover\Assets\Models.meta
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: Takeover\Assets\Models\map_snow.mtl
+      fullPath: C:\Users\Valkyrie\Documents\GitHub\Takeover\Takeover\Assets\Models\map_snow.mtl
+      projectPath: Takeover\Assets\Models\map_snow.mtl
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: Takeover\Assets\Models\map_snow.mtl.meta
+      fullPath: C:\Users\Valkyrie\Documents\GitHub\Takeover\Takeover\Assets\Models\map_snow.mtl.meta
+      projectPath: Takeover\Assets\Models\map_snow.mtl.meta
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: Takeover\Assets\Models\map_snow.obj
+      fullPath: C:\Users\Valkyrie\Documents\GitHub\Takeover\Takeover\Assets\Models\map_snow.obj
+      projectPath: Takeover\Assets\Models\map_snow.obj
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: Takeover\Assets\Models\map_snow.obj.meta
+      fullPath: C:\Users\Valkyrie\Documents\GitHub\Takeover\Takeover\Assets\Models\map_snow.obj.meta
+      projectPath: Takeover\Assets\Models\map_snow.obj.meta
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: Takeover\Assets\Models\tank.mtl
+      fullPath: C:\Users\Valkyrie\Documents\GitHub\Takeover\Takeover\Assets\Models\tank.mtl
+      projectPath: Takeover\Assets\Models\tank.mtl
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: Takeover\Assets\Models\tank.mtl.meta
+      fullPath: C:\Users\Valkyrie\Documents\GitHub\Takeover\Takeover\Assets\Models\tank.mtl.meta
+      projectPath: Takeover\Assets\Models\tank.mtl.meta
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: Takeover\Assets\Models\tank.obj
+      fullPath: C:\Users\Valkyrie\Documents\GitHub\Takeover\Takeover\Assets\Models\tank.obj
+      projectPath: Takeover\Assets\Models\tank.obj
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: Takeover\Assets\Models\tank.obj.meta
+      fullPath: C:\Users\Valkyrie\Documents\GitHub\Takeover\Takeover\Assets\Models\tank.obj.meta
+      projectPath: Takeover\Assets\Models\tank.obj.meta
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: Takeover\Assets\Scenes.meta
+      fullPath: C:\Users\Valkyrie\Documents\GitHub\Takeover\Takeover\Assets\Scenes.meta
+      projectPath: Takeover\Assets\Scenes.meta
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: Takeover\Assets\Scenes\SampleScene.unity
+      fullPath: C:\Users\Valkyrie\Documents\GitHub\Takeover\Takeover\Assets\Scenes\SampleScene.unity
+      projectPath: Takeover\Assets\Scenes\SampleScene.unity
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: Takeover\Assets\Scenes\SampleScene.unity.meta
+      fullPath: C:\Users\Valkyrie\Documents\GitHub\Takeover\Takeover\Assets\Scenes\SampleScene.unity.meta
+      projectPath: Takeover\Assets\Scenes\SampleScene.unity.meta
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: Takeover\Assets\Scripts.meta
+      fullPath: C:\Users\Valkyrie\Documents\GitHub\Takeover\Takeover\Assets\Scripts.meta
+      projectPath: Takeover\Assets\Scripts.meta
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: Takeover\Assets\Scripts\CameraController.cs
+      fullPath: C:\Users\Valkyrie\Documents\GitHub\Takeover\Takeover\Assets\Scripts\CameraController.cs
+      projectPath: Takeover\Assets\Scripts\CameraController.cs
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: Takeover\Assets\Scripts\CameraController.cs.meta
+      fullPath: C:\Users\Valkyrie\Documents\GitHub\Takeover\Takeover\Assets\Scripts\CameraController.cs.meta
+      projectPath: Takeover\Assets\Scripts\CameraController.cs.meta
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: Takeover\Assets\Scripts\DaylightController.cs
+      fullPath: C:\Users\Valkyrie\Documents\GitHub\Takeover\Takeover\Assets\Scripts\DaylightController.cs
+      projectPath: Takeover\Assets\Scripts\DaylightController.cs
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: Takeover\Assets\Scripts\DaylightController.cs.meta
+      fullPath: C:\Users\Valkyrie\Documents\GitHub\Takeover\Takeover\Assets\Scripts\DaylightController.cs.meta
+      projectPath: Takeover\Assets\Scripts\DaylightController.cs.meta
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: Takeover\Assets\Scripts\MapController.cs
+      fullPath: C:\Users\Valkyrie\Documents\GitHub\Takeover\Takeover\Assets\Scripts\MapController.cs
+      projectPath: Takeover\Assets\Scripts\MapController.cs
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: Takeover\Assets\Scripts\MapController.cs.meta
+      fullPath: C:\Users\Valkyrie\Documents\GitHub\Takeover\Takeover\Assets\Scripts\MapController.cs.meta
+      projectPath: Takeover\Assets\Scripts\MapController.cs.meta
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: Takeover\Assets\Scripts\MoveableComponent.cs
+      fullPath: C:\Users\Valkyrie\Documents\GitHub\Takeover\Takeover\Assets\Scripts\MoveableComponent.cs
+      projectPath: Takeover\Assets\Scripts\MoveableComponent.cs
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: Takeover\Assets\Scripts\MoveableComponent.cs.meta
+      fullPath: C:\Users\Valkyrie\Documents\GitHub\Takeover\Takeover\Assets\Scripts\MoveableComponent.cs.meta
+      projectPath: Takeover\Assets\Scripts\MoveableComponent.cs.meta
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: Takeover\Assets\Scripts\NightLightController.cs
+      fullPath: C:\Users\Valkyrie\Documents\GitHub\Takeover\Takeover\Assets\Scripts\NightLightController.cs
+      projectPath: Takeover\Assets\Scripts\NightLightController.cs
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: Takeover\Assets\Scripts\NightLightController.cs.meta
+      fullPath: C:\Users\Valkyrie\Documents\GitHub\Takeover\Takeover\Assets\Scripts\NightLightController.cs.meta
+      projectPath: Takeover\Assets\Scripts\NightLightController.cs.meta
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: Takeover\Assets\Scripts\SelectableController.cs
+      fullPath: C:\Users\Valkyrie\Documents\GitHub\Takeover\Takeover\Assets\Scripts\SelectableController.cs
+      projectPath: Takeover\Assets\Scripts\SelectableController.cs
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: Takeover\Assets\Scripts\SelectableController.cs.meta
+      fullPath: C:\Users\Valkyrie\Documents\GitHub\Takeover\Takeover\Assets\Scripts\SelectableController.cs.meta
+      projectPath: Takeover\Assets\Scripts\SelectableController.cs.meta
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: Takeover\Assets\Scripts\SelectableManager.cs
+      fullPath: C:\Users\Valkyrie\Documents\GitHub\Takeover\Takeover\Assets\Scripts\SelectableManager.cs
+      projectPath: Takeover\Assets\Scripts\SelectableManager.cs
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: Takeover\Assets\Scripts\SelectableManager.cs.meta
+      fullPath: C:\Users\Valkyrie\Documents\GitHub\Takeover\Takeover\Assets\Scripts\SelectableManager.cs.meta
+      projectPath: Takeover\Assets\Scripts\SelectableManager.cs.meta
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: Takeover\Assets\Textures.meta
+      fullPath: C:\Users\Valkyrie\Documents\GitHub\Takeover\Takeover\Assets\Textures.meta
+      projectPath: Takeover\Assets\Textures.meta
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: Takeover\Assets\Textures\metal_dif.png
+      fullPath: C:\Users\Valkyrie\Documents\GitHub\Takeover\Takeover\Assets\Textures\metal_dif.png
+      projectPath: Takeover\Assets\Textures\metal_dif.png
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: Takeover\Assets\Textures\metal_dif.png.meta
+      fullPath: C:\Users\Valkyrie\Documents\GitHub\Takeover\Takeover\Assets\Textures\metal_dif.png.meta
+      projectPath: Takeover\Assets\Textures\metal_dif.png.meta
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: Takeover\Assets\Textures\metal_nml.png
+      fullPath: C:\Users\Valkyrie\Documents\GitHub\Takeover\Takeover\Assets\Textures\metal_nml.png
+      projectPath: Takeover\Assets\Textures\metal_nml.png
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: Takeover\Assets\Textures\metal_nml.png.meta
+      fullPath: C:\Users\Valkyrie\Documents\GitHub\Takeover\Takeover\Assets\Textures\metal_nml.png.meta
+      projectPath: Takeover\Assets\Textures\metal_nml.png.meta
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: Takeover\Assets\Textures\rock.jpg
+      fullPath: C:\Users\Valkyrie\Documents\GitHub\Takeover\Takeover\Assets\Textures\rock.jpg
+      projectPath: Takeover\Assets\Textures\rock.jpg
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: Takeover\Assets\Textures\rock.jpg.meta
+      fullPath: C:\Users\Valkyrie\Documents\GitHub\Takeover\Takeover\Assets\Textures\rock.jpg.meta
+      projectPath: Takeover\Assets\Textures\rock.jpg.meta
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: Takeover\Assets\Textures\snow.jpg
+      fullPath: C:\Users\Valkyrie\Documents\GitHub\Takeover\Takeover\Assets\Textures\snow.jpg
+      projectPath: Takeover\Assets\Textures\snow.jpg
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: Takeover\Assets\Textures\snow.jpg.meta
+      fullPath: C:\Users\Valkyrie\Documents\GitHub\Takeover\Takeover\Assets\Textures\snow.jpg.meta
+      projectPath: Takeover\Assets\Textures\snow.jpg.meta
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: Takeover\Assets\Textures\tread_bmp.png
+      fullPath: C:\Users\Valkyrie\Documents\GitHub\Takeover\Takeover\Assets\Textures\tread_bmp.png
+      projectPath: Takeover\Assets\Textures\tread_bmp.png
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: Takeover\Assets\Textures\tread_bmp.png.meta
+      fullPath: C:\Users\Valkyrie\Documents\GitHub\Takeover\Takeover\Assets\Textures\tread_bmp.png.meta
+      projectPath: Takeover\Assets\Textures\tread_bmp.png.meta
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: Takeover\Assets\Textures\tread_dif.png
+      fullPath: C:\Users\Valkyrie\Documents\GitHub\Takeover\Takeover\Assets\Textures\tread_dif.png
+      projectPath: Takeover\Assets\Textures\tread_dif.png
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: Takeover\Assets\Textures\tread_dif.png.meta
+      fullPath: C:\Users\Valkyrie\Documents\GitHub\Takeover\Takeover\Assets\Textures\tread_dif.png.meta
+      projectPath: Takeover\Assets\Textures\tread_dif.png.meta
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: Takeover\Assets\Textures\tread_dif_old.png
+      fullPath: C:\Users\Valkyrie\Documents\GitHub\Takeover\Takeover\Assets\Textures\tread_dif_old.png
+      projectPath: Takeover\Assets\Textures\tread_dif_old.png
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: Takeover\Assets\Textures\tread_dif_old.png.meta
+      fullPath: C:\Users\Valkyrie\Documents\GitHub\Takeover\Takeover\Assets\Textures\tread_dif_old.png.meta
+      projectPath: Takeover\Assets\Textures\tread_dif_old.png.meta
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: Takeover\Packages\manifest.json
+      fullPath: C:\Users\Valkyrie\Documents\GitHub\Takeover\Takeover\Packages\manifest.json
+      projectPath: Takeover\Packages\manifest.json
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: Takeover\ProjectSettings\AudioManager.asset
+      fullPath: C:\Users\Valkyrie\Documents\GitHub\Takeover\Takeover\ProjectSettings\AudioManager.asset
+      projectPath: Takeover\ProjectSettings\AudioManager.asset
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: Takeover\ProjectSettings\ClusterInputManager.asset
+      fullPath: C:\Users\Valkyrie\Documents\GitHub\Takeover\Takeover\ProjectSettings\ClusterInputManager.asset
+      projectPath: Takeover\ProjectSettings\ClusterInputManager.asset
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: Takeover\ProjectSettings\DynamicsManager.asset
+      fullPath: C:\Users\Valkyrie\Documents\GitHub\Takeover\Takeover\ProjectSettings\DynamicsManager.asset
+      projectPath: Takeover\ProjectSettings\DynamicsManager.asset
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: Takeover\ProjectSettings\EditorBuildSettings.asset
+      fullPath: C:\Users\Valkyrie\Documents\GitHub\Takeover\Takeover\ProjectSettings\EditorBuildSettings.asset
+      projectPath: Takeover\ProjectSettings\EditorBuildSettings.asset
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: Takeover\ProjectSettings\EditorSettings.asset
+      fullPath: C:\Users\Valkyrie\Documents\GitHub\Takeover\Takeover\ProjectSettings\EditorSettings.asset
+      projectPath: Takeover\ProjectSettings\EditorSettings.asset
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: Takeover\ProjectSettings\GraphicsSettings.asset
+      fullPath: C:\Users\Valkyrie\Documents\GitHub\Takeover\Takeover\ProjectSettings\GraphicsSettings.asset
+      projectPath: Takeover\ProjectSettings\GraphicsSettings.asset
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: Takeover\ProjectSettings\InputManager.asset
+      fullPath: C:\Users\Valkyrie\Documents\GitHub\Takeover\Takeover\ProjectSettings\InputManager.asset
+      projectPath: Takeover\ProjectSettings\InputManager.asset
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: Takeover\ProjectSettings\NavMeshAreas.asset
+      fullPath: C:\Users\Valkyrie\Documents\GitHub\Takeover\Takeover\ProjectSettings\NavMeshAreas.asset
+      projectPath: Takeover\ProjectSettings\NavMeshAreas.asset
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: Takeover\ProjectSettings\Physics2DSettings.asset
+      fullPath: C:\Users\Valkyrie\Documents\GitHub\Takeover\Takeover\ProjectSettings\Physics2DSettings.asset
+      projectPath: Takeover\ProjectSettings\Physics2DSettings.asset
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: Takeover\ProjectSettings\PresetManager.asset
+      fullPath: C:\Users\Valkyrie\Documents\GitHub\Takeover\Takeover\ProjectSettings\PresetManager.asset
+      projectPath: Takeover\ProjectSettings\PresetManager.asset
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: Takeover\ProjectSettings\ProjectSettings.asset
+      fullPath: C:\Users\Valkyrie\Documents\GitHub\Takeover\Takeover\ProjectSettings\ProjectSettings.asset
+      projectPath: Takeover\ProjectSettings\ProjectSettings.asset
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: Takeover\ProjectSettings\ProjectVersion.txt
+      fullPath: C:\Users\Valkyrie\Documents\GitHub\Takeover\Takeover\ProjectSettings\ProjectVersion.txt
+      projectPath: Takeover\ProjectSettings\ProjectVersion.txt
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: Takeover\ProjectSettings\QualitySettings.asset
+      fullPath: C:\Users\Valkyrie\Documents\GitHub\Takeover\Takeover\ProjectSettings\QualitySettings.asset
+      projectPath: Takeover\ProjectSettings\QualitySettings.asset
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: Takeover\ProjectSettings\TagManager.asset
+      fullPath: C:\Users\Valkyrie\Documents\GitHub\Takeover\Takeover\ProjectSettings\TagManager.asset
+      projectPath: Takeover\ProjectSettings\TagManager.asset
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: Takeover\ProjectSettings\TimeManager.asset
+      fullPath: C:\Users\Valkyrie\Documents\GitHub\Takeover\Takeover\ProjectSettings\TimeManager.asset
+      projectPath: Takeover\ProjectSettings\TimeManager.asset
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: Takeover\ProjectSettings\UnityConnectSettings.asset
+      fullPath: C:\Users\Valkyrie\Documents\GitHub\Takeover\Takeover\ProjectSettings\UnityConnectSettings.asset
+      projectPath: Takeover\ProjectSettings\UnityConnectSettings.asset
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: Takeover\ProjectSettings\VFXManager.asset
+      fullPath: C:\Users\Valkyrie\Documents\GitHub\Takeover\Takeover\ProjectSettings\VFXManager.asset
+      projectPath: Takeover\ProjectSettings\VFXManager.asset
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: Takeover\ProjectSettings\XRSettings.asset
+      fullPath: C:\Users\Valkyrie\Documents\GitHub\Takeover\Takeover\ProjectSettings\XRSettings.asset
+      projectPath: Takeover\ProjectSettings\XRSettings.asset
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+  - commitID: 84140dc04b20a0ed6c13c4c4c62ca414e5074d80
+    mergeA: 
+    mergeB: 
+    authorName: VD-15
+    authorEmail: valkyriedev15@gmail.com
+    commitEmail: valkyriedev15@gmail.com
+    commitName: VD-15
+    summary: Initial commit
+    description: 
+    timeString: 2020-02-18T14:40:05.000+00:00
+    commitTimeString: 2020-02-18T14:40:05.000+00:00
+    changes:
+    - path: .gitattributes
+      fullPath: C:\Users\Valkyrie\Documents\GitHub\Takeover\.gitattributes
+      projectPath: .gitattributes
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: .gitignore
+      fullPath: C:\Users\Valkyrie\Documents\GitHub\Takeover\.gitignore
+      projectPath: .gitignore
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: Assets\.gitignore
+      fullPath: C:\Users\Valkyrie\Documents\GitHub\Takeover\Assets\.gitignore
+      projectPath: Assets\.gitignore
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0

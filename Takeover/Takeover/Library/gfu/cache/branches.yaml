@@ -1,0 +1,99 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &1
+MonoBehaviour:
+  m_ObjectHideFlags: 61
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1666186674, guid: 68c7e4565cde54155bb78d8e935f1ddb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cacheType: 2
+  lastUpdatedAtString: 2020-03-15T05:59:59.881+00:00
+  initializedAtString: 2020-03-15T05:59:59.861+00:00
+  localBranches:
+  - name: capture
+    tracking: origin/capture
+  - name: develop
+    tracking: origin/develop
+  - name: master
+    tracking: origin/master
+  - name: staging
+    tracking: origin/staging
+  remoteBranches:
+  - name: origin/capture
+    tracking: '[None]'
+  - name: origin/develop
+    tracking: '[None]'
+  - name: origin/HEAD
+    tracking: '[None]'
+  remotes:
+  - name: origin
+    url: https://github.com/VD-15/Takeover.git
+    login: 
+    user: 
+    host: 
+    function: 0
+    token: 
+  localConfigBranches:
+    keys:
+    - capture
+    - develop
+    - master
+    - staging
+    values:
+    - name: capture
+      remote:
+        name: origin
+        url: https://github.com/VD-15/Takeover.git
+      trackingBranch: capture
+    - name: develop
+      remote:
+        name: origin
+        url: https://github.com/VD-15/Takeover.git
+      trackingBranch: develop
+    - name: master
+      remote:
+        name: origin
+        url: https://github.com/VD-15/Takeover.git
+      trackingBranch: master
+    - name: staging
+      remote:
+        name: origin
+        url: https://github.com/VD-15/Takeover.git
+      trackingBranch: staging
+  remoteConfigBranches:
+    keys:
+    - origin
+    subKeys:
+    - Values:
+      - capture
+      - develop
+      - HEAD
+    subKeyValues:
+    - Values:
+      - name: capture
+        remote:
+          name: origin
+          url: https://github.com/VD-15/Takeover.git
+        trackingBranch: 
+      - name: develop
+        remote:
+          name: origin
+          url: https://github.com/VD-15/Takeover.git
+        trackingBranch: 
+      - name: HEAD
+        remote:
+          name: origin
+          url: https://github.com/VD-15/Takeover.git
+        trackingBranch: 
+  configRemotes:
+    keys:
+    - origin
+    values:
+    - name: origin
+      url: https://github.com/VD-15/Takeover.git
